@@ -1,0 +1,39 @@
+{
+  "name": "cubejs-uikit",
+  "version": "0.0.1",
+  "description": "UIKit for Cube.js projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p dist && rm -vrf dist/* && parcel build --out-dir dist index.html",
+    "deploy": "npm run build && now --prod dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cube-js/cube.js/tree/master/packages/cubejs-uikit"
+  },
+  "keywords": [
+    "design system",
+    "ui kit"
+  ],
+  "author": "Statsbot, Inc.",
+  "license": "MIT",
+  "devDependencies": {
+    "jsx-native-events": "^1.0.2",
+    "numl": "^0.11.30",
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "native-events": "^1.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "browserslist": [
+    "iOS 11",
+    "last 10 Chrome versions",
+    "last 5 Firefox versions",
+    "last 3 Safari versions"
+  ]
+}
