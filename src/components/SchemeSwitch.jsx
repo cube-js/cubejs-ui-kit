@@ -5,7 +5,17 @@ import jsx from 'jsx-native-events';
 const dataset = typeof document !== 'undefined' ? document.documentElement.dataset : {};
 
 export default function SchemeSwitch() {
-  const [scheme, setScheme] = useState(matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const media = matchMedia('(prefers-color-scheme: dark)');
+
+  function getCurrentScheme() {
+    return dataset.nuScheme || (media.matches ? 'dark' : 'light');
+  }
+
+  const [scheme, setScheme] = useState(getCurrentScheme());
+
+  media.addListener(() => {
+    setScheme(getCurrentScheme());
+  });
 
   function changeScheme(event) {
     const value = event.detail;

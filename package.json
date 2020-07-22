@@ -1,6 +1,6 @@
 {
   "name": "cubejs-uikit",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "UIKit for Cube.js projects",
   "main": "dist/core.js",
   "type": "module",
@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "mkdir -p dist && rm -vrf dist/* && rollup -c rollup.config.js && npm run size-limit",
     "now-build": "mkdir -p static && rm -vrf static/* && parcel build --out-dir static index.html",
-    "now-deploy": "npm run build && now --prod static",
+    "now-deploy": "npm run now-build && now --prod static",
     "size-limit": "node ./size-limit-config.js && npx size-limit",
     "prepublishOnly": "npm run build"
   },
