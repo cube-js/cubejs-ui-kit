@@ -30,13 +30,106 @@ Install via npm:
 npm install cubejs-uikit jsx-native-events --save-dev
 ```
 
+### For Gatsby projects
+
+Add the following code to the `gatsby-ssr.js` file:
+
+```javascript
+import React from "react";
+
+export const onRenderBody = ({ setHeadComponents }) => {
+    if (process.env.BUILD_STAGE === `build-html`) {
+        const css = `
+*:not(:defined) { visibility: hidden; }
+@font-face {
+    font-family: "CeraPro";
+    src: url(./assets/fonts/CeraPro-Regular.woff2);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "CeraPro";
+    src: url(./assets/fonts/CeraPro-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "CeraPro";
+    src: url(./assets/fonts/CeraPro-Medium.woff2);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "CeraPro";
+    src: url(./assets/fonts/CeraPro-Medium.woff2);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "CeraPro";
+    src: url(./assets/fonts/CeraPro-Medium.woff2);
+    font-weight: 700;
+}
+`;
+
+        setHeadComponents([<style>{css}</style>]);
+    }
+}
+```
+
+Where `./assets/fonts/CeraPro-Medium.woff2` is a public path to **CeraPro** font.
+
+### For other projects
+
+Include the following CSS in your application:
+
+```css
+@font-face {
+    font-family: "CeraPro";
+    src: url(./assets/fonts/CeraPro-Regular.woff2);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "CeraPro";
+    src: url(./assets/fonts/CeraPro-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "CeraPro";
+    src: url(./assets/fonts/CeraPro-Medium.woff2);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "CeraPro";
+    src: url(./assets/fonts/CeraPro-Medium.woff2);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "CeraPro";
+    src: url(./assets/fonts/CeraPro-Medium.woff2);
+    font-weight: 700;
+}
+```
+
+Where `./assets/fonts/CeraPro-Medium.woff2` is your local (or public) path to **CeraPro** font.
+
 ## Usage
 
 Import UI Kit to your React project:
 
 ```javascript
-// index.js
-import 'cubejs-uikit';
+// index.js / gatsby-browser.js for Gatsby
+import UIKit from 'cubejs-uikit';
+
+UIKit.init({
+  scheme: 'auto' // 'light' by default
+}).then(() => {
+  // UI Kit is initialized
+});
 ```
 
 Import UI Components to your application. It's required to use `Root` component to wrap your application.

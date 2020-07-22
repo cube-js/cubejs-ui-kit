@@ -1,20 +1,22 @@
-import './core.css';
-
 const html = document.querySelector('html');
 const dataset = html.dataset;
-
-dataset.nuIcons = 'eva';
-dataset.nuPrevent = '';
-dataset.nuScheme = 'light';
 
 const OPTIONS = { icons: 'eva', prevent: false, scheme: 'light' };
 
 export default {
-  init({ icons, prevent, scheme } = {}) {
+  init(options = {}) {
+    options = Object.assign({}, OPTIONS, options);
+
+    dataset.nuIcons = options.icons;
+
+    if (options.prevent) {
+      dataset.nuPrevent = '';
+    }
+
+    dataset.nuScheme = options.scheme;
+
     return import('./numl/index.js').then(module => {
       const { Nude } = module;
-
-      Nude.init();
 
       return Nude;
     });

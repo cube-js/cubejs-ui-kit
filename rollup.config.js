@@ -2,7 +2,6 @@ import { terser } from 'rollup-plugin-terser';
 import url from '@rollup/plugin-url';
 import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
-import postcss from 'rollup-plugin-postcss';
 import LIST from './list';
 
 const babelConfig = {
@@ -53,6 +52,5 @@ export default [{
     resolve(),
     url(),
     babel(babelConfig),
-    postcss(),
   ]
 }, ...LIST.map(componentConfig)];
