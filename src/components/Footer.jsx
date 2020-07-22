@@ -2,7 +2,7 @@
 import React from 'react';
 import jsx from 'jsx-native-events';
 
-const COMMINITY_LINKS = [
+const COMMUNITY_LINKS = [
   {
     label: 'Slack us!',
     link: '!https://slack.cube.dev/',
@@ -41,7 +41,7 @@ const RESOURCES_LINKS = [
 ];
 
 export default function Footer() {
-  return <nu-block theme="aside" fill="bg" padding="8x 4x|||6x 2x" space="0 (4x + 1bw)||0 (3x + 1bw)" shadow>
+  return <nu-block theme="aside" fill="bg" padding="8x 4x|||6x 2x">
     <nu-grid gap="4x||4x 2x" width="max 80" place="space-around" items="start|||start center" columns="1fr 12 12 auto||1pr 1pr" content="stretch|||center">
       <nu-attrs for="link" text="normal" color="text 80% :hover[text]"></nu-attrs>
       <nu-attrs for="h5" text="nowrap"></nu-attrs>
@@ -56,7 +56,7 @@ export default function Footer() {
       <nu-flex gap flow="column" items="start">
         <nu-h5>Community</nu-h5>
         {
-          COMMINITY_LINKS.map(item => {
+          COMMUNITY_LINKS.map(item => {
             return <nu-link key={item.label} to={item.link}>{item.label}</nu-link>
           })
         }

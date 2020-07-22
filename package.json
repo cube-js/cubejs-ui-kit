@@ -1,6 +1,6 @@
 {
   "name": "cubejs-uikit",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "UIKit for Cube.js projects",
   "main": "dist/core.js",
   "type": "module",
@@ -58,6 +58,16 @@
       "name": "Root Component",
       "path": [
         "dist/Root.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
+      "name": "SignUpBlock Component",
+      "path": [
+        "dist/SignUpBlock.js"
       ],
       "ignore": [
         "react",

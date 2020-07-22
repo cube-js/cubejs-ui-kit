@@ -130,7 +130,7 @@ export default function Showcase() {
       </nu-block>
     </nu-card>
 
-    <nu-card gap="2x">
+    <nu-card gap="2x" space="0 (4x + 1bw)||0 (3x + 1bw)" shadow>
       <nu-h2>Footer</nu-h2>
 
       <nu-block>
