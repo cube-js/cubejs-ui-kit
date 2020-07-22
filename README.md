@@ -16,6 +16,11 @@ Install dependencies:
 $ npm i
 ```
 
+Add **CeraPro** font to the `src/assets/fonts` folder:
+
+* `CeraPro-Regular.woff2`
+* `CeraPro-Medium.woff2`
+
 Run showcase:
 
 ```bash
