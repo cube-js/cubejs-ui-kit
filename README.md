@@ -130,12 +130,20 @@ Import UI Kit to your React project:
 // index.js / gatsby-browser.js for Gatsby
 import UIKit from 'cubejs-uikit';
 
+UIKit.init();
+```
+
+Either you can pass options to the `init()` method or/and subscribe to it.
+
+```javascript
 UIKit.init({
   scheme: 'auto' // 'light' by default
 }).then(() => {
   // UI Kit is initialized
 });
 ```
+
+Use simplified
 
 Import UI Components to your application. It's required to use `Root` component to wrap your application.
 
