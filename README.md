@@ -156,6 +156,7 @@ export default function App() {
 * **Root** - A root component to wrap your application with.
 * **Topbar** - A top bar component with a row of links.
 * **Footer** - A footer component with copyright, links and "get in touch" section.
+* **SignUpBlock** - A sign up block. A simple form to subscribe user to our updates.
 * **SchemeSwitch** - A switch button for schemes. (light/dark)
 
 ## Contribution
