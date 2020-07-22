@@ -31,7 +31,12 @@ export default function SignUpBlock() {
     }
   }
 
-  return <nu-section theme="aside" fill="bg" padding="12x 4x|||8x 2x" box="y" border="top bottom outside #main-border">
+  return <nu-section
+    theme="aside"
+    fill="bg"
+    padding="12x 4x|||8x 2x"
+    box="y"
+    border="top bottom outside #main-border">
     <nu-flex flow="column" items="center" gap text="center">
       <nu-h2 size="h2||h4|h5">Sign up for Cube.js&nbsp;Releases and&nbsp;Updates</nu-h2>
       <nu-description>Awesome product updates; no&nbsp;spam.</nu-description>
