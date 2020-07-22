@@ -50,7 +50,7 @@ export default function Topbar() {
         theme="secondary"/>
       {
         MENU.map(item => {
-          return <nu-btn clear to={item.link}>{ item.label }</nu-btn>;
+          return <nu-btn key={item.label} clear to={item.link}>{ item.label }</nu-btn>;
         })
       }
     </nu-pane>
@@ -77,7 +77,7 @@ export default function Topbar() {
           color="main-text :hover[special]"/>
         {
           MENU.map(item => {
-            return <nu-action to={item.link}>{ item.label }</nu-action>;
+            return <nu-action key={item.label} to={item.link}>{ item.label }</nu-action>;
           })
         }
       </nu-popup>

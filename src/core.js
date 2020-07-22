@@ -5,12 +5,18 @@ const dataset = html.dataset;
 
 dataset.nuIcons = 'eva';
 dataset.nuPrevent = '';
-// dataset.nuScheme = 'light';
+dataset.nuScheme = 'light';
 
-export const ready = import('./numl/index.js').then(module => {
-  const { Nude } = module;
+const OPTIONS = { icons: 'eva', prevent: false, scheme: 'light' };
 
-  Nude.init();
+export default {
+  init({ icons, prevent, scheme } = {}) {
+    return import('./numl/index.js').then(module => {
+      const { Nude } = module;
 
-  return Nude;
-});
+      Nude.init();
+
+      return Nude;
+    });
+  },
+};

@@ -35,6 +35,7 @@ export default function Showcase() {
               <nu-btn>Button</nu-btn>
               <nu-btn mark="y">Hover</nu-btn>
               <nu-btn inset="#shadow.50">Pressed</nu-btn>
+              <nu-btn inset>Toggled</nu-btn>
               <nu-btn outline="y">Focus</nu-btn>
               <nu-btn disabled>Disabled</nu-btn>
             </nu-flex>
@@ -42,6 +43,7 @@ export default function Showcase() {
               <nu-btn is-red>Button</nu-btn>
               <nu-btn is-red mark="y">Hover</nu-btn>
               <nu-btn is-red inset="#shadow.50">Pressed</nu-btn>
+              <nu-btn is-red inset>Toggled</nu-btn>
               <nu-btn is-red outline="y">Focus</nu-btn>
               <nu-btn is-red disabled>Disabled</nu-btn>
             </nu-flex>
@@ -64,6 +66,7 @@ export default function Showcase() {
               <nu-btn special>Button</nu-btn>
               <nu-btn special mark="y">Hover</nu-btn>
               <nu-btn special inset="#special-shadow.50">Pressed</nu-btn>
+              <nu-btn special inset>Toggled</nu-btn>
               <nu-btn special outline="y">Focus</nu-btn>
               <nu-btn special disabled>Disabled</nu-btn>
             </nu-flex>
@@ -71,6 +74,7 @@ export default function Showcase() {
               <nu-btn is-red special>Button</nu-btn>
               <nu-btn is-red special mark="y">Hover</nu-btn>
               <nu-btn is-red special inset="#special-shadow.50">Pressed</nu-btn>
+              <nu-btn is-red special inset>Toggled</nu-btn>
               <nu-btn is-red special outline="y">Focus</nu-btn>
               <nu-btn is-red special disabled>Disabled</nu-btn>
             </nu-flex>
@@ -93,6 +97,7 @@ export default function Showcase() {
               <nu-btn clear>Button</nu-btn>
               <nu-btn clear mark="y">Hover</nu-btn>
               <nu-btn clear inset="#shadow.50">Pressed</nu-btn>
+              <nu-btn clear inset>Toggled</nu-btn>
               <nu-btn clear outline="y">Focus</nu-btn>
               <nu-btn clear disabled>Disabled</nu-btn>
             </nu-flex>
@@ -100,6 +105,7 @@ export default function Showcase() {
               <nu-btn is-red clear>Button</nu-btn>
               <nu-btn is-red clear mark="y">Hover</nu-btn>
               <nu-btn is-red clear inset="#shadow.50">Pressed</nu-btn>
+              <nu-btn is-red clear inset>Toggled</nu-btn>
               <nu-btn is-red clear outline="y">Focus</nu-btn>
               <nu-btn is-red clear disabled>Disabled</nu-btn>
             </nu-flex>

@@ -57,7 +57,7 @@ export default function Footer() {
         <nu-h5>Community</nu-h5>
         {
           COMMINITY_LINKS.map(item => {
-            return <nu-link to={item.link}>{item.label}</nu-link>
+            return <nu-link key={item.label} to={item.link}>{item.label}</nu-link>
           })
         }
       </nu-flex>
@@ -66,7 +66,7 @@ export default function Footer() {
         <nu-h5>Resources</nu-h5>
         {
           RESOURCES_LINKS.map(item => {
-            return <nu-link to={item.link}>{item.label}</nu-link>
+            return <nu-link key={item.label} to={item.link}>{item.label}</nu-link>
           })
         }
       </nu-flex>
