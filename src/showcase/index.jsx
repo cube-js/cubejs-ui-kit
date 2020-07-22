@@ -7,7 +7,7 @@ import Topbar from '../components/Topbar';
 import Footer from '../components/Footer';
 
 export default function Showcase() {
-  return (<nu-flow id="showcase" gap="2x">
+  return (<nu-flow id="showcase" gap="2x" padding="2x||1x">
     <nu-pane content="space-between">
       <nu-h1>Cube.js UIKit Showcase</nu-h1>
       <nu-pane>
@@ -130,10 +130,10 @@ export default function Showcase() {
       </nu-block>
     </nu-card>
 
-    <nu-card gap="2x" space="0 (4x + 1bw)||0 (3x + 1bw)" shadow>
+    <nu-card gap="2x" shadow>
       <nu-h2>Footer</nu-h2>
 
-      <nu-block>
+      <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)">
         <Footer/>
       </nu-block>
     </nu-card>

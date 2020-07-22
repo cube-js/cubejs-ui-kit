@@ -1,12 +1,14 @@
+import './core.css';
 import React from 'react';
 import { render } from 'react-dom';
-import { ready } from './core';
+import UIKit from './core';
 import Showcase from './showcase';
 import Root from './components/Root.jsx';
-import 'core.css';
 
-ready.then(() => {
+UIKit.init().then(() => {
   render(<Root>
-    <Showcase/>
+    <nu-block>
+      <Showcase/>
+    </nu-block>
   </Root>, document.getElementById('app'));
 });
