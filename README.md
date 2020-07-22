@@ -89,6 +89,7 @@ Where `./assets/fonts/CeraPro-Medium.woff2` is a public path to **CeraPro** font
 Include the following CSS in your application:
 
 ```css
+*:not(:defined) { visibility: hidden; }
 @font-face {
     font-family: "CeraPro";
     src: url(./assets/fonts/CeraPro-Regular.woff2);

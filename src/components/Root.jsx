@@ -13,7 +13,7 @@ export default function Root(props) {
     <nu-props
       radius=".5x"
       font="CeraPro, 'Avenir Next', 'Avenir', Helvetica, Ubuntu, 'DejaVu Sans', Arial, sans-serif"/>
-    <nu-attrs for="btn" theme="primary tint :red[secondary tint]"></nu-attrs>
+    <nu-attrs for="btn" theme="primary tint :red[secondary tint]" text="n nowrap"></nu-attrs>
     { props.children }
   </nu-root>;
 }
