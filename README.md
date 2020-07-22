@@ -36,14 +36,14 @@ Import UI Kit to your React project:
 
 ```javascript
 // index.js
-import 'cubejs-uikit/core';
+import 'cubejs-uikit';
 ```
 
 Import UI Components to your application. It's required to use `Root` component to wrap your application.
 
 ```jsx
-import Root from 'cubejs-uikit/components/Root';
-import Topbar from 'cubejs-uikit/components/Topbar';
+import Root from 'cubejs-uikit/dist/Root';
+import Topbar from 'cubejs-uikit/dist/Topbar';
 
 export default function App() {
   return <Root>
