@@ -8,13 +8,15 @@ export default function SchemeSwitch() {
   let media = matchMedia('(prefers-color-scheme: dark)');
 
   function getCurrentScheme() {
-    return dataset.nuScheme || (media.matches ? 'dark' : 'light');
+    return (dataset.nuScheme !== 'auto' && dataset.nuScheme) || (media.matches ? 'dark' : 'light');
   }
 
   const [scheme, setScheme] = useState(getCurrentScheme());
 
   media.addListener((newMedia) => {
     media = newMedia;
+
+    console.log('!', getCurrentScheme());
 
     setScheme(getCurrentScheme());
   });

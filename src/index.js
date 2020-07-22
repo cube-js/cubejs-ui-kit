@@ -5,7 +5,7 @@ import UIKit from './core';
 import Showcase from './showcase';
 import Root from './components/Root.jsx';
 
-UIKit.init().then(() => {
+UIKit.init({ scheme: 'auto' }).then(() => {
   render(<Root>
     <nu-block>
       <Showcase/>
