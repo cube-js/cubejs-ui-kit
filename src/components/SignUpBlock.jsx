@@ -32,18 +32,18 @@ export default function SignUpBlock() {
   }
 
   return <nu-section
-    theme="aside"
-    fill="bg"
+    theme="special"
+    fill="minorbg"
     padding="12x 4x|||8x 2x"
     box="y"
     border="top bottom outside #main-border">
     <nu-flex flow="column" items="center" gap text="center">
       <nu-h2 size="h2||h4|h5">Sign up for Cube.js&nbsp;Releases and&nbsp;Updates</nu-h2>
-      <nu-description>Awesome product updates; no&nbsp;spam.</nu-description>
+      <nu-description color="minor">Awesome product updates; no&nbsp;spam.</nu-description>
       <nu-spacer></nu-spacer>
       {
         !email && <nu-form onEventInput={onSubmit} display="flex" flow="row wrap" gap width="20 100% 40" text="left">
-          <nu-input ref={inputRef} disabled={loading || null} id="email" placeholder="Email" special theme="primary special :invalid[secondary special]" border="1bw :invalid[#bg]" grow="2" padding="1.5x 2x"></nu-input>
+          <nu-input theme="main" ref={inputRef} color="main-text :invalid[text]" disabled={loading || null} id="email" placeholder="Email" theme="primary :invalid[secondary]" border="1bw :invalid[#bg]" grow="2" padding="1.5x 2x"></nu-input>
           <nu-btn action="submit" disabled={loading || null} special theme="primary" grow="1" padding="1.5x 2x">Subscribe</nu-btn>
           <nu-block width="100%" color>
             <nu-check for="email" assert="email">Email is not valid</nu-check>
@@ -54,9 +54,9 @@ export default function SignUpBlock() {
         </nu-form>
       }
       {
-        email && <nu-card border="1ow dashed" size="lg (2x + 1ow + 1bw)||md (2x + 1ow + 1bw)">
+        email && <nu-block radius padding="2x" border="1ow dashed" size="lg (2x + 1ow + 1bw)||md (2x + 1ow + 1bw)">
           <nu-strong>{email}</nu-strong> has been subscribed!
-        </nu-card>
+        </nu-block>
       }
     </nu-flex>
     {

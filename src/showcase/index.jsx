@@ -6,6 +6,21 @@ import SignUpBlock from '../components/SignUpBlock';
 import Topbar from '../components/Topbar';
 import Footer from '../components/Footer';
 
+const HOVER_STYLES = {
+  mark: '#special.12 :special[#special-text.20]',
+  border: '1bw :clear[hidden] :special[#special-text.20]'
+};
+const PRESSED_STYLES = {
+  mark: '#special.12 :special[#special-text.20]',
+  border: '#special :special[1bw] :clear[1bw]',
+};
+const FOCUS_STYLES = {
+  outline: 'y',
+};
+const DISABLED_STYLES = {
+  disabled: '',
+};
+
 export default function Showcase() {
   return (<nu-flow id="showcase" gap="2x" padding="2x||1x">
     <nu-attrs for="code" radius="" overflow="auto no" inset=".5x" padding="1x 2x"/>
@@ -35,19 +50,17 @@ export default function Showcase() {
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
               <nu-btn>Button</nu-btn>
-              <nu-btn mark="y">Hover</nu-btn>
-              <nu-btn inset="#shadow.50">Pressed</nu-btn>
-              <nu-btn inset>Toggled</nu-btn>
-              <nu-btn outline="y">Focus</nu-btn>
-              <nu-btn disabled>Disabled</nu-btn>
+              <nu-btn {...HOVER_STYLES}>Hover</nu-btn>
+              <nu-btn {...PRESSED_STYLES}>Pressed</nu-btn>
+              <nu-btn {...FOCUS_STYLES}>Focus</nu-btn>
+              <nu-btn {...DISABLED_STYLES}>Disabled</nu-btn>
             </nu-flex>
             <nu-flex flow="row wrap" gap>
               <nu-btn is-red>Button</nu-btn>
-              <nu-btn is-red mark="y">Hover</nu-btn>
-              <nu-btn is-red inset="#shadow.50">Pressed</nu-btn>
-              <nu-btn is-red inset>Toggled</nu-btn>
-              <nu-btn is-red outline="y">Focus</nu-btn>
-              <nu-btn is-red disabled>Disabled</nu-btn>
+              <nu-btn is-red {...HOVER_STYLES}>Hover</nu-btn>
+              <nu-btn is-red {...PRESSED_STYLES}>Pressed</nu-btn>
+              <nu-btn is-red {...FOCUS_STYLES}>Focus</nu-btn>
+              <nu-btn is-red {...DISABLED_STYLES}>Disabled</nu-btn>
             </nu-flex>
           </nu-flex>
         </nu-block>
@@ -66,19 +79,17 @@ export default function Showcase() {
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
               <nu-btn special>Button</nu-btn>
-              <nu-btn special mark="y">Hover</nu-btn>
-              <nu-btn special inset="#special-shadow.50">Pressed</nu-btn>
-              <nu-btn special inset>Toggled</nu-btn>
-              <nu-btn special outline="y">Focus</nu-btn>
-              <nu-btn special disabled>Disabled</nu-btn>
+              <nu-btn special {...HOVER_STYLES}>Hover</nu-btn>
+              <nu-btn special {...PRESSED_STYLES}>Pressed</nu-btn>
+              <nu-btn special {...FOCUS_STYLES}>Focus</nu-btn>
+              <nu-btn special {...DISABLED_STYLES}>Disabled</nu-btn>
             </nu-flex>
             <nu-flex flow="row wrap" gap>
-              <nu-btn is-red special>Button</nu-btn>
-              <nu-btn is-red special mark="y">Hover</nu-btn>
-              <nu-btn is-red special inset="#special-shadow.50">Pressed</nu-btn>
-              <nu-btn is-red special inset>Toggled</nu-btn>
-              <nu-btn is-red special outline="y">Focus</nu-btn>
-              <nu-btn is-red special disabled>Disabled</nu-btn>
+              <nu-btn special is-red>Button</nu-btn>
+              <nu-btn special is-red {...HOVER_STYLES}>Hover</nu-btn>
+              <nu-btn special is-red {...PRESSED_STYLES}>Pressed</nu-btn>
+              <nu-btn special is-red {...FOCUS_STYLES}>Focus</nu-btn>
+              <nu-btn special is-red {...DISABLED_STYLES}>Disabled</nu-btn>
             </nu-flex>
           </nu-flex>
         </nu-block>
@@ -97,23 +108,51 @@ export default function Showcase() {
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
               <nu-btn clear>Button</nu-btn>
-              <nu-btn clear mark="y">Hover</nu-btn>
-              <nu-btn clear inset="#shadow.50">Pressed</nu-btn>
-              <nu-btn clear inset>Toggled</nu-btn>
-              <nu-btn clear outline="y">Focus</nu-btn>
-              <nu-btn clear disabled>Disabled</nu-btn>
+              <nu-btn clear {...HOVER_STYLES}>Hover</nu-btn>
+              <nu-btn clear {...PRESSED_STYLES}>Pressed</nu-btn>
+              <nu-btn clear {...FOCUS_STYLES}>Focus</nu-btn>
+              <nu-btn clear {...DISABLED_STYLES}>Disabled</nu-btn>
             </nu-flex>
             <nu-flex flow="row wrap" gap>
-              <nu-btn is-red clear>Button</nu-btn>
-              <nu-btn is-red clear mark="y">Hover</nu-btn>
-              <nu-btn is-red clear inset="#shadow.50">Pressed</nu-btn>
-              <nu-btn is-red clear inset>Toggled</nu-btn>
-              <nu-btn is-red clear outline="y">Focus</nu-btn>
-              <nu-btn is-red clear disabled>Disabled</nu-btn>
+              <nu-btn clear clear clear is-red>Button</nu-btn>
+              <nu-btn clear clear is-red {...HOVER_STYLES}>Hover</nu-btn>
+              <nu-btn clear is-red {...PRESSED_STYLES}>Pressed</nu-btn>
+              <nu-btn clear clear is-red {...FOCUS_STYLES}>Focus</nu-btn>
+              <nu-btn clear is-red {...DISABLED_STYLES}>Disabled</nu-btn>
             </nu-flex>
           </nu-flex>
         </nu-block>
       </nu-grid>
+      <nu-spacer></nu-spacer>
+      <nu-h3>Big button</nu-h3>
+      <nu-grid as="preview">
+        <nu-code dangerouslySetInnerHTML={{
+          __html: `<textarea>
+            <nu-btn is-big>Button</nu-btn>
+            <nu-btn is-big is-red>Button</nu-btn>
+          </textarea>`,
+        }}>
+        </nu-code>
+        <nu-block padding="2x left" border="1sw left">
+          <nu-flex gap="2x 1x" flow="column">
+            <nu-flex flow="row wrap" gap>
+              <nu-btn is-big special>Button</nu-btn>
+              <nu-btn is-big special {...HOVER_STYLES}>Hover</nu-btn>
+              <nu-btn is-big special {...PRESSED_STYLES}>Pressed</nu-btn>
+              <nu-btn is-big special {...FOCUS_STYLES}>Focus</nu-btn>
+              <nu-btn is-big special {...DISABLED_STYLES}>Disabled</nu-btn>
+            </nu-flex>
+            <nu-flex flow="row wrap" gap>
+              <nu-btn is-big is-red special>Button</nu-btn>
+              <nu-btn is-big is-red special {...HOVER_STYLES}>Hover</nu-btn>
+              <nu-btn is-big is-red special {...PRESSED_STYLES}>Pressed</nu-btn>
+              <nu-btn is-big is-red special {...FOCUS_STYLES}>Focus</nu-btn>
+              <nu-btn is-big is-red special {...DISABLED_STYLES}>Disabled</nu-btn>
+            </nu-flex>
+          </nu-flex>
+        </nu-block>
+      </nu-grid>
+
     </nu-card>
 
     <nu-card gap="2x">

@@ -1,4 +1,10 @@
 import React from 'react';
+import { colors } from '../vars';
+
+const { primary, secondary, minor } = colors;
+const BTN_STYLES = {
+  theme: 'primary tint :red[secondary tint]',
+};
 
 export default function Root(props) {
   return <nu-root
@@ -6,14 +12,17 @@ export default function Root(props) {
     fill="bg"
     height="min 100vh"
     text="n">
-    <nu-theme hue="269" saturation="90"></nu-theme>
-    <nu-theme name="primary" hue="269" saturation="90" mod="tint"></nu-theme>
-    <nu-theme name="secondary" hue="359" saturation="84" mod="tint"></nu-theme>
-    <nu-theme name="aside" hue="269" saturation="25" mod="strong special"></nu-theme>
+    <nu-theme hue={primary.hue} saturation={primary.saturation}></nu-theme>
+    <nu-theme name="primary" hue={primary.hue} saturation={primary.saturation} mod="tint"></nu-theme>
+    <nu-theme name="secondary" hue={secondary.hue} saturation={secondary.saturation} mod="tint"></nu-theme>
+    <nu-theme name="minor" hue={minor.hue} saturation={minor.saturation} mod="special strong"></nu-theme>
+    <nu-theme name="menu" hue={secondary.hue} saturation="0"></nu-theme>
     <nu-props
       radius=".5x"
-      font="CeraPro, 'Avenir Next', 'Avenir', Helvetica, Ubuntu, 'DejaVu Sans', Arial, sans-serif"/>
-    <nu-attrs for="btn" theme="primary tint :red[secondary tint]" text="n nowrap"></nu-attrs>
+      font="CeraPro-Regular, CeraPro-Medium, 'Avenir Next', 'Avenir', Helvetica, Ubuntu, 'DejaVu Sans', Arial, sans-serif"
+      minorbg-color={`hue(${minor.hue} ${minor.saturation} 50 special)`}
+      minor-color={`hue(${minor.hue} 0 0 70% special)`}/>
+    <nu-attrs for="btn" {...BTN_STYLES}></nu-attrs>
     { props.children }
   </nu-root>;
 }

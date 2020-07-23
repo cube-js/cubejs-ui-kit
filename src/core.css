@@ -1,29 +1,29 @@
 @font-face {
-    font-family: "CeraPro";
+    font-family: "CeraPro-Regular";
     src: url(./assets/fonts/CeraPro-Regular.woff2);
     font-weight: 300;
 }
 
 @font-face {
-    font-family: "CeraPro";
+    font-family: "CeraPro-Regular";
     src: url(./assets/fonts/CeraPro-Regular.woff2);
     font-weight: 400;
 }
 
 @font-face {
-    font-family: "CeraPro";
+    font-family: "CeraPro-Medium";
     src: url(./assets/fonts/CeraPro-Medium.woff2);
     font-weight: 500;
 }
 
 @font-face {
-    font-family: "CeraPro";
+    font-family: "CeraPro-Medium";
     src: url(./assets/fonts/CeraPro-Medium.woff2);
     font-weight: 600;
 }
 
 @font-face {
-    font-family: "CeraPro";
+    font-family: "CeraPro-Medium";
     src: url(./assets/fonts/CeraPro-Medium.woff2);
     font-weight: 700;
 }

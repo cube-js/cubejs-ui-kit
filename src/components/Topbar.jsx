@@ -45,9 +45,9 @@ export default function Topbar() {
     <nu-pane gap="0">
       <nu-attrs
         for="btn"
-        color="main-text :hover[special] :focus[special] :hover:focus[special]"
+        color="main-text"
         show="y||n"
-        theme="secondary"/>
+        theme="menu"/>
       {
         MENU.map(item => {
           return <nu-btn key={item.label} clear to={item.link}>{ item.label }</nu-btn>;
@@ -55,7 +55,7 @@ export default function Topbar() {
       }
     </nu-pane>
     <nu-btn
-      as="get-started" special is-red fill="bg :hover[special-bg]"
+      as="get-started" border special is-red fill="bg :hover[special-bg]"
       color="text :hover[special-text]" to="#getting-started">
       Get Started
     </nu-btn>
@@ -70,11 +70,10 @@ export default function Topbar() {
         scale=":hidden[1 .5]">
         <nu-attrs
           for="action"
-          theme="secondary"
           padding
           display="block"
           outline="focus inset"
-          color="main-text :hover[special]"/>
+          theme="menu"/>
         {
           MENU.map(item => {
             return <nu-action key={item.label} to={item.link}>{ item.label }</nu-action>;
