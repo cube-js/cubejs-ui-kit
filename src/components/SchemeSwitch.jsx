@@ -5,7 +5,9 @@ import jsx from 'jsx-native-events';
 const dataset = typeof document !== 'undefined' ? document.documentElement.dataset : {};
 
 export default function SchemeSwitch() {
-  let media = matchMedia('(prefers-color-scheme: dark)');
+  let media = typeof matchMedia !== 'undefined'
+    ? matchMedia('(prefers-color-scheme: dark)')
+    : { addListener() {} };
 
   function getCurrentScheme() {
     return (dataset.nuScheme !== 'auto' && dataset.nuScheme) || (media.matches ? 'dark' : 'light');
@@ -15,8 +17,6 @@ export default function SchemeSwitch() {
 
   media.addListener((newMedia) => {
     media = newMedia;
-
-    console.log('!', getCurrentScheme());
 
     setScheme(getCurrentScheme());
   });
