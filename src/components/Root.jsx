@@ -20,7 +20,7 @@ export default function Root(props) {
     <nu-props
       radius=".5x"
       font="CeraPro, 'Avenir Next', 'Avenir', Helvetica, Ubuntu, 'DejaVu Sans', Arial, sans-serif"
-      minorbg-color={`hue(${minor.hue} ${minor.saturation} 50 special)`}
+      minorbg-color={`hue(${minor.hue} ${minor.saturation} 68 special)`}
       minor-color={`hue(${minor.hue} 0 0 70% special)`}/>
     <nu-attrs for="btn" {...BTN_STYLES}></nu-attrs>
     { props.children }
