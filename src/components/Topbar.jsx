@@ -34,13 +34,14 @@ export default function Topbar() {
   return <nu-header
     display="flex" flow="row" content="space-between" size="md" theme="secondary" padding="2x"
     width="max 80" box="y" place="space-around">
-  <nu-svg
-    id="logo"
-    height="3"
-    src={logo}
-    label="Cube.js logo"
-    theme="main"
-    filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
+  <nu-blocklink to="/" theme="main" mark="1x hover" radius>
+    <nu-svg
+      id="logo"
+      height="3"
+      src={logo}
+      label="Cube.js logo"
+      filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
+  </nu-blocklink>
   <nu-pane>
     <nu-pane gap="0">
       <nu-attrs
