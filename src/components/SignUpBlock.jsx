@@ -43,7 +43,7 @@ export default function SignUpBlock() {
       <nu-spacer></nu-spacer>
       {
         !email && <nu-form onEventInput={onSubmit} display="flex" flow="row wrap" gap width="20 100% 40" text="left">
-          <nu-input theme="main" ref={inputRef} color="main-text :invalid[text]" disabled={loading || null} id="email" placeholder="Email" theme="primary :invalid[secondary]" border="1bw :invalid[#bg]" grow="2" padding="1.5x 2x"></nu-input>
+          <nu-input theme="main special" ref={inputRef} color="main-text :invalid[text]" disabled={loading || null} id="email" placeholder="Email" theme="primary :invalid[secondary]" border="1bw :invalid[#bg]" grow="2" padding="1.5x 2x"></nu-input>
           <nu-btn action="submit" disabled={loading || null} special theme="primary" grow="1" padding="1.5x 2x">Subscribe</nu-btn>
           <nu-block width="100%" color>
             <nu-check for="email" assert="email">Email is not valid</nu-check>

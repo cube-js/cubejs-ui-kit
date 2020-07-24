@@ -23,7 +23,7 @@ const DISABLED_STYLES = {
 
 export default function Showcase() {
   return (<nu-flow id="showcase" gap="2x" padding="2x||1x">
-    <nu-attrs for="code" radius="" overflow="auto no" inset=".5x" padding="1x 2x"/>
+    <nu-attrs for="code" radius="" overflow="auto no" inset=".5x" padding="1x 2x" fill="main-bg"/>
 
     <nu-pane content="space-between">
       <nu-h1>Cube.js UIKit Showcase</nu-h1>

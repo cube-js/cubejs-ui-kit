@@ -71,6 +71,7 @@ export default function Topbar() {
         <nu-attrs
           for="action"
           padding
+          color="main-text"
           display="block"
           outline="focus inset"
           theme="menu"/>

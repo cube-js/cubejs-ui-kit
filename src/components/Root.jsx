@@ -9,7 +9,7 @@ const BTN_STYLES = {
 export default function Root(props) {
   return <nu-root
     responsive="80rem|60rem|40rem"
-    fill="bg"
+    fill="subtle"
     height="min 100vh"
     text="n">
     <nu-theme hue={primary.hue} saturation={primary.saturation}></nu-theme>
@@ -19,7 +19,7 @@ export default function Root(props) {
     <nu-theme name="menu" hue={secondary.hue} saturation="0"></nu-theme>
     <nu-props
       radius=".5x"
-      font="CeraPro-Regular, CeraPro-Medium, 'Avenir Next', 'Avenir', Helvetica, Ubuntu, 'DejaVu Sans', Arial, sans-serif"
+      font="CeraPro, 'Avenir Next', 'Avenir', Helvetica, Ubuntu, 'DejaVu Sans', Arial, sans-serif"
       minorbg-color={`hue(${minor.hue} ${minor.saturation} 50 special)`}
       minor-color={`hue(${minor.hue} 0 0 70% special)`}/>
     <nu-attrs for="btn" {...BTN_STYLES}></nu-attrs>
