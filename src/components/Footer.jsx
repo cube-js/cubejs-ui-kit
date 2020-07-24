@@ -58,7 +58,7 @@ export default function Footer() {
       <nu-attrs for="h5" text="nowrap" size="md"></nu-attrs>
 
       <nu-flow
-        color="dimgrey" width="auto||100%" size="md lg"
+        opacity=".7" width="auto||100%" size="md lg"
         row="||2|4" column="||3|1 / -1" place="||stretch|center" text="||right|center">
         <nu-block text="nowrap">Built with ♥️ in San Francisco</nu-block>
         <nu-block text="nowrap">2020 © Cube Dev, Inc</nu-block>

@@ -46,8 +46,7 @@ export default function Topbar() {
       <nu-attrs
         for="btn"
         color="main-text"
-        show="y||n"
-        theme="menu"/>
+        show="y||n"/>
       {
         MENU.map(item => {
           return <nu-btn key={item.label} clear to={item.link}>{ item.label }</nu-btn>;
@@ -73,8 +72,7 @@ export default function Topbar() {
           padding
           color="main-text"
           display="block"
-          outline="focus inset"
-          theme="menu"/>
+          outline="focus inset"/>
         <nu-action
           show="n|||y"
           color="text" theme="secondary" color="text :hover[special-text]" to="#getting-started">

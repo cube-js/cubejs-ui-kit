@@ -37,6 +37,81 @@ export default function Showcase() {
     <nu-attrs for="preview" padding="2x left" border="1ow left"></nu-attrs>
 
     <nu-card gap="2x">
+      <nu-h2>Typography</nu-h2>
+      <nu-spacer/>
+      <nu-h3>Headings</nu-h3>
+      <nu-grid as="example">
+        <nu-code dangerouslySetInnerHTML={{
+          __html: `<textarea>
+<nu-h1>Heading level 1</nu-h1>
+<nu-h2>Heading level 2</nu-h2>
+<nu-h3>Heading level 3</nu-h3>
+<nu-h4>Heading level 4</nu-h4>
+<nu-h5>Heading level 5</nu-h5>
+<nu-h6>Heading level 6</nu-h6>
+          </textarea>`,
+        }}></nu-code>
+        <nu-block as="preview">
+          <nu-grid columns="1pr 1pr||1pr" gap="2x" radius border="1ow #minorbg" overflow="n">
+            <nu-flow gap="1x" padding="2x">
+              <nu-h1>Heading level 1</nu-h1>
+              <nu-h2>Heading level 2</nu-h2>
+              <nu-h3>Heading level 3</nu-h3>
+              <nu-h4>Heading level 4</nu-h4>
+              <nu-h5>Heading level 5</nu-h5>
+              <nu-h6>Heading level 6</nu-h6>
+            </nu-flow>
+            <nu-flow gap="1x" padding="2x" fill="minorbg" color="white">
+              <nu-h1>Heading level 1</nu-h1>
+              <nu-h2>Heading level 2</nu-h2>
+              <nu-h3>Heading level 3</nu-h3>
+              <nu-h4>Heading level 4</nu-h4>
+              <nu-h5>Heading level 5</nu-h5>
+              <nu-h6>Heading level 6</nu-h6>
+            </nu-flow>
+          </nu-grid>
+        </nu-block>
+      </nu-grid>
+      <nu-spacer/>
+      <nu-h3>Text sizes</nu-h3>
+      <nu-grid as="example">
+        <nu-code dangerouslySetInnerHTML={{
+          __html: `<textarea>
+<nu-block size="xl">Very very large</nu-block>
+<nu-block size="xl">Very large</nu-block>
+<nu-block size="lg">Large</nu-block>
+<nu-block size="md">Medium</nu-block>
+<nu-block size="sm">Small</nu-block>
+<nu-block size="xs" text="b">Very small</nu-block>
+<nu-block size="xxs" text="b">Very very small</nu-block>
+          </textarea>`,
+        }}></nu-code>
+        <nu-block as="preview">
+          <nu-grid columns="1pr 1pr||1pr" gap="2x" radius border="1ow #minorbg" overflow="n">
+            <nu-flow gap="1x" padding="2x">
+              <nu-block size="xl">Very very large</nu-block>
+              <nu-block size="xl">Very large</nu-block>
+              <nu-block size="lg">Large</nu-block>
+              <nu-block size="md">Medium</nu-block>
+              <nu-block size="sm">Small</nu-block>
+              <nu-block size="xs" text="w7">Very small</nu-block>
+              <nu-block size="xxs" text="w7">Very very small</nu-block>
+            </nu-flow>
+            <nu-flow gap="1x" padding="2x" fill="minorbg" color="white">
+              <nu-block size="xl">Very very large</nu-block>
+              <nu-block size="xl">Very large</nu-block>
+              <nu-block size="lg">Large</nu-block>
+              <nu-block size="md">Medium</nu-block>
+              <nu-block size="sm">Small</nu-block>
+              <nu-block size="xs" text="b">Very small</nu-block>
+              <nu-block size="xxs" text="b">Very very small</nu-block>
+            </nu-flow>
+          </nu-grid>
+        </nu-block>
+      </nu-grid>
+    </nu-card>
+
+    <nu-card gap="2x">
       <nu-h2>Buttons</nu-h2>
       <nu-spacer></nu-spacer>
       <nu-h3>Basic button</nu-h3>
