@@ -5,6 +5,7 @@ import SchemeSwitch from '../components/SchemeSwitch';
 import SignUpBlock from '../components/SignUpBlock';
 import Topbar from '../components/Topbar';
 import Footer from '../components/Footer';
+import ImportSnippet from './ImportSnippet';
 
 const HOVER_STYLES = {
   mark: '#special.12 :special[#special-text.20]',
@@ -32,21 +33,22 @@ export default function Showcase() {
       </nu-pane>
     </nu-pane>
 
-    <nu-attrs for="preview" gap="2x" columns="1pr 2pr||1fr" items="start stretch"></nu-attrs>
+    <nu-attrs for="example" gap="2x" columns="1pr 2pr||1fr" items="start stretch"></nu-attrs>
+    <nu-attrs for="preview" padding="2x left" border="1ow left"></nu-attrs>
 
     <nu-card gap="2x">
       <nu-h2>Buttons</nu-h2>
       <nu-spacer></nu-spacer>
       <nu-h3>Basic button</nu-h3>
-      <nu-grid as="preview">
+      <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
           __html: `<textarea>
-            <nu-btn>Button</nu-btn>
-            <nu-btn is-red>Button</nu-btn>
+<nu-btn>Button</nu-btn>
+<nu-btn is-red>Button</nu-btn>
           </textarea>`,
         }}>
         </nu-code>
-        <nu-block padding="2x left" border="1sw left">
+        <nu-block as="preview">
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
               <nu-btn>Button</nu-btn>
@@ -67,15 +69,15 @@ export default function Showcase() {
       </nu-grid>
       <nu-spacer></nu-spacer>
       <nu-h4>Special button</nu-h4>
-      <nu-grid as="preview">
+      <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
           __html: `<textarea>
-            <nu-btn special>Button</nu-btn>
-            <nu-btn is-red special>Button</nu-btn>
+<nu-btn special>Button</nu-btn>
+<nu-btn is-red special>Button</nu-btn>
           </textarea>`,
         }}>
         </nu-code>
-        <nu-block padding="2x left" border="1sw left">
+        <nu-block as="preview">
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
               <nu-btn special>Button</nu-btn>
@@ -96,15 +98,15 @@ export default function Showcase() {
       </nu-grid>
       <nu-spacer></nu-spacer>
       <nu-h4>Clear button</nu-h4>
-      <nu-grid as="preview">
+      <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
           __html: `<textarea>
-            <nu-btn clear>Button</nu-btn>
-            <nu-btn is-red clear>Button</nu-btn>
+<nu-btn clear>Button</nu-btn>
+<nu-btn is-red clear>Button</nu-btn>
           </textarea>`,
         }}>
         </nu-code>
-        <nu-block padding="2x left" border="1sw left">
+        <nu-block as="preview">
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
               <nu-btn clear>Button</nu-btn>
@@ -125,15 +127,15 @@ export default function Showcase() {
       </nu-grid>
       <nu-spacer></nu-spacer>
       <nu-h3>Big button</nu-h3>
-      <nu-grid as="preview">
+      <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
           __html: `<textarea>
-            <nu-btn is-big>Button</nu-btn>
-            <nu-btn is-big is-red>Button</nu-btn>
+<nu-btn is-big>Button</nu-btn>
+<nu-btn is-big is-red>Button</nu-btn>
           </textarea>`,
         }}>
         </nu-code>
-        <nu-block padding="2x left" border="1sw left">
+        <nu-block as="preview">
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
               <nu-btn is-big special>Button</nu-btn>
@@ -152,11 +154,41 @@ export default function Showcase() {
           </nu-flex>
         </nu-block>
       </nu-grid>
-
     </nu-card>
 
     <nu-card gap="2x">
-      <nu-h2>Top navigation bar</nu-h2>
+      <nu-h2>Inputs</nu-h2>
+      <nu-spacer></nu-spacer>
+      <nu-h3>Basic input</nu-h3>
+      <nu-grid as="example">
+        <nu-code dangerouslySetInnerHTML={{
+          __html: `<textarea>
+<nu-input placeholder="Input"/>
+<nu-input placeholder="Input" is-red/>
+          </textarea>`,
+        }}>
+        </nu-code>
+        <nu-block as="preview">
+          <nu-flex gap="2x 1x" flow="column">
+            <nu-flex flow="row wrap" gap>
+              <nu-input placeholder="Input"/>
+              <nu-input placeholder="Focus" outline="y"/>
+              <nu-input disabled placeholder="Disabled"/>
+            </nu-flex>
+            <nu-flex flow="row wrap" gap>
+              <nu-input is-red placeholder="Input"/>
+              <nu-input is-red placeholder="Focus" outline="y"/>
+              <nu-input is-red disabled placeholder="Disabled"/>
+            </nu-flex>
+          </nu-flex>
+        </nu-block>
+      </nu-grid>
+    </nu-card>
+
+    <nu-card gap="2x">
+      <nu-h2>Block: Topbar</nu-h2>
+
+      <ImportSnippet name="Topbar" />
 
       <nu-block space="0 4x||0 (3x + 1bw)" fill shadow>
         <Topbar/>
@@ -164,15 +196,19 @@ export default function Showcase() {
     </nu-card>
 
     <nu-card gap="2x">
-      <nu-h2>Signup block</nu-h2>
+      <nu-h2>Block: SignUpBlock</nu-h2>
+
+      <ImportSnippet name="SignUpBlock" />
 
       <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)" shadow>
         <SignUpBlock/>
       </nu-block>
     </nu-card>
 
-    <nu-card gap="2x" shadow>
-      <nu-h2>Footer</nu-h2>
+    <nu-card gap="2x">
+      <nu-h2>Block: Footer</nu-h2>
+
+      <ImportSnippet name="Footer" />
 
       <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)">
         <Footer/>

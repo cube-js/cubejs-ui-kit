@@ -31,12 +31,12 @@ const MENU = [
 ];
 
 export default function Topbar() {
-  return <nu-pane
-    content="space-between" size="md" theme="secondary" padding="2x"
+  return <nu-header
+    display="flex" flow="row" content="space-between" size="md" theme="secondary" padding="2x"
     width="max 80" box="y" place="space-around">
   <nu-svg
     id="logo"
-    width="8"
+    height="3"
     src={logo}
     label="Cube.js logo"
     theme="main"
@@ -55,7 +55,7 @@ export default function Topbar() {
       }
     </nu-pane>
     <nu-btn
-      as="get-started" border special is-red fill="bg :hover[special-bg]"
+      as="get-started" show="y|||n" border special is-red fill="bg :hover[special-bg]"
       color="text :hover[special-text]" to="#getting-started">
       Get Started
     </nu-btn>
@@ -75,6 +75,11 @@ export default function Topbar() {
           display="block"
           outline="focus inset"
           theme="menu"/>
+        <nu-action
+          show="n|||y"
+          color="text" theme="secondary" color="text :hover[special-text]" to="#getting-started">
+          Get Started
+        </nu-action>
         {
           MENU.map(item => {
             return <nu-action key={item.label} to={item.link}>{ item.label }</nu-action>;
@@ -83,5 +88,5 @@ export default function Topbar() {
       </nu-popup>
     </nu-btn>
   </nu-pane>
-</nu-pane>;
+</nu-header>;
 }
