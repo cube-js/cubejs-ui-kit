@@ -1,4 +1,4 @@
-const html = document.querySelector('html');
+const html = typeof document !== 'undefined' ? document.querySelector('html') : {};
 const dataset = html.dataset;
 
 const OPTIONS = { icons: 'eva', prevent: true, scheme: 'light' };
@@ -27,10 +27,6 @@ export default {
         padding: '1x 2x :big[2x 4x]',
         width: 'auto :big[min 15]',
       });
-
-      // Nude.assign('nu-btn', 'attrs', {
-      //   theme: 'primary tint :red[secondary tint]',
-      // });
 
       Nude.init();
 
