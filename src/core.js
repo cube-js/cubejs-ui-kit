@@ -1,5 +1,5 @@
-const html = typeof document !== 'undefined' ? document.querySelector('html') : {};
-const dataset = html.dataset;
+const html = typeof document !== 'undefined' ? document.querySelector('html') : null;
+const dataset = html ? html.dataset : {};
 
 const OPTIONS = { icons: 'eva', prevent: true, scheme: 'light' };
 
