@@ -55,7 +55,7 @@ export default function Footer() {
       items="start|||start center"
       content="stretch||stretch">
       <nu-attrs for="link" text="n nowrap" color="minor :hover[text]"></nu-attrs>
-      <nu-attrs for="h5" text="nowrap" size="md"></nu-attrs>
+      <nu-attrs for="h5" text="b nowrap" size="md"></nu-attrs>
 
       <nu-flow
         opacity=".7" width="auto||100%" size="md lg"
