@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react';
 import jsx from 'jsx-native-events';
-import logo from '../assets/cubejs-logo.svg';
+import { logo } from '../images';
 
 const MENU = [
   {
@@ -32,8 +32,8 @@ const MENU = [
 
 export default function Topbar() {
   return <nu-header
-    display="flex" flow="row" content="space-between" size="md" theme="secondary" padding="2x"
-    width="max 80" box="y" place="space-around">
+    display="flex" flow="row" content="space-between" size="md" theme="secondary" padding="4x||2x"
+    width="max 80" box="y" place="space-around" fill="clear">
   <nu-blocklink to="/" theme="main" mark="1x hover" radius>
     <nu-svg
       id="logo"
@@ -42,7 +42,7 @@ export default function Topbar() {
       label="Cube.js logo"
       filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
   </nu-blocklink>
-  <nu-pane>
+  <nu-grid flow="column" gap items="center">
     <nu-pane gap="0">
       <nu-attrs
         for="btn"
@@ -55,11 +55,11 @@ export default function Topbar() {
       }
     </nu-pane>
     <nu-btn
-      as="get-started" show="y|||n" border special is-red fill="bg :hover[special-bg]"
+      as="get-started" show="y|||n" border special is-red fill="clear :hover[special-bg]"
       color="text :hover[special-text]" to="#getting-started">
       Get Started
     </nu-btn>
-    <nu-btn toggle padding="1x" show="n||y" is-red>
+    <nu-btn toggle padding="1x" show="n||y" is-red fill="clear">
       <nu-icon name="menu"/>
       <nu-popup
         padding="1x 0"
@@ -86,6 +86,6 @@ export default function Topbar() {
         }
       </nu-popup>
     </nu-btn>
-  </nu-pane>
+  </nu-grid>
 </nu-header>;
 }

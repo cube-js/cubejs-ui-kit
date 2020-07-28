@@ -1,31 +1,24 @@
 /** @jsx jsx */
 import React, { createRef, useState } from 'react';
 import jsx from 'jsx-native-events';
-import fetch from '../utils/fetch';
+import { colors } from '../vars';
+import { insertHTML } from '../helpers';
+import Subscription from '../services/subscription';
 
-const subscribeUrl = 'https://hooks.zapier.com/hooks/catch/2073111/lgugyb/';
+const HEADING = 'Sign up for Cube.js&nbsp;Releases and&nbsp;Updates';
+const DESCRIPTION = 'Awesome product updates; no&nbsp;spam.';
 
-export default function SignUpBlock() {
+export default function SubscriptionBlock(props) {
   const inputRef = createRef();
-  const [loading, setLoading] = useState(false);
-  const [email, setEmail] = useState('');
-  const [error, setError] = useState(false);
+  const subscription = Subscription();
+
+  let { email, error, loading } = subscription;
 
   function onSubmit(event) {
     const data = event.detail;
 
     if (data && data.email) {
-      setLoading(true);
-
-      fetch.post(subscribeUrl, { email })
-        .then(() => {
-          setEmail(data.email);
-        }, () => {
-          setError(true);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
+      subscription.submit(data.email);
     } else {
       inputRef.current.focus();
     }
@@ -33,13 +26,13 @@ export default function SignUpBlock() {
 
   return <nu-section
     theme="special"
-    fill="minorbg"
+    fill="bold-bg"
     padding="12x 4x|||8x 2x"
     box="y"
     border="top bottom outside #main-border">
     <nu-flex flow="column" items="center" gap text="center">
-      <nu-h2 size="h2||h4|h5">Sign up for Cube.js&nbsp;Releases and&nbsp;Updates</nu-h2>
-      <nu-description color="minor">Awesome product updates; no&nbsp;spam.</nu-description>
+      <nu-h2 size="h2||h4|h5" {...insertHTML(props.heading || HEADING)} />
+      <nu-description color="bold-text" {...insertHTML(props.description || DESCRIPTION)} />
       <nu-spacer></nu-spacer>
       {
         !email && <nu-form onEventInput={onSubmit} display="flex" flow="row wrap" gap width="18 100% 40" text="left">
@@ -52,7 +45,9 @@ export default function SignUpBlock() {
             theme="primary :invalid[secondary]"
             border="1bw :invalid[#bg]"
             grow="2"
-            padding="1.5x 2x"/>
+            padding="1.5x 2x">
+            <nu-props placeholder-color={`hue(${colors.primary.hue} 25 70 40 special})`}></nu-props>
+          </nu-input>
           <nu-btn action="submit" disabled={loading || null} special theme="primary" width="min 13|||100%" padding="1.5x 2x">Subscribe</nu-btn>
           <nu-block width="100%" color>
             <nu-check for="email" assert="email">Email is not valid</nu-check>

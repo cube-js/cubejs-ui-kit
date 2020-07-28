@@ -56,7 +56,7 @@
     {
       "name": "Root Component",
       "path": [
-        "dist/Root.js"
+        "dist/components/Root.js"
       ],
       "ignore": [
         "react",
@@ -64,9 +64,49 @@
       ]
     },
     {
-      "name": "SignUpBlock Component",
+      "name": "SubscriptionBlock Component",
       "path": [
-        "dist/SignUpBlock.js"
+        "dist/components/SubscriptionBlock.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
+      "name": "Section Component",
+      "path": [
+        "dist/components/Section.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
+      "name": "CardBlock Component",
+      "path": [
+        "dist/components/CardBlock.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
+      "name": "FeatureBlock Component",
+      "path": [
+        "dist/components/FeatureBlock.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
+      "name": "Hero Component",
+      "path": [
+        "dist/components/Hero.js"
       ],
       "ignore": [
         "react",
@@ -76,7 +116,7 @@
     {
       "name": "Topbar Component",
       "path": [
-        "dist/Topbar.js"
+        "dist/components/Topbar.js"
       ],
       "ignore": [
         "react",
@@ -86,7 +126,7 @@
     {
       "name": "Footer Component",
       "path": [
-        "dist/Footer.js"
+        "dist/components/Footer.js"
       ],
       "ignore": [
         "react",
@@ -96,11 +136,30 @@
     {
       "name": "SchemeSwitch Component",
       "path": [
-        "dist/SchemeSwitch.js"
+        "dist/components/SchemeSwitch.js"
       ],
       "ignore": [
         "react",
         "jsx-native-events"
+      ]
+    },
+    {
+      "name": "SmallSignUpCard Component",
+      "path": [
+        "dist/components/SmallSignUpCard.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
+      "name": "subscription Service",
+      "path": [
+        "dist/services/subscription.js"
+      ],
+      "ignore": [
+        "react"
       ]
     }
   ]

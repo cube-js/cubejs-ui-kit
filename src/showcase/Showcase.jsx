@@ -1,11 +1,42 @@
 /** @jsx jsx */
-import React, { useState } from 'react';
+import React from 'react';
 import jsx from 'jsx-native-events';
 import SchemeSwitch from '../components/SchemeSwitch';
-import SignUpBlock from '../components/SignUpBlock';
+import SubscriptionBlock from '../components/SubscriptionBlock';
 import Topbar from '../components/Topbar';
 import Footer from '../components/Footer';
 import ImportSnippet from './ImportSnippet';
+import CardBlock from '../components/CardBlock';
+import Hero from '../components/Hero';
+import SmallSignUpCard from '../components/SmallSignUpCard';
+import FeatureBlock from '../components/FeatureBlock';
+import cloudIcon1 from '../assets/cubecloud_icon1.svg';
+import cloudIcon2 from '../assets/cubecloud_icon2.svg';
+import cloudIcon3 from '../assets/cubecloud_icon3.svg';
+import cloudIcon4 from '../assets/cubecloud_icon4.svg';
+
+const FEATURES = [
+  {
+    image: cloudIcon1,
+    heading: 'Managed Infrastructure',
+    description: 'Provision every piece of Cube.js infrastructure starting from clusters of Cube.js instances to a Redis cache and external pre-aggregation databases.',
+  },
+  {
+    image: cloudIcon2,
+    heading: 'Trace and Inspect Queries',
+    description: 'Inspect the execution time of each query and their lifecycle. Get insights into query queues and background refreshes.',
+  },
+  {
+    image: cloudIcon3,
+    heading: 'Pre-Aggregations Management',
+    description: 'Analyze your pre-aggregation refresh rate and time. Use Cube Cloud suggestions to select the best possible pre-aggregation for a given query.',
+  },
+  {
+    image: cloudIcon4,
+    heading: 'Monitoring & Analytics',
+    description: 'Monitor the performance of a query with metrics such as response time, pre-aggregation, refresh rate, and more.',
+  },
+];
 
 const HOVER_STYLES = {
   mark: '#special.12 :special[#special-text.20]',
@@ -52,7 +83,7 @@ export default function Showcase() {
           </textarea>`,
         }}></nu-code>
         <nu-block as="preview">
-          <nu-grid columns="1pr 1pr||1pr" gap="2x" radius border="1ow #minorbg" overflow="n">
+          <nu-grid columns="1pr 1pr||1pr" gap="2x" radius border="1ow #bold-bg" overflow="n">
             <nu-flow gap="1x" padding="2x">
               <nu-h1>Heading level 1</nu-h1>
               <nu-h2>Heading level 2</nu-h2>
@@ -61,7 +92,7 @@ export default function Showcase() {
               <nu-h5>Heading level 5</nu-h5>
               <nu-h6>Heading level 6</nu-h6>
             </nu-flow>
-            <nu-flow gap="1x" padding="2x" fill="minorbg" color="white">
+            <nu-flow gap="1x" padding="2x" fill="bold-bg" color="white">
               <nu-h1>Heading level 1</nu-h1>
               <nu-h2>Heading level 2</nu-h2>
               <nu-h3>Heading level 3</nu-h3>
@@ -77,7 +108,7 @@ export default function Showcase() {
       <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
           __html: `<textarea>
-<nu-block size="xl">Very very large</nu-block>
+<nu-block size="xxl">Very very large</nu-block>
 <nu-block size="xl">Very large</nu-block>
 <nu-block size="lg">Large</nu-block>
 <nu-block size="md">Medium</nu-block>
@@ -87,9 +118,9 @@ export default function Showcase() {
           </textarea>`,
         }}></nu-code>
         <nu-block as="preview">
-          <nu-grid columns="1pr 1pr||1pr" gap="2x" radius border="1ow #minorbg" overflow="n">
+          <nu-grid columns="1pr 1pr||1pr" gap="2x" radius border="1ow #bold-bg" overflow="n">
             <nu-flow gap="1x" padding="2x">
-              <nu-block size="xl">Very very large</nu-block>
+              <nu-block size="xxl">Very very large</nu-block>
               <nu-block size="xl">Very large</nu-block>
               <nu-block size="lg">Large</nu-block>
               <nu-block size="md">Medium</nu-block>
@@ -97,8 +128,8 @@ export default function Showcase() {
               <nu-block size="xs" text="w7">Very small</nu-block>
               <nu-block size="xxs" text="w7">Very very small</nu-block>
             </nu-flow>
-            <nu-flow gap="1x" padding="2x" fill="minorbg" color="white">
-              <nu-block size="xl">Very very large</nu-block>
+            <nu-flow gap="1x" padding="2x" fill="bold-bg" color="white">
+              <nu-block size="xxl">Very very large</nu-block>
               <nu-block size="xl">Very large</nu-block>
               <nu-block size="lg">Large</nu-block>
               <nu-block size="md">Medium</nu-block>
@@ -261,6 +292,68 @@ export default function Showcase() {
     </nu-card>
 
     <nu-card gap="2x">
+      <nu-h2>Component: CardBlock</nu-h2>
+
+      <ImportSnippet name="CardBlock" />
+
+      <nu-grid as="example">
+        <nu-code dangerouslySetInnerHTML={{
+          __html: `<textarea>
+<CardBlock>Card content</CardBlock>
+<CardBlock bold>Card content</CardBlock>
+          </textarea>`,
+        }}>
+        </nu-code>
+        <nu-block as="preview">
+          <nu-flow gap="2x 1x">
+            <CardBlock>Card content</CardBlock>
+            <CardBlock bold>Card content</CardBlock>
+          </nu-flow>
+        </nu-block>
+      </nu-grid>
+    </nu-card>
+
+    <nu-card gap="2x">
+      <nu-h2>Component: SmallSignUpCard</nu-h2>
+
+      <ImportSnippet name="SmallSignUpCard" />
+
+      <nu-code dangerouslySetInnerHTML={{
+        __html: `<textarea>
+<SmallSignUpCard 
+  description="Cube&nbsp;Cloud is&nbsp;currently in&nbsp;early&nbsp;access with a&nbsp;select few&nbsp;design&nbsp;partners.\nSign&nbsp;up for&nbsp;the&nbsp;waitlist to&nbsp;be in&nbsp;the&nbsp;next cohort&nbsp;of&nbsp;partners"/>
+        </textarea>`,
+      }}></nu-code>
+
+      <nu-block space="0 4x||0 (3x + 1bw)" fill shadow padding="2x 0">
+        <SmallSignUpCard
+          description="Cube&nbsp;Cloud is&nbsp;currently in&nbsp;early&nbsp;access with a&nbsp;select few&nbsp;design&nbsp;partners.\nSign&nbsp;up for&nbsp;the&nbsp;waitlist to&nbsp;be in&nbsp;the&nbsp;next cohort&nbsp;of&nbsp;partners"/>
+      </nu-block>
+    </nu-card>
+
+    <nu-card gap="2x">
+      <nu-h2>Component: Hero</nu-h2>
+
+      <ImportSnippet name="Hero" />
+
+      <nu-code dangerouslySetInnerHTML={{
+        __html: `<textarea>
+<Hero
+  logo="cloudLogo"
+  heading="Deploy, Scale, and&nbsp;Optimize Your&nbsp;Cube.js&nbsp;Apps"
+  description="Secure and&nbsp;highly&nbsp;available managed&nbsp;deployment\nby&nbsp;the&nbsp;creators of&nbsp;Cube.js"/>
+        </textarea>`,
+      }}></nu-code>
+
+      <nu-block space="0 4x||0 (3x + 1bw)" fill shadow>
+        <Hero
+          logo="cloudLogo"
+          heading="Deploy, Scale, and&nbsp;Optimize Your&nbsp;Cube.js&nbsp;Apps"
+          description="Secure and&nbsp;highly&nbsp;available managed&nbsp;deployment\nby&nbsp;the&nbsp;creators of&nbsp;Cube.js"/>
+      </nu-block>
+    </nu-card>
+
+    <nu-card gap="2x">
       <nu-h2>Block: Topbar</nu-h2>
 
       <ImportSnippet name="Topbar" />
@@ -271,12 +364,12 @@ export default function Showcase() {
     </nu-card>
 
     <nu-card gap="2x">
-      <nu-h2>Block: SignUpBlock</nu-h2>
+      <nu-h2>Block: SubscriptionBlock</nu-h2>
 
-      <ImportSnippet name="SignUpBlock" />
+      <ImportSnippet name="SubscriptionBlock" />
 
       <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)" shadow>
-        <SignUpBlock/>
+        <SubscriptionBlock/>
       </nu-block>
     </nu-card>
 
@@ -287,6 +380,19 @@ export default function Showcase() {
 
       <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)">
         <Footer/>
+      </nu-block>
+    </nu-card>
+
+    <nu-card gap="2x">
+      <nu-h2>Block: Footer</nu-h2>
+
+      <ImportSnippet name="Footer" />
+
+      <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)" fill shadow>
+        <FeatureBlock
+          heading="Production Grade Cube.js Deployment"
+          description="Created by Cube.js authors, Cube&nbsp;Cloud is the&nbsp;most&nbsp;reliable, scalable, and secure&nbsp;way to&nbsp;deploy your&nbsp;production Cube.js clusters."
+          features={FEATURES}/>
       </nu-block>
     </nu-card>
   </nu-flow>);

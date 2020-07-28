@@ -12,3 +12,5 @@ export const colors = {
     saturation: 25,
   },
 };
+
+export const SUBSCRIBE_URL = '';

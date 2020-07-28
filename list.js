@@ -1,7 +1,17 @@
-export default [
+export const COMPONENT_LIST = [
   'Root',
-  'SignUpBlock',
+  'SubscriptionBlock',
+  'Section',
+  'CardBlock',
+  'FeatureBlock',
+  'Hero',
   'Topbar',
   'Footer',
-  'SchemeSwitch'
+  'SchemeSwitch',
+  'SmallSignUpCard',
+  // 'BigSignUpCard',
+];
+
+export const SERVICE_LIST = [
+  'subscription',
 ];

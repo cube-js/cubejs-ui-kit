@@ -43,7 +43,7 @@ const RESOURCES_LINKS = [
 export default function Footer() {
   return <nu-section
     theme="special"
-    fill="minorbg"
+    fill="bold-bg"
     padding="11x 11x|11x 11x|11x 4x|6x 2x"
     border="top bottom outside #main-border">
     <nu-grid
@@ -54,7 +54,7 @@ export default function Footer() {
       columns="1fr auto auto auto||auto auto 1fr|auto auto"
       items="start|||start center"
       content="stretch||stretch">
-      <nu-attrs for="link" text="n nowrap" color="minor :hover[text]"></nu-attrs>
+      <nu-attrs for="link" text="n nowrap" color="bold-text :hover[text]"></nu-attrs>
       <nu-attrs for="h5" text="b nowrap" size="md"></nu-attrs>
 
       <nu-flow
