@@ -25,18 +25,19 @@ export default function SmallSignUpCard(props) {
   }
 
   return <CardBlock
-    bold {...filterAttrs(props)}
+    {...filterAttrs(props)}
     width="initial (100% - 8x) 76||min-content max-content (100% - 4x)"
-    text="left">
-    <nu-grid
-      columns="1pr auto||auto" gap="4x" label="Subscription" content="space-between||center">
-      <nu-block
-        {...insertHTML(props.description)} />
+    text="center">
+    <nu-flex
+      flow="column" gap="4x" label="Subscription" items="center" width="max 40" place="space-around">
+      { props.heading && <nu-h1 {...insertHTML(props.heading)} /> }
+      { props.description && <nu-description
+        {...insertHTML(props.description)} /> }
       <nu-block>
         {
           !email && <nu-form
-            onEventInput={onSubmit} gap="0">
-            <nu-pane width="||100%" flow="row|||column">
+            onEventInput={onSubmit} gap="0" text="left">
+            <nu-flex width="||100%" flow="row|||column" gap size="lg">
               <nu-input
                 ref={inputRef}
                 color="main-text :invalid[text]"
@@ -46,7 +47,7 @@ export default function SmallSignUpCard(props) {
                 theme="primary :invalid[secondary]"
                 border="1bw :invalid[bg]"
                 grow="initial||1"
-                width="min 15|||100%"
+                width="min 20|||100%"
                 padding="1.5x 2x">
                 <nu-props placeholder-color={`hue(${colors.primary.hue} 25 70 40 special})`}></nu-props>
               </nu-input>
@@ -55,12 +56,12 @@ export default function SmallSignUpCard(props) {
                 disabled={loading || null}
                 special
                 theme="secondary"
-                width="min 8|||100%"
+                width="min 12|||100%"
                 padding="1.5x 2x">
                 { props.action || ACTION }
               </nu-btn>
-            </nu-pane>
-            <nu-check place="right bottom 1.25x 6x||bottom .75x" for="email" assert="email">Email is not valid</nu-check>
+            </nu-flex>
+            <nu-check place="bottom 1.25x 6x||bottom .75x" for="email" assert="email">Email is not valid</nu-check>
             {
               error && <nu-block width="100%">We are unable to subscribe your email. This may be due to an invalid email address. Please&nbsp;check and try again.</nu-block>
             }
@@ -72,7 +73,7 @@ export default function SmallSignUpCard(props) {
           </nu-block>
         }
       </nu-block>
-    </nu-grid>
+    </nu-flex>
     {
       loading && <nu-progressbar value="100" place="bottom" width="100%"></nu-progressbar>
     }

@@ -154,6 +154,16 @@
       ]
     },
     {
+      "name": "BigSignUpCard Component",
+      "path": [
+        "dist/components/BigSignUpCard.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
       "name": "subscription Service",
       "path": [
         "dist/services/subscription.js"

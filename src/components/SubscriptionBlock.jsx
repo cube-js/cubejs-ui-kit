@@ -43,7 +43,7 @@ export default function SubscriptionBlock(props) {
             id="email"
             placeholder="Email"
             theme="primary :invalid[secondary]"
-            border="1bw :invalid[#bg]"
+            border="1bw :invalid[bg]"
             grow="2"
             padding="1.5x 2x">
             <nu-props placeholder-color={`hue(${colors.primary.hue} 25 70 40 special})`}></nu-props>

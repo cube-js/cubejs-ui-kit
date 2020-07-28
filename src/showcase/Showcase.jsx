@@ -9,6 +9,7 @@ import ImportSnippet from './ImportSnippet';
 import CardBlock from '../components/CardBlock';
 import Hero from '../components/Hero';
 import SmallSignUpCard from '../components/SmallSignUpCard';
+import BigSignUpCard from '../components/BigSignUpCard';
 import FeatureBlock from '../components/FeatureBlock';
 import cloudIcon1 from '../assets/cubecloud_icon1.svg';
 import cloudIcon2 from '../assets/cubecloud_icon2.svg';
@@ -332,6 +333,26 @@ export default function Showcase() {
     </nu-card>
 
     <nu-card gap="2x">
+      <nu-h2>Component: BigSignUpCard</nu-h2>
+
+      <ImportSnippet name="BigSignUpCard" />
+
+      <nu-code dangerouslySetInnerHTML={{
+        __html: `<textarea>
+<BigSignUpCard
+  heading="Want to run Cube Cloud\non-prem for&nbsp;your&nbsp;enterprise?"
+  description="Cube&nbsp;Cloud is&nbsp;currently in&nbsp;early&nbsp;access with a&nbsp;select few&nbsp;design&nbsp;partners.\nSign&nbsp;up for&nbsp;the&nbsp;waitlist to&nbsp;be in&nbsp;the&nbsp;next cohort&nbsp;of&nbsp;partners"/>
+        </textarea>`,
+      }}></nu-code>
+
+      <nu-block space="0 4x||0 (3x + 1bw)" fill shadow padding="2x 0">
+        <BigSignUpCard
+          heading="Want to run Cube Cloud\non-prem for&nbsp;your&nbsp;enterprise?"
+          description="Cube&nbsp;Cloud is&nbsp;currently in&nbsp;early&nbsp;access with a&nbsp;select few&nbsp;design&nbsp;partners.\nSign&nbsp;up for&nbsp;the&nbsp;waitlist to&nbsp;be in&nbsp;the&nbsp;next cohort&nbsp;of&nbsp;partners"/>
+      </nu-block>
+    </nu-card>
+
+    <nu-card gap="2x">
       <nu-h2>Component: Hero</nu-h2>
 
       <ImportSnippet name="Hero" />
@@ -384,9 +405,9 @@ export default function Showcase() {
     </nu-card>
 
     <nu-card gap="2x">
-      <nu-h2>Block: Footer</nu-h2>
+      <nu-h2>Block: FeatureBlock</nu-h2>
 
-      <ImportSnippet name="Footer" />
+      <ImportSnippet name="FeatureBlock" />
 
       <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)" fill shadow>
         <FeatureBlock

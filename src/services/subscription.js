@@ -3,7 +3,14 @@ import fetch from '../utils/fetch';
 
 export const SUBSCRIPTION_URL = 'https://hooks.zapier.com/hooks/catch/2073111/lgugyb/';
 
-export default function Subscription(url) {
+/**
+ * * Subscription service.
+ * @param url - POST URL for subscription.
+ * @param data - Additional data for the request.
+ * @return {Promise<unknown>|{submit(*=): *, state: string, error: boolean, loading: boolean, email: string}}
+ * @constructor
+ */
+export default function Subscription(url, data = {}) {
   if (!url) {
     url = SUBSCRIPTION_URL;
   }
@@ -26,12 +33,14 @@ export default function Subscription(url) {
       setState('loading');
       setLoading(true);
 
-      fetch.post(url, { email })
+      return fetch.post(url, { email, ...data })
         .then(() => {
           setEmail(email);
           setState('subscribed');
-        }, () => {
+        }, (e) => {
           setError(true);
+
+          throw e;
         })
         .finally(() => {
           setState('initial');

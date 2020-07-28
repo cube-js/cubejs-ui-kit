@@ -9,7 +9,7 @@ export const COMPONENT_LIST = [
   'Footer',
   'SchemeSwitch',
   'SmallSignUpCard',
-  // 'BigSignUpCard',
+  'BigSignUpCard',
 ];
 
 export const SERVICE_LIST = [
