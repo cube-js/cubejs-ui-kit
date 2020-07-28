@@ -48,7 +48,6 @@ export default function SmallSignUpCard(props) {
                 grow="initial||1"
                 width="min 15|||100%"
                 padding="1.5x 2x">
-                <nu-props placeholder-color={`hue(${colors.primary.hue} 25 70 40 special})`}></nu-props>
               </nu-input>
               <nu-btn
                 action="submit"

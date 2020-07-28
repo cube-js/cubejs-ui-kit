@@ -2,6 +2,7 @@
 import React from 'react';
 import jsx from 'jsx-native-events';
 import { logo } from '../images';
+import SchemeSwitch from './SchemeSwitch.jsx';
 
 const MENU = [
   {
@@ -37,7 +38,7 @@ export default function Topbar() {
   <nu-blocklink to="/" theme="main" mark="1x hover" radius>
     <nu-svg
       id="logo"
-      height="3"
+      height="2.5"
       src={logo}
       label="Cube.js logo"
       filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
@@ -54,6 +55,7 @@ export default function Topbar() {
         })
       }
     </nu-pane>
+    <SchemeSwitch theme="secondary" radius/>
     <nu-btn
       as="get-started" show="y|||n" border special is-red fill="clear :hover[special-bg]"
       color="text :hover[special-text]" to="#getting-started">

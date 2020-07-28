@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import React, { useState } from 'react';
 import jsx from 'jsx-native-events';
+import { filterAttrs } from '../helpers';
 
 const dataset = typeof document !== 'undefined' ? document.documentElement.dataset : {};
 
-export default function SchemeSwitch() {
+export default function SchemeSwitch(props) {
   let media = typeof matchMedia !== 'undefined'
     ? matchMedia('(prefers-color-scheme: dark)')
     : { addListener() {} };
@@ -36,7 +37,8 @@ export default function SchemeSwitch() {
     radius="round"
     inset="n :active[#shadow.50]"
     pressed={scheme === 'dark' || null}
-    padding>
+    padding
+    {...filterAttrs(props)}>
     <nu-icon name="^ moon :pressed[sun]"></nu-icon>
   </nu-btn>
 }

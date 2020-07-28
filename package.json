@@ -164,6 +164,16 @@
       ]
     },
     {
+      "name": "SwitchBlock Component",
+      "path": [
+        "dist/components/SwitchBlock.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
       "name": "subscription Service",
       "path": [
         "dist/services/subscription.js"

@@ -30,14 +30,14 @@ export default function SmallSignUpCard(props) {
     text="center">
     <nu-flex
       flow="column" gap="4x" label="Subscription" items="center" width="max 40" place="space-around">
-      { props.heading && <nu-h1 {...insertHTML(props.heading)} /> }
+      { props.heading && <nu-h2 {...insertHTML(props.heading)} /> }
       { props.description && <nu-description
         {...insertHTML(props.description)} /> }
-      <nu-block>
+      <nu-block width="|||initial 100% 20">
         {
           !email && <nu-form
             onEventInput={onSubmit} gap="0" text="left">
-            <nu-flex width="||100%" flow="row|||column" gap size="lg">
+            <nu-flex flow="row|||column" gap size="lg">
               <nu-input
                 ref={inputRef}
                 color="main-text :invalid[text]"
@@ -49,7 +49,6 @@ export default function SmallSignUpCard(props) {
                 grow="initial||1"
                 width="min 20|||100%"
                 padding="1.5x 2x">
-                <nu-props placeholder-color={`hue(${colors.primary.hue} 25 70 40 special})`}></nu-props>
               </nu-input>
               <nu-btn
                 action="submit"

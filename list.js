@@ -10,6 +10,7 @@ export const COMPONENT_LIST = [
   'SchemeSwitch',
   'SmallSignUpCard',
   'BigSignUpCard',
+  'SwitchBlock',
 ];
 
 export const SERVICE_LIST = [

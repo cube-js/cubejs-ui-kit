@@ -46,7 +46,6 @@ export default function SubscriptionBlock(props) {
             border="1bw :invalid[bg]"
             grow="2"
             padding="1.5x 2x">
-            <nu-props placeholder-color={`hue(${colors.primary.hue} 25 70 40 special})`}></nu-props>
           </nu-input>
           <nu-btn action="submit" disabled={loading || null} special theme="primary" width="min 13|||100%" padding="1.5x 2x">Subscribe</nu-btn>
           <nu-block width="100%" color>

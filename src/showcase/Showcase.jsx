@@ -15,6 +15,31 @@ import cloudIcon1 from '../assets/cubecloud_icon1.svg';
 import cloudIcon2 from '../assets/cubecloud_icon2.svg';
 import cloudIcon3 from '../assets/cubecloud_icon3.svg';
 import cloudIcon4 from '../assets/cubecloud_icon4.svg';
+import cloudIllustration1 from '../assets/cube-cloud-illustration.svg';
+import cloudIllustration2 from '../assets/cube-cloud-illustration2.svg';
+import SwitchBlock from '../components/SwitchBlock';
+
+
+const TYPES = [
+  {
+    image: cloudIllustration1,
+    id: 'hybrid',
+    heading: 'Hybrid',
+    description: 'With Cube Cloud Hybrid you can provision and manage the whole Cube.js stack with your cloud. Kubernetes based deployment ensures only one way connection from your cluster to the Cube Cloud. Your cluster pulls Kubernetes and images to install.',
+  },
+  {
+    image: cloudIllustration2,
+    id: 'hosted',
+    heading: 'Hosted',
+    description: 'Deploy fully managed Cube.js apps in the cloud of your choice: AWS, Azure, or GCP. With best-in-class infrastructure and proven practices, Cube Cloud guarantees high availability, scalability, and improved performance.',
+  },
+  {
+    image: cloudIllustration1,
+    id: 'onprem',
+    heading: 'On-prem',
+    description: 'With Cube Cloud Hybrid you can provision and manage the whole Cube.js stack with your cloud. Kubernetes based deployment ensures only one way connection from your cluster to the Cube Cloud. Your cluster pulls Kubernetes and images to install.',
+  },
+];
 
 const FEATURES = [
   {
@@ -401,6 +426,18 @@ export default function Showcase() {
 
       <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)">
         <Footer/>
+      </nu-block>
+    </nu-card>
+
+    <nu-card gap="2x">
+      <nu-h2>Block: SwitchBlock</nu-h2>
+
+      <ImportSnippet name="SwitchBlock" />
+
+      <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)" fill shadow>
+        <SwitchBlock
+          heading="How Cube Cloud Works"
+          options={TYPES}/>
       </nu-block>
     </nu-card>
 
