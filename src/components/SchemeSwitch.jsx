@@ -16,9 +16,11 @@ export default function SchemeSwitch(props) {
 
   const [scheme, setScheme] = useState('light');
 
-  setInterval(() => {
-    setScheme(getCurrentScheme());
-  }, 500);
+  if (typeof window !== 'undefined') {
+    setInterval(() => {
+      setScheme(getCurrentScheme());
+    }, 500);
+  }
 
   media.addListener((newMedia) => {
     media = newMedia;
