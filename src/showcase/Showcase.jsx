@@ -18,7 +18,13 @@ import cloudIcon4 from '../assets/cubecloud_icon4.svg';
 import cloudIllustration1 from '../assets/cube-cloud-illustration.svg';
 import cloudIllustration2 from '../assets/cube-cloud-illustration2.svg';
 import SwitchBlock from '../components/SwitchBlock';
+import { filterAttrs } from '../helpers';
 
+const FullWidthBlock = (props) => {
+  return <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)" fill shadow transition="fill" {...filterAttrs(props)}>
+    {props.children}
+  </nu-block>
+}
 
 const TYPES = [
   {
@@ -351,10 +357,10 @@ export default function Showcase() {
         </textarea>`,
       }}></nu-code>
 
-      <nu-block space="0 4x||0 (3x + 1bw)" fill shadow padding="2x 0">
+      <FullWidthBlock padding="2x 0">
         <SmallSignUpCard
           description="Cube&nbsp;Cloud is&nbsp;currently in&nbsp;early&nbsp;access with a&nbsp;select few&nbsp;design&nbsp;partners.\nSign&nbsp;up for&nbsp;the&nbsp;waitlist to&nbsp;be in&nbsp;the&nbsp;next cohort&nbsp;of&nbsp;partners"/>
-      </nu-block>
+      </FullWidthBlock>
     </nu-card>
 
     <nu-card gap="2x">
@@ -370,11 +376,11 @@ export default function Showcase() {
         </textarea>`,
       }}></nu-code>
 
-      <nu-block space="0 4x||0 (3x + 1bw)" fill shadow padding="2x 0">
+      <FullWidthBlock padding="2x 0">
         <BigSignUpCard
           heading="Want to run Cube Cloud\non-prem for&nbsp;your&nbsp;enterprise?"
           description="Cube&nbsp;Cloud is&nbsp;currently in&nbsp;early&nbsp;access with a&nbsp;select few&nbsp;design&nbsp;partners.\nSign&nbsp;up for&nbsp;the&nbsp;waitlist to&nbsp;be in&nbsp;the&nbsp;next cohort&nbsp;of&nbsp;partners"/>
-      </nu-block>
+      </FullWidthBlock>
     </nu-card>
 
     <nu-card gap="2x">
@@ -391,12 +397,12 @@ export default function Showcase() {
         </textarea>`,
       }}></nu-code>
 
-      <nu-block space="0 4x||0 (3x + 1bw)" fill shadow>
+      <FullWidthBlock>
         <Hero
           logo="cloudLogo"
           heading="Deploy, Scale, and&nbsp;Optimize Your&nbsp;Cube.js&nbsp;Apps"
           description="Secure and&nbsp;highly&nbsp;available managed&nbsp;deployment\nby&nbsp;the&nbsp;creators of&nbsp;Cube.js"/>
-      </nu-block>
+      </FullWidthBlock>
     </nu-card>
 
     <nu-card gap="2x">
@@ -404,9 +410,9 @@ export default function Showcase() {
 
       <ImportSnippet name="Topbar" />
 
-      <nu-block space="0 4x||0 (3x + 1bw)" fill shadow>
+      <FullWidthBlock>
         <Topbar/>
-      </nu-block>
+      </FullWidthBlock>
     </nu-card>
 
     <nu-card gap="2x">
@@ -414,9 +420,9 @@ export default function Showcase() {
 
       <ImportSnippet name="SubscriptionBlock" />
 
-      <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)" shadow>
+      <FullWidthBlock>
         <SubscriptionBlock/>
-      </nu-block>
+      </FullWidthBlock>
     </nu-card>
 
     <nu-card gap="2x">
@@ -424,9 +430,9 @@ export default function Showcase() {
 
       <ImportSnippet name="Footer" />
 
-      <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)">
+      <FullWidthBlock>
         <Footer/>
-      </nu-block>
+      </FullWidthBlock>
     </nu-card>
 
     <nu-card gap="2x">
@@ -434,11 +440,11 @@ export default function Showcase() {
 
       <ImportSnippet name="SwitchBlock" />
 
-      <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)" fill shadow>
+      <FullWidthBlock>
         <SwitchBlock
           heading="How Cube Cloud Works"
           options={TYPES}/>
-      </nu-block>
+      </FullWidthBlock>
     </nu-card>
 
     <nu-card gap="2x">
@@ -446,12 +452,12 @@ export default function Showcase() {
 
       <ImportSnippet name="FeatureBlock" />
 
-      <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)" fill shadow>
+      <FullWidthBlock>
         <FeatureBlock
           heading="Production Grade Cube.js Deployment"
           description="Created by Cube.js authors, Cube&nbsp;Cloud is the&nbsp;most&nbsp;reliable, scalable, and secure&nbsp;way to&nbsp;deploy your&nbsp;production Cube.js clusters."
           features={FEATURES}/>
-      </nu-block>
+      </FullWidthBlock>
     </nu-card>
   </nu-flow>);
 }

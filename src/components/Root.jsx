@@ -17,6 +17,7 @@ const BTN_STYLES = {
 export default function Root(props) {
   return <nu-root
     responsive="80rem|60rem|40rem"
+    transition="fill"
     fill="subtle"
     height="min 100vh"
     text="n">

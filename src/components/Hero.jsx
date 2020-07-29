@@ -15,9 +15,9 @@ export default function Hero(props) {
     {...filterAttrs(props)}>
     <nu-svg
       id="logo"
-      height="4"
+      height="5"
       width="18"
-      src={images[props.logo] || logo}
+      src={images[props.logo] || images.logo}
       label="Cube.js logo"
       filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
     <nu-spacer/>
