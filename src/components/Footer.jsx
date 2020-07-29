@@ -44,6 +44,7 @@ export default function Footer() {
   return <nu-section
     theme="special"
     fill="bold-bg"
+    color="white"
     padding="11x 11x|11x 11x|11x 4x|6x 2x"
     border="top bottom outside #main-border">
     <nu-grid
