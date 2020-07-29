@@ -30,18 +30,20 @@ export default function SwitchBlock(props) {
         column="2||1"
         box="y"
         place="start end||center"
-        class="nu-dark-invert">
+        class="nu-dark-invert"
+        height="18||16|12" width="100%">
         <nu-attrs
           for="img"
-          height="18||16|12"/>
+          height="100%" width="100%"/>
         {
           options.map(option => {
             return <nu-img
               key={option.id}
               id={`${option.id}-img`}
-              src={option.image}
               label={`Illustration for ${option.heading}`}
-              hidden/>;
+              hidden>
+              <img src={option.image} alt="" />
+            </nu-img>;
           })
         }
       </nu-block>

@@ -23,7 +23,9 @@ export default function FeatureBlock(props) {
             gap="1x 0"
             text="left|||center"
             content="start stretch">
-            <nu-img src={feature.image} class="nu-dark-invert" row="1 / 3" height="6|||4" padding="1x"/>
+            <nu-img class="nu-dark-invert" row="1 / 3" height="6|||4" padding="1x" place="center">
+              <img src={feature.image} alt="" />
+            </nu-img>
             <nu-h4 text="nowrap" {...insertHTML(feature.heading)}/>
             <nu-description width="max 30" {...insertHTML(feature.description)}/>
           </nu-grid>;

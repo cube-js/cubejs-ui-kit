@@ -22,8 +22,8 @@ export default {
         text: 'n nowrap',
         inset: 'n',
         mark: 'hover #special.12 :special[hover #special-text.20]',
-        border: `1bw :active[#special] :active:hover[#special] :special[hidden] :special:hover[#special-text.20] :clear[hidden] :clear:active[1bw] :clear:hover[hidden]`,
-        size: 'md :big[lg]',
+        border: `1bw :active[#special] :active:hover[#special] :special[hidden] :special:active[#special-text.66] :special:active:hover[#special-text.66] :special:hover[#special-text.20] :clear[hidden] :clear:active[1bw] :clear:hover[hidden]`,
+        size: 'md :big[xl]',
         padding: '1x 2x :big[2x 4x]',
         width: 'auto :big[min 15]',
       });
