@@ -14,7 +14,11 @@ export default function SchemeSwitch(props) {
     return (dataset.nuScheme !== 'auto' && dataset.nuScheme) || (media.matches ? 'dark' : 'light');
   }
 
-  const [scheme, setScheme] = useState(getCurrentScheme());
+  const [scheme, setScheme] = useState('light');
+
+  setTimeout(() => {
+    setScheme(getCurrentScheme());
+  });
 
   media.addListener((newMedia) => {
     media = newMedia;
