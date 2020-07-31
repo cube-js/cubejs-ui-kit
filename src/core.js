@@ -33,6 +33,7 @@ export default {
         '--hover-color': '--pink-hover-color :purple[--purple-hover-color]',
         '--hover-color-rgb': '--pink-hover-color-rgb :purple[--purple-hover-color-rgb]',
         '--outline-color': '--pink-outline-color :purple[--purple-outline-color]',
+        '--outline-width': '(3rem / 16) :special[1rem / 4]',
       });
 
       Nude.assign('nu-input', 'styles', {
