@@ -48,31 +48,24 @@ export default function SwitchBlock(props) {
         }
       </nu-block>
       <nu-block>
-        {/*<nu-attrs*/}
-        {/*  for="btn"*/}
-        {/*  padding="1x 4x||1x 2x"*/}
-        {/*  fill="bg :pressed[mark]"*/}
-        {/*  border="center #special.20 :pressed[center #border]"*/}
-        {/*  mark="hover :pressed[n]"*/}
-        {/*  z=":pressed[above]"*/}
-        {/*  color="text 80% :pressed[text]"/>*/}
         <nu-attrs
           for="btn"
           padding="1x 4x||1x 2x"
           fill="bg :pressed[special-bg]"
-          color="text :pressed[special-text]"/>
-        <nu-btngroup value="hybrid" width="min-content" padding="1bw / 2">
-          {
-            options.map(option => {
-              return <nu-btn
-                key={option.id}
-                value={option.id}
-                control={`${option.id} ${option.id}-img`} is-red trigger>
-                {option.heading}
-              </nu-btn>;
-            })
-          }
-        </nu-btngroup>
+          color="main :pressed[special-text]"/>
+        { options.length
+          && <nu-btngroup value={options[0].id} width="min-content" padding="1bw / 2">
+            {
+              options.map(option => {
+                return <nu-btn
+                  key={option.id}
+                  value={option.id}
+                  control={`${option.id} ${option.id}-img`} is-red trigger>
+                  {option.heading}
+                </nu-btn>;
+              })
+            }
+        </nu-btngroup>}
       </nu-block>
       {
         options.map(option => {

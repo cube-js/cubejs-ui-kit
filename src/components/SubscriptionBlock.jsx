@@ -29,7 +29,8 @@ export default function SubscriptionBlock(props) {
     fill="bold-bg"
     padding="12x 4x|||8x 2x"
     box="y"
-    border="top bottom outside #main-border">
+    color="white"
+    border="top bottom outside #white.50">
     <nu-flex flow="column" items="center" gap text="center">
       <nu-h2 size="h2||h4|h5" {...insertHTML(props.heading || HEADING)} />
       <nu-description color="bold-text" {...insertHTML(props.description || DESCRIPTION)} />

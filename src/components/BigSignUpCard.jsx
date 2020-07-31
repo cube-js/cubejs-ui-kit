@@ -44,7 +44,7 @@ export default function SmallSignUpCard(props) {
                 disabled={loading || null}
                 id="email"
                 placeholder="Email"
-                theme="primary :invalid[secondary]"
+                theme="main :invalid[secondary]"
                 border="1bw :invalid[bg]"
                 grow="initial||1"
                 width="min 20|||100%"

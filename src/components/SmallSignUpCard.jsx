@@ -36,15 +36,13 @@ export default function SmallSignUpCard(props) {
         {
           !email && <nu-form
             onEventInput={onSubmit} gap="0">
-            <nu-pane width="||100%" flow="row|||column">
+            <nu-flex width="||100%" flow="row|||column" gap>
               <nu-input
                 ref={inputRef}
                 color="main-text :invalid[text]"
                 disabled={loading || null}
                 id="email"
                 placeholder="Email"
-                theme="primary :invalid[secondary]"
-                border="1bw :invalid[bg]"
                 grow="initial||1"
                 width="min 15|||100%"
                 padding="1.5x 2x">
@@ -53,12 +51,11 @@ export default function SmallSignUpCard(props) {
                 action="submit"
                 disabled={loading || null}
                 special
-                theme="secondary"
                 width="min 8|||100%"
                 padding="1.5x 2x">
                 { props.action || ACTION }
               </nu-btn>
-            </nu-pane>
+            </nu-flex>
             <nu-check place="right bottom 1.25x 6x||bottom .75x" for="email" assert="email">Email is not valid</nu-check>
             {
               error && <nu-block width="100%">We are unable to subscribe your email. This may be due to an invalid email address. Please&nbsp;check and try again.</nu-block>

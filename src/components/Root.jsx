@@ -10,45 +10,76 @@ import { colors } from '../vars';
 //   hero: [4, 5],
 
 const { primary, secondary, minor } = colors;
-const BTN_STYLES = {
-  theme: 'primary tint :red[secondary tint]',
-};
 
 export default function Root(props) {
   return <nu-root
+    style={{ WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}
     responsive="80rem|60rem|40rem"
     transition="fill"
-    fill="subtle"
+    fill="light"
     height="min 100vh"
     text="n">
-    <nu-theme hue={primary.hue} saturation={primary.saturation}></nu-theme>
-    <nu-theme name="primary" hue={primary.hue} saturation={primary.saturation} mod="tint"></nu-theme>
-    <nu-theme name="secondary" hue={secondary.hue} saturation={secondary.saturation} mod="tint"></nu-theme>
-    <nu-theme name="minor" hue={minor.hue} saturation={minor.saturation} mod="special strong"></nu-theme>
     <nu-props
       radius=".5x"
       font="CeraPro, 'Avenir Next', 'Avenir', Helvetica, Ubuntu, 'DejaVu Sans', Arial, sans-serif"
       bold-bg-color={`hue(${minor.hue} ${minor.saturation} 68 special)`}
       bold-text-color={`hue(${minor.hue} 0 0 70% special)`}
+      disabled-opacity=".6"
+
+      dark-01-color="#141446"
+      dark-02-color="#43436B"
+      dark-03-color="#727290"
+      dark-04-color="#A1A1B5"
+      dark-05-color="#D5D5E2"
+      light-color="#F3F3FB"
+
+      input-border-color="#D5D5E2"
+
+      text-color="#141446"
+      text-soft-color="#141446"
+
+      purple-color="#7A77FF"
+      purple-hover-color="#6B4CF6"
+      purple-outline-color="color(purple 30%)"
+
+      outline-color="--purple-outline-color"
+
+      pink-color="#FF6492"
+      pink-hover-color="#FA326E"
+      pink-outline-color="color(pink 30%)"
+
+      special-color="color(pink)"
+      special-bg-color="color(pink)"
+      special-text-color="white"
+      border-color="color(pink 60%)"
+
       hero-font-size="2.5rem||2rem"
       hero-line-height="3.5rem||3rem"
-      h1-font-size="2rem||1.75rem"
-      h1-line-height="2.5rem"
-      h2-font-size="1.75rem||1.5rem"
-      h2-line-height="2.5rem||2rem"
-      h3-font-size="1.5rem||1.375rem"
-      h3-line-height="2rem"
-      h4-font-size="1.25rem||1.25rem"
-      h4-line-height="2rem"
-      h5-font-size="1.125rem"
-      h5-line-height="1.5rem"
-      h6-font-size="1rem"
-      h6-line-height="1.5rem"
+      h1-font-size="42rp||32rp"
+      h1-line-height="54rp||44rp"
+      h2-font-size="32rp||26rp"
+      h2-line-height="44rp||36rp"
+      h3-font-size="26rp||22rp"
+      h3-line-height="36rp||30rp"
+      h4-font-size="20rp"
+      h4-line-height="28rp"
+      h5-font-size="16rp"
+      h5-line-height="28rp"
+      t1-font-size="18rp"
+      t1-line-height="28rp"
+      t2-font-size="16rp"
+      t2-line-height="28rp"
+      c1-font-size="16rp"
+      c1-line-height="22rp"
+      c2-font-size="14rp"
+      c2-line-height="22rp"
+      p1-font-size="18rp"
+      p1-line-height="32rp"
+
       content-padding="10x||2x"
-      placeholder-color={`hue(${colors.primary.hue} 25 70 40})`}
+      placeholder-color="--dark-02-color"
       />
-    <nu-attrs for="description" color="text 80%"></nu-attrs>
-    <nu-attrs for="btn" {...BTN_STYLES}></nu-attrs>
+    <nu-attrs for="description" color="dark-03" size="lg||md"></nu-attrs>
     { props.children }
   </nu-root>;
 }

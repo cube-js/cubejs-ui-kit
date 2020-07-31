@@ -35,7 +35,7 @@ export default function Topbar() {
   return <nu-header
     display="flex" flow="row" content="space-between" size="md" theme="secondary" padding="4x||2x"
     width="max 80" box="y" place="space-around" fill="clear">
-    <nu-blocklink to="/" theme="main" mark="1x hover" radius>
+    <nu-blocklink to="/" theme="main" mark="1x hover" radius mark="n">
       <nu-svg
         id="logo"
         height="2.5"
@@ -45,20 +45,21 @@ export default function Topbar() {
     </nu-blocklink>
     <nu-grid flow="column" gap items="center">
       <nu-pane gap="0">
+        <nu-props outline-color="color(text 10%)"></nu-props>
         <nu-attrs
-          for="btn"
-          color="main-text"
+          for="link"
+          color="dark-03 :hover[text] :active.hover[dark-02]"
+          padding="1x 2x"
           show="y||n"/>
         {
           MENU.map(item => {
-            return <nu-btn key={item.label} clear to={item.link}>{item.label}</nu-btn>;
+            return <nu-link key={item.label} clear to={item.link}>{item.label}</nu-link>;
           })
         }
       </nu-pane>
-      <SchemeSwitch theme="secondary" radius/>
+      {/*<SchemeSwitch theme="secondary" radius fill="clear" />*/}
       <nu-btn
-        as="get-started" show="y|||n" border special is-red fill="clear :hover[special-bg]"
-        color="text :hover[special-text]" to="#getting-started">
+        as="get-started" show="y|||n" special to="#getting-started">
         Get Started
       </nu-btn>
       <nu-btn toggle padding="1x" show="n||y" is-red fill="clear">

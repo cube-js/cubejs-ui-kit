@@ -19,13 +19,43 @@ export default {
       const { Nude } = module;
 
       Nude.assign('nu-btn', 'styles', {
-        text: 'n nowrap',
+        text: 'n b nowrap :clear[n sb nowrap]',
         inset: 'n',
-        mark: 'hover #special.12 :special[hover #special-text.20]',
-        border: `1bw :active[#special] :active:hover[#special] :special[hidden] :special:active[#special-text.66] :special:active:hover[#special-text.66] :special:hover[#special-text.20] :clear[hidden] :clear:active[1bw] :clear:hover[hidden]`,
-        size: 'md :big[xl]',
-        padding: '1x 2x :big[2x 4x]',
+        border: `#main.60 :active[#main] :active:hover[#main] :clear[hidden] :hover:clear[hidden] :active:clear[#main.60] :active:hover:clear[#main.60] :special[#main] :special:hover[#hover] :special:hover:active[#hover] :special:active[#main]`,
+        color: 'hover :special[white]',
+        fill: 'clear :special[main] :special:hover[hover] :special:hover:active[main] :special:active[hover]',
+        mark: 'hover #hover.10 :special[n]',
+        size: 'md :big[t1]',
+        padding: '1x 2x :big[1.875x 4x]',
         width: 'auto :big[min 15]',
+        '--main-color': '--pink-color :purple[--purple-color]',
+        '--main-color-rgb': '--pink-color-rgb :purple[--purple-color-rgb]',
+        '--hover-color': '--pink-hover-color :purple[--purple-hover-color]',
+        '--hover-color-rgb': '--pink-hover-color-rgb :purple[--purple-hover-color-rgb]',
+        '--outline-color': '--pink-outline-color :purple[--purple-outline-color]',
+      });
+
+      Nude.assign('nu-input', 'styles', {
+        border: '#input-border :invalid[#pink] :focus.invalid[#clear]',
+        padding: '1.75x 2x',
+        color: 'dark-02 :invalid[pink]',
+        size: 't1',
+        '--outline-color': '--purple-outline-color :invalid[--pink-outline-color]',
+      });
+
+      Nude.assign('nu-label', 'styles', {
+        color: 'dark-03',
+        text: 'n',
+      });
+
+      Nude.assign('nu-field', 'styles', {
+        flow: 'column',
+        gap: '1x',
+      });
+
+      Nude.assign('nu-link', 'styles', {
+        text: 'n',
+        mark: 'n',
       });
 
       Nude.init();

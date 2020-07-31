@@ -7,7 +7,7 @@ export const COMPONENT_LIST = [
   'Hero',
   'Topbar',
   'Footer',
-  'SchemeSwitch',
+  // 'SchemeSwitch',
   'SmallSignUpCard',
   'BigSignUpCard',
   'SwitchBlock',
