@@ -1,7 +1,7 @@
 const html = typeof document !== 'undefined' ? document.querySelector('html') : null;
 const dataset = html ? html.dataset : {};
 
-const OPTIONS = { icons: 'eva', prevent: true, scheme: 'light' };
+const OPTIONS = { icons: 'eva', prevent: false, scheme: 'light' };
 
 export default {
   init(options = {}) {
@@ -15,8 +15,25 @@ export default {
 
     dataset.nuScheme = options.scheme;
 
-    return import('./numl/index.js').then(module => {
-      const { Nude } = module;
+    window.addEventListener('nudeReady', (event) => {
+      const { Nude } = window;
+
+      Nude.assign('nu-root', 'attrsFor', {
+        description: {
+          color: 'dark-03',
+          size: 'lg||md',
+        },
+        h1: { size: 'h1', text: 'h' },
+        h2: { size: 'h2', text: 'h' },
+        h3: { size: 'h3', text: 'h' },
+        h4: { size: 'h4', text: 'h' },
+        h5: { size: 'h5', text: 'h' },
+        t1: { size: 't1', text: 'n' },
+        t2: { size: 't2', text: 'n' },
+        c1: { size: 'c1', text: 'n up spacing(0.02em)' },
+        c2: { size: 'c2', text: 'n up spacing(0.02em)' },
+        p1: { size: 'p2', text: 'n' },
+      });
 
       Nude.assign('nu-btn', 'styles', {
         text: 'n b nowrap :clear[n sb nowrap]',
@@ -58,10 +75,8 @@ export default {
         text: 'n',
         mark: 'n',
       });
-
-      Nude.init();
-
-      return Nude;
     });
+
+    return import('./numl/index.js');
   },
 };

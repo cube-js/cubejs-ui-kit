@@ -134,16 +134,6 @@
       ]
     },
     {
-      "name": "SchemeSwitch Component",
-      "path": [
-        "dist/components/SchemeSwitch.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
       "name": "SmallSignUpCard Component",
       "path": [
         "dist/components/SmallSignUpCard.js"

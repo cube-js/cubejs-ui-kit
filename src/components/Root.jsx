@@ -35,8 +35,8 @@ export default function Root(props) {
 
       input-border-color="#D5D5E2"
 
-      text-color="#141446"
-      text-soft-color="#141446"
+      text-color="color(dark-01)"
+      text-soft-color="color(dark-01)"
 
       purple-color="#7A77FF"
       purple-hover-color="#6B4CF6"
@@ -53,8 +53,6 @@ export default function Root(props) {
       special-text-color="white"
       border-color="color(pink 60%)"
 
-      hero-font-size="2.5rem||2rem"
-      hero-line-height="3.5rem||3rem"
       h1-font-size="42rp||32rp"
       h1-line-height="54rp||44rp"
       h2-font-size="32rp||26rp"
@@ -76,10 +74,15 @@ export default function Root(props) {
       p1-font-size="18rp"
       p1-line-height="32rp"
 
-      content-padding="10x||2x"
       placeholder-color="--dark-02-color"
       />
-    <nu-attrs for="description" color="dark-03" size="lg||md"></nu-attrs>
+    <nu-attrs for="h1" size="h1"></nu-attrs>
+    <nu-attrs for="h2" size="h2"></nu-attrs>
+    <nu-attrs for="h3" size="h3"></nu-attrs>
+    <nu-attrs for="h4" size="h4"></nu-attrs>
+    <nu-attrs for="h5" size="h5"></nu-attrs>
+    <nu-attrs for="h6" size="h6"></nu-attrs>
+    {/*<nu-attrs for="description" color="dark-03" size="lg||md"></nu-attrs>*/}
     { props.children }
   </nu-root>;
 }
