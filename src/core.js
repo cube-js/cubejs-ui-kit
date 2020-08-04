@@ -79,10 +79,10 @@ export default {
         mark: 'n',
       });
 
-      // Nude.assign('nu-description', 'attrs', {
-      //   size: 't1',
-      //   text: 'n',
-      // });
+      Nude.assign('nu-description', 'attrs', {
+        size: 't1',
+        text: 'n',
+      });
     });
 
     return import('numl');
