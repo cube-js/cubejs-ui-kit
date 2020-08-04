@@ -1,6 +1,6 @@
 {
   "name": "cubejs-uikit",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "UIKit for Cube.js projects",
   "main": "dist/core.js",
   "type": "module",
@@ -33,7 +33,7 @@
     "@rollup/plugin-url": "^5.0.1",
     "@size-limit/preset-small-lib": "^4.5.5",
     "jsx-native-events": "^1.0.2",
-    "numl": "^0.12.0-beta.1",
+    "numl": "^0.12.0-beta.5",
     "parcel": "^1.12.4",
     "parcel-bundler": "^1.12.4",
     "rollup": "^2.22.2",

@@ -85,6 +85,6 @@ export default {
       // });
     });
 
-    return import('./numl/index.js');
+    return import('numl');
   },
 };
