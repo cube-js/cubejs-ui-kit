@@ -9,6 +9,7 @@ export default function SwitchBlock(props) {
 
   return <Section
     fill="bg"
+    padding="25x 0||16x 0"
     {...filterAttrs(props)}>
     <nu-grid
       width="10sp|||--full-width"
