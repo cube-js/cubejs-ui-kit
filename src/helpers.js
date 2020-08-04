@@ -13,7 +13,13 @@ export function filterAttrs(props, ignore = []) {
 export function insertHTML(html = '') {
   return {
     dangerouslySetInnerHTML: {
-      __html: html.replace(/\\n/g, '<br/>'),
+      __html: `<nu-block>${html
+        .replace(/\\n\\n/g, '</nu-block><nu-block>')
+        .replace(/\\n/g, '<br/>')}</nu-block>`,
     },
   };
+}
+
+export function spanWidth(num) {
+  return `((${num} * var(--nu-column-width)) + (${num - 1} * var(--nu-grid-gap)))`;
 }

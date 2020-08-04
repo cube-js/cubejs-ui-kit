@@ -1,6 +1,7 @@
 import React from 'react';
 import { filterAttrs, insertHTML } from '../helpers';
 import Section from './Section.jsx';
+import Grid from './Grid.jsx';
 
 export default function FeatureBlock(props) {
   let { heading, description, features } = props;
@@ -11,26 +12,31 @@ export default function FeatureBlock(props) {
     {...filterAttrs(props)}>
     <nu-attrs for="description" size="lg|md"/>
     <nu-flow gap="4x|2x" text="center" width="max 30">
-      <nu-h2 size="h1" {...insertHTML(heading)}/>
+      <nu-h2 {...insertHTML(heading)}/>
       <nu-description size="lg||md" {...insertHTML(description)}/>
     </nu-flow>
-    <nu-grid columns="1pr 1pr||1pr" gap="12x 4x|8x 4x|4x">
+    <Grid gap="12x --grid-gap|||8x --grid-gap">
       {
         features.map(feature => {
           return <nu-grid
-            columns="10 1fr|||1fr"
+            columns="repeat(6, 1pr)||1fr"
+            column="span 6|||span 2"
+            gap="4x 0"
             key={feature.heading}
-            gap="1x 0"
-            text="left|||center"
+            text="left||center"
             content="start stretch">
-            <nu-img class="nu-dark-invert" row="1 / 3" height="6|||4" padding="1x" place="center">
+            <nu-img
+              class="nu-dark-invert"
+              height="6||4" place="start center" column="1 / 3||1">
               <img src={feature.image} alt="" />
             </nu-img>
-            <nu-h4 text="nowrap" {...insertHTML(feature.heading)}/>
-            <nu-description width="max 30" {...insertHTML(feature.description)}/>
+            <nu-flow gap="2x 0" column="3 / 7||1">
+              <nu-h4 text="nowrap" {...insertHTML(feature.heading)}/>
+              <nu-description {...insertHTML(feature.description)}/>
+            </nu-flow>
           </nu-grid>;
         })
       }
-    </nu-grid>
+    </Grid>
   </Section>
 }

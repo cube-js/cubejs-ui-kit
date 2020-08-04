@@ -8,10 +8,9 @@ export default function Section(props) {
     border={props.border}>
     <nu-flex
       flow="column"
-      width="max 80"
+      width="max (--max-width + (--content-padding * 2))"
       place="space-around"
-      padding="2x"
-      gap="2x"
+      gap="--grid-gap"
       {...filterAttrs(props, ['fill', 'shadow', 'border'])}>
       {props.children}
     </nu-flex>

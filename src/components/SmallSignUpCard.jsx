@@ -26,49 +26,49 @@ export default function SmallSignUpCard(props) {
 
   return <CardBlock
     bold {...filterAttrs(props)}
-    width="initial (100% - 8x) 76||min-content max-content (100% - 4x)"
-    text="left">
-    <nu-grid
-      columns="1pr auto||auto" gap="4x" label="Subscription" content="space-between||center">
-      <nu-block
-        {...insertHTML(props.description)} />
-      <nu-block>
-        {
-          !email && <nu-form
-            onEventInput={onSubmit} gap="0">
-            <nu-flex width="||100%" flow="row|||column" gap>
-              <nu-input
-                ref={inputRef}
-                color="main-text :invalid[text]"
-                disabled={loading || null}
-                id="email"
-                placeholder="Email"
-                grow="initial||1"
-                width="min 15|||100%"
-                padding="1.5x 2x">
-              </nu-input>
-              <nu-btn
-                action="submit"
-                disabled={loading || null}
-                special
-                width="min 8|||100%"
-                padding="1.5x 2x">
-                { props.action || ACTION }
-              </nu-btn>
-            </nu-flex>
-            <nu-check place="right bottom 1.25x 6x||bottom .75x" for="email" assert="email">Email is not valid</nu-check>
-            {
-              error && <nu-block width="100%">We are unable to subscribe your email. This may be due to an invalid email address. Please&nbsp;check and try again.</nu-block>
-            }
-          </nu-form>
-        }
-        {
-          email && <nu-block radius padding="1x 2x" border="1ow dashed" size="lg||md">
-            <nu-strong>{email}</nu-strong> has been signed up!
-          </nu-block>
-        }
-      </nu-block>
-    </nu-grid>
+    text="left" label="Subscription">
+    <nu-flow
+      column="2 / span 6||2 / span 5|span 2"
+      text="left|||center" gap="0|||2x" size="t2" color="light-text"
+      {...insertHTML(props.description)} />
+    <nu-block column="span 4||span 5|span 2">
+      {
+        !email && <nu-form
+          display="flex" width="||100%" flow="row||column" gap
+          onEventInput={onSubmit}>
+          <nu-input
+            ref={inputRef}
+            color="main-text :invalid[text]"
+            disabled={loading || null}
+            id="email"
+            placeholder="Email"
+            grow="1"
+            padding="1.5x 2x">
+          </nu-input>
+          <nu-btn
+            action="submit"
+            disabled={loading || null}
+            special
+            is-big>
+            {props.action || ACTION}
+          </nu-btn>
+          <nu-check place="right bottom 1.25x 6x||bottom .75x" for="email" assert="email">Email is
+            not valid
+          </nu-check>
+          {
+            error &&
+            <nu-block width="100%">We are unable to subscribe your email. This may be due to an
+              invalid email address. Please&nbsp;check and try again.</nu-block>
+          }
+        </nu-form>
+      }
+      {
+        email && <nu-block radius padding="1x 2x" border="1ow dashed" size="lg||md">
+          <nu-strong>{email}</nu-strong>
+          has been signed up!
+        </nu-block>
+      }
+    </nu-block>
     {
       loading && <nu-progressbar value="100" place="bottom" width="100%"></nu-progressbar>
     }

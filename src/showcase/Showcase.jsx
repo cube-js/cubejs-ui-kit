@@ -126,7 +126,7 @@ export default function Showcase() {
           </textarea>`,
         }}></nu-code>
         <nu-block as="preview">
-          <nu-grid columns="1pr 1pr||1pr" gap="2x" radius border="1ow #bold-bg" overflow="n">
+          <nu-grid columns="1pr 1pr||1pr" gap="2x" radius border="1ow #dark-02" overflow="n">
             <nu-flow gap="1x" padding="2x">
               <nu-h1>H1 Cera Pro Medium 42-54</nu-h1>
               <nu-h2>H2 Cera Pro Medium 32/44</nu-h2>
@@ -139,7 +139,7 @@ export default function Showcase() {
               <nu-block as="c2">C2 Cera Pro Regular 14-22</nu-block>
               <nu-block as="p1">P1 Cera Pro Regular 18-32</nu-block>
             </nu-flow>
-            <nu-flow gap="1x" padding="2x" fill="bold-bg" color="white">
+            <nu-flow gap="1x" padding="2x" fill="dark-02" color="white">
               <nu-h1>H1 Cera Pro Medium 42-54</nu-h1>
               <nu-h2>H2 Cera Pro Medium 32/44</nu-h2>
               <nu-h3>H3 Cera Pro Medium 26/36</nu-h3>
@@ -354,13 +354,13 @@ export default function Showcase() {
       <nu-code dangerouslySetInnerHTML={{
         __html: `<textarea>
 <SmallSignUpCard 
-  description="Cube&nbsp;Cloud is&nbsp;currently in&nbsp;early&nbsp;access with a&nbsp;select few&nbsp;design&nbsp;partners.\nSign&nbsp;up for&nbsp;the&nbsp;waitlist to&nbsp;be in&nbsp;the&nbsp;next cohort&nbsp;of&nbsp;partners"/>
+  description="Cube&nbsp;Cloud is&nbsp;currently in&nbsp;early&nbsp;access with a&nbsp;select few&nbsp;design&nbsp;partners.\n\nSign&nbsp;up for&nbsp;the&nbsp;waitlist to&nbsp;be in&nbsp;the&nbsp;next cohort&nbsp;of&nbsp;partners"/>
         </textarea>`,
       }}></nu-code>
 
       <FullWidthBlock padding="2x 0">
         <SmallSignUpCard
-          description="Cube&nbsp;Cloud is&nbsp;currently in&nbsp;early&nbsp;access with a&nbsp;select few&nbsp;design&nbsp;partners.\nSign&nbsp;up for&nbsp;the&nbsp;waitlist to&nbsp;be in&nbsp;the&nbsp;next cohort&nbsp;of&nbsp;partners"/>
+          description="Cube&nbsp;Cloud is&nbsp;currently in&nbsp;early&nbsp;access with a&nbsp;select few&nbsp;design&nbsp;partners.\n\nSign&nbsp;up for&nbsp;the&nbsp;waitlist to&nbsp;be in&nbsp;the&nbsp;next cohort&nbsp;of&nbsp;partners"/>
       </FullWidthBlock>
     </nu-card>
 
@@ -372,15 +372,13 @@ export default function Showcase() {
       <nu-code dangerouslySetInnerHTML={{
         __html: `<textarea>
 <BigSignUpCard
-  heading="Want to run Cube Cloud\non-prem for&nbsp;your&nbsp;enterprise?"
-  description="Cube&nbsp;Cloud is&nbsp;currently in&nbsp;early&nbsp;access with a&nbsp;select few&nbsp;design&nbsp;partners.\nSign&nbsp;up for&nbsp;the&nbsp;waitlist to&nbsp;be in&nbsp;the&nbsp;next cohort&nbsp;of&nbsp;partners"/>
+  heading="Want to run Cube Cloud\non-prem for&nbsp;your&nbsp;enterprise?"/>
         </textarea>`,
       }}></nu-code>
 
-      <FullWidthBlock padding="2x 0">
+      <FullWidthBlock padding="2x 0" fill="light">
         <BigSignUpCard
-          heading="Want to run Cube Cloud\non-prem for&nbsp;your&nbsp;enterprise?"
-          description="Cube&nbsp;Cloud is&nbsp;currently in&nbsp;early&nbsp;access with a&nbsp;select few&nbsp;design&nbsp;partners.\nSign&nbsp;up for&nbsp;the&nbsp;waitlist to&nbsp;be in&nbsp;the&nbsp;next cohort&nbsp;of&nbsp;partners"/>
+          heading="Want to run Cube Cloud\non-prem for&nbsp;your&nbsp;enterprise?"/>
       </FullWidthBlock>
     </nu-card>
 
@@ -393,16 +391,16 @@ export default function Showcase() {
         __html: `<textarea>
 <Hero
   logo="cloudLogo"
-  heading="Deploy, Scale, and&nbsp;Optimize Your&nbsp;Cube.js&nbsp;Apps"
-  description="Secure and&nbsp;highly&nbsp;available managed&nbsp;deployment\nby&nbsp;the&nbsp;creators of&nbsp;Cube.js"/>
+  heading="Run, manage, scale and&nbsp;optimize\nyour&nbsp;Cube.js&nbsp;Apps."
+  description="Leave&nbsp;uptime, devops and&nbsp;deployment to&nbsp;the&nbsp;creators of&nbsp;Cube.js.\nSecure and&nbsp;highly&nbsp;available managed&nbsp;deployment\nby&nbsp;the&nbsp;creators of&nbsp;Cube.js"/>
         </textarea>`,
       }}></nu-code>
 
       <FullWidthBlock>
         <Hero
           logo="cloudLogo"
-          heading="Deploy, Scale, and&nbsp;Optimize Your&nbsp;Cube.js&nbsp;Apps"
-          description="Secure and&nbsp;highly&nbsp;available managed&nbsp;deployment\nby&nbsp;the&nbsp;creators of&nbsp;Cube.js"/>
+          heading="Run, manage, scale and&nbsp;optimize\nyour&nbsp;Cube.js&nbsp;Apps."
+          description="Leave&nbsp;uptime, devops and&nbsp;deployment to&nbsp;the&nbsp;creators of&nbsp;Cube.js.\nSecure and&nbsp;highly&nbsp;available managed&nbsp;deployment\nby&nbsp;the&nbsp;creators of&nbsp;Cube.js"/>
       </FullWidthBlock>
     </nu-card>
 
@@ -412,7 +410,7 @@ export default function Showcase() {
       <ImportSnippet name="Topbar" />
 
       <FullWidthBlock>
-        <Topbar/>
+        <Topbar getStarted/>
       </FullWidthBlock>
     </nu-card>
 

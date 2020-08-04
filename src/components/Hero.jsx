@@ -15,14 +15,14 @@ export default function Hero(props) {
     {...filterAttrs(props)}>
     <nu-svg
       id="logo"
-      height="5"
+      height="4.5x"
       width="18"
       src={images[props.logo] || images.logo}
       label="Cube.js logo"
       filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
     <nu-spacer/>
     <nu-h1
-      size="hero"
+      size="h2"
       {...insertHTML(props.heading)}></nu-h1>
     <nu-description
       size="lg||md"

@@ -2,7 +2,6 @@
 import React from 'react';
 import jsx from 'jsx-native-events';
 import { logo } from '../images';
-import SchemeSwitch from './SchemeSwitch.jsx';
 
 const MENU = [
   {
@@ -31,10 +30,10 @@ const MENU = [
   }
 ];
 
-export default function Topbar() {
+export default function Topbar(props) {
   return <nu-header
-    display="flex" flow="row" content="space-between" size="md" theme="secondary" padding="4x||2x"
-    width="max 80" box="y" place="space-around" fill="clear">
+    display="flex" flow="row" content="space-between" size="md" theme="secondary" padding="4x --content-padding||2x --content-padding"
+    width="max --max-width" box="y" place="space-around" fill="clear">
     <nu-blocklink to="/" theme="main" mark="1x hover" radius mark="n">
       <nu-svg
         id="logo"
@@ -58,10 +57,12 @@ export default function Topbar() {
         }
       </nu-pane>
       {/*<SchemeSwitch theme="secondary" radius fill="clear" />*/}
-      <nu-btn
-        as="get-started" show="y|||n" special to="#getting-started">
-        Get Started
-      </nu-btn>
+      {
+        props.getStarted && <nu-btn
+          as="get-started" show="y|||n" special to="#getting-started">
+          Get Started
+        </nu-btn>
+      }
       <nu-btn toggle padding="1x" show="n||y" is-red fill="clear">
         <nu-icon name="menu"/>
         <nu-popup

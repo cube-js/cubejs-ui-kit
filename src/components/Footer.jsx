@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from 'react';
 import jsx from 'jsx-native-events';
+import Grid from './Grid.jsx';
 
 const COMMUNITY_LINKS = [
   {
@@ -43,38 +44,24 @@ const RESOURCES_LINKS = [
 export default function Footer() {
   return <nu-section
     theme="special"
-    fill="bold-bg"
+    fill="dark-02"
     color="white"
     padding="11x 11x|11x 11x|11x 4x|6x 2x"
     border="top bottom outside #main-border">
-    <nu-grid
-      gap="4x 12x||4x 10x|4x 8x"
+    <Grid
       flow="row"
-      width="max 80||auto|max 24"
-      place="space-around"
-      columns="1fr auto auto auto||auto auto 1fr|auto auto"
-      items="start|||start center"
-      content="stretch||stretch">
+      place="space-around">
       <nu-attrs for="link" text="n nowrap" color="white 70% :hover[white]"></nu-attrs>
       <nu-attrs for="h5" text="b nowrap" size="md"></nu-attrs>
 
       <nu-flow
         opacity=".7" width="auto||100%" size="md lg"
-        row="||2|4" column="||3|1 / -1" place="||stretch|center" text="||right|center">
-        <nu-block text="nowrap">Built with ♥️ in San Francisco</nu-block>
+        column="2 / span 4|||span 2">
+        <nu-block text="nowrap">Built with ♥️ <nu-el display="inline||block|inline">in San Francisco</nu-el></nu-block>
         <nu-block text="nowrap">2020 © Cube Dev, Inc</nu-block>
       </nu-flow>
 
-      <nu-flex gap flow="column" items="start" row="||1 / 3" column="||1">
-        <nu-h5>Community</nu-h5>
-        {
-          COMMUNITY_LINKS.map(item => {
-            return <nu-link key={item.label} to={item.link}>{item.label}</nu-link>
-          })
-        }
-      </nu-flex>
-
-      <nu-flex gap flow="column" items="start" row="||1 / 3" column="||2">
+      <nu-flex gap flow="column" column="span 2||span 3|span 2">
         <nu-h5>Resources</nu-h5>
         {
           RESOURCES_LINKS.map(item => {
@@ -83,9 +70,18 @@ export default function Footer() {
         }
       </nu-flex>
 
-      <nu-flow gap row="||1|3" column="||3|1 / -1" place="||start end|center">
+      <nu-flex gap flow="column" column="span 2||span 3|span 2">
+        <nu-h5>Community</nu-h5>
+        {
+          COMMUNITY_LINKS.map(item => {
+            return <nu-link key={item.label} to={item.link}>{item.label}</nu-link>
+          })
+        }
+      </nu-flex>
+
+      <nu-flow gap column="span 2||6 / span 6|span 2">
         <nu-h5>Get in touch</nu-h5>
-        <nu-pane gap content="||flex-end|center">
+        <nu-pane gap>
           <nu-attrs for="blocklink" radius="round" padding=".25x .5x" size="lg"></nu-attrs>
           <nu-blocklink to="!https://twitter.com/thecubejs">
             <nu-icon name="twitter"></nu-icon>
@@ -95,6 +91,6 @@ export default function Footer() {
           </nu-blocklink>
         </nu-pane>
       </nu-flow>
-    </nu-grid>
+    </Grid>
   </nu-section>
 }

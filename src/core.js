@@ -1,3 +1,5 @@
+import { spanWidth } from './helpers';
+
 const html = typeof document !== 'undefined' ? document.querySelector('html') : null;
 const dataset = html ? html.dataset : {};
 
@@ -18,6 +20,8 @@ export default {
     window.addEventListener('nudeReady', (event) => {
       const { Nude } = window;
 
+      Nude.unit('sp', spanWidth);
+
       Nude.assign('nu-root', 'attrsFor', {
         description: {
           color: 'dark-03',
@@ -36,15 +40,14 @@ export default {
       });
 
       Nude.assign('nu-btn', 'styles', {
-        text: 'n b nowrap :clear[n sb nowrap]',
+        text: 'b nowrap :clear[n sb nowrap] :special[b nowrap]',
         inset: 'n',
         border: `#main.60 :active[#main] :active:hover[#main] :clear[hidden] :hover:clear[hidden] :active:clear[#main.60] :active:hover:clear[#main.60] :special[#main] :special:hover[#hover] :special:hover:active[#hover] :special:active[#main]`,
-        color: 'hover :special[white]',
+        color: 'main :active[hover] :special[white] :special:active[white]',
         fill: 'clear :special[main] :special:hover[hover] :special:hover:active[main] :special:active[hover]',
         mark: 'hover #hover.10 :special[n]',
         size: 'md :big[t1]',
-        padding: '1x 2x :big[1.875x 4x]',
-        width: 'auto :big[min 15]',
+        padding: '1.375x 2.5x :big[1.875x 2.5x]',
         '--main-color': '--pink-color :purple[--purple-color]',
         '--main-color-rgb': '--pink-color-rgb :purple[--purple-color-rgb]',
         '--hover-color': '--pink-hover-color :purple[--purple-hover-color]',
@@ -55,7 +58,7 @@ export default {
 
       Nude.assign('nu-input', 'styles', {
         border: '#input-border :invalid[#pink] :focus.invalid[#clear]',
-        padding: '1.75x 2x',
+        padding: '1.875x 2x',
         color: 'dark-02 :invalid[pink]',
         size: 't1',
         '--outline-color': '--purple-outline-color :invalid[--pink-outline-color]',

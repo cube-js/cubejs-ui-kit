@@ -1,30 +1,25 @@
 import React from 'react';
 import { colors } from '../vars';
 
-//   h1: [2.5, 3],
-//   h2: [2, 2.5],
-//   h3: [1.75, 2.5],
-//   h4: [1.5, 2],
-//   h5: [1.25, 2],
-//   h6: [1, 1.5],
-//   hero: [4, 5],
-
-const { primary, secondary, minor } = colors;
+const { minor } = colors;
 
 export default function Root(props) {
   return <nu-root
     style={{ WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}
-    responsive="80rem|60rem|40rem"
+    responsive="100rem|61.25rem|40rem"
     transition="fill"
     fill="light"
     height="min 100vh"
-    text="n">
+    text="n"
+    size="t2">
     <nu-props
       radius=".5x"
       font="CeraPro, 'Avenir Next', 'Avenir', Helvetica, Ubuntu, 'DejaVu Sans', Arial, sans-serif"
-      bold-bg-color={`hue(${minor.hue} ${minor.saturation} 68 special)`}
-      bold-text-color={`hue(${minor.hue} 0 0 70% special)`}
       disabled-opacity=".6"
+      max-width="100rem - (--content-padding * 2)"
+      grid-gap="3x"
+      content-padding="6x||3x"
+      column-width="((--max-width - (--grid-gap * 11)) / 12)|((100vw - (--content-padding * 2) - (--grid-gap * 11)) / 12)||((100vw - (--content-padding * 2) - --grid-gap) / 2)"
 
       dark-01-color="#141446"
       dark-02-color="#43436B"
@@ -37,6 +32,7 @@ export default function Root(props) {
 
       text-color="color(dark-01)"
       text-soft-color="color(dark-01)"
+      light-text-color="rgba(255, 255, 255, .7)"
 
       purple-color="#7A77FF"
       purple-hover-color="#6B4CF6"
@@ -82,7 +78,7 @@ export default function Root(props) {
     <nu-attrs for="h4" size="h4"></nu-attrs>
     <nu-attrs for="h5" size="h5"></nu-attrs>
     <nu-attrs for="h6" size="h6"></nu-attrs>
-    {/*<nu-attrs for="description" color="dark-03" size="lg||md"></nu-attrs>*/}
+
     { props.children }
   </nu-root>;
 }
