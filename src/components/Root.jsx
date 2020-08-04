@@ -1,7 +1,4 @@
 import React from 'react';
-import { colors } from '../vars';
-
-const { minor } = colors;
 
 export default function Root(props) {
   return <nu-root
@@ -20,6 +17,7 @@ export default function Root(props) {
       grid-gap="3x"
       content-padding="6x||3x"
       column-width="((--max-width - (--grid-gap * 11)) / 12)|((100vw - (--content-padding * 2) - (--grid-gap * 11)) / 12)||((100vw - (--content-padding * 2) - --grid-gap) / 2)"
+      full-width="12sp|||2sp"
 
       dark-01-color="#141446"
       dark-02-color="#43436B"
@@ -49,12 +47,12 @@ export default function Root(props) {
       special-text-color="white"
       border-color="color(pink 60%)"
 
-      h1-font-size="42rp||32rp"
-      h1-line-height="54rp||44rp"
-      h2-font-size="32rp||26rp"
-      h2-line-height="44rp||36rp"
-      h3-font-size="26rp||22rp"
-      h3-line-height="36rp||30rp"
+      h1-font-size="42rp|||32rp"
+      h1-line-height="54rp|||44rp"
+      h2-font-size="32rp|||26rp"
+      h2-line-height="44rp|||36rp"
+      h3-font-size="26rp|||22rp"
+      h3-line-height="36rp|||30rp"
       h4-font-size="20rp"
       h4-line-height="28rp"
       h5-font-size="16rp"
@@ -71,13 +69,7 @@ export default function Root(props) {
       p1-line-height="32rp"
 
       placeholder-color="--dark-02-color"
-      />
-    <nu-attrs for="h1" size="h1"></nu-attrs>
-    <nu-attrs for="h2" size="h2"></nu-attrs>
-    <nu-attrs for="h3" size="h3"></nu-attrs>
-    <nu-attrs for="h4" size="h4"></nu-attrs>
-    <nu-attrs for="h5" size="h5"></nu-attrs>
-    <nu-attrs for="h6" size="h6"></nu-attrs>
+    />
 
     { props.children }
   </nu-root>;

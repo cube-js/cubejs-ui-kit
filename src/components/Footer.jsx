@@ -2,6 +2,10 @@
 import React from 'react';
 import jsx from 'jsx-native-events';
 import Grid from './Grid.jsx';
+import slackIcon from '../assets/slack.svg';
+import twitterIcon from '../assets/twitter.svg';
+import githubIcon from '../assets/github.svg';
+import Section from './Section.jsx';
 
 const COMMUNITY_LINKS = [
   {
@@ -42,27 +46,23 @@ const RESOURCES_LINKS = [
 ];
 
 export default function Footer() {
-  return <nu-section
-    theme="special"
+  return <Section
     fill="dark-02"
     color="white"
-    padding="11x 11x|11x 11x|11x 4x|6x 2x"
     border="top bottom outside #main-border">
-    <Grid
-      flow="row"
-      place="space-around">
+    <Grid width="10sp|||100%" columns="4sp 2sp 2sp 2sp||4sp 3sp 3sp|2sp" padding="11x 0">
       <nu-attrs for="link" text="n nowrap" color="white 70% :hover[white]"></nu-attrs>
       <nu-attrs for="h5" text="b nowrap" size="md"></nu-attrs>
 
       <nu-flow
-        opacity=".7" width="auto||100%" size="md lg"
-        column="2 / span 4|||span 2">
+        opacity=".7" width="auto||100%" size="md lg">
         <nu-block text="nowrap">Built with ♥️ <nu-el display="inline||block|inline">in San Francisco</nu-el></nu-block>
         <nu-block text="nowrap">2020 © Cube Dev, Inc</nu-block>
       </nu-flow>
 
-      <nu-flex gap flow="column" column="span 2||span 3|span 2">
+      <nu-flex gap=".5x" flow="column">
         <nu-h5>Resources</nu-h5>
+        <nu-spacer height=".5x" />
         {
           RESOURCES_LINKS.map(item => {
             return <nu-link key={item.label} to={item.link}>{item.label}</nu-link>
@@ -70,8 +70,9 @@ export default function Footer() {
         }
       </nu-flex>
 
-      <nu-flex gap flow="column" column="span 2||span 3|span 2">
+      <nu-flex gap=".5x" flow="column">
         <nu-h5>Community</nu-h5>
+        <nu-spacer height=".5x" />
         {
           COMMUNITY_LINKS.map(item => {
             return <nu-link key={item.label} to={item.link}>{item.label}</nu-link>
@@ -79,18 +80,27 @@ export default function Footer() {
         }
       </nu-flex>
 
-      <nu-flow gap column="span 2||6 / span 6|span 2">
+      <nu-flow gap="2x" column="||2|1 / -1">
         <nu-h5>Get in touch</nu-h5>
         <nu-pane gap>
-          <nu-attrs for="blocklink" radius="round" padding=".25x .5x" size="lg"></nu-attrs>
+          <nu-attrs
+            for="blocklink"
+            radius="round"
+            padding=".25x"
+            size="t1"
+            opacity=".7 :hover.focus[1]"
+            transition="opacity"></nu-attrs>
+          <nu-blocklink to="!https://slack.cube.dev/">
+            <nu-svg src={slackIcon}></nu-svg>
+          </nu-blocklink>
           <nu-blocklink to="!https://twitter.com/thecubejs">
-            <nu-icon name="twitter"></nu-icon>
+            <nu-svg src={twitterIcon}></nu-svg>
           </nu-blocklink>
           <nu-blocklink to="!https://github.com/cube-js/cube.js">
-            <nu-icon name="github"></nu-icon>
+            <nu-svg src={githubIcon}></nu-svg>
           </nu-blocklink>
         </nu-pane>
       </nu-flow>
     </Grid>
-  </nu-section>
+  </Section>
 }

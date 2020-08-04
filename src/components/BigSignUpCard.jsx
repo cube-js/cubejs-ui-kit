@@ -26,13 +26,13 @@ export default function SmallSignUpCard(props) {
   return <CardBlock
     {...filterAttrs(props)}
     text="center" label="Subscription">
-    <nu-flow gap="4x" columns="repeat(8, 1pr)|||1pr" column="4 / -4||3 / -3|1 / -1" padding="0|||0 --grid-gap">
+    <nu-flow gap="4x" columns="repeat(8, 1pr)|||1pr" column="4 / -4||3 / -3|1 / -1">
       { props.heading && <nu-h2 {...insertHTML(props.heading)} /> }
       { props.description && <nu-description
         {...insertHTML(props.description)} /> }
       {
         !email && <nu-form display="flex" flow="row|||column" gap
-          onEventInput={onSubmit} text="left" size="lg">
+          onEventInput={onSubmit} text="left">
           <nu-input
             ref={inputRef}
             color="main-text :invalid[text]"
@@ -57,8 +57,8 @@ export default function SmallSignUpCard(props) {
         </nu-form>
       }
       {
-        email && <nu-block radius padding="1x 2x" border="1ow dashed" size="lg||md">
-          <nu-strong>{email}</nu-strong> has been signed up!
+        email && <nu-block radius padding="1x 2x" border="1ow dashed" as="t1">
+          <nu-strong>{email}</nu-strong>&nbsp;has been signed up!
         </nu-block>
       }
     </nu-flow>

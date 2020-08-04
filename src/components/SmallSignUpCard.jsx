@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import React, { createRef } from 'react';
 import jsx from 'jsx-native-events';
-import { colors } from '../vars';
 import { filterAttrs, insertHTML } from '../helpers';
 import CardBlock from './CardBlock.jsx';
 import Subscription from '../services/subscription';
@@ -48,6 +47,7 @@ export default function SmallSignUpCard(props) {
           <nu-btn
             action="submit"
             disabled={loading || null}
+            width="min 20x|auto"
             special
             is-big>
             {props.action || ACTION}
@@ -63,9 +63,8 @@ export default function SmallSignUpCard(props) {
         </nu-form>
       }
       {
-        email && <nu-block radius padding="1x 2x" border="1ow dashed" size="lg||md">
-          <nu-strong>{email}</nu-strong>
-          has been signed up!
+        email && <nu-block radius padding="1x 2x" border="1ow dashed" as="t1">
+          <nu-strong>{email}</nu-strong>&nbsp;has been signed up!
         </nu-block>
       }
     </nu-block>

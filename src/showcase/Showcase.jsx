@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react';
 import jsx from 'jsx-native-events';
-import SchemeSwitch from '../components/SchemeSwitch';
+// import SchemeSwitch from '../components/SchemeSwitch';
 import SubscriptionBlock from '../components/SubscriptionBlock';
 import Topbar from '../components/Topbar';
 import Footer from '../components/Footer';
@@ -15,8 +15,9 @@ import cloudIcon1 from '../assets/cubecloud_icon1.svg';
 import cloudIcon2 from '../assets/cubecloud_icon2.svg';
 import cloudIcon3 from '../assets/cubecloud_icon3.svg';
 import cloudIcon4 from '../assets/cubecloud_icon4.svg';
-import cloudIllustration1 from '../assets/cube-cloud-illustration.svg';
-import cloudIllustration2 from '../assets/cube-cloud-illustration2.svg';
+import hybridImg from '../assets/hybrid.svg';
+import hostedImg from '../assets/hosted.svg';
+import onPremImg from '../assets/onprem.svg';
 import SwitchBlock from '../components/SwitchBlock';
 import { filterAttrs } from '../helpers';
 
@@ -28,19 +29,23 @@ const FullWidthBlock = (props) => {
 
 const TYPES = [
   {
-    image: cloudIllustration1,
+    image: hybridImg,
     id: 'hybrid',
     heading: 'Hybrid',
     description: 'With Cube Cloud Hybrid you can provision and manage the whole Cube.js stack with your cloud. Kubernetes based deployment ensures only one way connection from your cluster to the Cube Cloud. Your cluster pulls Kubernetes and images to install.',
+    imageAttrs: {
+      space: '6x top||0',
+      height: '100% + 6x||100%',
+    },
   },
   {
-    image: cloudIllustration2,
+    image: hostedImg,
     id: 'hosted',
     heading: 'Hosted',
     description: 'Deploy fully managed Cube.js apps in the cloud of your choice: AWS, Azure, or GCP. With best-in-class infrastructure and proven practices, Cube Cloud guarantees high availability, scalability, and improved performance.',
   },
   {
-    image: cloudIllustration1,
+    image: onPremImg,
     id: 'onprem',
     heading: 'On-prem',
     description: 'With Cube Cloud Hybrid you can provision and manage the whole Cube.js stack with your cloud. Kubernetes based deployment ensures only one way connection from your cluster to the Cube Cloud. Your cluster pulls Kubernetes and images to install.',
@@ -80,7 +85,6 @@ const PRESSED_STYLES = {
   border: '#main :clear[#main.60]',
   fill: 'bg :special[main]',
   mark: '#hover.10 :special[n]',
-  // color: 'hover :special[white]',
 };
 const FOCUS_STYLES = {
   outline: 'y',
@@ -329,21 +333,19 @@ export default function Showcase() {
 
       <ImportSnippet name="CardBlock" />
 
-      <nu-grid as="example">
-        <nu-code dangerouslySetInnerHTML={{
-          __html: `<textarea>
+      <nu-code dangerouslySetInnerHTML={{
+        __html: `<textarea>
 <CardBlock>Card content</CardBlock>
 <CardBlock bold>Card content</CardBlock>
-          </textarea>`,
-        }}>
-        </nu-code>
-        <nu-block as="preview">
-          <nu-flow gap="2x 1x" fill="light" padding="2x 0">
-            <CardBlock>Card content</CardBlock>
-            <CardBlock bold>Card content</CardBlock>
-          </nu-flow>
-        </nu-block>
-      </nu-grid>
+        </textarea>`,
+      }}>
+      </nu-code>
+      <FullWidthBlock>
+        <nu-flow gap="2x 1x" fill="light" padding="2x 0">
+          <CardBlock>Card content</CardBlock>
+          <CardBlock bold>Card content</CardBlock>
+        </nu-flow>
+      </FullWidthBlock>
     </nu-card>
 
     <nu-card gap="2x">
@@ -372,13 +374,13 @@ export default function Showcase() {
       <nu-code dangerouslySetInnerHTML={{
         __html: `<textarea>
 <BigSignUpCard
-  heading="Want to run Cube Cloud\non-prem for&nbsp;your&nbsp;enterprise?"/>
+  heading="Want to run Cube Cloud\non-prem for your enterprise?"/>
         </textarea>`,
       }}></nu-code>
 
       <FullWidthBlock padding="2x 0" fill="light">
         <BigSignUpCard
-          heading="Want to run Cube Cloud\non-prem for&nbsp;your&nbsp;enterprise?"/>
+          heading="Want to run Cube Cloud\non-prem for your enterprise?"/>
       </FullWidthBlock>
     </nu-card>
 
@@ -409,8 +411,8 @@ export default function Showcase() {
 
       <ImportSnippet name="Topbar" />
 
-      <FullWidthBlock>
-        <Topbar getStarted/>
+      <FullWidthBlock height="15">
+        <Topbar sticky getStarted/>
       </FullWidthBlock>
     </nu-card>
 

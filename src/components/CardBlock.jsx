@@ -11,7 +11,6 @@ export default function CardBlock(props) {
     color={props.bold ? 'white' : null}
     padding="7x 0||5x 0|5x --content-padding"
     width="initial (100% - (--content-padding * 2)) --max-width"
-    theme={props.bold ? 'bold special' : ''}
     shadow={props.bold ? '0' : '0px 20px 30px rgba(114, 114, 144, 0.05)'}
     place="space-around"
     {...filterAttrs(props)}>

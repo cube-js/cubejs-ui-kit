@@ -17,15 +17,14 @@ export default function Hero(props) {
       id="logo"
       height="4.5x"
       width="18"
+      padding="1x bottom"
       src={images[props.logo] || images.logo}
       label="Cube.js logo"
       filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
-    <nu-spacer/>
     <nu-h1
       size="h2"
       {...insertHTML(props.heading)}></nu-h1>
     <nu-description
-      size="lg||md"
       {...insertHTML(props.description)}></nu-description>
     {props.children}
   </Section>;

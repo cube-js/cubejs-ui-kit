@@ -39,7 +39,6 @@ export default function SchemeSwitch(props) {
   return <nu-btn
     onEventInput={changeScheme}
     toggle value="dark" off-value="light"
-    theme="swap"
     radius="round"
     inset="n :active[#shadow.50]"
     pressed={scheme === 'dark' || null}
