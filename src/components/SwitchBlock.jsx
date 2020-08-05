@@ -72,9 +72,8 @@ export default function SwitchBlock(props) {
             key={option.id}
             id={option.id}
             height={props.contentHeight || 'min 25x||min 15x'}
-            hidden>
-            {option.description}
-          </nu-description>;
+            hidden
+            {...insertHTML(option.description)}/>
         })
       }
     </nu-grid>
