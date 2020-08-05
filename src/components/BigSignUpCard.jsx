@@ -24,6 +24,7 @@ export default function SmallSignUpCard(props) {
   }
 
   return <CardBlock
+    padding="10x 0|||7.5x --content-padding 6x"
     {...filterAttrs(props)}
     text="center" label="Subscription">
     <nu-flow gap="4x" columns="repeat(8, 1pr)|||1pr" column="4 / -4||3 / -3|1 / -1">

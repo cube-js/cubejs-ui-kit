@@ -42,7 +42,7 @@ export default function Topbar(props) {
       <nu-blocklink to="/" mark="n">
         <nu-svg
           id="logo"
-          height="5x"
+          height="4.5x"
           src={logo}
           label="Cube.js logo"
           filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>

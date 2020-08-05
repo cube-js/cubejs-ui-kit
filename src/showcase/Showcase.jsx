@@ -22,7 +22,8 @@ import SwitchBlock from '../components/SwitchBlock';
 import { filterAttrs } from '../helpers';
 
 const FullWidthBlock = (props) => {
-  return <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)" fill shadow transition="fill" {...filterAttrs(props)}>
+  return <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)" fill shadow
+                   transition="fill" {...filterAttrs(props)}>
     {props.children}
   </nu-block>
 }
@@ -34,8 +35,8 @@ const TYPES = [
     heading: 'Hybrid',
     description: 'With Cube Cloud Hybrid you can provision and manage the whole Cube.js stack with your cloud. Kubernetes based deployment ensures only one way connection from your cluster to the Cube Cloud. Your cluster pulls Kubernetes and images to install.',
     imageAttrs: {
-      space: '6x top||0',
-      height: '100% + 6x||100%',
+      space: '6x top||6x bottom',
+      height: '100% + 6x',
     },
   },
   {
@@ -120,10 +121,10 @@ export default function Showcase() {
 <nu-h1>H1 Cera Pro Medium 42-54</nu-h1>
 <nu-h2>H2 Cera Pro Medium 32/44</nu-h2>
 <nu-h3>H3 Cera Pro Medium 26/36</nu-h3>
-<nu-h4>H4 Cera Pro Medium 20/28</nu-h4>
-<nu-h5>H5 Cera Pro Medium 18/26</nu-h5>
-<nu-block as="t1">T1 Cera Pro Regular 18-28</nu-block>
-<nu-block as="t2">T2 Cera Pro Regular 16-28</nu-block>
+<nu-h4>H4 Cera Pro Medium 20/30</nu-h4>
+<nu-h5>H5 Cera Pro Medium 16/26</nu-h5>
+<nu-block as="t1">T1 Cera Pro Regular 18-30</nu-block>
+<nu-block as="t2">T2 Cera Pro Regular 16-26</nu-block>
 <nu-block as="c1">C1 Cera Pro Regular 16-22</nu-block>
 <nu-block as="c2">C2 Cera Pro Regular 14-22</nu-block>
 <nu-block as="p1">P1 Cera Pro Regular 18-32</nu-block>
@@ -135,10 +136,10 @@ export default function Showcase() {
               <nu-h1>H1 Cera Pro Medium 42-54</nu-h1>
               <nu-h2>H2 Cera Pro Medium 32/44</nu-h2>
               <nu-h3>H3 Cera Pro Medium 26/36</nu-h3>
-              <nu-h4>H4 Cera Pro Medium 20/28</nu-h4>
-              <nu-h5>H5 Cera Pro Medium 18/26</nu-h5>
-              <nu-block as="t1">T1 Cera Pro Regular 18-28</nu-block>
-              <nu-block as="t2">T2 Cera Pro Regular 16-28</nu-block>
+              <nu-h4>H4 Cera Pro Medium 20/30</nu-h4>
+              <nu-h5>H5 Cera Pro Medium 16/26</nu-h5>
+              <nu-block as="t1">T1 Cera Pro Regular 18-30</nu-block>
+              <nu-block as="t2">T2 Cera Pro Regular 16-26</nu-block>
               <nu-block as="c1">C1 Cera Pro Regular 16-22</nu-block>
               <nu-block as="c2">C2 Cera Pro Regular 14-22</nu-block>
               <nu-block as="p1">P1 Cera Pro Regular 18-32</nu-block>
@@ -147,13 +148,13 @@ export default function Showcase() {
               <nu-h1>H1 Cera Pro Medium 42-54</nu-h1>
               <nu-h2>H2 Cera Pro Medium 32/44</nu-h2>
               <nu-h3>H3 Cera Pro Medium 26/36</nu-h3>
-              <nu-h4>H4 Cera Pro Medium 20/28</nu-h4>
-              <nu-h5>H5 Cera Pro Medium 18/26</nu-h5>
-              <nu-block size="t1">T1 Cera Pro Regular 18-28</nu-block>
-              <nu-block size="t2">T2 Cera Pro Regular 16-28</nu-block>
-              <nu-block size="c1">C1 Cera Pro Regular 16-22</nu-block>
-              <nu-block size="c2">C2 Cera Pro Regular 14-22</nu-block>
-              <nu-block size="p1">P1 Cera Pro Regular 18-32</nu-block>
+              <nu-h4>H4 Cera Pro Medium 20/30</nu-h4>
+              <nu-h5>H5 Cera Pro Medium 16/26</nu-h5>
+              <nu-block as="t1">T1 Cera Pro Regular 18-30</nu-block>
+              <nu-block as="t2">T2 Cera Pro Regular 16-26</nu-block>
+              <nu-block as="c1">C1 Cera Pro Regular 16-22</nu-block>
+              <nu-block as="c2">C2 Cera Pro Regular 14-22</nu-block>
+              <nu-block as="p1">P1 Cera Pro Regular 18-32</nu-block>
             </nu-flow>
           </nu-grid>
         </nu-block>
@@ -331,7 +332,7 @@ export default function Showcase() {
     <nu-card gap="2x">
       <nu-h2>Component: CardBlock</nu-h2>
 
-      <ImportSnippet name="CardBlock" />
+      <ImportSnippet name="CardBlock"/>
 
       <nu-code dangerouslySetInnerHTML={{
         __html: `<textarea>
@@ -351,7 +352,7 @@ export default function Showcase() {
     <nu-card gap="2x">
       <nu-h2>Component: SmallSignUpCard</nu-h2>
 
-      <ImportSnippet name="SmallSignUpCard" />
+      <ImportSnippet name="SmallSignUpCard"/>
 
       <nu-code dangerouslySetInnerHTML={{
         __html: `<textarea>
@@ -369,7 +370,7 @@ export default function Showcase() {
     <nu-card gap="2x">
       <nu-h2>Component: BigSignUpCard</nu-h2>
 
-      <ImportSnippet name="BigSignUpCard" />
+      <ImportSnippet name="BigSignUpCard"/>
 
       <nu-code dangerouslySetInnerHTML={{
         __html: `<textarea>
@@ -387,7 +388,7 @@ export default function Showcase() {
     <nu-card gap="2x">
       <nu-h2>Component: Hero</nu-h2>
 
-      <ImportSnippet name="Hero" />
+      <ImportSnippet name="Hero"/>
 
       <nu-code dangerouslySetInnerHTML={{
         __html: `<textarea>
@@ -409,7 +410,7 @@ export default function Showcase() {
     <nu-card gap="2x">
       <nu-h2>Block: Topbar</nu-h2>
 
-      <ImportSnippet name="Topbar" />
+      <ImportSnippet name="Topbar"/>
 
       <FullWidthBlock height="15">
         <Topbar sticky getStarted/>
@@ -419,7 +420,7 @@ export default function Showcase() {
     <nu-card gap="2x">
       <nu-h2>Block: SubscriptionBlock</nu-h2>
 
-      <ImportSnippet name="SubscriptionBlock" />
+      <ImportSnippet name="SubscriptionBlock"/>
 
       <FullWidthBlock>
         <SubscriptionBlock/>
@@ -429,7 +430,7 @@ export default function Showcase() {
     <nu-card gap="2x">
       <nu-h2>Block: Footer</nu-h2>
 
-      <ImportSnippet name="Footer" />
+      <ImportSnippet name="Footer"/>
 
       <FullWidthBlock>
         <Footer/>
@@ -439,7 +440,7 @@ export default function Showcase() {
     <nu-card gap="2x">
       <nu-h2>Block: SwitchBlock</nu-h2>
 
-      <ImportSnippet name="SwitchBlock" />
+      <ImportSnippet name="SwitchBlock"/>
 
       <FullWidthBlock>
         <SwitchBlock
@@ -451,7 +452,7 @@ export default function Showcase() {
     <nu-card gap="2x">
       <nu-h2>Block: FeatureBlock</nu-h2>
 
-      <ImportSnippet name="FeatureBlock" />
+      <ImportSnippet name="FeatureBlock"/>
 
       <FullWidthBlock>
         <FeatureBlock

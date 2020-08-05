@@ -15,13 +15,14 @@ export default function SwitchBlock(props) {
       width="10sp|||--full-width"
       columns="1pr 1pr||1fr"
       rows="auto auto 1fr"
-      gap="4x 8x||4x"
+      gap="4x --grid-gap"
       items="stretch||center"
       content="start"
       place="space-around">
       <nu-attrs
         for="description"
-        text="left||center|left"/>
+        text="left||center"
+        width="max 4sp||auto"/>
       <nu-h2 {...insertHTML(props.heading)} />
       <nu-block
         row="1 / span 3||4"
@@ -29,7 +30,7 @@ export default function SwitchBlock(props) {
         box="y"
         place="space-around"
         class="nu-dark-invert"
-        height="18||16" width="100%">
+        height="48x||16" width="100%">
         <nu-attrs
           for="img"
           height="100%" width="100%"/>
@@ -70,6 +71,7 @@ export default function SwitchBlock(props) {
           return <nu-description
             key={option.id}
             id={option.id}
+            height="min 25x||min 15x"
             hidden>
             {option.description}
           </nu-description>;

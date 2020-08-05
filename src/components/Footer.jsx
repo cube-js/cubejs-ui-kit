@@ -82,13 +82,12 @@ export default function Footer() {
 
       <nu-flow gap="2x" column="||2|1 / -1">
         <nu-h5>Get in touch</nu-h5>
-        <nu-pane gap>
+        <nu-pane gap="2x">
           <nu-attrs
             for="blocklink"
             radius="round"
             padding=".25x"
             size="t1"
-            opacity=".7 :hover.focus[1]"
             transition="opacity"></nu-attrs>
           <nu-blocklink to="!https://slack.cube.dev/">
             <nu-svg src={slackIcon}></nu-svg>

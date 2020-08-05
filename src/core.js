@@ -20,7 +20,7 @@ export default {
     window.addEventListener('nudeReady', (event) => {
       const { Nude } = window;
 
-      Nude.unit('sp', spanWidth);
+      Nude.units.define('sp', spanWidth);
 
       Nude.assign('nu-root', 'attrsFor', {
         description: {
@@ -85,6 +85,6 @@ export default {
       });
     });
 
-    return import('numl');
+    return import('./numl');
   },
 };

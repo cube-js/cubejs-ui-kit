@@ -47,7 +47,7 @@ export default function SmallSignUpCard(props) {
           <nu-btn
             action="submit"
             disabled={loading || null}
-            width="min 20x|auto"
+            width="15x|auto"
             special
             is-big>
             {props.action || ACTION}
