@@ -30,27 +30,21 @@ const FullWidthBlock = (props) => {
 
 const TYPES = [
   {
-    image: hybridImg,
-    id: 'hybrid',
-    heading: 'Hybrid',
-    description: 'With Cube Cloud Hybrid you can provision and manage the whole Cube.js stack with your cloud. Kubernetes based deployment ensures only one way connection from your cluster to the Cube Cloud. Your cluster pulls Kubernetes and images to install.',
-    imageAttrs: {
-      space: '6x top||6x bottom',
-      height: '100% + 6x',
-    },
-  },
-  {
-    image: hostedImg,
+    image: '/static/images/hosted.svg',
     id: 'hosted',
     heading: 'Hosted',
-    description: 'Deploy fully managed Cube.js apps in the cloud of your choice: AWS, Azure, or GCP. With best-in-class infrastructure and proven practices, Cube Cloud guarantees high availability, scalability, and improved performance.',
+    description: 'Deploy fully managed Cube.js apps in the cloud of your choice: AWS, Azure, or GCP. With best-in-class infrastructure and proven practices, Cube Cloud guarantees high availability, scalability, and improved performance.\\n\\nCube Cloud provisions and manages API instances, caching layer, background refresh schedulers, and external databases for pre-aggregations. It supports multi-tenant deployments both on database and instance levels.'
   },
   {
-    image: onPremImg,
-    id: 'onprem',
-    heading: 'On-prem',
-    description: 'With Cube Cloud Hybrid you can provision and manage the whole Cube.js stack with your cloud. Kubernetes based deployment ensures only one way connection from your cluster to the Cube Cloud. Your cluster pulls Kubernetes and images to install.',
-  },
+    image: '/static/images/hybrid.svg',
+    id: 'hybrid',
+    heading: 'Hybrid',
+    description: 'With Cube Cloud Hybrid, you can provision and manage the whole Cube.js stack inside your cloud. \\n\\n Kubernetes-based deployment ensures a one-way connection from your cluster to the Cube Cloud. Your cluster pulls Kubernetes config and images to install.',
+    imageAttrs: {
+      space: '3x top||6x bottom',
+      height: '100% + 3x||100% + 6x',
+    },
+  }
 ];
 
 const FEATURES = [
