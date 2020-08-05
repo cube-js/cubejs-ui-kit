@@ -47,8 +47,9 @@ export default function Topbar(props) {
           label="Cube.js logo"
           filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
       </nu-blocklink>
-      <nu-grid flow="column" gap items="center">
-        <nu-pane gap="0">
+      <nu-grid flow="column" gap="3x"
+        items="center">
+        <nu-pane gap>
           <nu-props outline-color="color(text 10%)"></nu-props>
           <nu-attrs
             for="link"
