@@ -28,7 +28,7 @@ export default function SwitchBlock(props) {
         row="1 / span 3||4"
         column="2||1"
         box="y"
-        place="space-around"
+        place="start center"
         class="nu-dark-invert"
         height="48x||16" width="100%">
         <nu-attrs
