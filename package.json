@@ -84,6 +84,16 @@
       ]
     },
     {
+      "name": "Grid Component",
+      "path": [
+        "dist/components/Grid.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
       "name": "CardBlock Component",
       "path": [
         "dist/components/CardBlock.js"
