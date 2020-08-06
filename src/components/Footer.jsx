@@ -60,7 +60,7 @@ export default function Footer() {
         <nu-block text="nowrap">2020 © Cube Dev, Inc</nu-block>
       </nu-flow>
 
-      <nu-flex gap=".5x" flow="column">
+      <nu-flex gap=".5x" flow="column" items="start">
         <nu-h5>Resources</nu-h5>
         <nu-spacer height=".5x" />
         {
@@ -70,7 +70,7 @@ export default function Footer() {
         }
       </nu-flex>
 
-      <nu-flex gap=".5x" flow="column">
+      <nu-flex gap=".5x" flow="column" items="start">
         <nu-h5>Community</nu-h5>
         <nu-spacer height=".5x" />
         {
