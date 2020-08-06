@@ -25,7 +25,7 @@ export default {
       Nude.assign('nu-root', 'attrsFor', {
         description: {
           color: 'dark-03',
-          size: 'lg||md',
+          size: 't1',
         },
         h1: { size: 'h1', text: 'h' },
         h2: { size: 'h2', text: 'h' },
@@ -46,7 +46,7 @@ export default {
         color: 'main :active[hover] :special[white] :special:active[white]',
         fill: 'clear :special[main] :special:hover[hover] :special:hover:active[main] :special:active[hover]',
         mark: 'hover #hover.10 :special[n]',
-        size: 'md :big[t1]',
+        size: 't2 :big[t1]',
         padding: '1.375x 2.5x :big[1.875x 2.5x]',
         '--main-color': '--pink-color :purple[--purple-color]',
         '--main-color-rgb': '--pink-color-rgb :purple[--purple-color-rgb]',
@@ -58,9 +58,9 @@ export default {
 
       Nude.assign('nu-input', 'styles', {
         border: '#input-border :invalid[#pink] :focus.invalid[#clear]',
-        padding: '1.875x 2x',
+        padding: '1.375x 2.5x :big[1.875x 2.5x]',
         color: 'dark-02 :invalid[pink]',
-        size: 't1',
+        size: 't2 :big[t1]',
         '--outline-color': '--purple-outline-color :invalid[--pink-outline-color]',
       });
 

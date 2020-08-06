@@ -42,7 +42,7 @@ export default function SubscriptionBlock(props) {
             id="email"
             placeholder="Email"
             grow="1"
-            padding="1.5x 2x">
+            is-big>
           </nu-input>
           <nu-btn
             width="2sp||3sp|100%"

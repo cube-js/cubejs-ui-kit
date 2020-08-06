@@ -2,6 +2,7 @@ export const COMPONENT_LIST = [
   'Root',
   'SubscriptionBlock',
   'Section',
+  'Grid',
   'CardBlock',
   'FeatureBlock',
   'Hero',

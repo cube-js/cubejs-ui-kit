@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { useState } from 'react';
 import jsx from 'jsx-native-events';
-import { filterAttrs } from '../helpers';
+import { attrs } from '../helpers';
 
 const dataset = typeof document !== 'undefined' ? document.documentElement.dataset : {};
 
@@ -43,7 +43,7 @@ export default function SchemeSwitch(props) {
     inset="n :active[#shadow.50]"
     pressed={scheme === 'dark' || null}
     padding
-    {...filterAttrs(props)}>
+    {...attrs(props)}>
     <nu-icon name="^ moon :pressed[sun]"></nu-icon>
   </nu-btn>
 }

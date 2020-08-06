@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from './Section.jsx';
-import { filterAttrs, insertHTML } from '../helpers';
+import { attrs, insertHTML } from '../helpers';
 import * as images from '../images';
 
 export default function Hero(props) {
@@ -12,7 +12,7 @@ export default function Hero(props) {
     items="center"
     width="max 44"
     color="text-soft"
-    {...filterAttrs(props)}>
+    {...attrs(props)}>
     <nu-svg
       id="logo"
       height="4.5x"

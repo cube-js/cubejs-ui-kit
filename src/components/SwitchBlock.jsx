@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react';
 import jsx from 'jsx-native-events';
-import { filterAttrs, insertHTML } from '../helpers';
+import { attrs, insertHTML } from '../helpers';
 import Section from './Section.jsx';
 
 export default function SwitchBlock(props) {
@@ -10,7 +10,7 @@ export default function SwitchBlock(props) {
   return <Section
     fill="bg"
     padding="25x 0||16x 0"
-    {...filterAttrs(props)}>
+    {...attrs(props)}>
     <nu-grid
       width="10sp|||--full-width"
       columns="1pr 1pr||1fr"

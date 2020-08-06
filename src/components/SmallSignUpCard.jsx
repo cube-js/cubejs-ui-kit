@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { createRef } from 'react';
 import jsx from 'jsx-native-events';
-import { filterAttrs, insertHTML } from '../helpers';
+import { attrs, insertHTML } from '../helpers';
 import CardBlock from './CardBlock.jsx';
 import Subscription from '../services/subscription';
 
@@ -24,7 +24,7 @@ export default function SmallSignUpCard(props) {
   }
 
   return <CardBlock
-    bold {...filterAttrs(props)}
+    bold {...attrs(props)}
     text="left" label="Subscription">
     <nu-flow
       column="2 / span 6||2 / span 5|span 2"
@@ -41,15 +41,13 @@ export default function SmallSignUpCard(props) {
             disabled={loading || null}
             id="email"
             placeholder="Email"
-            grow="1"
-            padding="1.5x 2x">
+            grow="1">
           </nu-input>
           <nu-btn
             action="submit"
             disabled={loading || null}
             width="15x|auto"
-            special
-            is-big>
+            special>
             {props.action || ACTION}
           </nu-btn>
           <nu-check place="right bottom 1.25x 6x||bottom .75x" for="email" assert="email">Email is

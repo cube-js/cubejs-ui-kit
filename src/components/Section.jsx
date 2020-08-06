@@ -1,5 +1,5 @@
 import React from 'react';
-import { filterAttrs } from '../helpers';
+import { attrs } from '../helpers';
 
 export default function Section(props) {
   return <nu-section
@@ -12,7 +12,7 @@ export default function Section(props) {
       padding="0 --content-padding"
       place="space-around"
       gap="--grid-gap"
-      {...filterAttrs(props, ['fill', 'shadow', 'border'])}>
+      {...attrs(props, ['fill', 'shadow', 'border'])}>
       {props.children}
     </nu-flex>
   </nu-section>

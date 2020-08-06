@@ -165,18 +165,38 @@ export default function App() {
 * **Root** - A root component to wrap your application with.
 * **Section** - A section component.
 * **Card** - A card component.
+* **Grid** - A card component.
+
+## Available blocks
+
 * **Topbar** - A top bar component with a row of links.
 * **Hero** - A card block component.
 * **Footer** - A footer block component with copyright, links and "get in touch" section.
-* **SubscriptionForm** - A subscription block. A simple form to subscribe user to our updates.
-* **SchemeSwitch** - A switch button for schemes. (light/dark)
+* **SubscriptionBlock** - A subscription block. A simple form to subscribe user to our updates.
+* **CardBlock** - A card block.
+* **FeatureBlock** - A block with feature list.
+* **SmallSignUpCard** - A small signup card block with dark background.
+* **BigSignUpCard** - A big signup card block with white background.
+* **SwitchBlock** - A block with button group to switch sections each with text and image.
 
 ## Contribution
 
-To add a new component:
+### Add new component/block
 
 - Add a new file `{ComponentName}.jsx` in `src/components` folder with your component.
 - Add a new line to `list.js` file in the root with component name.
 - Add an example of usage to the **Showcase** component in `src/showcase/index.jsx`.
 - Add a new line to the **Available components** section.
 - Add a documentation `docs/${ComponentName}.md` file for the component. 
+
+### Run showcase and test your work
+
+```bash
+$ npm start
+```
+
+Then navigate to `https://localhost:1234/` in your browser to open Showcase.
+
+### Create pull request
+
+Commit your work to the new branch and create pull request.

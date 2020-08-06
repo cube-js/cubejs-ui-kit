@@ -52,10 +52,10 @@ export default function Footer() {
     border="top bottom outside #main-border">
     <Grid width="10sp|||100%" columns="4sp 2sp 2sp 2sp||4sp 3sp 3sp|2sp" padding="11x 0">
       <nu-attrs for="link" text="n nowrap" color="white 70% :hover[white]"></nu-attrs>
-      <nu-attrs for="h5" text="b nowrap" size="md"></nu-attrs>
+      <nu-attrs for="h5" text="b nowrap"></nu-attrs>
 
       <nu-flow
-        opacity=".7" width="auto||100%" size="md lg">
+        opacity=".7" width="auto||100%" size="t2">
         <nu-block text="nowrap">Built with ♥️ <nu-el display="inline||block|inline">in San Francisco</nu-el></nu-block>
         <nu-block text="nowrap">2020 © Cube Dev, Inc</nu-block>
       </nu-flow>

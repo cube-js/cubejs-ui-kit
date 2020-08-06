@@ -1,5 +1,5 @@
 import React from 'react';
-import { filterAttrs, insertHTML } from '../helpers';
+import { attrs, insertHTML } from '../helpers';
 import Section from './Section.jsx';
 import Grid from './Grid.jsx';
 
@@ -9,7 +9,7 @@ export default function FeatureBlock(props) {
   features = features || [];
 
   return <Section items="center"
-                  {...filterAttrs(props)}>
+                  {...attrs(props)}>
     <nu-grid
       columns="1pr 1pr|||1pr"
       padding="17x 0||12x 0||10x 0"

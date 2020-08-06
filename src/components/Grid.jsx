@@ -1,5 +1,5 @@
 import React from 'react';
-import { filterAttrs } from '../helpers';
+import { attrs } from '../helpers';
 
 export default function Grid(props) {
   return <nu-grid
@@ -7,7 +7,7 @@ export default function Grid(props) {
     columns="repeat(12, 1pr)|||1pr 1pr"
     gap="(--grid-gap * 2) --grid-gap"
     place="space-around"
-    {...filterAttrs(props)}>
+    {...attrs(props)}>
     {props.children}
   </nu-grid>;
 }

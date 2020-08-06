@@ -19,24 +19,24 @@ import hybridImg from '../assets/hybrid.svg';
 import hostedImg from '../assets/hosted.svg';
 import onPremImg from '../assets/onprem.svg';
 import SwitchBlock from '../components/SwitchBlock';
-import { filterAttrs } from '../helpers';
+import { attrs } from '../helpers';
 
 const FullWidthBlock = (props) => {
   return <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)" fill shadow
-                   transition="fill" {...filterAttrs(props)}>
+                   transition="fill" {...attrs(props)}>
     {props.children}
   </nu-block>
 }
 
 const TYPES = [
   {
-    image: '/static/images/hosted.svg',
+    image: hostedImg,
     id: 'hosted',
     heading: 'Hosted',
     description: 'Deploy fully managed Cube.js apps in the cloud of your choice: AWS, Azure, or GCP. With best-in-class infrastructure and proven practices, Cube Cloud guarantees high availability, scalability, and improved performance.\\n\\nCube Cloud provisions and manages API instances, caching layer, background refresh schedulers, and external databases for pre-aggregations. It supports multi-tenant deployments both on database and instance levels.'
   },
   {
-    image: '/static/images/hybrid.svg',
+    image: hybridImg,
     id: 'hybrid',
     heading: 'Hybrid',
     description: 'With Cube Cloud Hybrid, you can provision and manage the whole Cube.js stack inside your cloud. \\n\\n Kubernetes-based deployment ensures a one-way connection from your cluster to the Cube Cloud. Your cluster pulls Kubernetes config and images to install.',
@@ -294,6 +294,27 @@ export default function Showcase() {
               <nu-input value="Input Text"/>
               <nu-input value="Invalid Input" is-invalid/>
               <nu-input disabled placeholder="Disabled"/>
+            </nu-flex>
+          </nu-flex>
+        </nu-block>
+      </nu-grid>
+      <nu-spacer/>
+      <nu-h3>Big input</nu-h3>
+      <nu-grid as="example">
+        <nu-code dangerouslySetInnerHTML={{
+          __html: `<textarea>
+<nu-input is-big placeholder="Input"/>
+          </textarea>`,
+        }}>
+        </nu-code>
+        <nu-block as="preview">
+          <nu-flex gap="2x 1x" flow="column">
+            <nu-flex flow="row wrap" gap>
+              <nu-input is-big placeholder="Input"/>
+              <nu-input is-big placeholder="Focus" outline="y" border="hidden"/>
+              <nu-input is-big value="Input Text"/>
+              <nu-input is-big value="Invalid Input" is-invalid/>
+              <nu-input is-big disabled placeholder="Disabled"/>
             </nu-flex>
           </nu-flex>
         </nu-block>

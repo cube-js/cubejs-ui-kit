@@ -1,5 +1,5 @@
 import React from 'react';
-import { filterAttrs } from '../helpers';
+import { attrs } from '../helpers';
 import Grid from './Grid.jsx';
 
 export default function CardBlock(props) {
@@ -13,7 +13,7 @@ export default function CardBlock(props) {
     width="initial (100% - (--content-padding * 2)) --max-width"
     shadow={props.bold ? '0' : '0px 20px 30px rgba(114, 114, 144, 0.05)'}
     place="space-around"
-    {...filterAttrs(props)}>
+    {...attrs(props)}>
     <nu-props text-soft-color={props.bold ? 'white' : ''}></nu-props>
     <Grid>
       { props.children }
