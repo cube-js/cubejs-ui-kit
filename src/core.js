@@ -62,6 +62,7 @@ export default {
         color: 'dark-02 :invalid[pink]',
         size: 't2 :big[t1]',
         '--outline-color': '--purple-outline-color :invalid[--pink-outline-color]',
+        '--outline-width': '1rem / 4',
       });
 
       Nude.assign('nu-label', 'styles', {

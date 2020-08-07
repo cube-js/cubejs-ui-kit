@@ -68,7 +68,7 @@ export default function Topbar(props) {
     box="y"
     fill="clear">
 
-    <nu-pane width="--full-width" content="space-between" place="space-around">
+    <nu-pane width="--content-width" content="space-between" place="space-around">
       <nu-blocklink to="/" mark="n">
         <nu-svg
           id="logo"

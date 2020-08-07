@@ -8,7 +8,7 @@ export default function Section(props) {
     border={props.border}>
     <nu-flex
       flow="column"
-      width="min-content (--max-width + (--content-padding * 2))"
+      width="min-content (--max-content-width + (--content-padding * 2))"
       padding="0 --content-padding"
       place="space-around"
       gap="--grid-gap"
