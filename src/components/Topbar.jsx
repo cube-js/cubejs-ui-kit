@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { useState } from 'react';
 import jsx from 'jsx-native-events';
-import { logo } from '../images';
+import { main as mainLogo } from '../logos';
 import { attrs } from '../helpers';
 
 const MENU = [
@@ -79,7 +79,7 @@ export default function Topbar(props) {
         <nu-svg
           id="logo"
           height="4x"
-          src={logo}
+          src={mainLogo}
           label="Cube.js logo"
           filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
       </nu-blocklink>

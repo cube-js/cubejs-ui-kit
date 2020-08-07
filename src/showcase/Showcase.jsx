@@ -416,7 +416,7 @@ export default function Showcase() {
 
       <FullWidthBlock>
         <Hero
-          logo="cloudLogo"
+          logo="cubeCloud"
           heading="Run, manage, scale and&nbsp;optimize\nyour&nbsp;Cube.js&nbsp;Apps."
           description="Leave&nbsp;uptime, devops and&nbsp;deployment to&nbsp;the&nbsp;creators of&nbsp;Cube.js.\nSecure and&nbsp;highly&nbsp;available managed&nbsp;deployment\nby&nbsp;the&nbsp;creators of&nbsp;Cube.js"/>
       </FullWidthBlock>
