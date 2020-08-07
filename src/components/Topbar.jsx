@@ -45,6 +45,7 @@ const MenuBtn = (props) => {
     place="top right"
     mark="hover #dark-03.10"
     onEventInput={evt => props.onInput(evt.detail)}
+    onEventTap={props.onClick}
     {...attrs(props, ['pressed', 'toggle'])}>
     <nu-icon
       place="inside"
@@ -58,6 +59,11 @@ export default function Topbar(props) {
 
   function onMenuBtnClick(bool) {
     setIsMenuOpen(bool);
+  }
+
+  function onAction(evt) {
+    console.log('!', evt);
+    setIsMenuOpen(false);
   }
 
   return <nu-header
@@ -78,7 +84,7 @@ export default function Topbar(props) {
           filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
       </nu-blocklink>
       <nu-grid flow="column" gap="3x"
-        items="center">
+               items="center">
         <nu-pane gap>
           <nu-props
             outline-color="color(text 10%)"
@@ -103,70 +109,73 @@ export default function Topbar(props) {
           </nu-btn>
         }
 
-        <nu-action
-          id="overlay"
-          place="fixed cover"
-          fill="special-shadow 50%"
-          hidden={!isMenuOpen || undefined}></nu-action>
-
-        <nu-region
-          id="sidemenu"
-          place="fixed right"
-          height="100vh"
-          z="front"
-          size="t1"
-          is-shown={isMenuOpen || undefined}
-          gap="2x"
-          width="15"
-          padding="10x top"
-          fill="bg"
-          shadow="#special-shadow.50"
-          opacity="0 :shown[1]"
-          move="100% 0 :shown[]"
-          transition="move, opacity"
-          text="right"
-          border="left"
-          onClick={() => setIsMenuOpen(false)}>
-
-          <MenuBtn pressed={isMenuOpen} onInput={onMenuBtnClick} />
-
-          <nu-flow>
-            <nu-attrs
-              for="action"
-              color="dark-03 :hover[text] :active.hover[dark-02]"
-              padding="1x 2x"
-              display="block"
-              outline="focus inset"/>
-            {
-              props.getStarted && <nu-action
-                show="n||y"
-                color="special"
-                mark="#pink-hover.10 hover"
-                text="sb"
-                to="#getting-started">
-                Get Started
-              </nu-action>
-            }
-            {
-              MENU.map(item => {
-                return <nu-action
-                  key={item.label}
-                  to={item.link}>
-                  {item.label}
-                </nu-action>;
-              })
-            }
-          </nu-flow>
-          <nu-block padding="0 2x">
-            <nu-btn to="!https://github.com/cube-js/cube.js">
-              <nu-icon name="github"></nu-icon>
-              Github
-            </nu-btn>
-          </nu-block>
-        </nu-region>
-
-        <MenuBtn pressed={isMenuOpen} show="n||y" onInput={onMenuBtnClick} />
+        <MenuBtn pressed={isMenuOpen} show="n||y" onInput={onMenuBtnClick}/>
       </nu-grid>
     </nu-pane>
+
+    <nu-action
+      id="overlay"
+      place="fixed cover"
+      fill="special-shadow 50%"
+      hidden={!isMenuOpen || undefined}
+      cursor="default"
+      onClick={() => setIsMenuOpen(false)}></nu-action>
+
+    <nu-region
+      id="sidemenu"
+      place="fixed right"
+      height="stretch"
+      z="front"
+      size="t1"
+      is-shown={isMenuOpen || undefined}
+      gap="2x"
+      width="15"
+      padding="10x top"
+      fill="bg"
+      shadow="#special-shadow.50"
+      opacity="0 :shown[1]"
+      move="100% 0 :shown[]"
+      transition="move, opacity"
+      text="right"
+      border="left">
+
+      <MenuBtn pressed={isMenuOpen} onInput={onMenuBtnClick}/>
+
+      <nu-flow>
+        <nu-attrs
+          for="action"
+          color="dark-03 :hover[text] :active.hover[dark-02]"
+          padding="1x 2x"
+          display="block"
+          outline="focus inset"/>
+        {
+          props.getStarted && <nu-action
+            show="n||y"
+            color="special"
+            mark="#pink-hover.10 hover"
+            text="sb"
+            to="#getting-started"
+            onEventTap={onAction}>
+            Get Started
+          </nu-action>
+        }
+        {
+          MENU.map(item => {
+            return <nu-action
+              key={item.label}
+              to={item.link}
+              onEventTap={onAction}>
+              {item.label}
+            </nu-action>;
+          })
+        }
+      </nu-flow>
+      <nu-block padding="0 2x">
+        <nu-btn to="!https://github.com/cube-js/cube.js" onEventTap={onAction}>
+          <nu-icon name="github"></nu-icon>
+          Github
+        </nu-btn>
+      </nu-block>
+    </nu-region>
   </nu-header>;
 }
