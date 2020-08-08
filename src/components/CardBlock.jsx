@@ -1,9 +1,12 @@
 import React from 'react';
 import { attrs } from '../helpers';
-import Grid from './Grid.jsx';
 
 export default function CardBlock(props) {
   return <nu-card
+    display="flex"
+    content="center"
+    items="center"
+    flow="column"
     gap="4x"
     border="0"
     radius="1x"
@@ -15,8 +18,6 @@ export default function CardBlock(props) {
     place="space-around"
     {...attrs(props)}>
     <nu-props text-soft-color={props.bold ? 'white' : ''}></nu-props>
-    <Grid>
-      { props.children }
-    </Grid>
+    { props.children }
   </nu-card>
 }

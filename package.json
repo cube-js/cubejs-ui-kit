@@ -1,6 +1,6 @@
 {
   "name": "cubejs-uikit",
-  "version": "0.0.38",
+  "version": "0.0.39",
   "description": "UIKit for Cube.js projects",
   "main": "dist/core.js",
   "type": "module",
@@ -36,6 +36,7 @@
     "numl": "^0.12.0-beta.5",
     "parcel": "^1.12.4",
     "parcel-bundler": "^1.12.4",
+    "prop-types": "^15.7.2",
     "rollup": "^2.22.2",
     "rollup-plugin-postcss": "^3.1.3",
     "rollup-plugin-terser": "^6.1.0",
@@ -53,6 +54,46 @@
     "last 3 Safari versions"
   ],
   "size-limit": [
+    {
+      "name": "Button Component",
+      "path": [
+        "dist/components/Button.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
+      "name": "Input Component",
+      "path": [
+        "dist/components/Input.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
+      "name": "ButtonGroup Component",
+      "path": [
+        "dist/components/ButtonGroup.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
+      "name": "FormField Component",
+      "path": [
+        "dist/components/FormField.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
     {
       "name": "Root Component",
       "path": [
@@ -137,6 +178,16 @@
       "name": "Footer Component",
       "path": [
         "dist/components/Footer.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
+      "name": "SiteBlock Component",
+      "path": [
+        "dist/components/SiteBlock.js"
       ],
       "ignore": [
         "react",

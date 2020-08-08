@@ -1,11 +1,20 @@
 /** @jsx jsx */
-import React from 'react';
+import React, { useState } from 'react';
 import jsx from 'jsx-native-events';
 import { attrs, insertHTML } from '../helpers';
 import Section from './Section.jsx';
+import ButtonGroup from './ButtonGroup.jsx';
 
 export default function SwitchBlock(props) {
   const { options } = props;
+  const [value, setValue] = useState(props.value || (options.length && options[0].id));
+
+  const groupOptions = options.map(option => {
+    return {
+      id: option.id,
+      label: option.heading,
+    };
+  });
 
   return <Section
     fill="bg"
@@ -38,11 +47,10 @@ export default function SwitchBlock(props) {
           options.map(option => {
             return <nu-img
               key={option.id}
-              id={`${option.id}-img`}
               label={`Illustration for ${option.heading}`}
-              hidden
+              hidden={value !== option.id || null}
               {...(option.imageAttrs || {})}>
-              <img src={option.image} alt="" />
+              <img src={option.image} alt=""/>
             </nu-img>;
           })
         }
@@ -52,27 +60,18 @@ export default function SwitchBlock(props) {
           for="btn"
           fill="bg :pressed[special-bg]"
           color="main :pressed[special-text]"/>
-        { options.length
-          && <nu-btngroup value={options[0].id} width="min-content" fill="pink">
-            {
-              options.map(option => {
-                return <nu-btn
-                  key={option.id}
-                  value={option.id}
-                  control={`${option.id} ${option.id}-img`} is-red trigger>
-                  {option.heading}
-                </nu-btn>;
-              })
-            }
-        </nu-btngroup>}
+        {options.length
+        && <ButtonGroup
+          options={groupOptions}
+          value={value}
+          onInput={val => setValue(val)}/>}
       </nu-block>
       {
         options.map(option => {
           return <nu-description
             key={option.id}
-            id={option.id}
             height={props.contentHeight || 'min 25x||min 15x'}
-            hidden>
+            hidden={value !== option.id || null}>
             <nu-flow gap {...insertHTML(option.description)}/>
           </nu-description>
         })

@@ -41,6 +41,7 @@ export default function Root(props) {
       pink-color="#FF6492"
       pink-hover-color="#FA326E"
       pink-outline-color="color(pink 30%)"
+      pink-04-color="#FFC1D3"
 
       special-color="color(pink)"
       special-bg-color="color(pink)"

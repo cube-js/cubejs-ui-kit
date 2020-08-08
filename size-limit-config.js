@@ -21,6 +21,6 @@ config['size-limit'] = COMPONENT_LIST.map(component => {
   };
 }));
 
-fs.writeFileSync('./package.json', JSON.stringify(config, null, 2), 'utf-8');
+fs.writeFileSync('./package.json', JSON.stringify(config, null, 2) + '\n', 'utf-8');
 
 console.log('Size limit config generated');

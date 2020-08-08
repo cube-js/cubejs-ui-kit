@@ -1,4 +1,8 @@
 export const COMPONENT_LIST = [
+  'Button',
+  'Input',
+  'ButtonGroup',
+  'FormField',
   'Root',
   'SubscriptionBlock',
   'Section',
@@ -8,6 +12,7 @@ export const COMPONENT_LIST = [
   'Hero',
   'Topbar',
   'Footer',
+  'SiteBlock',
   // 'SchemeSwitch',
   'SmallSignUpCard',
   'BigSignUpCard',

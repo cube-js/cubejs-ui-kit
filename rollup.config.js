@@ -15,7 +15,7 @@ const external = [
   'jsx-native-events',
   'react',
   'react-dom',
-  'prop-types'
+  'prop-types',
 ];
 
 const plugins = [

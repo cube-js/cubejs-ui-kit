@@ -324,10 +324,10 @@ export default function Showcase() {
       <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
           __html: `<textarea>
-<nu-formfield>
+<nu-field>
   <nu-label>Form label</nu-label>
   <nu-input placeholder="Input"/>
-</nu-formfield>
+</nu-field>
           </textarea>`,
         }}>
         </nu-code>
@@ -408,7 +408,7 @@ export default function Showcase() {
       <nu-code dangerouslySetInnerHTML={{
         __html: `<textarea>
 <Hero
-  logo="cloudLogo"
+  image="cloudLogo"
   heading="Run, manage, scale and&nbsp;optimize\nyour&nbsp;Cube.js&nbsp;Apps."
   description="Leave&nbsp;uptime, devops and&nbsp;deployment to&nbsp;the&nbsp;creators of&nbsp;Cube.js.\nSecure and&nbsp;highly&nbsp;available managed&nbsp;deployment\nby&nbsp;the&nbsp;creators of&nbsp;Cube.js"/>
         </textarea>`,
@@ -416,7 +416,7 @@ export default function Showcase() {
 
       <FullWidthBlock>
         <Hero
-          logo="cubeCloud"
+          image="cubeCloud"
           heading="Run, manage, scale and&nbsp;optimize\nyour&nbsp;Cube.js&nbsp;Apps."
           description="Leave&nbsp;uptime, devops and&nbsp;deployment to&nbsp;the&nbsp;creators of&nbsp;Cube.js.\nSecure and&nbsp;highly&nbsp;available managed&nbsp;deployment\nby&nbsp;the&nbsp;creators of&nbsp;Cube.js"/>
       </FullWidthBlock>

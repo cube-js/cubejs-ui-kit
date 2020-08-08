@@ -32,26 +32,23 @@ const MENU = [
 ];
 
 const MenuBtn = (props) => {
-  return <nu-btn
+  return <nu-action
     as="menubtn"
     toggle
     pressed={props.pressed || undefined}
-    color="dark-03"
+    color="dark-03 :active[dark-02]"
     fill="bg"
     width="8x"
     height="8x"
-    border="n :active[1bw outside #dark-03.30]"
-    radius="n"
     place="top right"
     mark="hover #dark-03.10"
     onEventInput={evt => props.onInput(evt.detail)}
-    onEventTap={props.onClick}
     {...attrs(props, ['pressed', 'toggle'])}>
     <nu-icon
       place="inside"
       name="^ menu :pressed[close-outline]"
       size="2"/>
-  </nu-btn>;
+  </nu-action>;
 };
 
 export default function Topbar(props) {
@@ -119,7 +116,7 @@ export default function Topbar(props) {
       fill="special-shadow 50%"
       hidden={!isMenuOpen || undefined}
       cursor="default"
-      onClick={() => setIsMenuOpen(false)}></nu-action>
+      onEventTap={() => setIsMenuOpen(false)}></nu-action>
 
     <nu-region
       id="sidemenu"

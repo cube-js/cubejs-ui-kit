@@ -1,33 +1,16 @@
 import React from 'react';
-import Section from './Section.jsx';
-import { attrs, insertHTML } from '../helpers';
-import * as images from '../logos';
+import SiteBlock from './SiteBlock.jsx';
+import { attrs } from '../helpers';
 
 export default function Hero(props) {
-  return <Section
-    padding="16x 2x"
-    display="flex"
-    flow="column"
-    text="center"
-    items="center"
-    width="max 44"
-    color="text-soft"
-    {...attrs(props)}>
-    { props.logo &&
-      <nu-svg
-        id="logo"
-        height="4.5x"
-        width="18"
-        padding="1x bottom"
-        src={images[props.logo] || images.logo}
-        label="Cube.js logo"
-        filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
-    }
-    <nu-h1
-      size="h2"
-      {...insertHTML(props.heading)}></nu-h1>
-    <nu-description
-      {...insertHTML(props.description)}></nu-description>
-    {props.children}
-  </Section>;
+  return <SiteBlock
+    image={props.image}
+    heading={props.heading}
+    description={props.description}
+    level={1}
+    headingSize={props.headingSize}
+    {...attrs(props)}
+  />;
 }
+
+Hero.propTypes = SiteBlock.propTypes;

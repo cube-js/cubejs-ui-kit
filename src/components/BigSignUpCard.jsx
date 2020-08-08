@@ -1,13 +1,18 @@
 /** @jsx jsx */
 import React, { createRef } from 'react';
 import jsx from 'jsx-native-events';
-import { attrs, insertHTML, spanWidth } from '../helpers';
-import CardBlock from './CardBlock.jsx';
+import T from 'prop-types';
+
+import { attrs, insertHTML } from '../helpers';
 import Subscription from '../services/subscription';
+import { HAS_BEEN_SIGNED_UP, UNABLE_TO_SUBSCRIBE } from '../messages';
+import CardBlock from './CardBlock.jsx';
+import Input from './Input.jsx';
+import Button from './Button.jsx';
 
 const ACTION = 'Sign Up';
 
-export default function SmallSignUpCard(props) {
+export default function BigSignUpCard(props) {
   const inputRef = createRef();
   const subscription = Subscription(props.postUrl, props.postData);
 
@@ -25,43 +30,49 @@ export default function SmallSignUpCard(props) {
 
   return <CardBlock
     padding="10x 0|||7.5x --content-padding 6x"
-    {...attrs(props)}
-    text="center" label="Subscription">
-    <nu-flow gap="4x" columns="repeat(8, 1pr)|||1pr" column="4 / -4||3 / -3|1 / -1">
+    text="center" label="Subscription"
+    {...attrs(props)}>
+    <nu-flex gap="4x" width="6sp||8sp|100%" items="center" flow="column">
       { props.heading && <nu-h2 {...insertHTML(props.heading)} /> }
       { props.description && <nu-description
         {...insertHTML(props.description)} /> }
       {
-        !email && <nu-form display="flex" flow="row|||column" gap
+        !email && <nu-form
+          display="flex" flow="row|||column" gap
+          width="100%"
           onEventInput={onSubmit} text="left">
-          <nu-input
+          <Input
             ref={inputRef}
             color="main-text :invalid[text]"
             disabled={loading || null}
             id="email"
             placeholder="Email"
             grow="1"
-            is-big>
-          </nu-input>
-          <nu-btn
+            big>
+          </Input>
+          <Button
             action="submit"
             disabled={loading || null}
-            special
-            is-big
+            special big
             width="2sp||3sp|100%">
             { props.action || ACTION }
-          </nu-btn>
+          </Button>
           <nu-check place="bottom 1.25x 6x||bottom .75x" for="email" assert="email">Email is not valid</nu-check>
           {
-            error && <nu-block width="100%">We are unable to subscribe your email. This may be due to an invalid email address. Please&nbsp;check and try again.</nu-block>
+            error && <nu-block width="100%">{UNABLE_TO_SUBSCRIBE}</nu-block>
           }
         </nu-form>
       }
       {
         email && <nu-block radius padding="1x 2x" border="1ow dashed" as="t1">
-          <nu-strong>{email}</nu-strong>&nbsp;has been signed up!
+          <nu-strong>{email}</nu-strong>&nbsp;{HAS_BEEN_SIGNED_UP}
         </nu-block>
       }
-    </nu-flow>
+    </nu-flex>
   </CardBlock>;
 }
+
+BigSignUpCard.propTypes = {
+  postUrl: T.string,
+  postData: T.object,
+};

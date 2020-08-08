@@ -11,7 +11,7 @@ export default function Section(props) {
       width="min-content (--max-content-width + (--content-padding * 2))"
       padding="0 --content-padding"
       place="space-around"
-      gap="--grid-gap"
+      gap="4x"
       {...attrs(props, ['fill', 'shadow', 'border'])}>
       {props.children}
     </nu-flex>

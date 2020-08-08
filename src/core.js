@@ -65,6 +65,10 @@ export default {
         '--outline-width': '1rem / 4',
       });
 
+      Nude.assign('nu-btngroup', 'styles', {
+        fill: 'pink',
+      });
+
       Nude.assign('nu-label', 'styles', {
         color: 'dark-03',
         text: 'n',
