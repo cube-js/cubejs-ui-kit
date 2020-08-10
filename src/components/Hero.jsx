@@ -10,7 +10,9 @@ export default function Hero(props) {
     level={1}
     headingSize={props.headingSize}
     {...attrs(props)}
-  />;
+  >
+    {props.children}
+  </SiteBlock>;
 }
 
 Hero.propTypes = SiteBlock.propTypes;

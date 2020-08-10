@@ -121,6 +121,11 @@ export default {
         mark: 'n',
       });
 
+      Nude.assign('nu-grid', 'styles', {
+        items: 'start stretch',
+        gap: '--grid-gap',
+      });
+
       Nude.assign('nu-description', 'attrs', {
         size: 't1',
         text: 'n',

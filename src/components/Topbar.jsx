@@ -59,7 +59,6 @@ export default function Topbar(props) {
   }
 
   function onAction(evt) {
-    console.log('!', evt);
     setIsMenuOpen(false);
   }
 
@@ -69,7 +68,8 @@ export default function Topbar(props) {
     padding={`${props.sticky ? 2 : 4}x --content-padding||2x --content-padding`}
     border={props.sticky ? 'bottom' : 'n'}
     box="y"
-    fill="clear">
+    fill="clear"
+    {...attrs(props)}>
 
     <nu-pane width="--content-width" content="space-between" place="space-around">
       <nu-blocklink to="/" mark="n">
