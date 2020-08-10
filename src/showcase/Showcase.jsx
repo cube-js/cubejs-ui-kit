@@ -96,6 +96,7 @@ export default function Showcase() {
     <nu-pane content="space-between">
       <nu-h1>Cube.js UIKit Showcase</nu-h1>
       <nu-pane>
+        <nu-icon name="slack"></nu-icon>
         <nu-btn padding toggle control=":root[data-nu-outline]">
           <nu-icon name="grid-outline"></nu-icon>
         </nu-btn>

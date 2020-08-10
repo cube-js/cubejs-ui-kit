@@ -2,9 +2,6 @@
 import React from 'react';
 import jsx from 'jsx-native-events';
 import Grid from './Grid.jsx';
-import slackIcon from '../assets/slack.svg';
-import twitterIcon from '../assets/twitter.svg';
-import githubIcon from '../assets/github.svg';
 import Section from './Section.jsx';
 
 const COMMUNITY_LINKS = [
@@ -88,15 +85,16 @@ export default function Footer() {
             radius="round"
             padding=".25x"
             size="t1"
+            color="white"
             transition="opacity"></nu-attrs>
           <nu-blocklink to="!https://slack.cube.dev/">
-            <nu-svg src={slackIcon}></nu-svg>
+            <nu-icon name="slack"></nu-icon>
           </nu-blocklink>
           <nu-blocklink to="!https://twitter.com/thecubejs">
-            <nu-svg src={twitterIcon}></nu-svg>
+            <nu-icon name="twitter"></nu-icon>
           </nu-blocklink>
           <nu-blocklink to="!https://github.com/cube-js/cube.js">
-            <nu-svg src={githubIcon}></nu-svg>
+            <nu-icon name="github"></nu-icon>
           </nu-blocklink>
         </nu-pane>
       </nu-flow>

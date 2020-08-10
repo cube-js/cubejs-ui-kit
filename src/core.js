@@ -1,9 +1,19 @@
 import { spanWidth } from './helpers';
+import slackIcon from './assets/icons/slack.svg';
+import twitterIcon from './assets/icons/twitter.svg';
+import githubIcon from './assets/icons/github.svg';
+import linkedinIcon from './assets/icons/linkedin.svg';
+import cbIcon from './assets/icons/cb.svg';
+import angelListIcon from './assets/icons/angellist.svg';
 
 const html = typeof document !== 'undefined' ? document.querySelector('html') : null;
 const dataset = html ? html.dataset : {};
 
 const OPTIONS = { icons: 'eva', prevent: false, scheme: 'light' };
+
+function loadIcon(url) {
+  return fetch(url).then(response => response.text());
+}
 
 export default {
   init(options = {}) {
@@ -21,6 +31,25 @@ export default {
       const { Nude } = window;
 
       Nude.units.define('sp', spanWidth);
+
+      Nude.icons.setLoader((name) => {
+        switch (name) {
+          case 'slack':
+            return loadIcon(slackIcon);
+          case 'twitter':
+            return loadIcon(twitterIcon);
+          case 'github':
+            return loadIcon(githubIcon);
+          case 'linkedin':
+            return loadIcon(linkedinIcon);
+          case 'cb':
+            return loadIcon(cbIcon);
+          case 'angellist':
+            return loadIcon(angelListIcon);
+          default:
+            return Nude.icons.loaders.eva(name);
+        }
+      });
 
       Nude.assign('nu-root', 'attrsFor', {
         description: {
@@ -67,8 +96,10 @@ export default {
 
       Nude.assign('nu-card', 'styles', {
         fill: 'pink 20% :purple[light]',
-        gap: '2x',
+        gap: '3x',
         border: 'n',
+        padding: '4x',
+        radius: '1x',
       });
 
       Nude.assign('nu-btngroup', 'styles', {
