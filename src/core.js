@@ -65,6 +65,12 @@ export default {
         '--outline-width': '1rem / 4',
       });
 
+      Nude.assign('nu-card', 'styles', {
+        fill: 'pink 20% :purple[light]',
+        gap: '2x',
+        border: 'n',
+      });
+
       Nude.assign('nu-btngroup', 'styles', {
         fill: 'pink',
       });
