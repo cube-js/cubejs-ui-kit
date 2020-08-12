@@ -5,7 +5,7 @@ export default function Root(props) {
     style={{ WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}
     responsive="100rem|61.25rem|40rem"
     transition="fill"
-    fill="light"
+    fill={props.fill || 'light'}
     height="min 100vh"
     text="n"
     size="t2">
@@ -46,7 +46,8 @@ export default function Root(props) {
       special-color="color(pink)"
       special-bg-color="color(pink)"
       special-text-color="white"
-      border-color="color(pink 60%)"
+
+      border-color="color(dark-05)"
 
       h1-font-size="42rp|||32rp"
       h1-line-height="54rp|||44rp"
@@ -69,7 +70,7 @@ export default function Root(props) {
       p1-font-size="18rp"
       p1-line-height="32rp"
 
-      placeholder-color="--dark-02-color"
+      placeholder-color="color(dark-02 40%)"
     />
 
     { props.children }

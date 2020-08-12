@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
 import jsx from 'jsx-native-events';
-// import SchemeSwitch from '../components/SchemeSwitch';
 import SubscriptionBlock from '../components/SubscriptionBlock';
 import Topbar from '../components/Topbar';
 import Footer from '../components/Footer';
@@ -17,12 +16,12 @@ import cloudIcon3 from '../assets/cubecloud_icon3.svg';
 import cloudIcon4 from '../assets/cubecloud_icon4.svg';
 import hybridImg from '../assets/hybrid.svg';
 import hostedImg from '../assets/hosted.svg';
-import onPremImg from '../assets/onprem.svg';
+// import onPremImg from '../assets/onprem.svg';
 import SwitchBlock from '../components/SwitchBlock';
 import { attrs } from '../helpers';
 
 const FullWidthBlock = (props) => {
-  return <nu-block space="0 (4x + 1bw)||0 (3x + 1bw)" fill shadow
+  return <nu-block space="0 (6x + 1bw)||0 (5x + 1bw)" fill shadow
                    transition="fill" {...attrs(props)}>
     {props.children}
   </nu-block>
@@ -300,6 +299,7 @@ export default function Showcase() {
         </nu-block>
       </nu-grid>
       <nu-spacer/>
+
       <nu-h3>Big input</nu-h3>
       <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
@@ -321,6 +321,26 @@ export default function Showcase() {
         </nu-block>
       </nu-grid>
       <nu-spacer/>
+
+      <nu-h3>File input</nu-h3>
+      <nu-grid as="example">
+        <nu-code dangerouslySetInnerHTML={{
+          __html: `<textarea>
+<nu-fileinput placeholder="Input"/>
+          </textarea>`,
+        }}>
+        </nu-code>
+        <nu-block as="preview">
+          <nu-flex gap="2x 1x" flow="column">
+            <nu-flex flow="column" gap>
+              <nu-fileinput/>
+              <nu-fileinput disabled/>
+            </nu-flex>
+          </nu-flex>
+        </nu-block>
+      </nu-grid>
+      <nu-spacer/>
+
       <nu-h3>Form field</nu-h3>
       <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
@@ -439,7 +459,7 @@ export default function Showcase() {
       <ImportSnippet name="SubscriptionBlock"/>
 
       <FullWidthBlock>
-        <SubscriptionBlock/>
+        <SubscriptionBlock dark/>
       </FullWidthBlock>
     </nu-card>
 

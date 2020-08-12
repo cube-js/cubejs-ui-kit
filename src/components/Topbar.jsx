@@ -116,6 +116,7 @@ export default function Topbar(props) {
       fill="special-shadow 50%"
       hidden={!isMenuOpen || undefined}
       cursor="default"
+      mark="n"
       onEventTap={() => setIsMenuOpen(false)}></nu-action>
 
     <nu-region

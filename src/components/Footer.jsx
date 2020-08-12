@@ -46,7 +46,7 @@ export default function Footer() {
   return <Section
     fill="dark-02"
     color="white"
-    border="top bottom outside #main-border">
+    border="top bottom outside #white.50">
     <Grid width="10sp|||100%" columns="4sp 2sp 2sp 2sp||4sp 3sp 3sp|2sp" padding="11x 0">
       <nu-attrs for="link" text="n nowrap" color="white 70% :hover[white]"></nu-attrs>
       <nu-attrs for="h5" text="b nowrap"></nu-attrs>

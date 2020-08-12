@@ -15,6 +15,7 @@ export default function SiteBlock(props) {
     color={props.dark ? 'white' : null}
     border={props.dark ? 'top bottom outside #white.50' : null}
     {...attrs(props)}>
+    <nu-attrs for="description" color={props.dark ? 'white 70%' : 'dark-03'} />
     {
       (props.image || props.heading || props.description) && <nu-flex
         flow="column"
