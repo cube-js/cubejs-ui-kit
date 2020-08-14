@@ -111,6 +111,11 @@ export default function Showcase() {
     <nu-attrs for="example" gap="2x" columns="1pr 2pr||1fr" items="start stretch"></nu-attrs>
     <nu-attrs for="preview" padding="2x left" border="1ow left"></nu-attrs>
 
+    <nu-block>
+      <nu-theme hue="1"></nu-theme>
+      <nu-progressbar value="100" width="100%"></nu-progressbar>
+    </nu-block>
+
     <nu-card border="y" fill="bg" gap="2x">
       <Heading>Typography</Heading>
       <nu-spacer/>

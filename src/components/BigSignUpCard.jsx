@@ -34,39 +34,48 @@ export default function BigSignUpCard(props) {
     text="center" label="Subscription"
     {...attrs(props)}>
     <nu-flex gap="4x" width="6sp||8sp|100%" items="center" flow="column">
-      { props.heading && <Heading {...insertHTML(props.heading)} /> }
-      { props.description && <nu-description
-        {...insertHTML(props.description)} /> }
+      {props.heading && <Heading>
+        <nu-el {...insertHTML(props.heading)}/>
+      </Heading>}
+      {props.description && <nu-description
+        {...insertHTML(props.description)} />}
       {
         !email && <nu-form
-          display="flex" flow="row|||column" gap
-          width="100%"
+          gap place="stretch"
           onEventInput={onSubmit} text="left">
-          <Input
-            ref={inputRef}
-            color="main-text :invalid[text]"
-            disabled={loading || null}
-            id="email"
-            placeholder="Email"
-            grow="1"
-            big>
-          </Input>
-          <Button
-            action="submit"
-            disabled={loading || null}
-            special big
-            width="2sp||3sp|100%">
-            { props.action || ACTION }
-          </Button>
-          <nu-check place="bottom 1.25x 6x||bottom .75x" for="email" assert="email">Email is not valid</nu-check>
+          <nu-flex flow="row|||column" gap>
+            <Input
+              ref={inputRef}
+              color="main-text :invalid[text]"
+              disabled={loading || null}
+              id="email"
+              placeholder="Email"
+              grow="1"
+              big>
+            </Input>
+            <Button
+              action="submit"
+              disabled={loading || null}
+              special big
+              width="2sp||3sp|100%">
+              {props.action || ACTION}
+            </Button>
+          </nu-flex>
+          <nu-check place="bottom 1.25x 6x||bottom .75x" for="email" assert="email">Email is not
+            valid
+          </nu-check>
           {
             error && <nu-block width="100%">{UNABLE_TO_SUBSCRIBE}</nu-block>
+          }
+          {
+            loading && <nu-progressbar value="100" width="100%"></nu-progressbar>
           }
         </nu-form>
       }
       {
         email && <nu-block radius padding="1x 2x" border="1ow dashed" as="t1">
-          <nu-strong>{email}</nu-strong>&nbsp;{HAS_BEEN_SIGNED_UP}
+          <nu-strong>{email}</nu-strong>
+          &nbsp;{HAS_BEEN_SIGNED_UP}
         </nu-block>
       }
     </nu-flex>
@@ -74,6 +83,8 @@ export default function BigSignUpCard(props) {
 }
 
 BigSignUpCard.propTypes = {
+  heading: T.string,
+  description: T.string,
   postUrl: T.string,
   postData: T.object,
 };

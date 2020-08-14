@@ -34,7 +34,7 @@ export default function SubscriptionBlock(props) {
     dark={props.dark}
     heading={HEADING}
     description={DESCRIPTION}>
-    <nu-block width="6sp 100%||10sp 100%|100%">
+    <nu-block width="6sp 100%||10sp 100%|--content-width">
       {
         !email &&
         <nu-form onEventInput={onSubmit} display="flex" flow="row wrap|||column" width="100%" gap
@@ -62,6 +62,9 @@ export default function SubscriptionBlock(props) {
             error &&
             <nu-block {...insertHTML(UNABLE_TO_SUBSCRIBE)}></nu-block>
           }
+          {
+            loading && <nu-progressbar value="100" width="100%"></nu-progressbar>
+          }
         </nu-form>
       }
       {
@@ -71,9 +74,6 @@ export default function SubscriptionBlock(props) {
         </nu-block>
       }
     </nu-block>
-    {
-      loading && <nu-progressbar value="100" place="bottom" width="100%"></nu-progressbar>
-    }
   </SiteBlock>;
 }
 

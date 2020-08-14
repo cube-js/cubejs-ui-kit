@@ -201,6 +201,13 @@ export default {
           special: '',
         },
       });
+
+      Nude.assign('nu-progressbar', {
+        styles: {
+          border: 'n',
+          height: '.75x',
+        },
+      });
     });
 
     return import('./numl');

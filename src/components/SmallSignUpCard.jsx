@@ -30,7 +30,7 @@ export default function SmallSignUpCard(props) {
 
   return <CardBlock
     bold {...attrs(props)}
-    text="left" label="Subscription" flow="row">
+    text="left" label="Subscription" flow="row|||column">
     <nu-flow
       width="6sp||5sp|2sp"
       text="left|||center" gap="0|||2x" size="t2" color="light-text"
@@ -62,6 +62,9 @@ export default function SmallSignUpCard(props) {
             error &&
             <nu-block width="100%" {...insertHTML(UNABLE_TO_SUBSCRIBE)}></nu-block>
           }
+          {
+            loading && <nu-progressbar value="100" width="100%"></nu-progressbar>
+          }
         </nu-form>
       }
       {
@@ -70,9 +73,6 @@ export default function SmallSignUpCard(props) {
         </nu-block>
       }
     </nu-block>
-    {
-      loading && <nu-progressbar value="100" place="bottom" width="100%"></nu-progressbar>
-    }
   </CardBlock>;
 }
 

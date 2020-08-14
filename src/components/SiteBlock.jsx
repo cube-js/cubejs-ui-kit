@@ -34,8 +34,9 @@ export default function SiteBlock(props) {
           filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
         }
         {props.heading && <Heading
-          size={props.headingSize || (props.level ? null : 'h2')}
-          {...insertHTML(props.heading)}/>}
+          size={props.headingSize || (props.level ? null : 'h2')}>
+          <nu-el {...insertHTML(props.heading)}></nu-el>
+        </Heading>}
         {props.description && <nu-description
           {...insertHTML(props.description)}/>}
       </nu-flex>

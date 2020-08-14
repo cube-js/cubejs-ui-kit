@@ -33,7 +33,9 @@ export default function SwitchBlock(props) {
         for="description"
         text="left||center"
         width="max 4sp||auto"/>
-      <Heading {...insertHTML(props.heading)} />
+      <Heading>
+        <nu-el {...insertHTML(props.heading)}/>
+      </Heading>
       <nu-block
         row="1 / span 3||4"
         column="2||1"

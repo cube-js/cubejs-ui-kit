@@ -7,7 +7,7 @@ export default function CardBlock(props) {
     content="center"
     items="center"
     flow="column"
-    gap="4x"
+    gap="--grid-gap"
     border="0"
     radius="1x"
     fill={props.bold ? 'dark-02' : (props.fill || 'bg')}
