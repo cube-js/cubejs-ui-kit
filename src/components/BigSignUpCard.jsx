@@ -4,7 +4,7 @@ import jsx from 'jsx-native-events';
 import T from 'prop-types';
 
 import { attrs, insertHTML } from '../helpers';
-import Subscription from '../services/subscription';
+import useSubscription from '../services/subscription';
 import { HAS_BEEN_SIGNED_UP, UNABLE_TO_SUBSCRIBE } from '../messages';
 import CardBlock from './CardBlock.jsx';
 import Input from './Input.jsx';
@@ -15,7 +15,7 @@ const ACTION = 'Sign Up';
 
 export default function BigSignUpCard(props) {
   const inputRef = createRef();
-  const subscription = Subscription(props.postUrl, props.postData);
+  const subscription = useSubscription(props.postUrl, props.postData);
 
   let { email, error, loading } = subscription;
 

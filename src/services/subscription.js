@@ -10,7 +10,7 @@ export const SUBSCRIPTION_URL = 'https://hooks.zapier.com/hooks/catch/2073111/lg
  * @return {Promise<unknown>|{submit(*=): *, state: string, error: boolean, loading: boolean, email: string}}
  * @constructor
  */
-export default function Subscription(url, data = {}) {
+export default function useSubscription(url, data = {}) {
   if (!url) {
     url = SUBSCRIPTION_URL;
   }

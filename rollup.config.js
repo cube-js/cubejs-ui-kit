@@ -51,16 +51,27 @@ function serviceConfig(name) {
   };
 }
 
-export default [{
-  input: 'src/core.js',
-  external,
-  output: [{
-    name: 'CubeJS UI Kit',
-    dir: './dist/',
-    format: 'es',
-  }],
-  plugins,
-},
+export default [
+  {
+    input: 'src/core.js',
+    external,
+    output: [{
+      name: 'CubeJS UI Kit',
+      dir: './dist/',
+      format: 'es',
+    }],
+    plugins,
+  },
+  {
+    input: 'src/helpers.js',
+    external,
+    output: [{
+      name: 'CubeJS UI Kit Helpers',
+      dir: './dist/',
+      format: 'es',
+    }],
+    plugins,
+  },
   ...COMPONENT_LIST.map(componentConfig),
   ...SERVICE_LIST.map(serviceConfig),
 ];

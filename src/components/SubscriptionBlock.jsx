@@ -4,7 +4,7 @@ import jsx from 'jsx-native-events';
 import T from 'prop-types';
 
 import { HAS_BEEN_SUBSCRIBED, UNABLE_TO_SUBSCRIBE } from '../messages';
-import Subscription from '../services/subscription';
+import useSubscription from '../services/subscription';
 import SiteBlock from './SiteBlock.jsx';
 import Input from './Input.jsx';
 import Button from './Button.jsx';
@@ -15,7 +15,7 @@ export const DESCRIPTION = 'Awesome product updates; no&nbsp;spam.';
 
 export default function SubscriptionBlock(props) {
   const inputRef = createRef();
-  const subscription = Subscription();
+  const subscription = useSubscription();
 
   let { email, error, loading } = subscription;
 
