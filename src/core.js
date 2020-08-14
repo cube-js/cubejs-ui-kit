@@ -129,6 +129,14 @@ export default {
         },
       });
 
+      Nude.assign('nu-cardbtn', {
+        styles: {
+          gap: '3x',
+          padding: '2x',
+          mark: 'n',
+        },
+      });
+
       Nude.assign('nu-btngroup', {
         styles: {
           fill: 'pink',

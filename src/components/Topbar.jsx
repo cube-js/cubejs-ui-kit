@@ -11,7 +11,7 @@ const MENU = [
   },
   {
     label: 'Docs',
-    link: '!https://cube.dev/docs'
+    link: '/docs'
   },
   {
     label: 'Community',
@@ -23,11 +23,11 @@ const MENU = [
   },
   {
     label: 'Blog',
-    link: 'https://cube.dev/blog'
+    link: '/blog'
   },
   {
     label: 'Cube Cloud',
-    link: 'https://cube.dev/cloud'
+    link: '/cloud'
   }
 ];
 
@@ -75,7 +75,7 @@ export default function Topbar(props) {
       <nu-blocklink to="/" mark="n">
         <nu-svg
           id="logo"
-          height="4x"
+          height="4.5x"
           src={mainLogo}
           label="Cube.js logo"
           filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>

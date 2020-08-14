@@ -1,6 +1,6 @@
 {
   "name": "cubejs-uikit",
-  "version": "0.0.43",
+  "version": "0.0.44",
   "description": "UIKit for Cube.js projects",
   "main": "dist/core.js",
   "type": "module",
@@ -228,6 +228,16 @@
       "name": "SwitchBlock Component",
       "path": [
         "dist/components/SwitchBlock.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
+      "name": "GettingStarted Component",
+      "path": [
+        "dist/components/GettingStarted.js"
       ],
       "ignore": [
         "react",

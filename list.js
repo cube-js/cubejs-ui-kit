@@ -18,6 +18,7 @@ export const COMPONENT_LIST = [
   'SmallSignUpCard',
   'BigSignUpCard',
   'SwitchBlock',
+  'GettingStarted',
 ];
 
 export const SERVICE_LIST = [
