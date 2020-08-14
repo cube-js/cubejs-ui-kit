@@ -11,7 +11,7 @@ export default function SiteBlock(props) {
     padding="16x 0|||12x 0"
     text="center"
     items="center"
-    fill={props.dark ? 'dark-02' : null}
+    fill={props.dark ? 'dark-02' : (props.pink ? '#FFF2F6' : null)}
     color={props.dark ? 'white' : null}
     border={props.dark ? 'top bottom outside #white.50' : null}
     {...attrs(props)}>
@@ -46,6 +46,7 @@ export default function SiteBlock(props) {
 
 SiteBlock.propTypes = {
   dark: T.bool,
+  pink: T.bool,
   image: T.string,
   heading: T.string,
   description: T.string,

@@ -20,6 +20,8 @@ import hostedImg from '../assets/hosted.svg';
 import SwitchBlock from '../components/SwitchBlock';
 import { attrs } from '../helpers';
 import Heading from '../components/Heading.jsx';
+import GettingStarted from '../components/GettingStarted';
+import GridLines from './GridLines';
 
 const FullWidthBlock = (props) => {
   return <nu-block space="0 (6x + 1bw)||0 (5x + 1bw)" fill shadow
@@ -90,15 +92,18 @@ const DISABLED_STYLES = {
 };
 
 export default function Showcase() {
-  return (<nu-flow id="showcase" gap="2x" padding="2x||1x">
+  return (<nu-flow id="showcase" gap="2x" padding="3x||1x">
     <nu-attrs for="code" radius="" overflow="auto no" padding="1x 2x"/>
+    <nu-attrs for="card" padding="2x 3x||2x"/>
 
     <nu-pane content="space-between">
       <Heading level="1">Cube.js UIKit Showcase</Heading>
       <nu-pane>
-        <nu-icon name="slack"></nu-icon>
-        <nu-btn padding toggle control=":root[data-nu-outline]">
+        <nu-btn padding toggle control=":root[data-nu-outline]" fill="bg :pressed[special-bg]">
           <nu-icon name="grid-outline"></nu-icon>
+        </nu-btn>
+        <nu-btn padding toggle control=":root[data-nu-grid]" fill="bg :pressed[special-bg]">
+          <nu-icon name="menu-outline" rotate="90deg"></nu-icon>
         </nu-btn>
       </nu-pane>
     </nu-pane>
@@ -498,5 +503,17 @@ export default function Showcase() {
           features={FEATURES}/>
       </FullWidthBlock>
     </nu-card>
+
+    <nu-card border="y" fill="bg" gap="2x">
+      <nu-h2>Block: GettingStarted</nu-h2>
+
+      <ImportSnippet name="GettingStarted"/>
+
+      <FullWidthBlock>
+        <GettingStarted/>
+      </FullWidthBlock>
+    </nu-card>
+
+    <GridLines/>
   </nu-flow>);
 }
