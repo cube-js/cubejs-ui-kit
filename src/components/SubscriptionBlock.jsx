@@ -37,25 +37,27 @@ export default function SubscriptionBlock(props) {
     <nu-block width="6sp 100%||10sp 100%|--content-width">
       {
         !email &&
-        <nu-form onEventInput={onSubmit} display="flex" flow="row wrap|||column" width="100%" gap
+        <nu-form onEventInput={onSubmit} width="100%" gap
                  text="left">
-          <Input
-            ref={inputRef}
-            disabled={loading || null}
-            id="email"
-            placeholder="Email"
-            grow="1"
-            big>
-          </Input>
-          <Button
-            width="2sp||3sp|100%"
-            action="submit"
-            disabled={loading || null}
-            special
-            big>
-            Subscribe
-          </Button>
-          <nu-block width="100%" color>
+          <nu-flex flow="row|||column" gap>
+            <Input
+              ref={inputRef}
+              disabled={loading || null}
+              id="email"
+              placeholder="Email"
+              grow="1"
+              big>
+            </Input>
+            <Button
+              width="2sp||3sp|100%"
+              action="submit"
+              disabled={loading || null}
+              special
+              big>
+              Subscribe
+            </Button>
+          </nu-flex>
+          <nu-block color>
             <nu-check for="email" assert="email">Email is not valid</nu-check>
           </nu-block>
           {
