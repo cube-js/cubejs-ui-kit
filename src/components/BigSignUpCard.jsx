@@ -9,6 +9,7 @@ import { HAS_BEEN_SIGNED_UP, UNABLE_TO_SUBSCRIBE } from '../messages';
 import CardBlock from './CardBlock.jsx';
 import Input from './Input.jsx';
 import Button from './Button.jsx';
+import Heading from './Heading.jsx';
 
 const ACTION = 'Sign Up';
 
@@ -33,7 +34,7 @@ export default function BigSignUpCard(props) {
     text="center" label="Subscription"
     {...attrs(props)}>
     <nu-flex gap="4x" width="6sp||8sp|100%" items="center" flow="column">
-      { props.heading && <nu-h2 {...insertHTML(props.heading)} /> }
+      { props.heading && <Heading {...insertHTML(props.heading)} /> }
       { props.description && <nu-description
         {...insertHTML(props.description)} /> }
       {

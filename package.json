@@ -75,6 +75,16 @@
       ]
     },
     {
+      "name": "Heading Component",
+      "path": [
+        "dist/components/Heading.js"
+      ],
+      "ignore": [
+        "react",
+        "jsx-native-events"
+      ]
+    },
+    {
       "name": "ButtonGroup Component",
       "path": [
         "dist/components/ButtonGroup.js"

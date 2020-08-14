@@ -1,6 +1,7 @@
 export const COMPONENT_LIST = [
   'Button',
   'Input',
+  'Heading',
   'ButtonGroup',
   'FormField',
   'Root',

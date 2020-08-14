@@ -176,6 +176,31 @@ export default {
           fill: 'dark-05 50%',
         },
       });
+
+      Nude.assign('nu-code', {
+        styles: {
+          fill: '#2B2B58',
+          '--com-color': 'hue(0 0 low special)',
+          '--spc-color': 'color(white)',
+          '--nam-color': 'color(white)',
+          '--key-color': 'color(purple)',
+          '--num-color': 'color(purple)',
+          '--pct-color': 'hue(0 0 0 60 special)',
+          '--rex-color': 'color(pink)',
+          '--str-color': 'color(pink)',
+          '--unk-color': 'color(white)',
+          '--pls-color': 'hue(180 70 10 special)',
+          '--mns-color': 'color(pink)',
+          '--mrk-color': 'color(purple)',
+          '--mrk-bg-color': 'hue(240 70 3 special)',
+          '--scrollbar-bg-color': '#2B2B58',
+          '--scrollbar-border-color': '#2B2B58',
+          '--scrollbar-thumb-color': 'color(white 60%)',
+        },
+        attrs: {
+          special: '',
+        },
+      });
     });
 
     return import('./numl');

@@ -1,7 +1,7 @@
 import React from 'react';
 import { attrs, insertHTML } from '../helpers';
 import Section from './Section.jsx';
-import Grid from './Grid.jsx';
+import Heading from './Heading.jsx';
 
 export default function FeatureBlock(props) {
   let { heading, description, features } = props;
@@ -16,7 +16,7 @@ export default function FeatureBlock(props) {
       gap="12x --grid-gap||6x --grid-gap"
       items="start stretch">
       <nu-flow gap="2x" text="center" width="max 30" column="1 / -1" place="center">
-        <nu-h2 {...insertHTML(heading)}/>
+        <Heading level="2" {...insertHTML(heading)}/>
         <nu-description {...insertHTML(description)}/>
       </nu-flow>
       {
@@ -34,7 +34,7 @@ export default function FeatureBlock(props) {
               <img src={feature.image} alt=""/>
             </nu-img>
             <nu-flow gap="2x 0" column="3 / 7||1">
-              <nu-h4 text="nowrap" {...insertHTML(feature.heading)}/>
+              <Heading level="4" text="nowrap" {...insertHTML(feature.heading)}/>
               <nu-description {...insertHTML(feature.description)}/>
             </nu-flow>
           </nu-grid>;

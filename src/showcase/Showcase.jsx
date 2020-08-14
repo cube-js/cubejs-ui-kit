@@ -19,6 +19,7 @@ import hostedImg from '../assets/hosted.svg';
 // import onPremImg from '../assets/onprem.svg';
 import SwitchBlock from '../components/SwitchBlock';
 import { attrs } from '../helpers';
+import Heading from '../components/Heading.jsx';
 
 const FullWidthBlock = (props) => {
   return <nu-block space="0 (6x + 1bw)||0 (5x + 1bw)" fill shadow
@@ -90,10 +91,10 @@ const DISABLED_STYLES = {
 
 export default function Showcase() {
   return (<nu-flow id="showcase" gap="2x" padding="2x||1x">
-    <nu-attrs for="code" radius="" overflow="auto no" inset=".5x" padding="1x 2x" fill="main-bg"/>
+    <nu-attrs for="code" radius="" overflow="auto no" padding="1x 2x"/>
 
     <nu-pane content="space-between">
-      <nu-h1>Cube.js UIKit Showcase</nu-h1>
+      <Heading level="1">Cube.js UIKit Showcase</Heading>
       <nu-pane>
         <nu-icon name="slack"></nu-icon>
         <nu-btn padding toggle control=":root[data-nu-outline]">
@@ -106,9 +107,9 @@ export default function Showcase() {
     <nu-attrs for="preview" padding="2x left" border="1ow left"></nu-attrs>
 
     <nu-card border="y" fill="bg" gap="2x">
-      <nu-h2>Typography</nu-h2>
+      <Heading>Typography</Heading>
       <nu-spacer/>
-      <nu-h3>Headings</nu-h3>
+      <Heading level="3">Headings</Heading>
       <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
           __html: `<textarea>

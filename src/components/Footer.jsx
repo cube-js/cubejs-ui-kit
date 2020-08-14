@@ -3,6 +3,7 @@ import React from 'react';
 import jsx from 'jsx-native-events';
 import Grid from './Grid.jsx';
 import Section from './Section.jsx';
+import Heading from './Heading.jsx';
 
 const COMMUNITY_LINKS = [
   {
@@ -58,7 +59,7 @@ export default function Footer() {
       </nu-flow>
 
       <nu-flex gap=".5x" flow="column" items="start">
-        <nu-h5>Resources</nu-h5>
+        <Heading level="5">Resources</Heading>
         <nu-spacer height=".5x" />
         {
           RESOURCES_LINKS.map(item => {
@@ -68,7 +69,7 @@ export default function Footer() {
       </nu-flex>
 
       <nu-flex gap=".5x" flow="column" items="start">
-        <nu-h5>Community</nu-h5>
+        <Heading level="5">Community</Heading>
         <nu-spacer height=".5x" />
         {
           COMMUNITY_LINKS.map(item => {
@@ -78,7 +79,7 @@ export default function Footer() {
       </nu-flex>
 
       <nu-flow gap="2x" column="||2|1 / -1">
-        <nu-h5>Get in touch</nu-h5>
+        <Heading level="5">Get in touch</Heading>
         <nu-pane gap="2x">
           <nu-attrs
             for="blocklink"
