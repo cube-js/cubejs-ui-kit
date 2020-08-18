@@ -31,7 +31,7 @@ export default function SubscriptionBlock(props) {
 
   return <SiteBlock
     padding="12x 4x|||8x 2x"
-    dark={props.dark}
+    special={props.special}
     heading={HEADING}
     description={DESCRIPTION}>
     <nu-block width="6sp 100%||10sp 100%|--content-width">
@@ -82,4 +82,5 @@ export default function SubscriptionBlock(props) {
 SubscriptionBlock.propTypes = {
   postUrl: T.string,
   postData: T.object,
+  special: T.bool,
 };

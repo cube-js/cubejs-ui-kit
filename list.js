@@ -19,6 +19,7 @@ export const COMPONENT_LIST = [
   'BigSignUpCard',
   'SwitchBlock',
   'GettingStarted',
+  'ExploreCubeCloud',
 ];
 
 export const SERVICE_LIST = [

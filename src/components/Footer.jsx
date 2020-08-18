@@ -5,46 +5,47 @@ import Grid from './Grid.jsx';
 import Section from './Section.jsx';
 import Heading from './Heading.jsx';
 
-const COMMUNITY_LINKS = [
+const COMPANY_LINKS = [
   {
-    label: 'Slack us!',
-    link: '!https://slack.cube.dev/',
+    label: 'About',
+    link: '/about',
   },
   {
-    label: 'Github issues',
-    link: '!https://github.com/cube-js/cube.js/issues',
+    label: 'Careers',
+    link: '/careers',
   },
   {
-    label: 'Email',
-    link: 'mailto:info@cube.dev',
+    label: 'Terms of Service',
+    link: '/terms-of-service',
+  },
+  {
+    label: 'Privacy Policy',
+    link: '/privacy-policy',
   },
 ];
 
 const RESOURCES_LINKS = [
   {
-    label: 'Github',
-    link: '!https://github.com/cube-js/cube.js',
+    label: 'Getting Started',
+    link: '!https://github.com/cube-js/cube.js#getting-started',
   },
   {
-    label: 'Docs',
-    link: 'https://cube.dev/docs',
+    label: 'Documentation',
+    link: '/docs',
   },
   {
     label: 'Examples',
     link: '!https://github.com/cube-js/cube.js#examples',
   },
   {
-    label: 'Community',
-    link: 'https://slack.cube.dev/',
-  },
-  {
     label: 'Blog',
-    link: 'https://cube.dev/blog',
+    link: '/blog',
   },
 ];
 
 export default function Footer() {
   return <Section
+    role="contentinfo"
     fill="dark-02"
     color="white"
     border="top bottom outside #white.50">
@@ -69,10 +70,10 @@ export default function Footer() {
       </nu-flex>
 
       <nu-flex gap=".5x" flow="column" items="start">
-        <Heading level="5">Community</Heading>
+        <Heading level="5">Company</Heading>
         <nu-spacer height=".5x" />
         {
-          COMMUNITY_LINKS.map(item => {
+          COMPANY_LINKS.map(item => {
             return <nu-link key={item.label} to={item.link}>{item.label}</nu-link>
           })
         }
@@ -88,13 +89,13 @@ export default function Footer() {
             size="t1"
             color="white"
             transition="opacity"></nu-attrs>
-          <nu-blocklink to="!https://slack.cube.dev/">
+          <nu-blocklink to="!https://slack.cube.dev/" label="Slack">
             <nu-icon name="slack"></nu-icon>
           </nu-blocklink>
-          <nu-blocklink to="!https://twitter.com/thecubejs">
+          <nu-blocklink to="!https://twitter.com/thecubejs" label="Twitter">
             <nu-icon name="twitter"></nu-icon>
           </nu-blocklink>
-          <nu-blocklink to="!https://github.com/cube-js/cube.js">
+          <nu-blocklink to="!https://github.com/cube-js/cube.js" label="Github">
             <nu-icon name="github"></nu-icon>
           </nu-blocklink>
         </nu-pane>

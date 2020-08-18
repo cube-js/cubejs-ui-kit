@@ -14,6 +14,7 @@ import cloudIcon1 from '../assets/cubecloud_icon1.svg';
 import cloudIcon2 from '../assets/cubecloud_icon2.svg';
 import cloudIcon3 from '../assets/cubecloud_icon3.svg';
 import cloudIcon4 from '../assets/cubecloud_icon4.svg';
+import mainIllustration from '../assets/cube-illustration.svg';
 import hybridImg from '../assets/hybrid.svg';
 import hostedImg from '../assets/hosted.svg';
 // import onPremImg from '../assets/onprem.svg';
@@ -22,6 +23,7 @@ import { attrs } from '../helpers';
 import Heading from '../components/Heading.jsx';
 import GettingStarted from '../components/GettingStarted';
 import GridLines from './GridLines';
+import ExploreCubeCloud from '../components/ExploreCubeCloud';
 
 const FullWidthBlock = (props) => {
   return <nu-block space="0 (6x + 1bw)||0 (5x + 1bw)" fill shadow
@@ -438,14 +440,33 @@ export default function Showcase() {
   image="cloudLogo"
   heading="Run, manage, scale and&nbsp;optimize\nyour&nbsp;Cube.js&nbsp;Apps."
   description="Leave&nbsp;uptime, devops and&nbsp;deployment to&nbsp;the&nbsp;creators of&nbsp;Cube.js.\nSecure and&nbsp;highly&nbsp;available managed&nbsp;deployment\nby&nbsp;the&nbsp;creators of&nbsp;Cube.js"/>
+<Hero
+  wide
+  githubBadge
+  badge="Open Source"
+  image={mainIllustration}
+  heading="Аnalytical data access layer for modern web applications"
+  description="Cube.js is an open source framework which is great for building internal business intelligence tools or adding customer-facing analytics to existing applications"/>
         </textarea>`,
       }}></nu-code>
 
       <FullWidthBlock>
         <Hero
           image="cubeCloud"
-          heading="Run, manage, scale and&nbsp;optimize\nyour&nbsp;Cube.js&nbsp;Apps."
+          heading="Run, manage, scale and&nbsp;optimize\nyour&nbsp;Cube.js&nbsp;Apps"
           description="Leave&nbsp;uptime, devops and&nbsp;deployment to&nbsp;the&nbsp;creators of&nbsp;Cube.js.\nSecure and&nbsp;highly&nbsp;available managed&nbsp;deployment\nby&nbsp;the&nbsp;creators of&nbsp;Cube.js"/>
+      </FullWidthBlock>
+
+      <nu-spacer/>
+
+      <FullWidthBlock>
+        <Hero
+          wide
+          githubBadge
+          badge="Open Source"
+          image={mainIllustration}
+          heading="Аnalytical data access layer for modern web applications"
+          description="Cube.js is an open source framework which is great for building internal business intelligence tools or adding customer-facing analytics to existing applications"/>
       </FullWidthBlock>
     </nu-card>
 
@@ -465,7 +486,13 @@ export default function Showcase() {
       <ImportSnippet name="SubscriptionBlock"/>
 
       <FullWidthBlock>
-        <SubscriptionBlock dark/>
+        <SubscriptionBlock/>
+      </FullWidthBlock>
+
+      <nu-spacer/>
+
+      <FullWidthBlock>
+        <SubscriptionBlock special/>
       </FullWidthBlock>
     </nu-card>
 
@@ -511,6 +538,16 @@ export default function Showcase() {
 
       <FullWidthBlock>
         <GettingStarted/>
+      </FullWidthBlock>
+    </nu-card>
+
+    <nu-card border="y" fill="bg" gap="2x">
+      <nu-h2>Block: ExploreCubeCloud</nu-h2>
+
+      <ImportSnippet name="ExploreCubeCloud"/>
+
+      <FullWidthBlock padding="2x">
+        <ExploreCubeCloud/>
       </FullWidthBlock>
     </nu-card>
 

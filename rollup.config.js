@@ -16,6 +16,7 @@ const external = [
   'react',
   'react-dom',
   'prop-types',
+  'cubejs-uikit',
 ];
 
 const plugins = [
@@ -25,31 +26,31 @@ const plugins = [
   babel(babelConfig),
 ];
 
-function componentConfig(name) {
-  return {
-    input: `src/components/${name}.jsx`,
-    external,
-    output: [{
-      name: `${name} Component`,
-      dir: './dist/components/',
-      format: 'es',
-    }],
-    plugins,
-  };
-}
-
-function serviceConfig(name) {
-  return {
-    input: `src/services/${name}.js`,
-    external,
-    output: [{
-      name: `${name} Service`,
-      dir: './dist/services/',
-      format: 'es',
-    }],
-    plugins,
-  };
-}
+// function componentConfig(name) {
+//   return {
+//     input: `src/components/${name}.jsx`,
+//     external,
+//     output: [{
+//       name: `${name} Component`,
+//       dir: './dist/components/',
+//       format: 'es',
+//     }],
+//     plugins,
+//   };
+// }
+//
+// function serviceConfig(name) {
+//   return {
+//     input: `src/services/${name}.js`,
+//     external,
+//     output: [{
+//       name: `${name} Service`,
+//       dir: './dist/services/',
+//       format: 'es',
+//     }],
+//     plugins,
+//   };
+// }
 
 export default [
   {
@@ -62,16 +63,16 @@ export default [
     }],
     plugins,
   },
-  {
-    input: 'src/helpers.js',
-    external,
-    output: [{
-      name: 'CubeJS UI Kit Helpers',
-      dir: './dist/',
-      format: 'es',
-    }],
-    plugins,
-  },
-  ...COMPONENT_LIST.map(componentConfig),
-  ...SERVICE_LIST.map(serviceConfig),
+  // {
+  //   input: 'src/helpers.js',
+  //   external,
+  //   output: [{
+  //     name: 'CubeJS UI Kit Helpers',
+  //     dir: './dist/',
+  //     format: 'es',
+  //   }],
+  //   plugins,
+  // },
+  // ...COMPONENT_LIST.map(componentConfig),
+  // ...SERVICE_LIST.map(serviceConfig),
 ];

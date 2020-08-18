@@ -4,7 +4,7 @@ export default function ImportSnippet({ name }) {
   return <nu-code
     dangerouslySetInnerHTML={{
       __html: `<textarea>
-import ${name} from 'cubejs-uikit/dist/${name}';</textarea>`,
+import { ${name} } from 'cubejs-uikit';</textarea>`,
     }}>
   </nu-code>
 }

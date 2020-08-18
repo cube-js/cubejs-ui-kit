@@ -1,10 +1,32 @@
-import { spanWidth } from './helpers';
 import slackIcon from './assets/icons/slack.svg';
+import slackBigIcon from './assets/icons/slack-big.svg';
 import twitterIcon from './assets/icons/twitter.svg';
 import githubIcon from './assets/icons/github.svg';
 import linkedinIcon from './assets/icons/linkedin.svg';
 import cbIcon from './assets/icons/cb.svg';
 import angelListIcon from './assets/icons/angellist.svg';
+export { default as Button } from './components/Button.jsx';
+export { default as Input } from './components/Input.jsx';
+export { default as Heading } from './components/Heading.jsx';
+export { default as ButtonGroup } from './components/ButtonGroup.jsx';
+export { default as FormField } from './components/FormField.jsx';
+export { default as Root } from './components/Root.jsx';
+export { default as SubscriptionBlock } from './components/SubscriptionBlock.jsx';
+export { default as Section } from './components/Section.jsx';
+export { default as Grid } from './components/Grid.jsx';
+export { default as CardBlock } from './components/CardBlock.jsx';
+export { default as FeatureBlock } from './components/FeatureBlock.jsx';
+export { default as Hero } from './components/Hero.jsx';
+export { default as Topbar } from './components/Topbar.jsx';
+export { default as Footer } from './components/Footer.jsx';
+export { default as SiteBlock } from './components/SiteBlock.jsx';
+export { default as SmallSignUpCard } from './components/SmallSignUpCard.jsx';
+export { default as BigSignUpCard } from './components/BigSignUpCard.jsx';
+export { default as SwitchBlock } from './components/SwitchBlock.jsx';
+export { default as GettingStarted } from './components/GettingStarted.jsx';
+export { default as ExploreCubeCloud } from './components/ExploreCubeCloud.jsx';
+export { default as useSubscription } from './services/subscription';
+export * from './helpers';
 
 const html = typeof document !== 'undefined' ? document.querySelector('html') : null;
 const dataset = html ? html.dataset : {};
@@ -13,6 +35,10 @@ const OPTIONS = { icons: 'eva', prevent: false, scheme: 'light' };
 
 function loadIcon(url) {
   return fetch(url).then(response => response.text());
+}
+
+function spanWidth(num) {
+  return `((${num} * var(--nu-column-width)) + (${num - 1} * var(--nu-grid-gap)))`;
 }
 
 export default {
@@ -31,11 +57,15 @@ export default {
       const { Nude } = window;
 
       Nude.units.define('sp', spanWidth);
+      Nude.units.define('gp', 'var(--nu-grid-gap)');
+      Nude.units.define('cp', 'var(--nu-content-padding)');
 
       Nude.icons.setLoader((name) => {
         switch (name) {
           case 'slack':
             return loadIcon(slackIcon);
+          case 'slack-big':
+            return loadIcon(slackBigIcon);
           case 'twitter':
             return loadIcon(twitterIcon);
           case 'github':
@@ -121,7 +151,7 @@ export default {
 
       Nude.assign('nu-card', {
         styles: {
-          fill: 'pink 20% :purple[light]',
+          fill: 'bg :pink[pink 20%] :purple[light]',
           gap: '3x',
           border: 'n',
           padding: '4x',
@@ -160,7 +190,7 @@ export default {
 
       Nude.assign('nu-link', {
         styles: {
-          text: 'n',
+          text: 'n u',
           mark: 'n',
         },
       });
@@ -214,6 +244,22 @@ export default {
         styles: {
           border: 'n',
           height: '.75x',
+        },
+      });
+
+      Nude.assign('nu-badge', {
+        styles: {
+          size: 'c2',
+          text: 'up',
+          color: 'dark-04',
+          border: 'n',
+          radius: 'n',
+        },
+      });
+
+      Nude.assign('nu-list', {
+        styles: {
+          position: 'outside',
         },
       });
     });

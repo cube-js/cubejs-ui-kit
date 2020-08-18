@@ -34,6 +34,7 @@ const MENU = [
 const MenuBtn = (props) => {
   return <nu-action
     as="menubtn"
+    label="Toggle menu"
     toggle
     pressed={props.pressed || undefined}
     color="dark-03 :active[dark-02]"
@@ -112,6 +113,7 @@ export default function Topbar(props) {
 
     <nu-action
       id="overlay"
+      aria-hidden="true"
       place="fixed cover"
       fill="special-shadow 50%"
       hidden={!isMenuOpen || undefined}

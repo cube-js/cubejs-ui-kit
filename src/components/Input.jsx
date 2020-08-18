@@ -14,6 +14,7 @@ const Input = (props, ref) => {
     ref={ref}
     is-big={props.big || null}
     onEventInput={onInput}
+    label={props.placeholder}
     {...attrs(props)}/>
 };
 

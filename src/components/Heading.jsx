@@ -4,12 +4,14 @@ import T from 'prop-types';
 import { attrs } from '../helpers';
 
 export default function Heading(props) {
-  return <nu-heading
+  const Tag = props.level ? `nu-h${props.level}` : 'nu-h2';
+
+  return <Tag
     level={props.level || 2}
     aria-level={props.level || 2}
     {...attrs(props)}>
     {props.children}
-  </nu-heading>
+  </Tag>;
 }
 
 Heading.propTypes = {

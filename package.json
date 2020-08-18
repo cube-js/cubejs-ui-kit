@@ -1,6 +1,6 @@
 {
   "name": "cubejs-uikit",
-  "version": "0.0.44",
+  "version": "0.0.45",
   "description": "UIKit for Cube.js projects",
   "main": "dist/core.js",
   "type": "module",
@@ -10,7 +10,7 @@
     "build": "mkdir -p dist && rm -vrf dist/* && rollup -c rollup.config.js && npm run size-limit",
     "now-build": "mkdir -p static && rm -vrf static/* && parcel build --out-dir static index.html",
     "deploy": "npm run now-build && now --prod static",
-    "size-limit": "node ./size-limit-config.js && npx size-limit",
+    "size-limit": "npx size-limit",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -55,202 +55,13 @@
   ],
   "size-limit": [
     {
-      "name": "Button Component",
+      "name": "Cube.js UI Kit",
       "path": [
-        "dist/components/Button.js"
+        "dist/core.js"
       ],
       "ignore": [
         "react",
         "jsx-native-events"
-      ]
-    },
-    {
-      "name": "Input Component",
-      "path": [
-        "dist/components/Input.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "Heading Component",
-      "path": [
-        "dist/components/Heading.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "ButtonGroup Component",
-      "path": [
-        "dist/components/ButtonGroup.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "FormField Component",
-      "path": [
-        "dist/components/FormField.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "Root Component",
-      "path": [
-        "dist/components/Root.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "SubscriptionBlock Component",
-      "path": [
-        "dist/components/SubscriptionBlock.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "Section Component",
-      "path": [
-        "dist/components/Section.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "Grid Component",
-      "path": [
-        "dist/components/Grid.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "CardBlock Component",
-      "path": [
-        "dist/components/CardBlock.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "FeatureBlock Component",
-      "path": [
-        "dist/components/FeatureBlock.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "Hero Component",
-      "path": [
-        "dist/components/Hero.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "Topbar Component",
-      "path": [
-        "dist/components/Topbar.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "Footer Component",
-      "path": [
-        "dist/components/Footer.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "SiteBlock Component",
-      "path": [
-        "dist/components/SiteBlock.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "SmallSignUpCard Component",
-      "path": [
-        "dist/components/SmallSignUpCard.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "BigSignUpCard Component",
-      "path": [
-        "dist/components/BigSignUpCard.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "SwitchBlock Component",
-      "path": [
-        "dist/components/SwitchBlock.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "GettingStarted Component",
-      "path": [
-        "dist/components/GettingStarted.js"
-      ],
-      "ignore": [
-        "react",
-        "jsx-native-events"
-      ]
-    },
-    {
-      "name": "subscription Service",
-      "path": [
-        "dist/services/subscription.js"
-      ],
-      "ignore": [
-        "react"
       ]
     }
   ]

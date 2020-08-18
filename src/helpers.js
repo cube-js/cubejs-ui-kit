@@ -28,6 +28,3 @@ export function insertHTML(html = '') {
   };
 }
 
-export function spanWidth(num) {
-  return `((${num} * var(--nu-column-width)) + (${num - 1} * var(--nu-grid-gap)))`;
-}

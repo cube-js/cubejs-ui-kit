@@ -1,4 +1,5 @@
 import React from 'react';
+import { attrs } from '../helpers';
 
 export default function Root(props) {
   return <nu-root
@@ -8,10 +9,11 @@ export default function Root(props) {
     fill={props.fill || 'light'}
     height="min 100vh"
     text="n"
-    size="t2">
+    size="t2"
+    {...attrs(props)}>
     <nu-props
       radius=".5x"
-      font="CeraPro, 'Avenir Next', 'Avenir', Helvetica, Ubuntu, 'DejaVu Sans', Arial, sans-serif"
+      font="CeraPro"
       disabled-opacity=".6"
       max-content-width="100rem - (--content-padding * 2)"
       grid-gap="3x"
