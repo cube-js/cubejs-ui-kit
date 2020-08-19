@@ -28,22 +28,33 @@ export default function Root(props) {
       dark-05-color="#D5D5E2"
       light-color="#F3F3FB"
 
+      purple-hover-color="#6B4CF6"
+      purple-01-color="#7A77FF"
+      purple-02-color="#9592FF"
+      purple-03-color="#AFADFF"
+      purple-04-color="#CAC9FF"
+      light-purple-color="color(purple-04 30%)"
+
+      pink-hover-color="#FA326E"
+      pink-01-color="#FF6492"
+      pink-02-color="#FF83A8"
+      pink-03-color="#FFA2BE"
+      pink-04-color="#FFC1D3"
+      light-pink-color="#FFF2F6"
+
       input-border-color="#D5D5E2"
 
       text-color="color(dark-01)"
       text-soft-color="color(dark-01)"
       light-text-color="rgba(255, 255, 255, .7)"
 
-      purple-color="#7A77FF"
-      purple-hover-color="#6B4CF6"
+      purple-color="color(purple-01)"
       purple-outline-color="color(purple 30%)"
 
       outline-color="--purple-outline-color"
 
-      pink-color="#FF6492"
-      pink-hover-color="#FA326E"
+      pink-color="color(pink-01)"
       pink-outline-color="color(pink 30%)"
-      pink-04-color="#FFC1D3"
 
       special-color="color(pink)"
       special-bg-color="color(pink)"
@@ -57,7 +68,7 @@ export default function Root(props) {
       h2-line-height="44rp|||36rp"
       h3-font-size="26rp|||22rp"
       h3-line-height="36rp|||30rp"
-      h4-font-size="20rp"
+      h4-font-size="18rp"
       h4-line-height="30rp"
       h5-font-size="16rp"
       h5-line-height="26rp"

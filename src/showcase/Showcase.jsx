@@ -26,7 +26,7 @@ import GridLines from './GridLines';
 import ExploreCubeCloud from '../components/ExploreCubeCloud';
 
 const FullWidthBlock = (props) => {
-  return <nu-block space="0 (6x + 1bw)||0 (5x + 1bw)" fill shadow
+  return <nu-block space="0 (--content-padding + 1bw)" fill shadow
                    transition="fill" {...attrs(props)}>
     {props.children}
   </nu-block>
@@ -546,7 +546,7 @@ export default function Showcase() {
 
       <ImportSnippet name="ExploreCubeCloud"/>
 
-      <FullWidthBlock padding="2x">
+      <FullWidthBlock padding="2x" fill="light">
         <ExploreCubeCloud/>
       </FullWidthBlock>
     </nu-card>

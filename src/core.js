@@ -192,6 +192,7 @@ export default {
         styles: {
           text: 'n u',
           mark: 'n',
+          color: 'purple-01 :hover[purple-02] :pink[pink-01] :pink:hover[pink-02]',
         },
       });
 
@@ -249,11 +250,13 @@ export default {
 
       Nude.assign('nu-badge', {
         styles: {
+          fill: 'clear',
           size: 'c2',
           text: 'up',
           color: 'dark-04',
           border: 'n',
           radius: 'n',
+          padding: '0',
         },
       });
 

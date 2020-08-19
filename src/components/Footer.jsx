@@ -15,8 +15,8 @@ const COMPANY_LINKS = [
     link: '/careers',
   },
   {
-    label: 'Terms of Service',
-    link: '/terms-of-service',
+    label: 'Terms of Use',
+    link: '/terms-of-use',
   },
   {
     label: 'Privacy Policy',

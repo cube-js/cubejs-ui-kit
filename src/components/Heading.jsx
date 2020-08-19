@@ -7,6 +7,7 @@ export default function Heading(props) {
   const Tag = props.level ? `nu-h${props.level}` : 'nu-h2';
 
   return <Tag
+    role="heading"
     level={props.level || 2}
     aria-level={props.level || 2}
     {...attrs(props)}>

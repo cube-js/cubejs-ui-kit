@@ -12,7 +12,7 @@ export default function GettingStarted(props) {
       $ npm install -g cubejs-cli
     </nu-card>
     <nu-block color="dark-03" as="t2">
-      or follow our <nu-link>Getting Started</nu-link> guide.
+      or follow our <nu-link text="u">Getting Started</nu-link> guide.
     </nu-block>
   </SiteBlock>
 }

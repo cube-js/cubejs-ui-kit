@@ -76,7 +76,7 @@ export default function Topbar(props) {
       <nu-blocklink to="/" mark="n">
         <nu-svg
           id="logo"
-          height="4.5x"
+          height="4.5x||4x"
           src={mainLogo}
           label="Cube.js logo"
           filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
@@ -92,6 +92,7 @@ export default function Topbar(props) {
             color="dark-03 :hover[text] :active.hover[dark-02]"
             padding="1x 2x"
             show="y||n"
+            text="n"
           />
           {
             MENU.map(item => {
