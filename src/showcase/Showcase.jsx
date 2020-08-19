@@ -125,8 +125,10 @@ export default function Showcase() {
 <nu-h3>H3 Cera Pro Medium 26/36</nu-h3>
 <nu-h4>H4 Cera Pro Medium 20/30</nu-h4>
 <nu-h5>H5 Cera Pro Medium 16/26</nu-h5>
+<nu-h6>H6 Cera Pro Medium 14/26</nu-h6>
 <nu-block as="t1">T1 Cera Pro Regular 18-30</nu-block>
 <nu-block as="t2">T2 Cera Pro Regular 16-26</nu-block>
+<nu-block as="t3">T3 Cera Pro Regular 14-24</nu-block>
 <nu-block as="c1">C1 Cera Pro Regular 16-22</nu-block>
 <nu-block as="c2">C2 Cera Pro Regular 14-22</nu-block>
 <nu-block as="p1">P1 Cera Pro Regular 18-32</nu-block>
@@ -140,8 +142,10 @@ export default function Showcase() {
               <nu-h3>H3 Cera Pro Medium 26/36</nu-h3>
               <nu-h4>H4 Cera Pro Medium 20/30</nu-h4>
               <nu-h5>H5 Cera Pro Medium 16/26</nu-h5>
+              <nu-h6>H6 Cera Pro Medium 14/26</nu-h6>
               <nu-block as="t1">T1 Cera Pro Regular 18-30</nu-block>
               <nu-block as="t2">T2 Cera Pro Regular 16-26</nu-block>
+              <nu-block as="t3">T3 Cera Pro Regular 14-24</nu-block>
               <nu-block as="c1">C1 Cera Pro Regular 16-22</nu-block>
               <nu-block as="c2">C2 Cera Pro Regular 14-22</nu-block>
               <nu-block as="p1">P1 Cera Pro Regular 18-32</nu-block>
@@ -152,8 +156,10 @@ export default function Showcase() {
               <nu-h3>H3 Cera Pro Medium 26/36</nu-h3>
               <nu-h4>H4 Cera Pro Medium 20/30</nu-h4>
               <nu-h5>H5 Cera Pro Medium 16/26</nu-h5>
+              <nu-h6>H6 Cera Pro Medium 14/26</nu-h6>
               <nu-block as="t1">T1 Cera Pro Regular 18-30</nu-block>
               <nu-block as="t2">T2 Cera Pro Regular 16-26</nu-block>
+              <nu-block as="t3">T3 Cera Pro Regular 14-24</nu-block>
               <nu-block as="c1">C1 Cera Pro Regular 16-22</nu-block>
               <nu-block as="c2">C2 Cera Pro Regular 14-22</nu-block>
               <nu-block as="p1">P1 Cera Pro Regular 18-32</nu-block>

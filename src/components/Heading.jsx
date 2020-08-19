@@ -16,5 +16,5 @@ export default function Heading(props) {
 }
 
 Heading.propTypes = {
-  level: T.oneOf([1, 2, 3, 4, 5, '1', '2', '3', '4', '5']),
+  level: T.oneOf([1, 2, 3, 4, 5, 6, '1', '2', '3', '4', '5', '6']),
 };
