@@ -98,7 +98,7 @@ export default {
           t3: { size: 't3', text: 'n' },
           c1: { size: 'c1', text: 'n up spacing(0.02em)' },
           c2: { size: 'c2', text: 'n up spacing(0.02em)' },
-          p1: { size: 'p2', text: 'n' },
+          p1: { size: 'p1', text: 'n' },
         },
       });
 

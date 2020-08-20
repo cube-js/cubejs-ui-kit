@@ -10,10 +10,11 @@ export default function Root(props) {
     height="min 100vh"
     text="n"
     size="t2"
+    color="dark"
+    font="CeraPro"
     {...attrs(props)}>
     <nu-props
       radius=".5x"
-      font="CeraPro"
       disabled-opacity=".6"
       max-content-width="100rem - (--content-padding * 2)"
       grid-gap="3x"
@@ -27,6 +28,7 @@ export default function Root(props) {
       dark-04-color="#A1A1B5"
       dark-05-color="#D5D5E2"
       light-color="#F3F3FB"
+      dark-color="color(dark-01)"
 
       purple-hover-color="#6B4CF6"
       purple-01-color="#7A77FF"
