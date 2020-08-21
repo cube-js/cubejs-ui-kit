@@ -9,7 +9,7 @@ export default function SiteBlock(props) {
   const MainPart = ({ image }) => (
     <Fragment>
       {(props.badge || props.githubBadge) &&
-      <nu-badge as="c2" color="dark-03" content="stretch||center">
+      <nu-badge as="c2" color="dark-03" content="stretch||center" padding="1x bottom">
         {props.badge}
         {props.githubBadge && <iframe
           src="https://ghbtns.com/github-btn.html?user=cube-js&repo=cube.js&type=star&count=true&size=large"
@@ -57,7 +57,7 @@ export default function SiteBlock(props) {
           props.wide
             ? <nu-grid columns="1pr 1pr||1fr" text="left||center" width="10sp|||--content-width"
                        gap="1gp||4x">
-              <nu-flow gap="4x">
+              <nu-flow gap="3x">
                 <MainPart/>
                 {props.children}
               </nu-flow>
@@ -74,7 +74,7 @@ export default function SiteBlock(props) {
               flow="column"
               items={props.items || 'center'}
               width="6sp||10sp|--content-width"
-              gap="2x">
+              gap="3x">
               <MainPart image={props.image}/>
             </nu-flex>
         )
