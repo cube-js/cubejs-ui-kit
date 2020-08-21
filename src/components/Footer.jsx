@@ -80,7 +80,7 @@ export default function Footer() {
       </nu-flex>
 
       <nu-flow gap="2x" column="||2|1 / -1">
-        <Heading level="5">Get in touch</Heading>
+        <Heading level="5">Community</Heading>
         <nu-pane gap="2x">
           <nu-attrs
             for="blocklink"

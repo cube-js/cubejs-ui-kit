@@ -3,6 +3,7 @@ import slackBigIcon from './assets/icons/slack-big.svg';
 import twitterIcon from './assets/icons/twitter.svg';
 import githubIcon from './assets/icons/github.svg';
 import linkedinIcon from './assets/icons/linkedin.svg';
+import menuIcon from './assets/icons/menu.svg';
 import cbIcon from './assets/icons/cb.svg';
 import angelListIcon from './assets/icons/angellist.svg';
 export { default as Button } from './components/Button.jsx';
@@ -63,6 +64,8 @@ export default {
 
       Nude.icons.setLoader((name) => {
         switch (name) {
+          case 'menu':
+            return loadIcon(menuIcon);
           case 'slack':
             return loadIcon(slackIcon);
           case 'slack-big':

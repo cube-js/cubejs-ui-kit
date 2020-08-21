@@ -5,31 +5,51 @@ import { main as mainLogo } from '../logos';
 import { attrs } from '../helpers';
 
 const MENU = [
-  {
-    label: 'Github',
-    link: 'https://github.com/cube-js/cube.js'
-  },
+
   {
     label: 'Docs',
     link: '/docs'
   },
   {
-    label: 'Community',
+    label: 'Slack',
     link: '!https://cubejs-community.herokuapp.com/'
   },
   {
-    label: 'Examples',
-    link: '!https://github.com/cube-js/cube.js#examples'
+    label: 'Resources',
+    items: [
+
+      {
+        label: 'Examples',
+        link: '/templates',
+        description: 'See what\'s possible with Cube.js',
+      },
+      {
+        label: 'Blog',
+        link: '/blog',
+        description: 'Learn more about Cube.js',
+      },
+      {
+        label: 'Github',
+        link: '!https://github.com/cube-js/cube.js',
+        description: 'File an issue or contribute the code',
+      },
+      // {
+      //   label: 'Cube Cloud',
+      //   link: '/cloud'
+      // }
+    ],
   },
-  {
-    label: 'Blog',
-    link: '/blog'
-  },
-  {
-    label: 'Cube Cloud',
-    link: '/cloud'
-  }
 ];
+
+const MOBILE_MENU = MENU.reduce((list, link) => {
+  if (link.items) {
+    list.push(...link.items);
+  } else {
+    list.push(link);
+  }
+
+  return list;
+}, []);
 
 const MenuBtn = (props) => {
   return <nu-action
@@ -38,17 +58,18 @@ const MenuBtn = (props) => {
     toggle
     pressed={props.pressed || undefined}
     color="dark-03 :active[dark-02]"
-    fill="bg"
+    fill="clear :hover[white]"
     width="8x"
     height="8x"
     place="top right"
-    mark="hover #dark-03.10"
+    mark="n"
     onEventInput={evt => props.onInput(evt.detail)}
     {...attrs(props, ['pressed', 'toggle'])}>
     <nu-icon
       place="inside"
       name="^ menu :pressed[close-outline]"
-      size="2"/>
+      transition="size"
+      size="^ 3 :pressed[2]"/>
   </nu-action>;
 };
 
@@ -96,7 +117,32 @@ export default function Topbar(props) {
           />
           {
             MENU.map(item => {
-              return <nu-link key={item.label} clear to={item.link}>{item.label}</nu-link>;
+              return item.items
+                ? <nu-link key={item.label} clear>
+                  <nu-el>{item.label}</nu-el>
+                  <nu-icon name="chevron-down-outline"/>
+                  <nu-card
+                    show="^ n :hover.focus-within[y]" gap="0" border="1bw #light"
+                    place="outside-bottom" size="t2" padding="0" fill="bg" overflow="n" z="front"
+                    radius="1x" clear shadow="0 20rp 30rp rgba(114, 114, 144, 0.05)">
+                    <nu-attrs for="link" padding="3x" display="block" fill="clear :hover.focus[light]"></nu-attrs>
+                    {
+                      item.items.map((item, i) => (
+                        <nu-link id="sublink" key={item.label} clear to={item.link} border={i ? 'top #light' : null}>
+                          <nu-flow>
+                            <nu-block color="^#sublink dark :hover.pressed[purple]">
+                              {item.label}
+                            </nu-block>
+                            <nu-block color="dark-03" text="nowrap">
+                              {item.description}
+                            </nu-block>
+                          </nu-flow>
+                        </nu-link>
+                      ))
+                    }
+                  </nu-card>
+                </nu-link>
+                : <nu-link key={item.label} clear to={item.link}>{item.label}</nu-link>;
             })
           }
         </nu-pane>
@@ -161,7 +207,7 @@ export default function Topbar(props) {
           </nu-action>
         }
         {
-          MENU.map(item => {
+          MOBILE_MENU.map(item => {
             return <nu-action
               key={item.label}
               to={item.link}
@@ -171,12 +217,12 @@ export default function Topbar(props) {
           })
         }
       </nu-flow>
-      <nu-block padding="0 2x">
-        <nu-btn to="!https://github.com/cube-js/cube.js" onEventTap={onAction}>
-          <nu-icon name="github"></nu-icon>
-          Github
-        </nu-btn>
-      </nu-block>
+      {/*<nu-block padding="0 2x">*/}
+      {/*  <nu-btn to="!https://github.com/cube-js/cube.js" onEventTap={onAction}>*/}
+      {/*    <nu-icon name="github"></nu-icon>*/}
+      {/*    Github*/}
+      {/*  </nu-btn>*/}
+      {/*</nu-block>*/}
     </nu-region>
   </nu-header>;
 }

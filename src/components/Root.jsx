@@ -62,7 +62,7 @@ export default function Root(props) {
       special-bg-color="color(pink)"
       special-text-color="white"
 
-      border-color="color(dark-05)"
+      border-color="rgba(213, 213, 226, 0.5)"
 
       h1-font-size="42rp|||32rp"
       h1-line-height="54rp|||44rp"
