@@ -10,7 +10,8 @@ export default function SiteBlock(props) {
     <Fragment>
       {(props.badge || props.githubBadge) &&
       <nu-badge as="c2" color="dark-03" content="stretch||center" padding="1x bottom">
-        {props.badge}
+        <nu-el>{props.badge}</nu-el>
+        &nbsp;&nbsp;
         {props.githubBadge && <iframe
           src="https://ghbtns.com/github-btn.html?user=cube-js&repo=cube.js&type=star&count=true&size=large"
           frameBorder="0" scrolling="0" width="170" height="30"
@@ -55,8 +56,9 @@ export default function SiteBlock(props) {
       (props.image || props.heading || props.description)
         ? (
           props.wide
-            ? <nu-grid columns="1pr 1pr||1fr" text="left||center" width="10sp|||--content-width"
-                       gap="1gp||4x">
+            ? <nu-grid
+              columns="1pr 1pr||1fr" text="left||center"
+              width={props.headingWidth || '10sp|||--content-width'} gap="1gp||4x">
               <nu-flow gap="3x">
                 <MainPart/>
                 {props.children}
@@ -73,7 +75,7 @@ export default function SiteBlock(props) {
             : <nu-flex
               flow="column"
               items={props.items || 'center'}
-              width="6sp||10sp|--content-width"
+              width={props.headingWidth || '6sp||10sp|--content-width'}
               gap="3x">
               <MainPart image={props.image}/>
             </nu-flex>
@@ -96,4 +98,5 @@ SiteBlock.propTypes = {
   description: T.string,
   level: T.oneOf([1, 2, 3, 4, 5]),
   headingSize: T.string,
+  headingWidth: T.string,
 };

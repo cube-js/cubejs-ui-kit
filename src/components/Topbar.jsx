@@ -20,7 +20,7 @@ const MENU = [
 
       {
         label: 'Examples',
-        link: '/templates',
+        link: '!https://github.com/cube-js/cube.js#examples',
         description: 'See what\'s possible with Cube.js',
       },
       {
@@ -123,9 +123,10 @@ export default function Topbar(props) {
                   <nu-icon name="chevron-down-outline"/>
                   <nu-card
                     show="^ n :hover.focus-within[y]" gap="0" border="1bw #light"
-                    place="outside-bottom" size="t2" padding="0" fill="bg" overflow="n" z="front"
+                    place={!props.getStarted ? 'outside-bottom right' : 'outside-bottom'}
+                    size="t2" padding="0" fill="bg" overflow="n" z="front"
                     radius="1x" clear shadow="0 20rp 30rp rgba(114, 114, 144, 0.05)">
-                    <nu-attrs for="link" padding="3x" display="block" fill="clear :hover.focus[light]"></nu-attrs>
+                    <nu-attrs for="link" padding="3x" display="block" fill="clear :hover.focus[light 50%]"></nu-attrs>
                     {
                       item.items.map((item, i) => (
                         <nu-link id="sublink" key={item.label} clear to={item.link} border={i ? 'top #light' : null}>

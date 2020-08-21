@@ -33,7 +33,8 @@ export default function SubscriptionBlock(props) {
     padding="12x 4x|||8x 2x"
     special={props.special}
     heading={HEADING}
-    description={DESCRIPTION}>
+    description={DESCRIPTION}
+    headingWidth="--content-width">
     <nu-block width="6sp 100%||10sp 100%|--content-width">
       {
         !email &&
