@@ -37,7 +37,7 @@ export default function SiteBlock(props) {
   );
 
   return <Section
-    padding="16x 0|||12x 0"
+    padding="15x 0|||10x 0"
     text="center"
     items="center"
     image={props.bgImage}
