@@ -53,7 +53,7 @@ export default function SubscriptionBlock(props) {
               action="submit"
               disabled={loading || null}
               special
-              big>
+              big purple>
               Subscribe
             </Button>
           </nu-flex>

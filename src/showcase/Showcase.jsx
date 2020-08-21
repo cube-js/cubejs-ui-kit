@@ -22,7 +22,7 @@ import SwitchBlock from '../components/SwitchBlock';
 import { attrs } from '../helpers';
 import Heading from '../components/Heading.jsx';
 import GettingStarted from '../components/GettingStarted';
-import GridLines from './GridLines';
+import GridLines from '../components/GridLines';
 import ExploreCubeCloud from '../components/ExploreCubeCloud';
 
 const FullWidthBlock = (props) => {

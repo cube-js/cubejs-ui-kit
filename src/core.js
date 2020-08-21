@@ -25,6 +25,7 @@ export { default as BigSignUpCard } from './components/BigSignUpCard.jsx';
 export { default as SwitchBlock } from './components/SwitchBlock.jsx';
 export { default as GettingStarted } from './components/GettingStarted.jsx';
 export { default as ExploreCubeCloud } from './components/ExploreCubeCloud.jsx';
+export { default as GridLines } from './components/GridLines.jsx';
 export { default as useSubscription } from './services/subscription';
 export * from './helpers';
 

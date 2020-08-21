@@ -6,14 +6,15 @@ export default function Section(props) {
     fill={props.fill}
     shadow={props.shadow}
     border={props.border}
-    image={props.image}>
+    image={props.image}
+    clip={props.clip}>
     <nu-flex
       flow="column"
       width="min-content (--max-content-width + (--content-padding * 2))"
       padding="0 --content-padding"
       place="space-around"
       gap="4x"
-      {...attrs(props, ['fill', 'shadow', 'border', 'image'])}>
+      {...attrs(props, ['fill', 'shadow', 'border', 'image', 'clip'])}>
       {props.children}
     </nu-flex>
   </nu-section>
