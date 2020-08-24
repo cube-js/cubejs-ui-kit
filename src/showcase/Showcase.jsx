@@ -24,6 +24,7 @@ import Heading from '../components/Heading.jsx';
 import GettingStarted from '../components/GettingStarted';
 import GridLines from '../components/GridLines';
 import ExploreCubeCloud from '../components/ExploreCubeCloud';
+import Select from '../components/Select';
 
 const FullWidthBlock = (props) => {
   return <nu-block space="0 (--content-padding + 1bw)" fill shadow
@@ -373,6 +374,33 @@ export default function Showcase() {
                 <nu-label>Form label</nu-label>
                 <nu-input placeholder="Input"/>
               </nu-field>
+            </nu-flex>
+          </nu-flex>
+        </nu-block>
+      </nu-grid>
+    </nu-card>
+
+    <nu-card border="y" fill="bg" gap="2x">
+      <nu-h2>Select</nu-h2>
+      <nu-spacer></nu-spacer>
+      <nu-h3>Basic select</nu-h3>
+      <nu-grid as="example">
+        <nu-code dangerouslySetInnerHTML={{
+          __html: `<textarea>
+<Select placeholder="Input"/>
+          </textarea>`,
+        }}>
+        </nu-code>
+        <nu-block as="preview">
+          <nu-flex gap="2x 1x" flow="column">
+            <nu-flex flow="row wrap" gap>
+              <Select
+                value="react"
+                options={[
+                  { value: 'react', label: 'React' },
+                  { value: 'vue', label: 'Vue' },
+                  { value: 'angular', label: 'Angular' },
+                ]}/>
             </nu-flex>
           </nu-flex>
         </nu-block>

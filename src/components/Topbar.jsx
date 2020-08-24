@@ -29,7 +29,7 @@ const MENU = [
         description: 'Learn more about Cube.js',
       },
       {
-        label: 'Github',
+        label: 'GitHub',
         link: '!https://github.com/cube-js/cube.js',
         description: 'File an issue or contribute the code',
       },
@@ -38,6 +38,10 @@ const MENU = [
       //   link: '/cloud'
       // }
     ],
+  },
+  {
+    label: 'Cube Cloud',
+    link: '/cloud',
   },
 ];
 

@@ -86,23 +86,23 @@ export default {
       });
 
       Nude.assign('nu-root', {
-        attrsFor: {
-          description: {
+        context: {
+          'attrs:description': {
             color: 'dark-03',
             size: 't1',
           },
-          h1: { size: 'h1', text: 'h' },
-          h2: { size: 'h2', text: 'h' },
-          h3: { size: 'h3', text: 'h' },
-          h4: { size: 'h4', text: 'h' },
-          h5: { size: 'h5', text: 'h' },
-          h6: { size: 'h6', text: 'h' },
-          t1: { size: 't1', text: 'n' },
-          t2: { size: 't2', text: 'n' },
-          t3: { size: 't3', text: 'n' },
-          c1: { size: 'c1', text: 'n up spacing(0.02em)' },
-          c2: { size: 'c2', text: 'n up spacing(0.02em)' },
-          p1: { size: 'p1', text: 'n' },
+          'attrs:h1': { size: 'h1', text: 'h' },
+          'attrs:h2': { size: 'h2', text: 'h' },
+          'attrs:h3': { size: 'h3', text: 'h' },
+          'attrs:h4': { size: 'h4', text: 'h' },
+          'attrs:h5': { size: 'h5', text: 'h' },
+          'attrs:h6': { size: 'h6', text: 'h' },
+          'attrs:t1': { size: 't1', text: 'n' },
+          'attrs:t2': { size: 't2', text: 'n' },
+          'attrs:t3': { size: 't3', text: 'n' },
+          'attrs:c1': { size: 'c1', text: 'n up spacing(0.02em)' },
+          'attrs:c2': { size: 'c2', text: 'n up spacing(0.02em)' },
+          'attrs:p1': { size: 'p1', text: 'n' },
         },
       });
 

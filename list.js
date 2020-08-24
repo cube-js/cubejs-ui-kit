@@ -3,6 +3,7 @@ export const COMPONENT_LIST = [
   'Input',
   'Heading',
   'ButtonGroup',
+  'Select',
   'FormField',
   'Root',
   'SubscriptionBlock',
