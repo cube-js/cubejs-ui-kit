@@ -1,6 +1,9 @@
 import React from 'react';
-import SiteBlock from './SiteBlock.jsx';
+import SiteBlock from './SiteBlock';
 import { attrs } from '../helpers';
+import CopyButton from './CopyButton';
+
+export const INSTALL_COMMAND = 'npx cubejs-cli create hello-world -d postgres';
 
 export default function GettingStarted(props) {
   return <SiteBlock
@@ -8,11 +11,16 @@ export default function GettingStarted(props) {
     pink
     heading="Get started with Cube.js"
     {...attrs(props)}>
-    <nu-card padding="2x 8x" text="monospace" fill="bg" as="h4">
-      $ npm install -g cubejs-cli
-    </nu-card>
+    <nu-pane width="max --content-width">
+      <nu-card padding="2x 8x||2x" text="monospace nowrap" fill="bg" as="h4" overflow="auto hidden" radius border="#pink-04">
+        $ { props.command || INSTALL_COMMAND }
+      </nu-card>
+      <CopyButton big special>
+        Copy
+      </CopyButton>
+    </nu-pane>
     <nu-block color="dark-03" as="t2">
-      or follow our <nu-link is-pink to="!https://cube.dev/docs/getting-started">Getting Started</nu-link> guide.
+      and follow our <nu-link is-pink to="!https://cube.dev/docs/getting-started">Getting Started</nu-link> guide.
     </nu-block>
   </SiteBlock>
 }

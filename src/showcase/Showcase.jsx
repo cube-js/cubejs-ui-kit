@@ -20,11 +20,12 @@ import hostedImg from '../assets/hosted.svg';
 // import onPremImg from '../assets/onprem.svg';
 import SwitchBlock from '../components/SwitchBlock';
 import { attrs } from '../helpers';
-import Heading from '../components/Heading.jsx';
+import Heading from '../components/Heading';
 import GettingStarted from '../components/GettingStarted';
 import GridLines from '../components/GridLines';
 import ExploreCubeCloud from '../components/ExploreCubeCloud';
 import Select from '../components/Select';
+import CopyButton from '../components/CopyButton';
 
 const FullWidthBlock = (props) => {
   return <nu-block space="0 (--content-padding + 1bw)" fill shadow
@@ -387,7 +388,13 @@ export default function Showcase() {
       <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
           __html: `<textarea>
-<Select placeholder="Input"/>
+<Select
+  value="react"
+  options={[
+    { value: 'react', label: 'React' },
+    { value: 'vue', label: 'Vue' },
+    { value: 'angular', label: 'Angular' },
+  ]}/>
           </textarea>`,
         }}>
         </nu-code>
@@ -401,6 +408,26 @@ export default function Showcase() {
                   { value: 'vue', label: 'Vue' },
                   { value: 'angular', label: 'Angular' },
                 ]}/>
+            </nu-flex>
+          </nu-flex>
+        </nu-block>
+      </nu-grid>
+    </nu-card>
+
+    <nu-card border="y" fill="bg" gap="2x">
+      <nu-h2>Copy Button</nu-h2>
+      <nu-spacer></nu-spacer>
+      <nu-grid as="example">
+        <nu-code dangerouslySetInnerHTML={{
+          __html: `<textarea>
+<CopyButton copy="Text to copy" />
+          </textarea>`,
+        }}>
+        </nu-code>
+        <nu-block as="preview">
+          <nu-flex gap="2x 1x" flow="column">
+            <nu-flex flow="row wrap" gap>
+              <CopyButton special copy="Text to copy" />
             </nu-flex>
           </nu-flex>
         </nu-block>

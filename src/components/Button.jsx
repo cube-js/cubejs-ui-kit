@@ -3,14 +3,14 @@ import React from 'react';
 import T from 'prop-types';
 import jsx from 'jsx-native-events';
 
-import { attrs } from '../helpers';
-
 export default function Button(props) {
+  const { big, purple, onTap, ...otherProps } = props;
+
   return <nu-btn
-    is-big={props.big || null}
-    is-purple={props.purple || null}
-    onEventTap={props.onTap}
-    {...attrs(props)}>
+    is-big={big || null}
+    is-purple={purple || null}
+    onEventTap={onTap}
+    {...otherProps}>
     {props.children}
   </nu-btn>
 }
