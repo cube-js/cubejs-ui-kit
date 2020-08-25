@@ -8,6 +8,7 @@ import cbIcon from './assets/icons/cb.svg';
 import angelListIcon from './assets/icons/angellist.svg';
 export { default as Button } from './components/Button.jsx';
 export { default as Input } from './components/Input.jsx';
+export { default as Select } from './components/Select.jsx';
 export { default as Heading } from './components/Heading.jsx';
 export { default as ButtonGroup } from './components/ButtonGroup.jsx';
 export { default as FormField } from './components/FormField.jsx';
@@ -106,6 +107,19 @@ export default {
         },
       });
 
+      Nude.assign('nu-option', {
+        inset: 'n',
+        padding: '1x 2x',
+      });
+
+      Nude.assign('nu-popuplistbox', {
+        styles: {
+          place: 'left top -1bw',
+          outline: 'focus',
+          border: '#main.60',
+        },
+      });
+
       Nude.assign('nu-btn', {
         styles: {
           text: 'b nowrap :clear[n sb nowrap] :special[b nowrap]',
@@ -122,6 +136,17 @@ export default {
           '--hover-color-rgb': '--pink-hover-color-rgb :purple[--purple-hover-color-rgb]',
           '--outline-color': '--pink-outline-color :purple[--purple-outline-color]',
           '--outline-width': '(3rem / 16) :special[1rem / 4]',
+        },
+        context: {
+          'attrs:option': {
+            color: 'main :current[white]',
+            fill: 'bg :current[main]',
+            text: '^btn b nowrap :clear[n sb nowrap] :special[b nowrap]',
+            mark: 'hover #hover.10',
+            inset: 'n',
+            border: 'n',
+            padding: '^btn 1.375x 2.5x :big[1.875x 2.5x]',
+          },
         },
       });
 
@@ -157,9 +182,9 @@ export default {
 
       Nude.assign('nu-card', {
         styles: {
-          fill: 'bg :pink[pink 20%] :purple[light]',
+          fill: 'bg :pink[pink 20%] :purple[light 50%]',
           gap: '3x',
-          border: 'n',
+          border: 'y :pink[n] :purple[n]',
           padding: '4x',
           radius: '1x',
         },
@@ -167,9 +192,11 @@ export default {
 
       Nude.assign('nu-cardbtn', {
         styles: {
+          fill: 'bg :pink[pink 20%] :purple[light 50%]',
           gap: '3x',
           padding: '2x',
-          mark: 'n',
+          border: 'y :pink[n] :purple[n]',
+          radius: '1x',
         },
       });
 

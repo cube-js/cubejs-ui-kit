@@ -15,7 +15,7 @@ export default function GettingStarted(props) {
       <nu-card padding="2x 8x||2x" text="monospace nowrap" fill="bg" as="h4" overflow="auto hidden" radius border="#pink-04">
         $ { props.command || INSTALL_COMMAND }
       </nu-card>
-      <CopyButton big special>
+      <CopyButton big special copy={props.command || INSTALL_COMMAND} show="y|||n">
         Copy
       </CopyButton>
     </nu-pane>

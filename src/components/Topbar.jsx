@@ -97,7 +97,7 @@ export default function Topbar(props) {
     fill="clear"
     {...attrs(props)}>
 
-    <nu-pane width="--content-width" content="space-between" place="space-around">
+    <nu-pane width="--content-width" content="space-between" space="around">
       <nu-blocklink to="/" mark="n">
         <nu-svg
           id="logo"
@@ -114,10 +114,11 @@ export default function Topbar(props) {
           />
           <nu-attrs
             for="link"
-            color="dark-03 :hover[text] :active.hover[dark-02]"
+            color="dark :hover[purple] :active.hover[purple]"
             padding="1x 2x"
             show="y||n"
-            text="n"
+            size="h5"
+            text="n sb"
           />
           {
             MENU.map(item => {
@@ -138,7 +139,7 @@ export default function Topbar(props) {
                             <nu-block color="^#sublink dark :hover.pressed[purple]">
                               {item.label}
                             </nu-block>
-                            <nu-block color="dark-03" text="nowrap">
+                            <nu-block color="dark-03" text="n nowrap">
                               {item.description}
                             </nu-block>
                           </nu-flow>

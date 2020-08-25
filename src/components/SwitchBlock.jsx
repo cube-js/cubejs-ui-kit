@@ -28,7 +28,7 @@ export default function SwitchBlock(props) {
       gap="4x --grid-gap"
       items="stretch||center"
       content="start"
-      place="space-around">
+      space="around">
       <nu-attrs
         for="description"
         text="left||center"

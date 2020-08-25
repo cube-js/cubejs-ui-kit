@@ -403,6 +403,7 @@ export default function Showcase() {
             <nu-flex flow="row wrap" gap>
               <Select
                 value="react"
+                width="min 12"
                 options={[
                   { value: 'react', label: 'React' },
                   { value: 'vue', label: 'Vue' },

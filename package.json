@@ -1,6 +1,6 @@
 {
   "name": "cubejs-uikit",
-  "version": "0.0.55",
+  "version": "0.0.56",
   "description": "UIKit for Cube.js projects",
   "main": "dist/core.js",
   "type": "module",
