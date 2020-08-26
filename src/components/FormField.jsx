@@ -3,11 +3,11 @@ import React from 'react';
 import T from 'prop-types';
 import jsx from 'jsx-native-events';
 
-import { attrs, insertHTML } from '../helpers';
+import { attrs, insertText } from '../helpers';
 
 export default function FormField(props) {
   return <nu-field>
-    { props.label && <nu-label {...insertHTML(props.label)}/> }
+    { props.label && <nu-label {...insertText(props.label)}/> }
     <nu-input
       onEventInput={props.onInput}
       {...attrs(props)}/>

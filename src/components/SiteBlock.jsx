@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 import Section from './Section.jsx';
-import { attrs, insertHTML } from '../helpers';
+import { attrs, insertText } from '../helpers';
 import * as images from '../logos';
 import Heading from './Heading.jsx';
 
@@ -28,10 +28,10 @@ export default function SiteBlock(props) {
       {props.heading && <Heading
         level={props.level}
         size={props.headingSize || (props.level ? null : 'h2')}>
-        <nu-el {...insertHTML(props.heading)}/>
+        <nu-el {...insertText(props.heading)}/>
       </Heading>}
       {props.description && <nu-description
-        {...insertHTML(props.description)}/>}
+        {...insertText(props.description)}/>}
     </Fragment>
   );
 

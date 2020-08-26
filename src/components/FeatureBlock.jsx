@@ -1,5 +1,5 @@
 import React from 'react';
-import { attrs, insertHTML } from '../helpers';
+import { attrs, insertText } from '../helpers';
 import Section from './Section.jsx';
 import Heading from './Heading.jsx';
 
@@ -17,9 +17,9 @@ export default function FeatureBlock(props) {
       items="start stretch">
       <nu-flow gap="2x" text="center" width="max 30" column="1 / -1" place="center">
         <Heading level="2">
-          <nu-el {...insertHTML(heading)}/>
+          <nu-el {...insertText(heading)}/>
         </Heading>
-        <nu-description {...insertHTML(description)}/>
+        <nu-description {...insertText(description)}/>
       </nu-flow>
       {
         features.map(feature => {
@@ -37,9 +37,9 @@ export default function FeatureBlock(props) {
             </nu-img>
             <nu-flow gap="2x 0" column="3 / 7||1">
               <Heading level="4" text="nowrap">
-                <nu-el {...insertHTML(feature.heading)}/>
+                <nu-el {...insertText(feature.heading)}/>
               </Heading>
-              <nu-description {...insertHTML(feature.description)}/>
+              <nu-description {...insertText(feature.description)}/>
             </nu-flow>
           </nu-grid>;
         })

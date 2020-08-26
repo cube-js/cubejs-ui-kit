@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { useState } from 'react';
 import jsx from 'jsx-native-events';
-import { attrs, insertHTML } from '../helpers';
+import { attrs, insertText } from '../helpers';
 import Section from './Section.jsx';
 import ButtonGroup from './ButtonGroup.jsx';
 import Heading from './Heading.jsx';
@@ -34,7 +34,7 @@ export default function SwitchBlock(props) {
         text="left||center"
         width="max 4sp||auto"/>
       <Heading>
-        <nu-el {...insertHTML(props.heading)}/>
+        <nu-el {...insertText(props.heading)}/>
       </Heading>
       <nu-block
         row="1 / span 3||4"
@@ -75,7 +75,7 @@ export default function SwitchBlock(props) {
             key={option.id}
             height={props.contentHeight || 'min 25x||min 15x'}
             hidden={value !== option.id || null}>
-            <nu-flow gap {...insertHTML(option.description)}/>
+            <nu-flow gap {...insertText(option.description)}/>
           </nu-description>
         })
       }

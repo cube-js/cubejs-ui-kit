@@ -18,13 +18,16 @@ export function attrs(props, ignore = []) {
   }, {});
 }
 
-export function insertHTML(html = '') {
+export function insertText(html = '') {
+  const multiline = !!html.match(/\\n/);
+
   return {
     dangerouslySetInnerHTML: {
-      __html: `<nu-block>${html
+      __html: `${multiline ? '<nu-block>' : ''}${html
+        .replace(/[-‑]/g, '&#8209;')
+        .replace(/\\s[\s]*/g, '&nbsp;')
         .replace(/\\n\\n/g, '</nu-block><nu-block>')
-        .replace(/\\n/g, '<br/>')}</nu-block>`
-        .replace(/-/g, '&#8209;'),
+        .replace(/\\n/g, '<br/>')}${multiline ? '</nu-block>' : ''}`,
     },
   };
 }

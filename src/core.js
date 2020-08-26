@@ -114,7 +114,7 @@ export default {
 
       Nude.assign('nu-popuplistbox', {
         styles: {
-          place: 'left top -1bw',
+          place: 'top -1bw',
           outline: 'focus',
           border: '#main.60',
         },

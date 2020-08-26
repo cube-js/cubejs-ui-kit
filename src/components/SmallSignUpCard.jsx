@@ -3,7 +3,7 @@ import React, { createRef } from 'react';
 import jsx from 'jsx-native-events';
 import T from 'prop-types';
 
-import { attrs, insertHTML } from '../helpers';
+import { attrs, insertText } from '../helpers';
 import useSubscription from '../services/subscription';
 import { HAS_BEEN_SIGNED_UP, UNABLE_TO_SUBSCRIBE } from '../messages';
 import CardBlock from './CardBlock.jsx';
@@ -34,7 +34,7 @@ export default function SmallSignUpCard(props) {
     <nu-flow
       width="6sp||5sp|2sp"
       text="left|||center" gap="0|||2x" size="t2" color="light-text"
-      {...insertHTML(props.description)} />
+      {...insertText(props.description)} />
     <nu-block width="4sp||5sp|2sp">
       {
         !email && <nu-form
@@ -60,7 +60,7 @@ export default function SmallSignUpCard(props) {
           </nu-check>
           {
             error &&
-            <nu-block width="100%" {...insertHTML(UNABLE_TO_SUBSCRIBE)}></nu-block>
+            <nu-block width="100%" {...insertText(UNABLE_TO_SUBSCRIBE)}></nu-block>
           }
           {
             loading && <nu-progressbar value="100" width="100%"></nu-progressbar>

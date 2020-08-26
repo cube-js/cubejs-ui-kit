@@ -8,7 +8,7 @@ import useSubscription from '../services/subscription';
 import SiteBlock from './SiteBlock.jsx';
 import Input from './Input.jsx';
 import Button from './Button.jsx';
-import { insertHTML } from '../helpers';
+import { insertText } from '../helpers';
 
 export const HEADING = 'Sign up for Cube.js&nbsp;Releases and&nbsp;Updates';
 export const DESCRIPTION = 'Awesome product updates; no&nbsp;spam.';
@@ -63,7 +63,7 @@ export default function SubscriptionBlock(props) {
           </nu-block>
           {
             error &&
-            <nu-block {...insertHTML(UNABLE_TO_SUBSCRIBE)}></nu-block>
+            <nu-block {...insertText(UNABLE_TO_SUBSCRIBE)}></nu-block>
           }
           {
             loading && <nu-progressbar value="100" width="100%"></nu-progressbar>

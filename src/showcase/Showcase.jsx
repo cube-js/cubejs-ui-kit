@@ -26,6 +26,7 @@ import GridLines from '../components/GridLines';
 import ExploreCubeCloud from '../components/ExploreCubeCloud';
 import Select from '../components/Select';
 import CopyButton from '../components/CopyButton';
+import Banner from '../components/Banner';
 
 const FullWidthBlock = (props) => {
   return <nu-block space="0 (--content-padding + 1bw)" fill shadow
@@ -452,6 +453,24 @@ export default function Showcase() {
           <CardBlock>Card content</CardBlock>
           <CardBlock bold>Card content</CardBlock>
         </nu-flow>
+      </FullWidthBlock>
+    </nu-card>
+
+    <nu-card border="y" fill="bg" gap="2x">
+      <nu-h2>Component: Banner</nu-h2>
+
+      <ImportSnippet name="Banner"/>
+
+      <nu-code dangerouslySetInnerHTML={{
+        __html: `<textarea>
+<Banner to="!https://cube.dev">
+  Аnalytical data access layer for modern web applications
+</Banner>
+        </textarea>`,
+      }}></nu-code>
+
+      <FullWidthBlock padding="2x 0">
+        <Banner to="!https://cube.dev">Аnalytical data access layer for modern web applications</Banner>
       </FullWidthBlock>
     </nu-card>
 

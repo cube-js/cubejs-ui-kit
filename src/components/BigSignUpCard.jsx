@@ -3,7 +3,7 @@ import React, { createRef } from 'react';
 import jsx from 'jsx-native-events';
 import T from 'prop-types';
 
-import { attrs, insertHTML } from '../helpers';
+import { attrs, insertText } from '../helpers';
 import useSubscription from '../services/subscription';
 import { HAS_BEEN_SIGNED_UP, UNABLE_TO_SUBSCRIBE } from '../messages';
 import CardBlock from './CardBlock.jsx';
@@ -35,10 +35,10 @@ export default function BigSignUpCard(props) {
     {...attrs(props)}>
     <nu-flex gap="4x" width="6sp||8sp|100%" items="center" flow="column">
       {props.heading && <Heading>
-        <nu-el {...insertHTML(props.heading)}/>
+        <nu-el {...insertText(props.heading)}/>
       </Heading>}
       {props.description && <nu-description
-        {...insertHTML(props.description)} />}
+        {...insertText(props.description)} />}
       {
         !email && <nu-form
           gap place="stretch"
