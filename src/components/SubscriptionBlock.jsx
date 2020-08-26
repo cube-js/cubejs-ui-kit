@@ -69,7 +69,7 @@ export default function SubscriptionBlock(props) {
             <nu-block {...insertText(UNABLE_TO_SUBSCRIBE)}></nu-block>
           }
           {
-            loading && <nu-progressbar value="100" width="100%"></nu-progressbar>
+            loading && <nu-progressbar is-purple value="100" width="100%"></nu-progressbar>
           }
         </nu-form>
       }

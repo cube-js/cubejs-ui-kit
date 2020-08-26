@@ -279,6 +279,7 @@ export default {
         styles: {
           border: 'n',
           height: '.75x',
+          '--special-color': '#pink :purple[#purple]',
         },
       });
 
