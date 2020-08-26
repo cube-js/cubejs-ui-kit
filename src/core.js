@@ -118,6 +118,7 @@ export default {
           place: 'top -1bw',
           outline: 'focus',
           border: '#main.60',
+          shadow: '3x',
         },
       });
 
