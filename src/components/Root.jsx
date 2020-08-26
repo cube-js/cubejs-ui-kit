@@ -4,9 +4,10 @@ import { attrs } from '../helpers';
 export default function Root(props) {
   return <nu-root
     style={{ WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}
-    responsive="100rem|61.25rem|40rem"
+    responsive="100rem|61.25rem|40rem|320px"
     transition="fill"
     fill={props.fill || 'light'}
+    width="min 320px"
     height="min 100vh"
     text="n"
     size="t2"
@@ -19,7 +20,8 @@ export default function Root(props) {
       max-content-width="100rem - (--content-padding * 2)"
       grid-gap="3x"
       content-padding="6x||3x"
-      column-width="((--max-content-width - (--grid-gap * 11)) / 12)|((100vw - (--content-padding * 2) - (--grid-gap * 11)) / 12)||((100vw - (--content-padding * 2) - --grid-gap) / 2)"
+      column-width="((--max-content-width - (--grid-gap * 11)) / 12)|((100vw - (--content-padding * 2) - (--grid-gap * 11)) / 12)||((--full-width - (--content-padding * 2) - --grid-gap) / 2)"
+      full-width="100vw||||320px"
       content-width="12sp|||2sp"
 
       dark-01-color="#141446"

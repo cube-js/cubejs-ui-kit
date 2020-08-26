@@ -23,7 +23,10 @@ export default function BigSignUpCard(props) {
     const data = event.detail;
 
     if (data && data.email) {
-      subscription.submit(data.email);
+      subscription.submit(data.email)
+        .then(() => {
+          props.onSuccess && props.onSuccess(data.email);
+        });
     } else {
       inputRef.current.focus();
     }
@@ -87,4 +90,5 @@ BigSignUpCard.propTypes = {
   description: T.string,
   postUrl: T.string,
   postData: T.object,
+  onSuccess: T.func,
 };

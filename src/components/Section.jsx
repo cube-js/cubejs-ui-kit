@@ -7,7 +7,8 @@ export default function Section(props) {
     shadow={props.shadow}
     border={props.border}
     image={props.image}
-    clip={props.clip}>
+    clip={props.clip}
+    width="min 320px">
     <nu-flex
       flow="column"
       width="min-content (--max-content-width + (--content-padding * 2))"

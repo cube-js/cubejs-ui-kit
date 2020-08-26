@@ -23,7 +23,10 @@ export default function SubscriptionBlock(props) {
     const data = event.detail;
 
     if (data && data.email) {
-      subscription.submit(data.email);
+      subscription.submit(data.email)
+        .then(() => {
+          props.onSuccess && props.onSuccess(data.email);
+        });
     } else {
       inputRef.current.focus();
     }
@@ -84,4 +87,5 @@ SubscriptionBlock.propTypes = {
   postUrl: T.string,
   postData: T.object,
   special: T.bool,
+  onSuccess: T.func,
 };

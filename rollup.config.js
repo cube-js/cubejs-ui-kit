@@ -2,6 +2,7 @@ import { terser } from 'rollup-plugin-terser';
 import url from '@rollup/plugin-url';
 import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 
 const babelConfig = {
   babelHelpers: 'bundled',
@@ -24,6 +25,7 @@ const plugins = [
     mainFields: ['module', 'main', 'jsnext:main'],
     extensions: ['.jsx', '.js'],
   }),
+  commonjs(),
   url(),
   babel(babelConfig),
 ];
