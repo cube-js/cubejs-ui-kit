@@ -10,6 +10,7 @@ export { default as Button } from './components/Button.jsx';
 export { default as Input } from './components/Input.jsx';
 export { default as Select } from './components/Select.jsx';
 export { default as Heading } from './components/Heading.jsx';
+export { default as Banner } from './components/Banner.jsx';
 export { default as ButtonGroup } from './components/ButtonGroup.jsx';
 export { default as FormField } from './components/FormField.jsx';
 export { default as Root } from './components/Root.jsx';
@@ -223,7 +224,7 @@ export default {
 
       Nude.assign('nu-link', {
         styles: {
-          text: 'n u',
+          text: 'n u #purple-01.30 :pink[n u #pink-01.30]',
           mark: 'n',
           color: 'purple-01 :hover[purple-02] :pink[pink-01] :pink:hover[pink-02]',
         },
