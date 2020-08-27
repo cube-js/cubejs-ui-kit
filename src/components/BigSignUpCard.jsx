@@ -52,6 +52,7 @@ export default function BigSignUpCard(props) {
               color="main-text :invalid[text]"
               disabled={loading || null}
               id="email"
+              type="email"
               placeholder="Email"
               grow="1"
               big>

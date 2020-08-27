@@ -11,14 +11,16 @@ export default function GettingStarted(props) {
     pink
     heading="Get started with Cube.js"
     {...attrs(props)}>
-    <nu-pane width="max --content-width">
-      <nu-card padding="2x 8x||2x" text="monospace nowrap" fill="bg" as="h4" overflow="auto hidden" radius border="#pink-04">
+    <nu-flex width="max --content-width" gap>
+      <nu-card
+        display="grid" padding="0 8x||0 2x" content="center start"
+        text="monospace nowrap" fill="bg" as="h4" overflow="auto hidden" radius border="#pink-04">
         $ { props.command || INSTALL_COMMAND }
       </nu-card>
       <CopyButton big special copy={props.command || INSTALL_COMMAND} show="y|||n">
         Copy
       </CopyButton>
-    </nu-pane>
+    </nu-flex>
     <nu-block color="dark-03" as="t2">
       and follow our <nu-link is-pink to="!https://cube.dev/docs/getting-started">Getting Started</nu-link> guide.
     </nu-block>

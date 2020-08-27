@@ -14,7 +14,7 @@ export default function CardBlock(props) {
     color={props.bold ? 'white' : null}
     padding="7x 0||5x 0|5x --content-padding"
     width="initial (100% - (--content-padding * 2)) --max-content-width"
-    shadow={props.bold ? '0' : '0px 20px 30px rgba(114, 114, 144, 0.05)'}
+    shadow={props.bold ? '0' : 'card'}
     space="around"
     {...attrs(props)}>
     <nu-props text-soft-color={props.bold ? 'white' : ''}></nu-props>

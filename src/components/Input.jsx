@@ -5,17 +5,27 @@ import jsx from 'jsx-native-events';
 
 import { attrs } from '../helpers';
 
+const MAP = {
+  'text': 'input',
+  'search': 'search',
+  'email': 'emailinput',
+};
+
 const Input = (props, ref) => {
-  function onInput(evt) {
-    props.onInput && props.onInput(evt.detail);
+  const { onInput, type = 'text', ...otherProps } = props;
+  const InputTag = `nu-${MAP[type]}`;
+
+  function inputHandler(evt) {
+    onInput && onInput(evt.detail);
   }
 
-  return <nu-input
+  return <InputTag
     ref={ref}
     is-big={props.big || null}
-    onEventInput={onInput}
+    onEventInput={inputHandler}
     label={props.placeholder}
-    {...attrs(props)}/>
+    style={{ '--nu-special-color': 'var(--nu-purple-color)' }}
+    {...attrs(otherProps)}/>
 };
 
 export default forwardRef(Input);

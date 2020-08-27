@@ -48,6 +48,7 @@ export default function SubscriptionBlock(props) {
               ref={inputRef}
               disabled={loading || null}
               id="email"
+              type="email"
               placeholder="Email"
               grow="1"
               big>

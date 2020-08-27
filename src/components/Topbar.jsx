@@ -130,7 +130,7 @@ export default function Topbar(props) {
                     show="^ n :hover.focus-within[y]" gap="0" border="1bw #light"
                     place={!props.getStarted ? 'outside-bottom right' : 'outside-bottom'}
                     size="t2" padding="0" fill="bg" overflow="n" z="front"
-                    radius="1x" clear shadow="0 20rp 30rp rgba(114, 114, 144, 0.05)">
+                    radius="1x" clear shadow="card">
                     <nu-attrs for="link" padding="3x" display="block" fill="clear :hover.focus[light 50%]"></nu-attrs>
                     {
                       item.items.map((item, i) => (
