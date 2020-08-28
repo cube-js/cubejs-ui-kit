@@ -13,7 +13,7 @@ export default function GettingStarted(props) {
     {...attrs(props)}>
     <nu-flex width="max --content-width" gap>
       <nu-card
-        display="grid" padding="0 8x||0 2x" content="center start"
+        display="grid" padding="0 8x||0 2x" content="center start" width="max --content-width"
         text="monospace nowrap" fill="bg" as="h4" overflow="auto hidden" radius border="#pink-04">
         $ { props.command || INSTALL_COMMAND }
       </nu-card>
