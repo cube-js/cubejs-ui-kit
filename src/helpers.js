@@ -27,7 +27,7 @@ export function insertText(html = '') {
         .replace(/[-‑]/g, '&#8209;')
         .replace(/\\s[\s]*/g, '&nbsp;')
         .replace(/\\n\\n/g, '</nu-block><nu-block>')
-        .replace(/\\n/g, '<br/>')}${multiline ? '</nu-block>' : ''}`,
+        .replace(/\\n[\s]*/g, '<br/>')}${multiline ? '</nu-block>' : ''}`,
     },
   };
 }

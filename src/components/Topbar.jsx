@@ -136,7 +136,7 @@ export default function Topbar(props) {
                       item.items.map((item, i) => (
                         <nu-link id="sublink" key={item.label} clear to={item.link} border={i ? 'top #light' : null}>
                           <nu-flow>
-                            <nu-block color="^#sublink dark :hover.pressed[purple]">
+                            <nu-block color="^#sublink dark :hover.pressed[purple]" transition="color">
                               {item.label}
                             </nu-block>
                             <nu-block color="dark-03" text="n nowrap">

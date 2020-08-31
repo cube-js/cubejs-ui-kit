@@ -141,8 +141,8 @@ export default {
         },
         context: {
           'attrs:option': {
-            color: 'main :current[white]',
-            fill: 'bg :current[main]',
+            color: 'main :selected[white]',
+            fill: 'bg :selected[main]',
             text: '^btn b nowrap :clear[n sb nowrap] :special[b nowrap]',
             mark: 'hover #hover.10',
             inset: 'n',
@@ -177,14 +177,16 @@ export default {
         },
         template: `
           <nu-block place="cover" opacity="0" overflow="n"><input/></nu-block>
-          <nu-block as="t2" radius="round" padding="0 2x" fill="light">Choose file</nu-block>
-          <nu-value placeholder="No file selected"></nu-value>        
+          <nu-block 
+            as="t2" radius="round" padding="0 2x" fill="^ light :hover.focus[purple-04]" 
+            color="dark" transition="fill">Choose file</nu-block>
+          <nu-value placeholder="No file selected"></nu-value>     
         `,
       });
 
       Nude.assign('nu-card', {
         styles: {
-          fill: 'bg :pink[pink 20%] :purple[light 50%]',
+          fill: 'bg :pink[pink-04 20%] :purple[light 50%]',
           gap: '3x',
           border: 'y :pink[n] :purple[n]',
           padding: '4x',

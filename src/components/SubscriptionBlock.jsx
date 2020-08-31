@@ -8,7 +8,7 @@ import useSubscription from '../services/subscription';
 import SiteBlock from './SiteBlock.jsx';
 import Input from './Input.jsx';
 import Button from './Button.jsx';
-import { insertText } from '../helpers';
+import { attrs, insertText } from '../helpers';
 
 export const HEADING = 'Sign up for Cube.js&nbsp;Releases and&nbsp;Updates';
 export const DESCRIPTION = 'Awesome product updates; no&nbsp;spam.';
@@ -37,7 +37,8 @@ export default function SubscriptionBlock(props) {
     special={props.special}
     heading={HEADING}
     description={DESCRIPTION}
-    headingWidth="--content-width">
+    headingWidth="--content-width"
+    {...attrs(props)}>
     <nu-block width="6sp 100%||10sp 100%|--content-width">
       {
         !email &&
