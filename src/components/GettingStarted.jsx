@@ -2,6 +2,7 @@ import React from 'react';
 import SiteBlock from './SiteBlock';
 import { attrs } from '../helpers';
 import CopyButton from './CopyButton';
+import Link from './Link';
 
 export const INSTALL_COMMAND = 'npx cubejs-cli create hello-world -d postgres';
 
@@ -22,7 +23,7 @@ export default function GettingStarted(props) {
       </CopyButton>
     </nu-flex>
     <nu-block color="dark-03" as="t2">
-      and follow our <nu-link is-pink to="!https://cube.dev/docs/getting-started">Getting Started</nu-link> guide.
+      and follow our <Link is-pink to="!https://cube.dev/docs/getting-started">Getting Started</Link> guide.
     </nu-block>
   </SiteBlock>
 }

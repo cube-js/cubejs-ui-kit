@@ -4,6 +4,7 @@ import jsx from 'jsx-native-events';
 import Grid from './Grid.jsx';
 import Section from './Section.jsx';
 import Heading from './Heading.jsx';
+import Link from './Link';
 
 const COMPANY_LINKS = [
   {
@@ -64,7 +65,7 @@ export default function Footer() {
         <nu-spacer height=".5x" />
         {
           RESOURCES_LINKS.map(item => {
-            return <nu-link key={item.label} to={item.link}>{item.label}</nu-link>
+            return <Link key={item.label} to={item.link}>{item.label}</Link>
           })
         }
       </nu-flex>
@@ -74,7 +75,7 @@ export default function Footer() {
         <nu-spacer height=".5x" />
         {
           COMPANY_LINKS.map(item => {
-            return <nu-link key={item.label} to={item.link}>{item.label}</nu-link>
+            return <Link key={item.label} to={item.link}>{item.label}</Link>
           })
         }
       </nu-flex>

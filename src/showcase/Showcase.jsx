@@ -27,6 +27,8 @@ import ExploreCubeCloud from '../components/ExploreCubeCloud';
 import Select from '../components/Select';
 import CopyButton from '../components/CopyButton';
 import Banner from '../components/Banner';
+import Button from '../components/Button';
+import Link from '../components/Link';
 
 const FullWidthBlock = (props) => {
   return <nu-block space="0 (--content-padding + 1bw)" fill shadow
@@ -104,12 +106,12 @@ export default function Showcase() {
     <nu-pane content="space-between">
       <Heading level="1">Cube.js UIKit Showcase</Heading>
       <nu-pane>
-        <nu-btn padding toggle control=":root[data-nu-outline]" fill="bg :pressed[special-bg]">
+        <Button padding toggle control=":root[data-nu-outline]" fill="bg :pressed[special-bg]">
           <nu-icon name="grid-outline"></nu-icon>
-        </nu-btn>
-        <nu-btn padding toggle control=":root[data-nu-grid]" fill="bg :pressed[special-bg]">
+        </Button>
+        <Button padding toggle control=":root[data-nu-grid]" fill="bg :pressed[special-bg]">
           <nu-icon name="menu-outline" rotate="90deg"></nu-icon>
-        </nu-btn>
+        </Button>
       </nu-pane>
     </nu-pane>
 
@@ -179,26 +181,26 @@ export default function Showcase() {
       <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
           __html: `<textarea>
-<nu-btn>Button</nu-btn>
-<nu-btn is-purple>Button</nu-btn>
+<Button>Button</Button>
+<Button is-purple>Button</Button>
           </textarea>`,
         }}>
         </nu-code>
         <nu-block as="preview">
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
-              <nu-btn>Button</nu-btn>
-              <nu-btn {...HOVER_STYLES}>Hover</nu-btn>
-              <nu-btn {...PRESSED_STYLES}>Pressed</nu-btn>
-              <nu-btn {...FOCUS_STYLES}>Focus</nu-btn>
-              <nu-btn {...DISABLED_STYLES}>Disabled</nu-btn>
+              <Button>Button</Button>
+              <Button {...HOVER_STYLES}>Hover</Button>
+              <Button {...PRESSED_STYLES}>Pressed</Button>
+              <Button {...FOCUS_STYLES}>Focus</Button>
+              <Button {...DISABLED_STYLES}>Disabled</Button>
             </nu-flex>
             <nu-flex flow="row wrap" gap>
-              <nu-btn is-purple>Button</nu-btn>
-              <nu-btn is-purple {...HOVER_STYLES}>Hover</nu-btn>
-              <nu-btn is-purple {...PRESSED_STYLES}>Pressed</nu-btn>
-              <nu-btn is-purple {...FOCUS_STYLES}>Focus</nu-btn>
-              <nu-btn is-purple {...DISABLED_STYLES}>Disabled</nu-btn>
+              <Button is-purple>Button</Button>
+              <Button is-purple {...HOVER_STYLES}>Hover</Button>
+              <Button is-purple {...PRESSED_STYLES}>Pressed</Button>
+              <Button is-purple {...FOCUS_STYLES}>Focus</Button>
+              <Button is-purple {...DISABLED_STYLES}>Disabled</Button>
             </nu-flex>
           </nu-flex>
         </nu-block>
@@ -208,26 +210,26 @@ export default function Showcase() {
       <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
           __html: `<textarea>
-<nu-btn special>Button</nu-btn>
-<nu-btn is-purple special>Button</nu-btn>
+<Button special>Button</Button>
+<Button is-purple special>Button</Button>
           </textarea>`,
         }}>
         </nu-code>
         <nu-block as="preview">
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
-              <nu-btn special>Button</nu-btn>
-              <nu-btn special {...HOVER_STYLES}>Hover</nu-btn>
-              <nu-btn special {...PRESSED_STYLES}>Pressed</nu-btn>
-              <nu-btn special {...FOCUS_STYLES}>Focus</nu-btn>
-              <nu-btn special {...DISABLED_STYLES}>Disabled</nu-btn>
+              <Button special>Button</Button>
+              <Button special {...HOVER_STYLES}>Hover</Button>
+              <Button special {...PRESSED_STYLES}>Pressed</Button>
+              <Button special {...FOCUS_STYLES}>Focus</Button>
+              <Button special {...DISABLED_STYLES}>Disabled</Button>
             </nu-flex>
             <nu-flex flow="row wrap" gap>
-              <nu-btn special is-purple>Button</nu-btn>
-              <nu-btn special is-purple {...HOVER_STYLES}>Hover</nu-btn>
-              <nu-btn special is-purple {...PRESSED_STYLES}>Pressed</nu-btn>
-              <nu-btn special is-purple {...FOCUS_STYLES}>Focus</nu-btn>
-              <nu-btn special is-purple {...DISABLED_STYLES}>Disabled</nu-btn>
+              <Button special is-purple>Button</Button>
+              <Button special is-purple {...HOVER_STYLES}>Hover</Button>
+              <Button special is-purple {...PRESSED_STYLES}>Pressed</Button>
+              <Button special is-purple {...FOCUS_STYLES}>Focus</Button>
+              <Button special is-purple {...DISABLED_STYLES}>Disabled</Button>
             </nu-flex>
           </nu-flex>
         </nu-block>
@@ -237,26 +239,26 @@ export default function Showcase() {
       <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
           __html: `<textarea>
-<nu-btn clear>Button</nu-btn>
-<nu-btn is-purple clear>Button</nu-btn>
+<Button clear>Button</Button>
+<Button is-purple clear>Button</Button>
           </textarea>`,
         }}>
         </nu-code>
         <nu-block as="preview">
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
-              <nu-btn clear>Button</nu-btn>
-              <nu-btn clear {...HOVER_STYLES}>Hover</nu-btn>
-              <nu-btn clear {...PRESSED_STYLES}>Pressed</nu-btn>
-              <nu-btn clear {...FOCUS_STYLES}>Focus</nu-btn>
-              <nu-btn clear {...DISABLED_STYLES}>Disabled</nu-btn>
+              <Button clear>Button</Button>
+              <Button clear {...HOVER_STYLES}>Hover</Button>
+              <Button clear {...PRESSED_STYLES}>Pressed</Button>
+              <Button clear {...FOCUS_STYLES}>Focus</Button>
+              <Button clear {...DISABLED_STYLES}>Disabled</Button>
             </nu-flex>
             <nu-flex flow="row wrap" gap>
-              <nu-btn clear is-purple>Button</nu-btn>
-              <nu-btn clear is-purple {...HOVER_STYLES}>Hover</nu-btn>
-              <nu-btn clear is-purple {...PRESSED_STYLES}>Pressed</nu-btn>
-              <nu-btn clear is-purple {...FOCUS_STYLES}>Focus</nu-btn>
-              <nu-btn clear is-purple {...DISABLED_STYLES}>Disabled</nu-btn>
+              <Button clear is-purple>Button</Button>
+              <Button clear is-purple {...HOVER_STYLES}>Hover</Button>
+              <Button clear is-purple {...PRESSED_STYLES}>Pressed</Button>
+              <Button clear is-purple {...FOCUS_STYLES}>Focus</Button>
+              <Button clear is-purple {...DISABLED_STYLES}>Disabled</Button>
             </nu-flex>
           </nu-flex>
         </nu-block>
@@ -266,26 +268,48 @@ export default function Showcase() {
       <nu-grid as="example">
         <nu-code dangerouslySetInnerHTML={{
           __html: `<textarea>
-<nu-btn is-big>Button</nu-btn>
-<nu-btn is-big is-purple>Button</nu-btn>
+<Button is-big>Button</Button>
+<Button is-big is-purple>Button</Button>
           </textarea>`,
         }}>
         </nu-code>
         <nu-block as="preview">
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
-              <nu-btn is-big special>Button</nu-btn>
-              <nu-btn is-big special {...HOVER_STYLES}>Hover</nu-btn>
-              <nu-btn is-big special {...PRESSED_STYLES}>Pressed</nu-btn>
-              <nu-btn is-big special {...FOCUS_STYLES}>Focus</nu-btn>
-              <nu-btn is-big special {...DISABLED_STYLES}>Disabled</nu-btn>
+              <Button is-big special>Button</Button>
+              <Button is-big special {...HOVER_STYLES}>Hover</Button>
+              <Button is-big special {...PRESSED_STYLES}>Pressed</Button>
+              <Button is-big special {...FOCUS_STYLES}>Focus</Button>
+              <Button is-big special {...DISABLED_STYLES}>Disabled</Button>
             </nu-flex>
             <nu-flex flow="row wrap" gap>
-              <nu-btn is-big is-purple special>Button</nu-btn>
-              <nu-btn is-big is-purple special {...HOVER_STYLES}>Hover</nu-btn>
-              <nu-btn is-big is-purple special {...PRESSED_STYLES}>Pressed</nu-btn>
-              <nu-btn is-big is-purple special {...FOCUS_STYLES}>Focus</nu-btn>
-              <nu-btn is-big is-purple special {...DISABLED_STYLES}>Disabled</nu-btn>
+              <Button is-big is-purple special>Button</Button>
+              <Button is-big is-purple special {...HOVER_STYLES}>Hover</Button>
+              <Button is-big is-purple special {...PRESSED_STYLES}>Pressed</Button>
+              <Button is-big is-purple special {...FOCUS_STYLES}>Focus</Button>
+              <Button is-big is-purple special {...DISABLED_STYLES}>Disabled</Button>
+            </nu-flex>
+          </nu-flex>
+        </nu-block>
+      </nu-grid>
+    </nu-card>
+
+    <nu-card border="y" fill="bg" gap="2x">
+      <nu-h2>Links</nu-h2>
+      <nu-spacer></nu-spacer>
+      <nu-grid as="example">
+        <nu-code dangerouslySetInnerHTML={{
+          __html: `<textarea>
+<Link to="!https://github.com/cube-js">Cube.js GitHub</Link>
+<Link pink to="!https://github.com/cube-js">Cube.js GitHub</Link>
+          </textarea>`,
+        }}>
+        </nu-code>
+        <nu-block as="preview">
+          <nu-flex gap="2x 1x" flow="column">
+            <nu-flex flow="row wrap" gap>
+              <Link to="!https://github.com/cube-js">Cube.js GitHub</Link>
+              <Link pink to="!https://github.com/cube-js">Cube.js GitHub</Link>
             </nu-flex>
           </nu-flex>
         </nu-block>
@@ -404,6 +428,39 @@ export default function Showcase() {
             <nu-flex flow="row wrap" gap>
               <Select
                 value="react"
+                width="min 12"
+                options={[
+                  { value: 'react', label: 'React' },
+                  { value: 'vue', label: 'Vue' },
+                  { value: 'angular', label: 'Angular' },
+                ]}/>
+            </nu-flex>
+          </nu-flex>
+        </nu-block>
+      </nu-grid>
+
+      <nu-spacer></nu-spacer>
+      <nu-h3>Multiple select</nu-h3>
+      <nu-grid as="example">
+        <nu-code dangerouslySetInnerHTML={{
+          __html: `<textarea>
+<Select
+  value="react"
+  multiple
+  options={[
+    { value: 'react', label: 'React' },
+    { value: 'vue', label: 'Vue' },
+    { value: 'angular', label: 'Angular' },
+  ]}/>
+          </textarea>`,
+        }}>
+        </nu-code>
+        <nu-block as="preview">
+          <nu-flex gap="2x 1x" flow="column">
+            <nu-flex flow="row wrap" gap>
+              <Select
+                value="react"
+                multiple
                 width="min 12"
                 options={[
                   { value: 'react', label: 'React' },

@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import jsx from 'jsx-native-events';
 import { main as mainLogo } from '../logos';
 import { attrs } from '../helpers';
+import Link from './Link';
+import Action from './Action';
+// import Button from './Button';
 
 const MENU = [
 
@@ -56,7 +59,7 @@ const MOBILE_MENU = MENU.reduce((list, link) => {
 }, []);
 
 const MenuBtn = (props) => {
-  return <nu-action
+  return <Action
     as="menubtn"
     label="Toggle menu"
     toggle
@@ -74,7 +77,7 @@ const MenuBtn = (props) => {
       name="^ menu :pressed[close-outline]"
       transition="size"
       size="^ 3 :pressed[2]"/>
-  </nu-action>;
+  </Action>;
 };
 
 export default function Topbar(props) {
@@ -123,7 +126,7 @@ export default function Topbar(props) {
           {
             MENU.map(item => {
               return item.items
-                ? <nu-link key={item.label} clear>
+                ? <Link key={item.label} clear>
                   <nu-el>{item.label}</nu-el>
                   <nu-icon name="chevron-down-outline" space=".75x right"/>
                   <nu-card
@@ -134,7 +137,7 @@ export default function Topbar(props) {
                     <nu-attrs for="link" padding="3x" display="block" fill="clear :hover.focus[light 50%]"></nu-attrs>
                     {
                       item.items.map((item, i) => (
-                        <nu-link id="sublink" key={item.label} clear to={item.link} border={i ? 'top #light' : null}>
+                        <Link id="sublink" key={item.label} clear to={item.link} border={i ? 'top #light' : null}>
                           <nu-flow>
                             <nu-block color="^#sublink dark :hover.pressed[purple]" transition="color">
                               {item.label}
@@ -143,12 +146,12 @@ export default function Topbar(props) {
                               {item.description}
                             </nu-block>
                           </nu-flow>
-                        </nu-link>
+                        </Link>
                       ))
                     }
                   </nu-card>
-                </nu-link>
-                : <nu-link key={item.label} clear to={item.link}>{item.label}</nu-link>;
+                </Link>
+                : <Link key={item.label} clear to={item.link}>{item.label}</Link>;
             })
           }
         </nu-pane>
@@ -164,7 +167,7 @@ export default function Topbar(props) {
       </nu-grid>
     </nu-pane>
 
-    <nu-action
+    <Action
       id="overlay"
       aria-hidden="true"
       place="fixed cover"
@@ -172,7 +175,7 @@ export default function Topbar(props) {
       hidden={!isMenuOpen || undefined}
       cursor="default"
       mark="n"
-      onEventTap={() => setIsMenuOpen(false)}></nu-action>
+      onEventTap={() => setIsMenuOpen(false)}></Action>
 
     <nu-region
       id="sidemenu"
@@ -202,7 +205,7 @@ export default function Topbar(props) {
           display="block"
           outline="focus inset"/>
         {
-          props.getStarted && <nu-action
+          props.getStarted && <Action
             show="n||y"
             color="special"
             mark="#pink-hover.10 hover"
@@ -210,24 +213,24 @@ export default function Topbar(props) {
             to="#getting-started"
             onEventTap={onAction}>
             Get Started
-          </nu-action>
+          </Action>
         }
         {
           MOBILE_MENU.map(item => {
-            return <nu-action
+            return <Action
               key={item.label}
               to={item.link}
               onEventTap={onAction}>
               {item.label}
-            </nu-action>;
+            </Action>;
           })
         }
       </nu-flow>
       {/*<nu-block padding="0 2x">*/}
-      {/*  <nu-btn to="!https://github.com/cube-js/cube.js" onEventTap={onAction}>*/}
+      {/*  <Button to="!https://github.com/cube-js/cube.js" onEventTap={onAction}>*/}
       {/*    <nu-icon name="github"></nu-icon>*/}
       {/*    Github*/}
-      {/*  </nu-btn>*/}
+      {/*  </Button>*/}
       {/*</nu-block>*/}
     </nu-region>
   </nu-header>;

@@ -6,7 +6,10 @@ import linkedinIcon from './assets/icons/linkedin.svg';
 import menuIcon from './assets/icons/menu.svg';
 import cbIcon from './assets/icons/cb.svg';
 import angelListIcon from './assets/icons/angellist.svg';
+export { default as Action } from './components/Action.jsx';
 export { default as Button } from './components/Button.jsx';
+export { default as CardButton } from './components/CardButton.jsx';
+export { default as Link } from './components/Link.jsx';
 export { default as Input } from './components/Input.jsx';
 export { default as Select } from './components/Select.jsx';
 export { default as Heading } from './components/Heading.jsx';
@@ -115,7 +118,7 @@ export default {
 
       Nude.assign('nu-popuplistbox', {
         styles: {
-          place: 'top -1bw',
+          place: 'top -1bw :multiple[outside-bottom]',
           outline: 'focus',
           border: '#main.60',
           shadow: '3x',
@@ -148,6 +151,12 @@ export default {
             inset: 'n',
             border: 'n',
             padding: '^btn 1.375x 2.5x :big[1.875x 2.5x]',
+          },
+          'attrs:badge': {
+            color: '^btn white :special[main]',
+            fill: '^btn main :special[white]',
+            radius: '1r',
+            padding: '0 .25em',
           },
         },
       });
