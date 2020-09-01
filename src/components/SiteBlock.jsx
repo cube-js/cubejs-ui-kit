@@ -13,7 +13,7 @@ export default function SiteBlock(props) {
         <nu-el padding="2x left" text="nowrap">{props.badge}</nu-el>{props.githubBadge && <iframe
           src="https://ghbtns.com/github-btn.html?user=cube-js&repo=cube.js&type=star&count=true&size=large"
           frameBorder="0" scrolling="0" width="170" height="30" style={{ marginTop: '-3px' }}
-          title="Star tenphi/numl on GitHub"/>}
+          title="Star Cube.js on GitHub"/>}
       </nu-badge>
       }
       {image &&
