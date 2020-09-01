@@ -190,17 +190,17 @@ export default function Showcase() {
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
               <Button>Button</Button>
-              <Button {...HOVER_STYLES}>Hover</Button>
-              <Button {...PRESSED_STYLES}>Pressed</Button>
-              <Button {...FOCUS_STYLES}>Focus</Button>
-              <Button {...DISABLED_STYLES}>Disabled</Button>
+              <Button nx-button="no" {...HOVER_STYLES}>Hover</Button>
+              <Button nx-button="no" {...PRESSED_STYLES}>Pressed</Button>
+              <Button nx-button="no" {...FOCUS_STYLES}>Focus</Button>
+              <Button nx-button="no" {...DISABLED_STYLES}>Disabled</Button>
             </nu-flex>
             <nu-flex flow="row wrap" gap>
               <Button is-purple>Button</Button>
-              <Button is-purple {...HOVER_STYLES}>Hover</Button>
-              <Button is-purple {...PRESSED_STYLES}>Pressed</Button>
-              <Button is-purple {...FOCUS_STYLES}>Focus</Button>
-              <Button is-purple {...DISABLED_STYLES}>Disabled</Button>
+              <Button is-purple nx-button="no" {...HOVER_STYLES}>Hover</Button>
+              <Button is-purple nx-button="no" {...PRESSED_STYLES}>Pressed</Button>
+              <Button is-purple nx-button="no" {...FOCUS_STYLES}>Focus</Button>
+              <Button is-purple nx-button="no" {...DISABLED_STYLES}>Disabled</Button>
             </nu-flex>
           </nu-flex>
         </nu-block>
@@ -219,17 +219,17 @@ export default function Showcase() {
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
               <Button special>Button</Button>
-              <Button special {...HOVER_STYLES}>Hover</Button>
-              <Button special {...PRESSED_STYLES}>Pressed</Button>
-              <Button special {...FOCUS_STYLES}>Focus</Button>
-              <Button special {...DISABLED_STYLES}>Disabled</Button>
+              <Button special nx-button="no" {...HOVER_STYLES}>Hover</Button>
+              <Button special nx-button="no" {...PRESSED_STYLES}>Pressed</Button>
+              <Button special nx-button="no" {...FOCUS_STYLES}>Focus</Button>
+              <Button special nx-button="no" {...DISABLED_STYLES}>Disabled</Button>
             </nu-flex>
             <nu-flex flow="row wrap" gap>
               <Button special is-purple>Button</Button>
-              <Button special is-purple {...HOVER_STYLES}>Hover</Button>
-              <Button special is-purple {...PRESSED_STYLES}>Pressed</Button>
-              <Button special is-purple {...FOCUS_STYLES}>Focus</Button>
-              <Button special is-purple {...DISABLED_STYLES}>Disabled</Button>
+              <Button special is-purple nx-button="no" {...HOVER_STYLES}>Hover</Button>
+              <Button special is-purple nx-button="no" {...PRESSED_STYLES}>Pressed</Button>
+              <Button special is-purple nx-button="no" {...FOCUS_STYLES}>Focus</Button>
+              <Button special is-purple nx-button="no" {...DISABLED_STYLES}>Disabled</Button>
             </nu-flex>
           </nu-flex>
         </nu-block>
@@ -248,17 +248,17 @@ export default function Showcase() {
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
               <Button clear>Button</Button>
-              <Button clear {...HOVER_STYLES}>Hover</Button>
-              <Button clear {...PRESSED_STYLES}>Pressed</Button>
-              <Button clear {...FOCUS_STYLES}>Focus</Button>
-              <Button clear {...DISABLED_STYLES}>Disabled</Button>
+              <Button clear nx-button="no" {...HOVER_STYLES}>Hover</Button>
+              <Button clear nx-button="no" {...PRESSED_STYLES}>Pressed</Button>
+              <Button clear nx-button="no" {...FOCUS_STYLES}>Focus</Button>
+              <Button clear nx-button="no" {...DISABLED_STYLES}>Disabled</Button>
             </nu-flex>
             <nu-flex flow="row wrap" gap>
               <Button clear is-purple>Button</Button>
-              <Button clear is-purple {...HOVER_STYLES}>Hover</Button>
-              <Button clear is-purple {...PRESSED_STYLES}>Pressed</Button>
-              <Button clear is-purple {...FOCUS_STYLES}>Focus</Button>
-              <Button clear is-purple {...DISABLED_STYLES}>Disabled</Button>
+              <Button clear is-purple nx-button="no" {...HOVER_STYLES}>Hover</Button>
+              <Button clear is-purple nx-button="no" {...PRESSED_STYLES}>Pressed</Button>
+              <Button clear is-purple nx-button="no" {...FOCUS_STYLES}>Focus</Button>
+              <Button clear is-purple nx-button="no" {...DISABLED_STYLES}>Disabled</Button>
             </nu-flex>
           </nu-flex>
         </nu-block>

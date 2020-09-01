@@ -5,7 +5,7 @@ import { main as mainLogo } from '../logos';
 import { attrs } from '../helpers';
 import Link from './Link';
 import Action from './Action';
-// import Button from './Button';
+import Button from './Button';
 
 const MENU = [
 
@@ -157,10 +157,10 @@ export default function Topbar(props) {
         </nu-pane>
         {/*<SchemeSwitch radius fill="clear" />*/}
         {
-          props.getStarted && <nu-btn
+          props.getStarted && <Button
             as="get-started" show="y||n" to="#getting-started">
             Get Started
-          </nu-btn>
+          </Button>
         }
 
         <MenuBtn pressed={isMenuOpen} show="n||y" onInput={onMenuBtnClick}/>

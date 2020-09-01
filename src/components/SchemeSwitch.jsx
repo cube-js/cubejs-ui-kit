@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import jsx from 'jsx-native-events';
 import { attrs } from '../helpers';
+import Button from './Button';
 
 const dataset = typeof document !== 'undefined' ? document.documentElement.dataset : {};
 
@@ -36,7 +37,7 @@ export default function SchemeSwitch(props) {
     dataset.nuScheme = value;
   }
 
-  return <nu-btn
+  return <Button
     onEventInput={changeScheme}
     toggle value="dark" off-value="light"
     radius="round"
@@ -45,5 +46,5 @@ export default function SchemeSwitch(props) {
     padding
     {...attrs(props)}>
     <nu-icon name="^ moon :pressed[sun]"></nu-icon>
-  </nu-btn>
+  </Button>
 }
