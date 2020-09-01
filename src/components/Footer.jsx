@@ -5,6 +5,7 @@ import Grid from './Grid.jsx';
 import Section from './Section.jsx';
 import Heading from './Heading.jsx';
 import Link from './Link';
+import BlockLink from './BlockLink';
 
 const COMPANY_LINKS = [
   {
@@ -90,15 +91,15 @@ export default function Footer() {
             size="t1"
             color="white"
             transition="opacity"></nu-attrs>
-          <nu-blocklink to="!https://slack.cube.dev/" label="Slack">
+          <BlockLink to="!https://slack.cube.dev/" label="Slack">
             <nu-icon name="slack"></nu-icon>
-          </nu-blocklink>
-          <nu-blocklink to="!https://twitter.com/thecubejs" label="Twitter">
+          </BlockLink>
+          <BlockLink to="!https://twitter.com/thecubejs" label="Twitter">
             <nu-icon name="twitter"></nu-icon>
-          </nu-blocklink>
-          <nu-blocklink to="!https://github.com/cube-js/cube.js" label="Github">
+          </BlockLink>
+          <BlockLink to="!https://github.com/cube-js/cube.js" label="Github">
             <nu-icon name="github"></nu-icon>
-          </nu-blocklink>
+          </BlockLink>
         </nu-pane>
       </nu-flow>
     </Grid>

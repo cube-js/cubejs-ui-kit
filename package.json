@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "mkdir -p dist && rm -vrf dist/* && rollup -c rollup.config.js && npm run size-limit",
     "now-build": "mkdir -p static && rm -vrf static/* && parcel build --out-dir static index.html",
-    "deploy": "npm run now-build && now --prod static",
+    "deploy": "npm run now-build && vercel --prod static",
     "size-limit": "npx size-limit",
     "prepublishOnly": "npm run build"
   },
@@ -44,7 +44,8 @@
     "rollup": "^2.22.2",
     "rollup-plugin-postcss": "^3.1.3",
     "rollup-plugin-terser": "^6.1.0",
-    "size-limit": "^4.5.5"
+    "size-limit": "^4.5.5",
+    "vercel": "^20.1.0"
   },
   "dependencies": {
     "native-events": "^1.0.0",

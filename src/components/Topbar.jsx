@@ -6,6 +6,7 @@ import { attrs } from '../helpers';
 import Link from './Link';
 import Action from './Action';
 import Button from './Button';
+import BlockLink from './BlockLink';
 
 const MENU = [
 
@@ -101,14 +102,14 @@ export default function Topbar(props) {
     {...attrs(props)}>
 
     <nu-pane width="--content-width" content="space-between" space="around">
-      <nu-blocklink to="/" mark="n">
+      <BlockLink to="/" mark="n">
         <nu-svg
           id="logo"
           height="4.5x||4x"
           src={mainLogo}
           label="Cube.js logo"
           filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
-      </nu-blocklink>
+      </BlockLink>
       <nu-grid flow="column" gap="3x"
                items="center">
         <nu-pane gap>
@@ -130,6 +131,7 @@ export default function Topbar(props) {
                   <nu-el>{item.label}</nu-el>
                   <nu-icon name="chevron-down-outline" space=".75x right"/>
                   <nu-card
+                    nx-hover
                     show="^ n :hover.focus-within[y]" gap="0" border="1bw #light"
                     place={!props.getStarted ? 'outside-bottom right' : 'outside-bottom'}
                     size="t2" padding="0" fill="bg" overflow="n" z="front"

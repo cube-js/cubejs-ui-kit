@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import jsx from 'jsx-native-events';
 import Storage from '../services/storage';
 import { attrs } from '../helpers';
+import BlockLink from './BlockLink';
 
 export default function Banner(props) {
   const [visible, setVisible] = useState(false);
@@ -25,7 +26,7 @@ export default function Banner(props) {
     }, 1500);
   }
 
-  return <nu-blocklink
+  return <BlockLink
     display="grid"
     items="center"
     content="center"
@@ -47,5 +48,5 @@ export default function Banner(props) {
       transition=".4s"
       text-transition=".08s"/>
     { props.children} →
-  </nu-blocklink>;
+  </BlockLink>;
 }

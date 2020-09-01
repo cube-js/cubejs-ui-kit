@@ -10,6 +10,7 @@ export { default as Action } from './components/Action.jsx';
 export { default as Button } from './components/Button.jsx';
 export { default as CardButton } from './components/CardButton.jsx';
 export { default as Link } from './components/Link.jsx';
+export { default as BlockLink } from './components/BlockLink.jsx';
 export { default as Input } from './components/Input.jsx';
 export { default as Select } from './components/Select.jsx';
 export { default as Heading } from './components/Heading.jsx';
