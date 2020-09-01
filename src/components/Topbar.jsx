@@ -131,7 +131,7 @@ export default function Topbar(props) {
                   <nu-el>{item.label}</nu-el>
                   <nu-icon name="chevron-down-outline" space=".75x right"/>
                   <nu-card
-                    nx-hover
+                    use-hover
                     show="^ n :hover.focus-within[y]" gap="0" border="1bw #light"
                     place={!props.getStarted ? 'outside-bottom right' : 'outside-bottom'}
                     size="t2" padding="0" fill="bg" overflow="n" z="front"
