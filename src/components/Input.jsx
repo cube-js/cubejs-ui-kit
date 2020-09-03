@@ -25,7 +25,7 @@ const Input = (props, ref) => {
     onEventInput={inputHandler}
     label={props.placeholder}
     style={{ '--nu-special-color': 'var(--nu-purple-color)' }}
-    {...attrs(otherProps)}/>
+    {...attrs(otherProps)}> </InputTag>
 };
 
 export default forwardRef(Input);

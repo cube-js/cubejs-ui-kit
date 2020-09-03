@@ -6,6 +6,7 @@ import Heading from './Heading.jsx';
 import Link from './Link';
 import BlockLink from './BlockLink';
 import { attrs } from '../helpers';
+import Icon from './Icon';
 
 const COMPANY_LINKS = [
   {
@@ -98,13 +99,13 @@ export default function Footer(props) {
             color="white"
             transition="opacity"></nu-attrs>
           <BlockLink to="!https://slack.cube.dev/" label="Slack">
-            <nu-icon name="slack"></nu-icon>
+            <Icon name="slack"/>
           </BlockLink>
           <BlockLink to="!https://twitter.com/thecubejs" label="Twitter">
-            <nu-icon name="twitter"></nu-icon>
+            <Icon name="twitter"/>
           </BlockLink>
           <BlockLink to="!https://github.com/cube-js/cube.js" label="Github">
-            <nu-icon name="github"></nu-icon>
+            <Icon name="github"/>
           </BlockLink>
         </nu-pane>
       </nu-flow>

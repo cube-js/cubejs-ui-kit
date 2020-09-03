@@ -29,6 +29,8 @@ import CopyButton from '../components/CopyButton';
 import Banner from '../components/Banner';
 import Button from '../components/Button';
 import Link from '../components/Link';
+import Image from '../components/Image';
+import Icon from '../components/Icon';
 
 const FullWidthBlock = (props) => {
   return <nu-block space="0 (--content-padding + 1bw)" fill shadow
@@ -107,10 +109,10 @@ export default function Showcase() {
       <Heading level="1">Cube.js UIKit Showcase</Heading>
       <nu-pane>
         <Button padding toggle control=":root[data-nu-outline]" fill="bg :pressed[special-bg]">
-          <nu-icon name="grid-outline"></nu-icon>
+          <Icon name="grid-outline"/>
         </Button>
         <Button padding toggle control=":root[data-nu-grid]" fill="bg :pressed[special-bg]">
-          <nu-icon name="menu-outline" rotate="90deg"></nu-icon>
+          <Icon name="menu-outline" rotate="90deg"/>
         </Button>
       </nu-pane>
     </nu-pane>

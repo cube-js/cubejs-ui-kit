@@ -4,6 +4,7 @@ import Section from './Section.jsx';
 import { attrs, insertText } from '../helpers';
 import * as images from '../logos';
 import Heading from './Heading.jsx';
+import Image from './Image';
 
 export default function SiteBlock(props) {
   const MainPart = ({ image }) => (
@@ -17,7 +18,7 @@ export default function SiteBlock(props) {
       </nu-badge>
       }
       {image &&
-      <nu-svg
+      <Image
         id="logo"
         height="4.5x"
         width="18"
@@ -62,7 +63,7 @@ export default function SiteBlock(props) {
                 {props.children}
               </nu-flow>
               {props.image &&
-              <nu-svg
+              <Image
                 id="logo"
                 padding={props.badge ? '4x top' : null}
                 width="max 100%"

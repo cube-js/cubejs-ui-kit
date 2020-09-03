@@ -50,8 +50,15 @@ const dataset = html ? html.dataset : {};
 
 const OPTIONS = { icons: 'no', prevent: false, scheme: 'light' };
 
-function loadIcon(url) {
-  return fetch(url).then(response => response.text());
+function loadIcon(url, prepare = false) {
+  return fetch(url).then(response => response.text())
+    .then(svg => {
+      if (prepare) {
+        svg = svg.replace('<svg ', '<svg fill="currentColor" width="24" height="24" ');
+      }
+
+      return svg;
+    });
 }
 
 function spanWidth(num) {
@@ -96,25 +103,25 @@ export default {
           case 'angellist':
             return loadIcon(angelListIcon);
           case 'menu-outline':
-            return basicMenuIcon;
+            return loadIcon(basicMenuIcon, true);
           case 'close':
           case 'close-outline':
-            return closeIcon;
+            return loadIcon(closeIcon, true);
           case 'sun':
           case 'sun-outline':
-            return sunIcon;
+            return loadIcon(sunIcon, true);
           case 'moon':
           case 'moon-outline':
-            return moonIcon;
+            return loadIcon(moonIcon, true);
           case 'chevron-down':
           case 'chevron-down-outline':
-            return chevronDownIcon;
+            return loadIcon(chevronDownIcon, true);
           case 'chevron-right':
           case 'chevron-right-outline':
-            return chevronRightIcon;
+            return loadIcon(chevronRightIcon, true);
           case 'grid':
           case 'grid-outline':
-            return gridIcon;
+            return loadIcon(gridIcon, true);
           default:
             return '';
         }
@@ -214,11 +221,16 @@ export default {
           padding: '1.375x 2.5x :big[1.875x 2.5x]',
           mark: 'n',
         },
+        behaviors: {
+          hover: true,
+        },
         template: `
           <nu-block place="cover" opacity="0" overflow="n"><input/></nu-block>
           <nu-block 
             as="t2" radius="round" padding="0 2x" fill="^ light :hover.focus[purple-04]" 
-            color="dark" transition="fill">Choose file</nu-block>
+            color="dark" transition="fill">
+            Choose file
+          </nu-block>
           <nu-value placeholder="No file selected"></nu-value>     
         `,
       });

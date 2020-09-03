@@ -7,6 +7,8 @@ import Link from './Link';
 import Action from './Action';
 import Button from './Button';
 import BlockLink from './BlockLink';
+import Image from './Image';
+import Icon from './Icon';
 
 const MENU = [
 
@@ -73,7 +75,7 @@ const MenuBtn = (props) => {
     mark="n"
     onEventInput={evt => props.onInput(evt.detail)}
     {...attrs(props, ['pressed', 'toggle'])}>
-    <nu-icon
+    <Icon
       place="inside"
       name="^ menu :pressed[close-outline]"
       transition="size"
@@ -103,7 +105,7 @@ export default function Topbar(props) {
 
     <nu-pane width="--content-width" content="space-between" space="around">
       <BlockLink to="/" mark="n">
-        <nu-svg
+        <Image
           id="logo"
           height="4.5x||4x"
           src={mainLogo}
@@ -129,7 +131,7 @@ export default function Topbar(props) {
               return item.items
                 ? <Link key={item.label} clear>
                   <nu-el>{item.label}</nu-el>
-                  <nu-icon name="chevron-down-outline" space=".75x right"/>
+                  <Icon name="chevron-down-outline" space=".75x right"/>
                   <nu-card
                     use-hover
                     show="^ n :hover.focus-within[y]" gap="0" border="1bw #light"
@@ -230,7 +232,7 @@ export default function Topbar(props) {
       </nu-flow>
       {/*<nu-block padding="0 2x">*/}
       {/*  <Button to="!https://github.com/cube-js/cube.js" onEventTap={onAction}>*/}
-      {/*    <nu-icon name="github"></nu-icon>*/}
+      {/*    <Icon name="github"/>*/}
       {/*    Github*/}
       {/*  </Button>*/}
       {/*</nu-block>*/}

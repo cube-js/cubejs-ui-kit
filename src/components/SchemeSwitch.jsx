@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import jsx from 'jsx-native-events';
 import { attrs } from '../helpers';
 import Button from './Button';
+import Icon from './Icon';
 
 const dataset = typeof document !== 'undefined' ? document.documentElement.dataset : {};
 
@@ -45,6 +46,6 @@ export default function SchemeSwitch(props) {
     pressed={scheme === 'dark' || null}
     padding
     {...attrs(props)}>
-    <nu-icon name="^ moon :pressed[sun]"></nu-icon>
+    <Icon name="^ moon :pressed[sun]"/>
   </Button>
 }
