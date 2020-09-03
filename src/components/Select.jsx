@@ -7,8 +7,8 @@ import { attrs } from '../helpers';
 
 export default function Select(props) {
   return <Button toggle purple value={props.value} onInput={props.onInput} {...attrs(props, ['multiple'])} content="space-between">
-    <nu-value list="list"/>
-    <nu-svg src={DropdownIcon} width="12rp" space="1x right" color={props.special ? 'white' : 'main'} />
+    <nu-value list="list"> </nu-value>
+    <nu-svg src={DropdownIcon} width="12rp" space="1x right" color={props.special ? 'white' : 'main'}> </nu-svg>
     <nu-popuplistbox
       id="list" padding="0" gap={props.multiple ? '1bw' : '0'} theme=""
       special={props.special} radius="1r" link-value multiple={props.multiple}>
