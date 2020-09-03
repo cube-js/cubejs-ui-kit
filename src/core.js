@@ -6,11 +6,19 @@ import linkedinIcon from './assets/icons/linkedin.svg';
 import menuIcon from './assets/icons/menu.svg';
 import cbIcon from './assets/icons/cb.svg';
 import angelListIcon from './assets/icons/angellist.svg';
+import closeIcon from './assets/icons/close-outline.svg';
+import basicMenuIcon from './assets/icons/menu-outline.svg';
+import sunIcon from './assets/icons/sun-outline.svg';
+import moonIcon from './assets/icons/moon-outline.svg';
+import gridIcon from './assets/icons/grid-outline.svg';
+import chevronDownIcon from './assets/icons/chevron-down-outline.svg';
+import chevronRightIcon from './assets/icons/chevron-right-outline.svg';
 export { default as Action } from './components/Action.jsx';
 export { default as Button } from './components/Button.jsx';
 export { default as CardButton } from './components/CardButton.jsx';
 export { default as Link } from './components/Link.jsx';
 export { default as BlockLink } from './components/BlockLink.jsx';
+export { default as Image } from './components/Image.jsx';
 export { default as Input } from './components/Input.jsx';
 export { default as Select } from './components/Select.jsx';
 export { default as Heading } from './components/Heading.jsx';
@@ -34,12 +42,13 @@ export { default as GettingStarted } from './components/GettingStarted.jsx';
 export { default as ExploreCubeCloud } from './components/ExploreCubeCloud.jsx';
 export { default as GridLines } from './components/GridLines.jsx';
 export { default as useSubscription } from './services/subscription';
+
 export * from './helpers';
 
 const html = typeof document !== 'undefined' ? document.querySelector('html') : null;
 const dataset = html ? html.dataset : {};
 
-const OPTIONS = { icons: 'eva', prevent: false, scheme: 'light' };
+const OPTIONS = { icons: 'no', prevent: false, scheme: 'light' };
 
 function loadIcon(url) {
   return fetch(url).then(response => response.text());
@@ -86,8 +95,28 @@ export default {
             return loadIcon(cbIcon);
           case 'angellist':
             return loadIcon(angelListIcon);
+          case 'menu-outline':
+            return basicMenuIcon;
+          case 'close':
+          case 'close-outline':
+            return closeIcon;
+          case 'sun':
+          case 'sun-outline':
+            return sunIcon;
+          case 'moon':
+          case 'moon-outline':
+            return moonIcon;
+          case 'chevron-down':
+          case 'chevron-down-outline':
+            return chevronDownIcon;
+          case 'chevron-right':
+          case 'chevron-right-outline':
+            return chevronRightIcon;
+          case 'grid':
+          case 'grid-outline':
+            return gridIcon;
           default:
-            return Nude.icons.loaders.eva(name);
+            return '';
         }
       });
 

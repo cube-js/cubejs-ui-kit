@@ -5,6 +5,7 @@ import { attrs, insertText } from '../helpers';
 import Section from './Section.jsx';
 import ButtonGroup from './ButtonGroup.jsx';
 import Heading from './Heading.jsx';
+import Image from './Image';
 
 export default function SwitchBlock(props) {
   const { options } = props;
@@ -48,13 +49,13 @@ export default function SwitchBlock(props) {
           height="100%" width="100%"/>
         {
           options.map(option => {
-            return <nu-img
+            return <Image
               key={option.id}
               label={`Illustration for ${option.heading}`}
               hidden={value !== option.id || null}
               {...(option.imageAttrs || {})}>
               <img src={option.image} alt=""/>
-            </nu-img>;
+            </Image>;
           })
         }
       </nu-block>

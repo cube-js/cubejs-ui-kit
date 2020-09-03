@@ -2,6 +2,7 @@ import React from 'react';
 import { attrs, insertText } from '../helpers';
 import Section from './Section.jsx';
 import Heading from './Heading.jsx';
+import Image from './Image';
 
 export default function FeatureBlock(props) {
   let { heading, description, features } = props;
@@ -30,11 +31,11 @@ export default function FeatureBlock(props) {
             key={feature.heading}
             text="left||center"
             content="start stretch">
-            <nu-img
+            <Image
               class="nu-dark-invert"
               height="6||4" place="start center" column="1 / 3||1">
               <img src={feature.image} alt=""/>
-            </nu-img>
+            </Image>
             <nu-flow gap="2x 0" column="3 / 7||1">
               <Heading level="4" text="nowrap">
                 <nu-el {...insertText(feature.heading)}/>

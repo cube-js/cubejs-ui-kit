@@ -1,11 +1,11 @@
-/** @jsx jsx */
 import React from 'react';
-import jsx from 'jsx-native-events';
+import T from 'prop-types';
 import Grid from './Grid.jsx';
 import Section from './Section.jsx';
 import Heading from './Heading.jsx';
 import Link from './Link';
 import BlockLink from './BlockLink';
+import { attrs } from '../helpers';
 
 const COMPANY_LINKS = [
   {
@@ -45,13 +45,17 @@ const RESOURCES_LINKS = [
   },
 ];
 
-export default function Footer() {
+export default function Footer(props) {
+  const columns = props.hideCompany ? '6sp 2sp 2sp||4sp 3sp 3sp|2sp' : '4sp 2sp 2sp 2sp||4sp 3sp 3sp|2sp';
+
   return <Section
     role="contentinfo"
     fill="dark-02"
     color="white"
-    border="top bottom outside #white.50">
-    <Grid width="10sp|||100%" columns="4sp 2sp 2sp 2sp||4sp 3sp 3sp|2sp" padding="11x 0">
+    border="top bottom outside #white.50"
+    {...attrs(props)}>
+
+    <Grid width="10sp|||100%" columns={columns} padding="11x 0">
       <nu-attrs for="link" text="n nowrap" color="white 70% :hover[white]"></nu-attrs>
       <nu-attrs for="h5" text="b nowrap"></nu-attrs>
 
@@ -71,17 +75,19 @@ export default function Footer() {
         }
       </nu-flex>
 
-      <nu-flex gap=".5x" flow="column" items="start">
-        <Heading level="5">Company</Heading>
-        <nu-spacer height=".5x" />
-        {
-          COMPANY_LINKS.map(item => {
-            return <Link key={item.label} to={item.link}>{item.label}</Link>
-          })
-        }
-      </nu-flex>
+      {
+        !props.hideCompany && <nu-flex gap=".5x" flow="column" items="start">
+          <Heading level="5">Company</Heading>
+          <nu-spacer height=".5x" />
+          {
+            COMPANY_LINKS.map(item => {
+              return <Link key={item.label} to={item.link}>{item.label}</Link>
+            })
+          }
+        </nu-flex>
+      }
 
-      <nu-flow gap="2x" column="||2|1 / -1">
+      <nu-flow gap="2x" column={props.hideCompany ? null : '||2|1 / -1'}>
         <Heading level="5">Community</Heading>
         <nu-pane gap="2x">
           <nu-attrs
@@ -105,3 +111,7 @@ export default function Footer() {
     </Grid>
   </Section>
 }
+
+Footer.propTypes = {
+  hideCompany: T.bool,
+};

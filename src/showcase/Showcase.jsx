@@ -640,7 +640,7 @@ export default function Showcase() {
       <ImportSnippet name="Footer"/>
 
       <FullWidthBlock>
-        <Footer/>
+        <Footer hideCompany/>
       </FullWidthBlock>
     </nu-card>
 
