@@ -19,6 +19,7 @@ export { default as CardButton } from './components/CardButton.jsx';
 export { default as Link } from './components/Link.jsx';
 export { default as BlockLink } from './components/BlockLink.jsx';
 export { default as Image } from './components/Image.jsx';
+export { default as Icon } from './components/Icon.jsx';
 export { default as Input } from './components/Input.jsx';
 export { default as Select } from './components/Select.jsx';
 export { default as Heading } from './components/Heading.jsx';
