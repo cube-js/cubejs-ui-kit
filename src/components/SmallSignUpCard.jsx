@@ -35,14 +35,14 @@ export default function SmallSignUpCard(props) {
     bold {...attrs(props)}
     text="left" label="Subscription" flow="row|||column">
     <nu-flow
-      width="6sp||5sp|2sp"
+      width="6sp||5sp|2sp - 2cp"
       text="left|||center" gap="0|||2x" size="t2" color="light-text"
       {...insertText(props.description)} />
     <nu-block width="4sp||5sp|2sp">
       {
         !email && <nu-form
-          display="flex" width="||100%" flow="row||column" gap
-          onEventInput={onSubmit}>
+          display="flex" width="||100% - 2cp" flow="row||column" gap
+          onEventInput={onSubmit} space="around">
           <Input
             ref={inputRef}
             color="main-text :invalid[text]"

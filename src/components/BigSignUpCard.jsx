@@ -36,7 +36,7 @@ export default function BigSignUpCard(props) {
     padding="10x 0|||7.5x --content-padding 6x"
     text="center" label="Subscription"
     {...attrs(props)}>
-    <nu-flex gap="4x" width="6sp||8sp|100%" items="center" flow="column">
+    <nu-flex gap="4x" width="6sp||8sp|100%" flow="column">
       {props.heading && <Heading>
         <nu-el {...insertText(props.heading)}/>
       </Heading>}

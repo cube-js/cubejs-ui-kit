@@ -48,15 +48,14 @@ export default function SwitchBlock(props) {
           for="img"
           height="100%" width="100%"/>
         {
-          options.map(option => {
-            return <Image
+          options.map(option => (
+            <Image
               key={option.id}
               label={`Illustration for ${option.heading}`}
               hidden={value !== option.id || null}
-              {...(option.imageAttrs || {})}>
-              <img src={option.image} alt=""/>
-            </Image>;
-          })
+              src={option.image}
+              {...(option.imageAttrs || {})}/>
+          ))
         }
       </nu-block>
       <nu-block>

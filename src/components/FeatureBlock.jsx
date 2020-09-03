@@ -32,10 +32,8 @@ export default function FeatureBlock(props) {
             text="left||center"
             content="start stretch">
             <Image
-              class="nu-dark-invert"
-              height="6||4" place="start center" column="1 / 3||1">
-              <img src={feature.image} alt=""/>
-            </Image>
+              src={feature.image}
+              height="6||4" place="start center" column="1 / 3||1"/>
             <nu-flow gap="2x 0" column="3 / 7||1">
               <Heading level="4" text="nowrap">
                 <nu-el {...insertText(feature.heading)}/>
