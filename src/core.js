@@ -358,6 +358,9 @@ export default {
 
       Nude.define('nu-headingwrapper', {
         contents: '*',
+        styles: {
+          display: 'block',
+        },
         css({ tag, css }) {
           return [css, `${tag} > * { margin: 0; }`];
         },
