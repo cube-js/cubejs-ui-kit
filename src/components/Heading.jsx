@@ -1,18 +1,18 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { attrs } from '../helpers';
+import { attrs, insertText } from '../helpers';
 
 export default function Heading(props) {
-  const Tag = props.level ? `nu-h${props.level}` : 'nu-h2';
+  const Tag = props.level ? `h${props.level}` : 'h2';
 
-  return <Tag
-    role="heading"
-    level={props.level || 2}
-    aria-level={props.level || 2}
-    {...attrs(props)}>
-    {props.children}
-  </Tag>;
+  return <nu-headingwrapper {...attrs(props)} size={Tag}><Tag
+    // role="heading"
+    // level={props.level || 2}
+    // aria-level={props.level || 2}
+    {...(props.innerText ? insertText(props.innerText) : {})}>
+    {!props.innerText ? props.children : null}
+  </Tag></nu-headingwrapper>;
 }
 
 Heading.propTypes = {

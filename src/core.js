@@ -355,6 +355,13 @@ export default {
           position: 'outside',
         },
       });
+
+      Nude.define('nu-headingwrapper', {
+        contents: '*',
+        css({ tag, css }) {
+          return [css, `${tag} > * { margin: 0; }`];
+        },
+      });
     });
 
     return import('./numl');

@@ -28,7 +28,8 @@ export default function SiteBlock(props) {
       }
       {props.heading && <Heading
         level={props.level}
-        size={props.headingSize || (props.level ? null : 'h2')}>
+        size={props.headingSize || (props.level ? null : 'h2')}
+        innerText={props.heading}>
         <nu-el {...insertText(props.heading)}/>
       </Heading>}
       {props.description && <nu-description

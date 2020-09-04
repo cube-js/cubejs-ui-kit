@@ -11,20 +11,21 @@ const ROLE_MAP = {
 };
 
 export default function Action(props) {
-  const { tag, big, purple, pink, onTap, onInput, to, ...otherProps } = props;
+  const { tag, big, purple, pink, onTap, onInput, to, children, label, ...otherProps } = props;
   const Tag = tag || 'nu-action';
 
   return <Tag
-    role={ROLE_MAP[tag] || 'button'}
+    role={!to ? (ROLE_MAP[tag] || 'button') : null}
     to={to}
     is-big={big || null}
     is-purple={purple || null}
     is-pink={pink || null}
+    label={label}
     onEventTap={onTap}
     onEventInput={(event) => onInput && onInput(event.detail)}
     {...otherProps}>
-    {props.children}
-    { NativeLink({ to }) }
+    {children}
+    { NativeLink({ to, label, children }) }
   </Tag>
 }
 

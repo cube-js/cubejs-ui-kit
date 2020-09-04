@@ -19,7 +19,7 @@ export function attrs(props, ignore = []) {
 }
 
 export function insertText(html = '') {
-  const multiline = !!html.match(/\\n/);
+  const multiline = !!html.match(/\\n\\n/);
 
   return {
     dangerouslySetInnerHTML: {
@@ -76,4 +76,16 @@ export function copyToClipboard(text) {
   return success
     ? Promise.resolve()
     : Promise.reject(new DOMException('The request is not allowed', 'NotAllowedError'))
+}
+
+export function JsxInnerText(children, counter = 0) {
+  if (typeof children === 'object' && !Array.isArray(children)) {
+    return JsxInnerText(children.props.children);
+  }
+
+  if (!children || typeof children === 'string') return children || '';
+
+  return children.reduce((str, obj) => {
+    return str + ' ' + JsxInnerText(obj);
+  }, '').trim();
 }
