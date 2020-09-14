@@ -360,13 +360,14 @@ export default {
         contents: '*',
         styles: {
           display: 'block',
+          color: 'current',
         },
         css({ tag, css }) {
-          return [css, `${tag} > * { margin: 0; }`];
+          return [css, `${tag} > * { margin: 0; color: inherit }`];
         },
       });
     });
 
-    return import('./numl');
+    return import('numl');
   },
 };
