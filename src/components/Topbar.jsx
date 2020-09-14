@@ -18,12 +18,11 @@ const MENU = [
   },
   {
     label: 'Slack',
-    link: '!https://cubejs-community.herokuapp.com/'
+    link: '!https://slack.cube.dev/'
   },
   {
     label: 'Resources',
     items: [
-
       {
         label: 'Examples',
         link: '!https://github.com/cube-js/cube.js#examples',
