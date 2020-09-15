@@ -44,7 +44,7 @@ export default function BigSignUpCard(props) {
         {...insertText(props.description)} />}
       {
         !email && <nu-form
-          gap place="stretch"
+          place="stretch" box="y"
           onEventInput={onSubmit} text="left">
           <nu-flex flow="row|||column" gap>
             <Input
@@ -72,12 +72,12 @@ export default function BigSignUpCard(props) {
             error && <nu-block width="100%">{UNABLE_TO_SUBSCRIBE}</nu-block>
           }
           {
-            loading && <nu-progressbar is-purple value="100" width="100%"></nu-progressbar>
+            loading && <nu-progressbar place="outside-bottom 1x" is-purple value="100" width="100%"/>
           }
         </nu-form>
       }
       {
-        email && <nu-block radius padding="1x 2x" border="1ow dashed" as="t1">
+        email && <nu-block radius padding="3x 2x" fill="#pink-04.40" color="pink" as="t2" text="b">
           <nu-strong>{email}</nu-strong>
           &nbsp;{HAS_BEEN_SIGNED_UP}
         </nu-block>

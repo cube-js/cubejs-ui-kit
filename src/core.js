@@ -205,6 +205,8 @@ export default {
           padding: '1.375x 2.5x :big[1.875x 2.5x]',
           color: 'dark-02 :invalid[pink]',
           size: 't2 :big[t1]',
+          fill: 'white',
+          mark: 'n',
           '--outline-color': '--purple-outline-color :invalid[--pink-outline-color]',
           '--outline-width': '1rem / 4',
         },

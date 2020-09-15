@@ -38,7 +38,7 @@ export default function SmallSignUpCard(props) {
       width="6sp||5sp|2sp - 2cp"
       text="left|||center" gap="0|||2x" size="t2" color="light-text"
       {...insertText(props.description)} />
-    <nu-block width="4sp||5sp|2sp">
+    <nu-flow width="4sp||5sp|2sp" gap box="y">
       {
         !email && <nu-form
           display="flex" width="||100% - 2cp" flow="row||column" gap
@@ -67,16 +67,17 @@ export default function SmallSignUpCard(props) {
             <nu-block width="100%" {...insertText(UNABLE_TO_SUBSCRIBE)}></nu-block>
           }
           {
-            loading && <nu-progressbar is-purple value="100" width="100%"></nu-progressbar>
+            loading && <nu-progressbar
+              place="outside-bottom 1x" width="100%" is-purple value="100"/>
           }
         </nu-form>
       }
       {
-        email && <nu-block radius padding="1x 2x" border="1ow dashed" as="t1">
+        email && <nu-block radius padding="1.5x" fill="#light.20" as="t2" text="b center">
           <nu-strong>{email}</nu-strong>&nbsp;{ HAS_BEEN_SIGNED_UP }
         </nu-block>
       }
-    </nu-block>
+    </nu-flow>
   </CardBlock>;
 }
 

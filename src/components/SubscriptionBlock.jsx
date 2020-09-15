@@ -42,8 +42,8 @@ export default function SubscriptionBlock(props) {
     <nu-block width="6sp 100%||10sp 100%|--content-width">
       {
         !email &&
-        <nu-form onEventInput={onSubmit} width="100%" gap
-                 text="left">
+        <nu-form onEventInput={onSubmit} width="100%"
+                 text="left" box="y">
           <nu-flex flow="row|||column" gap>
             <Input
               ref={inputRef}
@@ -71,12 +71,15 @@ export default function SubscriptionBlock(props) {
             <nu-block {...insertText(UNABLE_TO_SUBSCRIBE)}></nu-block>
           }
           {
-            loading && <nu-progressbar is-purple value="100" width="100%"></nu-progressbar>
+            loading && <nu-progressbar place="outside-bottom 1x" is-purple value="100" width="100%"/>
           }
         </nu-form>
       }
       {
-        email && <nu-block radius padding="2x" border="1ow dashed" as="t1">
+        email && <nu-block
+          radius padding="3x 2x"
+          fill={props.special ? '#light.20' : '#pink-04.20'}
+          color={props.special ? null : 'pink'} as="t1">
           <nu-strong>{email}</nu-strong>
           &nbsp;{ HAS_BEEN_SUBSCRIBED }
         </nu-block>
