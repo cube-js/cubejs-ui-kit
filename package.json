@@ -1,6 +1,6 @@
 {
   "name": "cubejs-uikit",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "UIKit for Cube.js projects",
   "main": "dist/core.js",
   "type": "module",
@@ -47,7 +47,7 @@
     "size-limit": "^4.5.5",
     "vercel": "^20.1.0"
   },
-  "dependencies": {
+  "peerDependencies": {
     "native-events": "^1.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
