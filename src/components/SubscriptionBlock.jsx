@@ -3,7 +3,7 @@ import React, { createRef } from 'react';
 import jsx from 'jsx-native-events';
 import T from 'prop-types';
 
-import { HAS_BEEN_SUBSCRIBED, UNABLE_TO_SUBSCRIBE } from '../messages';
+import { THANK_YOU, UNABLE_TO_SUBSCRIBE } from '../messages';
 import useSubscription from '../services/subscription';
 import SiteBlock from './SiteBlock.jsx';
 import Input from './Input.jsx';
@@ -80,8 +80,7 @@ export default function SubscriptionBlock(props) {
           radius padding="3x 2x"
           fill={props.special ? '#light.20' : '#pink-04.20'}
           color={props.special ? null : 'pink'} as="t1">
-          <nu-strong>{email}</nu-strong>
-          &nbsp;{ HAS_BEEN_SUBSCRIBED }
+          &nbsp;{ THANK_YOU }
         </nu-block>
       }
     </nu-block>

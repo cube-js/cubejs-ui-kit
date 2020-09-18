@@ -5,7 +5,7 @@ import T from 'prop-types';
 
 import { attrs, insertText } from '../helpers';
 import useSubscription from '../services/subscription';
-import { HAS_BEEN_SIGNED_UP, UNABLE_TO_SUBSCRIBE } from '../messages';
+import { THANK_YOU, UNABLE_TO_SUBSCRIBE } from '../messages';
 import CardBlock from './CardBlock.jsx';
 import Button from './Button.jsx';
 import Input from './Input.jsx';
@@ -74,7 +74,7 @@ export default function SmallSignUpCard(props) {
       }
       {
         email && <nu-block radius padding="1.5x" fill="#light.20" as="t2" text="b center">
-          <nu-strong>{email}</nu-strong>&nbsp;{ HAS_BEEN_SIGNED_UP }
+          { THANK_YOU }
         </nu-block>
       }
     </nu-flow>

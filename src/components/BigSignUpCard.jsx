@@ -5,7 +5,7 @@ import T from 'prop-types';
 
 import { attrs, insertText } from '../helpers';
 import useSubscription from '../services/subscription';
-import { HAS_BEEN_SIGNED_UP, UNABLE_TO_SUBSCRIBE } from '../messages';
+import { THANK_YOU, UNABLE_TO_SUBSCRIBE } from '../messages';
 import CardBlock from './CardBlock.jsx';
 import Input from './Input.jsx';
 import Button from './Button.jsx';
@@ -78,8 +78,7 @@ export default function BigSignUpCard(props) {
       }
       {
         email && <nu-block radius padding="3x 2x" fill="#pink-04.40" color="pink" as="t2" text="b">
-          <nu-strong>{email}</nu-strong>
-          &nbsp;{HAS_BEEN_SIGNED_UP}
+          { THANK_YOU }
         </nu-block>
       }
     </nu-flex>
