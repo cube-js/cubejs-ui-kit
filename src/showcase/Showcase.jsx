@@ -626,7 +626,11 @@ export default function Showcase() {
       <ImportSnippet name="SubscriptionBlock"/>
 
       <FullWidthBlock>
-        <SubscriptionBlock/>
+        <SubscriptionBlock
+          heading="Custom heading"
+          description="Custom description"
+          successMessage="Custom success message"
+        />
       </FullWidthBlock>
 
       <nu-spacer/>

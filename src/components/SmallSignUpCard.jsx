@@ -5,7 +5,7 @@ import T from 'prop-types';
 
 import { attrs, insertText } from '../helpers';
 import useSubscription from '../services/subscription';
-import { THANK_YOU, UNABLE_TO_SUBSCRIBE } from '../messages';
+import { THANK_YOU, UNABLE_TO_SUBSCRIBE, VALIDATION_ERROR_EMAIL } from '../messages';
 import CardBlock from './CardBlock.jsx';
 import Button from './Button.jsx';
 import Input from './Input.jsx';
@@ -59,8 +59,9 @@ export default function SmallSignUpCard(props) {
             special>
             {props.action || ACTION}
           </Button>
-          <nu-check place="right bottom 1.25x 6x||bottom .75x" for="email" assert="email">Email is
-            not valid
+          <nu-check
+            place="left outside-bottom 1.25x||outside-bottom .75x" for="email" assert="email">
+            { VALIDATION_ERROR_EMAIL }
           </nu-check>
           {
             error &&
@@ -74,15 +75,22 @@ export default function SmallSignUpCard(props) {
       }
       {
         email && <nu-block radius padding="1.5x" fill="#light.20" as="t2" text="b center">
-          { THANK_YOU }
+          { props.successMessage }
         </nu-block>
       }
     </nu-flow>
   </CardBlock>;
 }
 
+SmallSignUpCard.defaultProps = {
+  description: 'Awesome product updates; no&nbsp;spam.',
+  successMessage: THANK_YOU,
+};
+
 SmallSignUpCard.propTypes = {
   postUrl: T.string,
   postData: T.object,
   onSuccess: T.func,
+  description: T.string,
+  successMessage: T.string,
 };

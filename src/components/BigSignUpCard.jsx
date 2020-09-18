@@ -5,7 +5,7 @@ import T from 'prop-types';
 
 import { attrs, insertText } from '../helpers';
 import useSubscription from '../services/subscription';
-import { THANK_YOU, UNABLE_TO_SUBSCRIBE } from '../messages';
+import { THANK_YOU, UNABLE_TO_SUBSCRIBE, VALIDATION_ERROR_EMAIL } from '../messages';
 import CardBlock from './CardBlock.jsx';
 import Input from './Input.jsx';
 import Button from './Button.jsx';
@@ -65,8 +65,10 @@ export default function BigSignUpCard(props) {
               {props.action || ACTION}
             </Button>
           </nu-flex>
-          <nu-check place="bottom 1.25x 6x||bottom .75x" for="email" assert="email">Email is not
-            valid
+          <nu-check
+            place="outside-bottom 1.25x||outside-bottom .75x"
+            for="email" assert="email">
+            { VALIDATION_ERROR_EMAIL }
           </nu-check>
           {
             error && <nu-block width="100%">{UNABLE_TO_SUBSCRIBE}</nu-block>
@@ -78,16 +80,21 @@ export default function BigSignUpCard(props) {
       }
       {
         email && <nu-block radius padding="3x 2x" fill="#pink-04.40" color="pink" as="t2" text="b">
-          { THANK_YOU }
+          { props.successMessage }
         </nu-block>
       }
     </nu-flex>
   </CardBlock>;
 }
 
+BigSignUpCard.defaultProps = {
+  successMessage: THANK_YOU,
+};
+
 BigSignUpCard.propTypes = {
   heading: T.string,
   description: T.string,
+  successMessage: T.string,
   postUrl: T.string,
   postData: T.object,
   onSuccess: T.func,
