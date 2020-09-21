@@ -354,7 +354,7 @@ export default {
 
       Nude.assign('nu-list', {
         styles: {
-          position: 'outside',
+          position: 'inside',
         },
       });
 

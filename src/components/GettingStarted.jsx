@@ -4,7 +4,7 @@ import { attrs } from '../helpers';
 import CopyButton from './CopyButton';
 import Link from './Link';
 
-export const INSTALL_COMMAND = 'npx cubejs-cli create hello-world -d postgres';
+export const INSTALL_COMMAND = 'npx cubejs-cli create hello-world';
 
 export default function GettingStarted(props) {
   return <SiteBlock

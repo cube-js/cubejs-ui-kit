@@ -67,6 +67,7 @@ export default function Root(props) {
       border-color="rgba(213, 213, 226, 0.5)"
       shadow-color="rgba(114, 114, 144, 0.05)"
 
+      big-card-shadow="0px 20px 50px rgba(132, 131, 202, 0.15)"
       card-shadow="0 20rp 30rp rgba(114, 114, 144, 0.05)"
 
       h1-font-size="42rp|||32rp"
