@@ -19,12 +19,12 @@ export default function SmallSignUpCard(props) {
   let { email, error, loading } = subscription;
 
   function onSubmit(event) {
-    const data = event.detail;
+    const email = event.detail && event.detail.email;
 
-    if (data && data.email) {
-      subscription.submit(data.email)
+    if (email) {
+      subscription.submit(email)
         .then(() => {
-          props.onSuccess && props.onSuccess(data.email);
+          props.onSuccess && props.onSuccess(email);
         });
     } else {
       inputRef.current.focus();
