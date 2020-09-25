@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import jsx from 'jsx-native-events';
 import Storage from '../services/storage';
-import { attrs } from '../helpers';
+import { attrs, JsxInnerText } from '../helpers';
 import BlockLink from './BlockLink';
 
 export default function Banner(props) {
@@ -14,13 +14,13 @@ export default function Banner(props) {
     Storage.set(key, false);
   }
 
+  const text = JsxInnerText(props.children);
+  const key = `banner:{${text}}`;
+
   if (typeof window !== 'undefined') {
     setTimeout(() => {
-      const key = `banner:${props.children}`;
       const storedVisible = Storage.get(key);
-      const initialVisible = typeof props.children === 'string'
-        ? (storedVisible != null ? storedVisible : true)
-        : true;
+      const initialVisible = storedVisible != null ? storedVisible : true;
 
       setVisible(initialVisible);
     }, 1500);
