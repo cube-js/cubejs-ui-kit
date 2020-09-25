@@ -18,6 +18,13 @@ export function attrs(props, ignore = []) {
   }, {});
 }
 
+export function extractText(html = '') {
+  return html
+    .replace(/\\s[\s]*/g, ' ')
+    .replace(/\\n\\n/g, ' ')
+    .replace(/\\n[\s]*/g, ' ');
+}
+
 export function insertText(html = '') {
   const multiline = !!html.match(/\\n\\n/);
 
