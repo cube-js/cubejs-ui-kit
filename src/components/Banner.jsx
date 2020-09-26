@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import jsx from 'jsx-native-events';
 import Storage from '../services/storage';
 import { attrs, JsxInnerText } from '../helpers';
@@ -17,14 +17,12 @@ export default function Banner(props) {
   const text = JsxInnerText(props.children);
   const key = `banner:{${text}}`;
 
-  if (typeof window !== 'undefined') {
-    setTimeout(() => {
-      const storedVisible = Storage.get(key);
-      const initialVisible = storedVisible != null ? storedVisible : true;
+  useEffect(() => {
+    const storedVisible = Storage.get(key);
+    const initialVisible = storedVisible != null ? storedVisible : true;
 
-      setVisible(initialVisible);
-    }, 1500);
-  }
+    setVisible(initialVisible);
+  }, []);
 
   return <BlockLink
     display="grid"
@@ -38,7 +36,6 @@ export default function Banner(props) {
     overflow="no"
     gap="1x"
     text="sb u center #white.0 :hover[sb u center #white]"
-    transition="text, padding, height, opacity"
     opacity={visible ? '1' : '0'}
     padding={visible ? '.625x 1cp' : '0 1cp'}
     onEventTap={onTap}
