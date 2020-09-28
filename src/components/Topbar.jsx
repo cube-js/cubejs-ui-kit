@@ -102,7 +102,7 @@ export default function Topbar(props) {
     fill="clear"
     {...attrs(props)}>
 
-    <nu-pane width="--content-width" content="space-between" space="around">
+    <nu-pane width="--content-width" content="space-between" space="around" height="50rp">
       <BlockLink to="/" mark="n">
         <Image
           id="logo"
