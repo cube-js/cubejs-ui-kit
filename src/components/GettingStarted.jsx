@@ -5,8 +5,8 @@ import CopyButton from './CopyButton';
 import Link from './Link';
 
 export const INSTALL_COMMAND = 'npx cubejs-cli create hello-world';
-export const FRONT_TEXT = 'and follow our';
-export const BACK_TEXT = 'guide.';
+export const START_TEXT = 'and follow our';
+export const END_TEXT = 'guide.';
 export const LINK_URL = '!https://cube.dev/docs/getting-started';
 export const LINK_TEXT = 'Getting Started';
 
@@ -27,7 +27,7 @@ export default function GettingStarted(props) {
       </CopyButton>
     </nu-flex>
     <nu-block color="dark-03" as="t2">
-      {props.front || FRONT_TEXT} <Link is-pink to={props.link || LINK_URL}>{props.text || LINK_TEXT}</Link> {props.back || BACK_TEXT}
+      {props.start || START_TEXT} <Link is-pink to={props.link || LINK_URL}>{props.text || LINK_TEXT}</Link> {props.end || END_TEXT}
     </nu-block>
   </SiteBlock>
 }
