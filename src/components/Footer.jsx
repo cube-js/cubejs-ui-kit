@@ -63,7 +63,7 @@ export default function Footer(props) {
       <nu-flow
         opacity=".7" width="auto||100%" size="t2">
         <nu-block text="nowrap">Built with ♥️ <nu-el display="inline||block|inline">in San Francisco</nu-el></nu-block>
-        <nu-block text="nowrap">2020 © Cube Dev, Inc</nu-block>
+        <nu-block text="nowrap">2020 © Cube Dev, Inc.</nu-block>
       </nu-flow>
 
       <nu-flex gap=".5x" flow="column" items="start">

@@ -1,4 +1,5 @@
 import React from 'react';
+import T from 'prop-types';
 import CardBlock from './CardBlock.jsx';
 import Button from './Button.jsx';
 import { cubeCloud } from '../logos';
@@ -17,8 +18,14 @@ export default function ExploreCubeCloud(props) {
         <nu-block color="dark-03" as="t2" grow="1" text="left||center">
           A managed deployment platform by&nbsp;the&nbsp;creators&nbsp;of&nbsp;Cube.js
         </nu-block>
-        <Button special>Explore Cube Cloud</Button>
+        <Button special to={props.to || '/cloud'}>
+          Explore Cube Cloud
+        </Button>
       </nu-pane>
     </nu-pane>
   </CardBlock>;
 }
+
+ExploreCubeCloud.propTypes = {
+  to: T.string,
+};
