@@ -10,7 +10,7 @@ export default function GettingStarted(props) {
   return <SiteBlock
     id="getting-started"
     pink
-    heading="Get started with Cube.js"
+    heading={props.heading || "Get started with Cube.js"}
     {...attrs(props)}>
     <nu-flex width="max --content-width" gap height="min 7x">
       <nu-card
@@ -23,7 +23,7 @@ export default function GettingStarted(props) {
       </CopyButton>
     </nu-flex>
     <nu-block color="dark-03" as="t2">
-      and follow our <Link is-pink to="!https://cube.dev/docs/getting-started">Getting Started</Link> guide.
+      {props.frontText || 'and follow our'} <Link is-pink to={"!" + props.linkURL}>{props.linkText || 'Getting Started'}</Link> {props.backText || 'and follow our.'}
     </nu-block>
   </SiteBlock>
 }
