@@ -3,6 +3,7 @@ import SiteBlock from './SiteBlock';
 import { attrs } from '../helpers';
 import CopyButton from './CopyButton';
 import Link from './Link';
+import T from "prop-types";
 
 export const INSTALL_COMMAND = 'npx cubejs-cli create hello-world';
 export const START_TEXT = 'and follow our';
@@ -31,3 +32,13 @@ export default function GettingStarted(props) {
     </nu-block>
   </SiteBlock>
 }
+
+GettingStarted.propTypes = {
+  heading: T.string,
+  start: T.string,
+  end: T.string,
+  command: T.string,
+  text: T.string,
+  link: T.string,
+  onCopy: T.func,
+};
