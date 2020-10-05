@@ -7,6 +7,7 @@ export default function CopyButton(props) {
 
   async function onCopy() {
     await copyToClipboard(props.copy || '');
+    await props.onCopy && props.onCopy();
 
     setCopied(true);
   }

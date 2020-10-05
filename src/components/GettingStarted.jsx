@@ -22,7 +22,7 @@ export default function GettingStarted(props) {
         text="monospace nowrap" fill="bg" as="h4" overflow="auto hidden" radius border="#pink-04">
         $ { props.command || INSTALL_COMMAND }
       </nu-card>
-      <CopyButton big special copy={props.command || INSTALL_COMMAND} show="y|||n">
+      <CopyButton big special copy={props.command || INSTALL_COMMAND} onCopy={props.onCopy} show="y|||n">
         Copy
       </CopyButton>
     </nu-flex>
