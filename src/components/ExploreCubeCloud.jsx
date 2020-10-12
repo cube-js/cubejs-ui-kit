@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import CardBlock from './CardBlock.jsx';
 import Button from './Button.jsx';
-import { cubeCloud } from '../logos';
+import { cubeCloud, cubeCloudDefaultIcon } from '../logos';
 import { attrs } from '../helpers';
 import Image from './Image';
 
@@ -11,7 +11,7 @@ export default function ExploreCubeCloud(props) {
     <nu-pane gap="--column-width|||2x" width="10sp|||100%" flow="row|||column">
       <nu-attrs for="block"/>
       <nu-block>
-        <Image height="36rp" src={cubeCloud}/>
+        <Image height="36rp" src={(props.defaultIcon ? cubeCloudDefaultIcon : cubeCloud)}/>
       </nu-block>
       <nu-line orient="v" fill="light" height="15x" show="y|||n"/>
       <nu-pane grow="1|||initial" flow="row||column" width="auto|||100%" gap="2x">
