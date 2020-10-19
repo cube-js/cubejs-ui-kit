@@ -360,7 +360,7 @@ export default {
 
       Nude.assign('nu-heading', {
         styles: {
-          color: '#dark',
+          color: 'current',
         },
       });
 
@@ -368,7 +368,7 @@ export default {
         contents: '*',
         styles: {
           display: 'block',
-          color: '#dark',
+          color: 'current',
           padding: '0',
         },
         css({ tag, css }) {

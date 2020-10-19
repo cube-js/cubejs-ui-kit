@@ -42,11 +42,12 @@ export default function SiteBlock(props) {
     text="center"
     items="center"
     image={props.bgImage}
-    fill={props.special ? 'dark-02' : (props.pink ? '#FFF2F6' : null)}
+    fill={props.special ? '#dark-02' : (props.pink ? '#FFF2F6' : null)}
     color={props.special ? 'white' : null}
     border={props.special ? 'top bottom outside #white.50' : null}
     {...attrs(props, ['image'])}>
-    <nu-attrs for="description" color={props.special ? 'white 70%' : 'dark-03'}/>
+    <nu-attrs for="description" color={props.special ? '#white.70' : '#dark-03'}/>
+    <nu-attrs for="heading" color={props.special ? '#white' : '#dark'}/>
     {
       props.special && <nu-props
         text-color="white"
