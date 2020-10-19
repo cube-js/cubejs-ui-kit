@@ -131,7 +131,7 @@ export default {
       Nude.assign('nu-root', {
         context: {
           'attrs:description': {
-            color: 'dark-03',
+            color: '#dark-03',
             size: 't1',
           },
           'attrs:h1': { size: 'h1', text: 'h' },
@@ -168,7 +168,7 @@ export default {
           text: 'b nowrap :clear[n sb nowrap] :special[b nowrap]',
           inset: 'n',
           border: `#main.60 :active[#main] :active:hover[#main] :clear[hidden] :hover:clear[hidden] :active:clear[#main.60] :active:hover:clear[#main.60] :special[#main] :special:hover[#hover] :special:hover:active[#hover] :special:active[#main]`,
-          color: 'main :active[hover] :special[white] :special:active[white]',
+          color: '#main :active[#hover] :special[#white] :special:active[#white]',
           fill: 'clear :special[main] :special:hover[hover] :special:hover:active[main] :special:active[hover]',
           mark: 'hover #hover.10 :special[n]',
           size: 't2 :big[t1]',
@@ -182,7 +182,7 @@ export default {
         },
         context: {
           'attrs:option': {
-            color: 'main :selected[white]',
+            color: '#main :selected[#white]',
             fill: 'bg :selected[main]',
             text: '^btn b nowrap :clear[n sb nowrap] :special[b nowrap]',
             mark: 'hover #hover.10',
@@ -191,7 +191,7 @@ export default {
             padding: '^btn 1.375x 2.5x :big[1.875x 2.5x]',
           },
           'attrs:badge': {
-            color: '^btn white :special[main]',
+            color: '^btn #white :special[#main]',
             fill: '^btn main :special[white]',
             radius: '1r',
             padding: '0 .25em',
@@ -203,7 +203,7 @@ export default {
         styles: {
           border: '#input-border :invalid[#pink] :focus.invalid[#clear]',
           padding: '1.375x 2.5x :big[1.875x 2.5x]',
-          color: 'dark-02 :invalid[pink]',
+          color: '#dark-02 :invalid[#pink]',
           size: 't2 :big[t1]',
           fill: 'white',
           mark: 'n',
@@ -267,7 +267,7 @@ export default {
 
       Nude.assign('nu-label', {
         styles: {
-          color: 'dark-03',
+          color: '#dark-03',
           text: 'n',
         },
       });
@@ -283,7 +283,7 @@ export default {
         styles: {
           text: 'n u #purple-01.30 :pink[n u #pink-01.30]',
           mark: 'n',
-          color: 'purple-01 :hover[purple-02] :pink[pink-01] :pink:hover[pink-02]',
+          color: '#purple-01 :hover[#purple-02] :pink[#pink-01] :pink:hover[#pink-02]',
         },
       });
 
@@ -345,7 +345,7 @@ export default {
           fill: 'clear',
           size: 'c2',
           text: 'up',
-          color: 'dark-04',
+          color: '#dark-04',
           border: 'n',
           radius: 'n',
           padding: '0',
@@ -358,14 +358,21 @@ export default {
         },
       });
 
+      Nude.assign('nu-heading', {
+        styles: {
+          color: '#dark',
+        },
+      });
+
       Nude.define('nu-headingwrapper', {
         contents: '*',
         styles: {
           display: 'block',
-          color: 'current',
+          color: '#dark',
+          padding: '0',
         },
         css({ tag, css }) {
-          return [css, `${tag} > * { margin: 0; color: inherit }`];
+          return [css, `${tag}:not([space]) > * { margin: 0; }`];
         },
       });
     });
