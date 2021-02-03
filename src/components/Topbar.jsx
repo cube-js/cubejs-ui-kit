@@ -111,7 +111,7 @@ export default function Topbar(props) {
       <BlockLink to="/" mark="n">
         <Image
           id="logo"
-          height="4.5x||4x"
+          height="3.5x||3x"
           src={mainLogo}
           label="Cube.js logo"
           filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
