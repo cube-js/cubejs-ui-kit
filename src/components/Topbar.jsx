@@ -101,7 +101,7 @@ export default function Topbar(props) {
   return <nu-header
     place={props.sticky ? 'sticky top' : ''}
     size="t2"
-    padding={`${props.sticky ? 2 : 4}x --content-padding||2x --content-padding`}
+    padding={`${props.sticky ? 2 : 4}x --content-padding||1x --content-padding`}
     border={props.sticky ? 'bottom' : 'n'}
     box="y"
     fill="clear"
@@ -111,7 +111,7 @@ export default function Topbar(props) {
       <BlockLink to="/" mark="n">
         <Image
           id="logo"
-          height="4.5x||4x"
+          height="3.5x"
           src={mainLogo}
           label="Cube.js logo"
           filter="drop-shadow(0 1px 1px rgba(255, 255, 255, .2))"/>
