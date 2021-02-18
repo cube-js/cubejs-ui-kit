@@ -46,6 +46,8 @@ const RESOURCES_LINKS = [
   },
 ];
 
+const currentYear = new Date().getFullYear();
+
 export default function Footer(props) {
   const columns = props.hideCompany ? '6sp 2sp 2sp||4sp 3sp 3sp|2sp' : '4sp 2sp 2sp 2sp||4sp 3sp 3sp|2sp';
 
@@ -63,7 +65,7 @@ export default function Footer(props) {
       <nu-flow
         opacity=".7" width="auto||100%" size="t2">
         <nu-block text="nowrap">Built with ♥️ <nu-el display="inline||block|inline">in San Francisco</nu-el></nu-block>
-        <nu-block text="nowrap">2020 © Cube Dev, Inc.</nu-block>
+        <nu-block text="nowrap">{ currentYear } © Cube Dev, Inc.</nu-block>
       </nu-flow>
 
       <nu-flex gap=".5x" flow="column" items="start">
