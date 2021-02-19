@@ -46,7 +46,7 @@ const RESOURCES_LINKS = [
   },
 ];
 
-const currentYear = new Date().getFullYear();
+const CURRENT_YEAR = new Date().getFullYear();
 
 export default function Footer(props) {
   const columns = props.hideCompany ? '6sp 2sp 2sp||4sp 3sp 3sp|2sp' : '4sp 2sp 2sp 2sp||4sp 3sp 3sp|2sp';
@@ -59,13 +59,13 @@ export default function Footer(props) {
     {...attrs(props)}>
 
     <Grid width="10sp|||100%" columns={columns} padding="11x 0">
-      <nu-attrs for="link" text="n nowrap" color="white 70% :hover[white]"></nu-attrs>
-      <nu-attrs for="h5" text="b nowrap"></nu-attrs>
+      <nu-attrs for="link" text="n nowrap" color="white 70% :hover[white]"/>
+      <nu-attrs for="h5" text="b nowrap"/>
 
       <nu-flow
         opacity=".7" width="auto||100%" size="t2">
         <nu-block text="nowrap">Built with ♥️ <nu-el display="inline||block|inline">in San Francisco</nu-el></nu-block>
-        <nu-block text="nowrap">{ currentYear } © Cube Dev, Inc.</nu-block>
+        <nu-block text="nowrap">{ CURRENT_YEAR } © Cube Dev, Inc.</nu-block>
       </nu-flow>
 
       <nu-flex gap=".5x" flow="column" items="start">
@@ -99,7 +99,7 @@ export default function Footer(props) {
             padding=".25x"
             size="t1"
             color="white"
-            transition="opacity"></nu-attrs>
+            transition="opacity"/>
           <BlockLink to="!https://slack.cube.dev/" label="Slack">
             <Icon name="slack"/>
           </BlockLink>
