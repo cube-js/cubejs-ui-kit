@@ -14,7 +14,7 @@ export default function GridLines() {
     z="front"
     show="^root n :grid[y]">
     <Grid content="stretch" height="100%" items="stretch" gap="0 @grid-gap">
-      <nu-attrs for="block" fill="pink 10%"/>
+      <nu-attrs for="block" fill="#pink.10"/>
       <nu-block ref={removeOutline}/>
       <nu-block ref={removeOutline}/>
       <nu-block ref={removeOutline}/>

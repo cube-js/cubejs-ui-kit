@@ -49,7 +49,7 @@ export default function BigSignUpCard(props) {
           <nu-flex flow="row|||column" gap>
             <Input
               ref={inputRef}
-              color="main-text :invalid[text]"
+              color="#main-text :invalid[#text]"
               disabled={loading || null}
               id="email"
               type="email"
@@ -79,7 +79,7 @@ export default function BigSignUpCard(props) {
         </nu-form>
       }
       {
-        email && <nu-block radius padding="3x 2x" fill="#pink-04.40" color="pink" as="t2" text="b">
+        email && <nu-block radius padding="3x 2x" fill="#pink-04.40" color="#pink" as="t2" text="b">
           { props.successMessage }
         </nu-block>
       }

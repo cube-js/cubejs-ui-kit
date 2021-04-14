@@ -19,7 +19,7 @@ export default function SwitchBlock(props) {
   });
 
   return <Section
-    fill="bg"
+    fill="#bg"
     padding="25x 0||16x 0"
     {...attrs(props)}>
     <nu-grid
@@ -61,8 +61,8 @@ export default function SwitchBlock(props) {
       <nu-block>
         <nu-attrs
           for="btn"
-          fill="bg :pressed[special-bg]"
-          color="main :pressed[special-text]"/>
+          fill="#bg :pressed[#special-bg]"
+          color="#main :pressed[#special-text]"/>
         {options.length
         && <ButtonGroup
           options={groupOptions}

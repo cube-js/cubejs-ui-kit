@@ -10,8 +10,8 @@ export default function SiteBlock(props) {
   const MainPart = ({ image }) => (
     <Fragment>
       {(props.badge || props.githubBadge) &&
-      <nu-badge display="flex" flow="row" items="center" gap="2x" as="c2" color="dark-03" content="stretch||center" padding="1x bottom">
-        <nu-el padding="2x left" text="nowrap">{props.badge}</nu-el>{props.githubBadge && <iframe
+      <nu-badge display="flex" flow="row" items="center" gap="2x" as="c2" color="#dark-03" content="stretch||center" padding="1x bottom">
+        <nu-el text="nowrap">{props.badge}</nu-el>{props.githubBadge && <iframe
           src="https://ghbtns.com/github-btn.html?user=cube-js&repo=cube.js&type=star&count=true&size=large"
           frameBorder="0" scrolling="0" width="170" height="30" style={{ marginTop: '-3px' }}
           title="Star Cube.js on GitHub"/>}
@@ -50,8 +50,8 @@ export default function SiteBlock(props) {
     <nu-attrs for="heading" color={props.special ? '#white' : '#dark'}/>
     {
       props.special && <nu-props
-        text-color="white"
-        bg-color="dark-02"/>
+        text-color="#white"
+        bg-color="#dark-02"/>
     }
     {
       (props.image || props.heading || props.description)

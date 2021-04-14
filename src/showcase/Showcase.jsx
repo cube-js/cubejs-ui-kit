@@ -108,10 +108,10 @@ export default function Showcase() {
     <nu-pane content="space-between">
       <Heading level="1">Cube.js UIKit Showcase</Heading>
       <nu-pane>
-        <Button padding toggle control=":root[data-nu-outline]" fill="bg :pressed[special-bg]">
+        <Button padding toggle control=":root[data-nu-outline]" fill="#bg :pressed[#special-bg]">
           <Icon name="grid-outline"/>
         </Button>
-        <Button padding toggle control=":root[data-nu-grid]" fill="bg :pressed[special-bg]">
+        <Button padding toggle control=":root[data-nu-grid]" fill="#bg :pressed[#special-bg]">
           <Icon name="menu-outline" rotate="90deg"/>
         </Button>
       </nu-pane>
@@ -120,7 +120,7 @@ export default function Showcase() {
     <nu-attrs for="example" gap="2x" columns="1pr 2pr||1fr" items="start stretch"></nu-attrs>
     <nu-attrs for="preview" padding="2x left" border="1ow left"></nu-attrs>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <Heading>Typography</Heading>
       <nu-spacer/>
       <Heading level="3">Headings</Heading>
@@ -157,7 +157,7 @@ export default function Showcase() {
               <nu-block as="c2">C2 Cera Pro Regular 14-22</nu-block>
               <nu-block as="p1">P1 Cera Pro Regular 18-32</nu-block>
             </nu-flow>
-            <nu-flow gap="1x" padding="2x" fill="dark-02" color="white">
+            <nu-flow gap="1x" padding="2x" fill="#dark-02" color="#white">
               <nu-h1>H1 Cera Pro Medium 42-54</nu-h1>
               <nu-h2>H2 Cera Pro Medium 32/44</nu-h2>
               <nu-h3>H3 Cera Pro Medium 26/36</nu-h3>
@@ -176,7 +176,7 @@ export default function Showcase() {
       </nu-grid>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Buttons</nu-h2>
       <nu-spacer></nu-spacer>
       <nu-h3>Basic button</nu-h3>
@@ -296,7 +296,7 @@ export default function Showcase() {
       </nu-grid>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Links</nu-h2>
       <nu-spacer></nu-spacer>
       <nu-grid as="example">
@@ -318,7 +318,7 @@ export default function Showcase() {
       </nu-grid>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Inputs</nu-h2>
       <nu-spacer></nu-spacer>
       <nu-h3>Basic input</nu-h3>
@@ -408,7 +408,7 @@ export default function Showcase() {
       </nu-grid>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Select</nu-h2>
       <nu-spacer></nu-spacer>
       <nu-h3>Basic select</nu-h3>
@@ -475,7 +475,7 @@ export default function Showcase() {
       </nu-grid>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Copy Button</nu-h2>
       <nu-spacer></nu-spacer>
       <nu-grid as="example">
@@ -495,7 +495,7 @@ export default function Showcase() {
       </nu-grid>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Component: CardBlock</nu-h2>
 
       <ImportSnippet name="CardBlock"/>
@@ -508,14 +508,14 @@ export default function Showcase() {
       }}>
       </nu-code>
       <FullWidthBlock>
-        <nu-flow gap="2x 1x" fill="light" padding="2x 0">
+        <nu-flow gap="2x 1x" fill="#light" padding="2x 0">
           <CardBlock>Card content</CardBlock>
           <CardBlock bold>Card content</CardBlock>
         </nu-flow>
       </FullWidthBlock>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Component: Banner</nu-h2>
 
       <ImportSnippet name="Banner"/>
@@ -533,7 +533,7 @@ export default function Showcase() {
       </FullWidthBlock>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Component: SmallSignUpCard</nu-h2>
 
       <ImportSnippet name="SmallSignUpCard"/>
@@ -551,7 +551,7 @@ export default function Showcase() {
       </FullWidthBlock>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Component: BigSignUpCard</nu-h2>
 
       <ImportSnippet name="BigSignUpCard"/>
@@ -563,13 +563,13 @@ export default function Showcase() {
         </textarea>`,
       }}></nu-code>
 
-      <FullWidthBlock padding="2x 0" fill="light">
+      <FullWidthBlock padding="2x 0" fill="#light">
         <BigSignUpCard
           heading="Want to run Cube Cloud\non-prem for your enterprise?"/>
       </FullWidthBlock>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Component: Hero</nu-h2>
 
       <ImportSnippet name="Hero"/>
@@ -610,7 +610,7 @@ export default function Showcase() {
       </FullWidthBlock>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Block: Topbar</nu-h2>
 
       <ImportSnippet name="Topbar"/>
@@ -620,7 +620,7 @@ export default function Showcase() {
       </FullWidthBlock>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Block: SubscriptionBlock</nu-h2>
 
       <ImportSnippet name="SubscriptionBlock"/>
@@ -640,7 +640,7 @@ export default function Showcase() {
       </FullWidthBlock>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Block: Footer</nu-h2>
 
       <ImportSnippet name="Footer"/>
@@ -650,7 +650,7 @@ export default function Showcase() {
       </FullWidthBlock>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Block: SwitchBlock</nu-h2>
 
       <ImportSnippet name="SwitchBlock"/>
@@ -662,7 +662,7 @@ export default function Showcase() {
       </FullWidthBlock>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Block: FeatureBlock</nu-h2>
 
       <ImportSnippet name="FeatureBlock"/>
@@ -675,7 +675,7 @@ export default function Showcase() {
       </FullWidthBlock>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Block: GettingStarted</nu-h2>
 
       <ImportSnippet name="GettingStarted"/>
@@ -685,12 +685,12 @@ export default function Showcase() {
       </FullWidthBlock>
     </nu-card>
 
-    <nu-card border="y" fill="bg" gap="2x">
+    <nu-card border="y" fill="#bg" gap="2x">
       <nu-h2>Block: ExploreCubeCloud</nu-h2>
 
       <ImportSnippet name="ExploreCubeCloud"/>
 
-      <FullWidthBlock padding="2x" fill="light">
+      <FullWidthBlock padding="2x" fill="#light">
         <ExploreCubeCloud/>
       </FullWidthBlock>
     </nu-card>

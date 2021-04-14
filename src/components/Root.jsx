@@ -10,7 +10,7 @@ export default function Root(props) {
     height="min 100vh"
     text="n"
     size="t2"
-    color="dark"
+    color="#dark"
     font="CeraPro"
     {...attrs(props)}>
     <nu-props
@@ -29,15 +29,15 @@ export default function Root(props) {
       dark-04-color="#A1A1B5"
       dark-05-color="#D5D5E2"
       light-color="#F3F3FB"
-      dark-color="color(dark-01)"
-      local-bg-color="@light-color"
+      dark-color="#dark-01"
+      local-bg-color="#light"
 
       purple-hover-color="#6B4CF6"
       purple-01-color="#7A77FF"
       purple-02-color="#9592FF"
       purple-03-color="#AFADFF"
       purple-04-color="#CAC9FF"
-      light-purple-color="color(purple-04 30%)"
+      light-purple-color="#purple-04.30"
 
       pink-hover-color="#FA326E"
       pink-01-color="#FF6492"
@@ -48,21 +48,21 @@ export default function Root(props) {
 
       input-border-color="#D5D5E2"
 
-      text-color="color(dark-01)"
-      text-soft-color="color(dark-01)"
-      light-text-color="rgba(255, 255, 255, .7)"
+      text-color="#dark-01"
+      text-soft-color="#dark-01"
+      light-text-color="#white-70"
 
-      purple-color="color(purple-01)"
-      purple-outline-color="color(purple 30%)"
+      purple-color="#purple-01"
+      purple-outline-color="#purple.30"
 
-      outline-color="@purple-outline-color"
+      outline-color="#purple-outline"
 
-      pink-color="color(pink-01)"
-      pink-outline-color="color(pink 30%)"
+      pink-color="#pink-01"
+      pink-outline-color="#pink.30"
 
-      special-color="color(pink)"
-      special-bg-color="color(pink)"
-      special-text-color="white"
+      special-color="#pink"
+      special-bg-color="#pink"
+      special-text-color="#white"
 
       border-color="rgba(213, 213, 226, 0.5)"
       shadow-color="rgba(114, 114, 144, 0.05)"
@@ -95,7 +95,7 @@ export default function Root(props) {
       p1-font-size="18rp"
       p1-line-height="32rp"
 
-      placeholder-color="color(dark-02 40%)"
+      placeholder-color="#dark-02.40"
     />
 
     { props.children }

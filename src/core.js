@@ -189,7 +189,7 @@ export default {
           },
           'attrs:option': {
             color: '#main :selected[#white]',
-            fill: 'bg :selected[main]',
+            fill: '#bg :selected[#main]',
             text: '^btn b nowrap :clear[n sb nowrap] :special[b nowrap]',
             mark: 'hover #hover.10',
             inset: 'n',
@@ -198,7 +198,7 @@ export default {
           },
           'attrs:badge': {
             color: '^btn #white :special[#main]',
-            fill: '^btn main :special[white]',
+            fill: '^btn #main :special[#white]',
             radius: '1r',
             padding: '0 .25em',
           },
@@ -211,7 +211,7 @@ export default {
           padding: '1.375x 2.5x :big[1.875x 2.5x]',
           color: '#dark-02 :invalid[#pink]',
           size: 't2 :big[t1]',
-          fill: 'white',
+          fill: '#white',
           mark: 'n',
           filter: null,
           opacity: 'n :disabled[.4]',
@@ -238,8 +238,8 @@ export default {
         template: `
           <nu-block place="cover" opacity="0" overflow="n"><input/></nu-block>
           <nu-block 
-            as="t2" radius="round" padding="0 2x" fill="^ light :hover.focus[purple-04]" 
-            color="dark" transition="fill">
+            as="t2" radius="round" padding="0 2x" fill="^ #light :hover.focus[#purple-04] :disabled[#light]" 
+            color="#dark" transition="fill">
             Choose file
           </nu-block>
           <nu-value placeholder="No file selected"></nu-value>     
@@ -248,7 +248,7 @@ export default {
 
       Nude.assign('nu-card', {
         styles: {
-          fill: 'bg :pink[pink-04 20%] :purple[light 50%]',
+          fill: '#bg :pink[#pink-04.20] :purple[#light.50]',
           gap: '3x',
           border: 'y :pink[n] :purple[n]',
           padding: '4x',
@@ -258,7 +258,7 @@ export default {
 
       Nude.assign('nu-cardbtn', {
         styles: {
-          fill: 'bg :pink[pink 20%] :purple[light 50%]',
+          fill: '#bg :pink[#pink.20] :purple[#light.50]',
           gap: '3x',
           padding: '2x',
           border: 'y :pink[n] :purple[n]',
@@ -268,7 +268,7 @@ export default {
 
       Nude.assign('nu-btngroup', {
         styles: {
-          fill: 'pink',
+          fill: '#pink',
           border: '#pink.60',
         },
       });
@@ -311,7 +311,7 @@ export default {
 
       Nude.assign('nu-line', {
         styles: {
-          fill: 'dark-05 50%',
+          fill: '#dark-05.50',
         },
       });
 
@@ -350,7 +350,7 @@ export default {
 
       Nude.assign('nu-badge', {
         styles: {
-          fill: 'clear',
+          fill: '#clear',
           size: 'c2',
           text: 'up',
           color: '#dark-04',

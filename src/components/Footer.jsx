@@ -53,13 +53,13 @@ export default function Footer(props) {
 
   return <Section
     role="contentinfo"
-    fill="dark-02"
-    color="white"
+    fill="#dark-02"
+    color="#white"
     border="top bottom outside #white.50"
     {...attrs(props)}>
 
     <Grid width="10sp|||100%" columns={columns} padding="11x 0">
-      <nu-attrs for="link" text="n nowrap" color="white 70% :hover[white]"/>
+      <nu-attrs for="link" text="n nowrap" color="#white.70 :hover[#white]"/>
       <nu-attrs for="h5" text="b nowrap"/>
 
       <nu-flow
@@ -98,7 +98,7 @@ export default function Footer(props) {
             radius="round"
             padding=".25x"
             size="t1"
-            color="white"
+            color="#white"
             transition="opacity"/>
           <BlockLink to="!https://slack.cube.dev/" label="Slack">
             <Icon name="slack"/>

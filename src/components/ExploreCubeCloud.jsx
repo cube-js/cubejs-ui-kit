@@ -13,9 +13,9 @@ export default function ExploreCubeCloud(props) {
       <nu-block>
         <Image height="36rp" src={cubeCloud}/>
       </nu-block>
-      <nu-line orient="v" fill="light" height="15x" show="y|||n"/>
+      <nu-line orient="v" fill="#light" height="15x" show="y|||n"/>
       <nu-pane grow="1|||initial" flow="row||column" width="auto|||100%" gap="2x">
-        <nu-block color="dark-03" as="t2" grow="1" text="left||center">
+        <nu-block color="#dark-03" as="t2" grow="1" text="left||center">
           A managed deployment platform by&nbsp;the&nbsp;creators&nbsp;of&nbsp;Cube.js
         </nu-block>
         <Button special to={props.to || '/cloud'}>

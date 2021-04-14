@@ -71,8 +71,8 @@ const MenuBtn = (props) => {
     label="Toggle menu"
     toggle
     pressed={props.pressed || undefined}
-    color="dark-03 :active[dark-02]"
-    fill="clear :hover[white]"
+    color="#dark-03 :active[#dark-02]"
+    fill="#clear :hover[#white]"
     width="8x"
     height="8x"
     place="top right"
@@ -104,7 +104,7 @@ export default function Topbar(props) {
     padding={`${props.sticky ? 2 : 4}x --content-padding||1x --content-padding`}
     border={props.sticky ? 'bottom' : 'n'}
     box="y"
-    fill="clear"
+    fill="#clear"
     {...attrs(props)}>
 
     <nu-pane width="--content-width" content="space-between" space="around" height="50rp">
@@ -120,11 +120,11 @@ export default function Topbar(props) {
                items="center">
         <nu-pane gap>
           <nu-props
-            outline-color="color(text 10%)"
+            outline-color="#text.10%"
           />
           <nu-attrs
             for="link"
-            color="dark :hover[purple] :active.hover[purple]"
+            color="#dark :hover[#purple] :active.hover[#purple]"
             padding="1x 2x"
             show="y||n"
             size="h5"
@@ -140,17 +140,17 @@ export default function Topbar(props) {
                     use-hover
                     show="^ n :hover.focus-within[y]" gap="0" border="1bw #light"
                     place={!props.getStarted ? 'outside-bottom right' : 'outside-bottom'}
-                    size="t2" padding="0" fill="bg" overflow="n" z="front"
+                    size="t2" padding="0" fill="#bg" overflow="n" z="front"
                     radius="1x" clear shadow="card">
-                    <nu-attrs for="link" padding="3x" display="block" fill="clear :hover.focus[light 50%]"></nu-attrs>
+                    <nu-attrs for="link" padding="3x" display="block" fill="#clear :hover.focus[#light.50]"></nu-attrs>
                     {
                       item.items.map((item, i) => (
-                        <Link id="sublink" key={item.label} clear to={item.link} border={i ? 'top #light' : null}>
+                        <Link nu-sublink key={item.label} clear to={item.link} border={i ? 'top #light' : null}>
                           <nu-flow>
-                            <nu-block color="^#sublink dark :hover.pressed[purple]" transition="color">
+                            <nu-block color="^sublink #dark :hover.pressed[#purple]" transition="color">
                               {item.label}
                             </nu-block>
-                            <nu-block color="dark-03" text="n nowrap">
+                            <nu-block color="#dark-03" text="n nowrap">
                               {item.description}
                             </nu-block>
                           </nu-flow>
@@ -163,7 +163,7 @@ export default function Topbar(props) {
             })
           }
         </nu-pane>
-        {/*<SchemeSwitch radius fill="clear" />*/}
+        {/*<SchemeSwitch radius fill="#clear" />*/}
         {
           props.getStarted && <Button
             as="get-started" show="y||n" to="#getting-started">
@@ -179,7 +179,7 @@ export default function Topbar(props) {
       id="overlay"
       aria-hidden="true"
       place="fixed cover"
-      fill="special-shadow 50%"
+      fill="#special-shadow.50"
       hidden={!isMenuOpen || undefined}
       cursor="default"
       mark="n"
@@ -195,7 +195,7 @@ export default function Topbar(props) {
       gap="2x"
       width="15"
       padding="10x top"
-      fill="bg"
+      fill="#bg"
       shadow="#special-shadow.50"
       opacity="0 :shown[1]"
       move="100% 0 :shown[]"
@@ -208,14 +208,14 @@ export default function Topbar(props) {
       <nu-flow>
         <nu-attrs
           for="action"
-          color="dark-03 :hover[text] :active.hover[dark-02]"
+          color="#dark-03 :hover[#text] :active.hover[#dark-02]"
           padding="1x 2x"
           display="block"
           outline="focus inset"/>
         {
           props.getStarted && <Action
             show="n||y"
-            color="special"
+            color="#special"
             mark="#pink-hover.10 hover"
             text="sb"
             to="#getting-started"
