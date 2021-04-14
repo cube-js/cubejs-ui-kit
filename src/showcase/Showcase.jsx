@@ -29,12 +29,13 @@ import CopyButton from '../components/CopyButton';
 import Banner from '../components/Banner';
 import Button from '../components/Button';
 import Link from '../components/Link';
-import Image from '../components/Image';
 import Icon from '../components/Icon';
 
 const FullWidthBlock = (props) => {
-  return <nu-block space="0 (--content-padding + 1bw)" fill shadow
-                   transition="fill" {...attrs(props)}>
+  return <nu-block
+    space="0 (@content-padding + 1bw)" fill shadow
+    transition="fill" {...attrs(props)}
+  >
     {props.children}
   </nu-block>
 }
@@ -488,7 +489,7 @@ export default function Showcase() {
         <nu-block as="preview">
           <nu-flex gap="2x 1x" flow="column">
             <nu-flex flow="row wrap" gap>
-              <CopyButton special copy="Text to copy" />
+              <CopyButton special copy="Text to copy"/>
             </nu-flex>
           </nu-flex>
         </nu-block>
@@ -529,7 +530,8 @@ export default function Showcase() {
       }}></nu-code>
 
       <FullWidthBlock padding="2x 0">
-        <Banner to="!https://cube.dev">Аnalytical data access layer for modern web applications</Banner>
+        <Banner to="!https://cube.dev">Аnalytical data access layer for modern web
+          applications</Banner>
       </FullWidthBlock>
     </nu-card>
 

@@ -23,10 +23,10 @@ export default function SwitchBlock(props) {
     padding="25x 0||16x 0"
     {...attrs(props)}>
     <nu-grid
-      width="10sp|||--content-width"
+      width="10sp|||@content-width"
       columns="1pr 1pr||1fr"
       rows="auto auto 1fr"
-      gap="4x --grid-gap"
+      gap="4x @grid-gap"
       items="stretch||center"
       content="start"
       space="around">

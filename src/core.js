@@ -298,7 +298,7 @@ export default {
       Nude.assign('nu-grid', {
         styles: {
           items: 'start stretch',
-          gap: '--grid-gap',
+          gap: '@grid-gap',
         },
       });
 

@@ -14,7 +14,7 @@ export default function FeatureBlock(props) {
     <nu-grid
       columns="1pr 1pr|||1pr"
       padding="17x 0||12x 0||10x 0"
-      gap="12x --grid-gap||6x --grid-gap"
+      gap="12x @grid-gap||6x @grid-gap"
       items="start stretch">
       <nu-flow gap="2x" text="center" width="max 30" column="1 / -1" place="center">
         <Heading level="2">

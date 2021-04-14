@@ -49,8 +49,6 @@ const RESOURCES_LINKS = [
 const CURRENT_YEAR = new Date().getFullYear();
 
 export default function Footer(props) {
-  const columns = props.hideCompany ? '6sp 2sp 2sp||4sp 3sp 3sp|2sp' : '4sp 2sp 2sp 2sp||4sp 3sp 3sp|2sp';
-
   return <Section
     role="contentinfo"
     fill="#dark-02"
@@ -58,7 +56,7 @@ export default function Footer(props) {
     border="top bottom outside #white.50"
     {...attrs(props)}>
 
-    <Grid width="10sp|||100%" columns={columns} padding="11x 0">
+    <Grid width="10sp|||100%" columns="4sp 2sp 2sp 2sp||4sp 3sp 3sp|2sp" padding="11x 0">
       <nu-attrs for="link" text="n nowrap" color="#white.70 :hover[#white]"/>
       <nu-attrs for="h5" text="b nowrap"/>
 
@@ -78,19 +76,17 @@ export default function Footer(props) {
         }
       </nu-flex>
 
-      {
-        !props.hideCompany && <nu-flex gap=".5x" flow="column" items="start">
-          <Heading level="5">Company</Heading>
-          <nu-spacer height=".5x" />
-          {
-            COMPANY_LINKS.map(item => {
-              return <Link key={item.label} to={item.link}>{item.label}</Link>
-            })
-          }
-        </nu-flex>
-      }
+      <nu-flex gap=".5x" flow="column" items="start">
+        <Heading level="5">Company</Heading>
+        <nu-spacer height=".5x" />
+        {
+          COMPANY_LINKS.map(item => {
+            return <Link key={item.label} to={item.link}>{item.label}</Link>
+          })
+        }
+      </nu-flex>
 
-      <nu-flow gap="2x" column={props.hideCompany ? null : '||2|1 / -1'}>
+      <nu-flow gap="2x" column="||2|1 / -1">
         <Heading level="5">Community</Heading>
         <nu-pane gap="2x">
           <nu-attrs
@@ -114,7 +110,3 @@ export default function Footer(props) {
     </Grid>
   </Section>
 }
-
-Footer.propTypes = {
-  hideCompany: T.bool,
-};

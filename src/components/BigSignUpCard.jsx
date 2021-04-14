@@ -33,7 +33,7 @@ export default function BigSignUpCard(props) {
   }
 
   return <CardBlock
-    padding="10x 0|||7.5x --content-padding 6x"
+    padding="10x 0|||7.5x @content-padding 6x"
     text="center" label="Subscription"
     {...attrs(props)}>
     <nu-flex gap="4x" width="6sp||8sp|100%" flow="column">

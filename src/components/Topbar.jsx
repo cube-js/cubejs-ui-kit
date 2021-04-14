@@ -101,7 +101,7 @@ export default function Topbar(props) {
   return <nu-header
     place={props.sticky ? 'sticky top' : ''}
     size="t2"
-    padding={`${props.sticky ? 2 : 4}x --content-padding||1x --content-padding`}
+    padding={`${props.sticky ? 2 : 4}x @content-padding||1x @content-padding`}
     border={props.sticky ? 'bottom' : 'n'}
     box="y"
     fill="#clear"

@@ -11,8 +11,8 @@ export default function Section(props) {
     width="min 320px">
     <nu-flex
       flow="column"
-      width="min-content (--max-content-width + (--content-padding * 2))"
-      padding="0 --content-padding"
+      width="max (@max-content-width + (@content-padding * 2))"
+      padding="0 @content-padding"
       space="around"
       gap="4x"
       {...attrs(props, ['fill', 'shadow', 'border', 'image', 'clip'])}>
