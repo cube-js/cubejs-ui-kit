@@ -17,7 +17,7 @@ export default function Select(props) {
       <DropdownIcon/>
     </nu-svg>
     <nu-popuplistbox
-      id="list" padding="0" gap={props.multiple ? '1bw' : '0'} theme=""
+      id="list" theme=""
       special={props.special} radius="1r" link-value multiple={props.multiple}>
       {
         props.options.map(option => (

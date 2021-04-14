@@ -63,7 +63,7 @@ function loadIcon(url, prepare = false) {
 }
 
 function spanWidth(num) {
-  return `((${num} * var(--nu-column-width)) + (${num - 1} * var(--nu-grid-gap)))`;
+  return `((${num} * var(--column-width)) + (${num - 1} * var(--grid-gap)))`;
 }
 
 export default {
@@ -82,8 +82,8 @@ export default {
       const { Nude } = window;
 
       Nude.units.define('sp', spanWidth);
-      Nude.units.define('gp', 'var(--nu-grid-gap)');
-      Nude.units.define('cp', 'var(--nu-content-padding)');
+      Nude.units.define('gp', 'var(--grid-gap)');
+      Nude.units.define('cp', 'var(--content-padding)');
 
       Nude.icons.setLoader((name) => {
         switch (name) {
@@ -152,11 +152,11 @@ export default {
       Nude.assign('nu-option', {
         inset: 'n',
         padding: '1x 2x',
+        radius: '1r',
       });
 
       Nude.assign('nu-popuplistbox', {
         styles: {
-          place: 'top -1bw :multiple[outside-bottom]',
           outline: 'focus',
           border: '#main.60',
           shadow: '3x',
@@ -169,10 +169,13 @@ export default {
           inset: 'n',
           border: `#main.60 :active[#main] :active:hover[#main] :clear[hidden] :hover:clear[hidden] :active:clear[#main.60] :active:hover:clear[#main.60] :special[#main] :special:hover[#hover] :special:hover:active[#hover] :special:active[#main]`,
           color: '#main :active[#hover] :special[#white] :special:active[#white]',
-          fill: 'clear :special[main] :special:hover[hover] :special:hover:active[main] :special:active[hover]',
+          fill: '#local :special[#main] :special:hover[#hover] :special:hover:active[#main] :special:active[#hover]',
           mark: 'hover #hover.10 :special[n]',
           size: 't2 :big[t1]',
           padding: '1.375x 2.5x :big[1.875x 2.5x]',
+          filter: 'n :disabled[contrast(0.88)]',
+          'backdrop-filter': null,
+          opacity: '1 :disabled[.4]',
           '--main-color': '--pink-color :purple[--purple-color]',
           '--main-color-rgb': '--pink-color-rgb :purple[--purple-color-rgb]',
           '--hover-color': '--pink-hover-color :purple[--purple-hover-color]',
@@ -181,6 +184,9 @@ export default {
           '--outline-width': '(3rem / 16) :special[1rem / 4]',
         },
         context: {
+          'attrs:card': {
+            padding: '.5x',
+          },
           'attrs:option': {
             color: '#main :selected[#white]',
             fill: 'bg :selected[main]',
@@ -207,6 +213,8 @@ export default {
           size: 't2 :big[t1]',
           fill: 'white',
           mark: 'n',
+          filter: null,
+          opacity: 'n :disabled[.4]',
           '--outline-color': '--purple-outline-color :invalid[--pink-outline-color]',
           '--outline-width': '1rem / 4',
         },

@@ -3,7 +3,6 @@ import { attrs } from '../helpers';
 
 export default function Root(props) {
   return <nu-root
-    style={{ WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}
     responsive="100rem|61.25rem|40rem|320px"
     transition="fill"
     fill={props.fill || 'light'}
@@ -17,10 +16,10 @@ export default function Root(props) {
     <nu-props
       radius=".5x"
       disabled-opacity=".6"
-      max-content-width="100rem - (--content-padding * 2)"
+      max-content-width="100rem - (@content-padding * 2)"
       grid-gap="3x"
       content-padding="6x||3x"
-      column-width="((--max-content-width - (--grid-gap * 11)) / 12)|((100vw - (--content-padding * 2) - (--grid-gap * 11)) / 12)||((--full-width - (--content-padding * 2) - --grid-gap) / 2)"
+      column-width="((@max-content-width - (@grid-gap * 11)) / 12)|((100vw - (@content-padding * 2) - (@grid-gap * 11)) / 12)||((@full-width - (@content-padding * 2) - @grid-gap) / 2)"
       full-width="100vw||||320px"
       content-width="12sp|||2sp"
 
@@ -31,6 +30,7 @@ export default function Root(props) {
       dark-05-color="#D5D5E2"
       light-color="#F3F3FB"
       dark-color="color(dark-01)"
+      local-bg-color="@light-color"
 
       purple-hover-color="#6B4CF6"
       purple-01-color="#7A77FF"
@@ -55,7 +55,7 @@ export default function Root(props) {
       purple-color="color(purple-01)"
       purple-outline-color="color(purple 30%)"
 
-      outline-color="--purple-outline-color"
+      outline-color="@purple-outline-color"
 
       pink-color="color(pink-01)"
       pink-outline-color="color(pink 30%)"

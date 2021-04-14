@@ -8,7 +8,7 @@ import Image from './Image';
 
 export default function ExploreCubeCloud(props) {
   return <CardBlock text="left" padding="2x 0|2x --grid-gap|4x 2x" {...attrs(props)}>
-    <nu-pane gap="--column-width|||2x" width="10sp|||100%" flow="row|||column">
+    <nu-pane gap="@column-width|||2x" width="10sp|||100%" flow="row|||column">
       <nu-attrs for="block"/>
       <nu-block>
         <Image height="36rp" src={cubeCloud}/>
