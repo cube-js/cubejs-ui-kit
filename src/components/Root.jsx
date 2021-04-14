@@ -5,7 +5,7 @@ export default function Root(props) {
   return <nu-root
     responsive="100rem|61.25rem|40rem|320px"
     transition="fill"
-    fill={props.fill || 'light'}
+    fill={props.fill || '#light'}
     width="min 320px"
     height="min 100vh"
     text="n"
@@ -30,7 +30,6 @@ export default function Root(props) {
       dark-05-color="#D5D5E2"
       light-color="#F3F3FB"
       dark-color="#dark-01"
-      local-bg-color="#light"
 
       purple-hover-color="#6B4CF6"
       purple-01-color="#7A77FF"
