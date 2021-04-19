@@ -67,7 +67,7 @@ export default function Footer(props) {
       </nu-flow>
 
       <nu-flex gap=".5x" flow="column" items="start">
-        <Heading level="5">Resources</Heading>
+        <Heading level="2" size="h5">Resources</Heading>
         <nu-spacer height=".5x" />
         {
           RESOURCES_LINKS.map(item => {
@@ -77,7 +77,7 @@ export default function Footer(props) {
       </nu-flex>
 
       <nu-flex gap=".5x" flow="column" items="start">
-        <Heading level="5">Company</Heading>
+        <Heading level="2" size="h5">Company</Heading>
         <nu-spacer height=".5x" />
         {
           COMPANY_LINKS.map(item => {
@@ -87,7 +87,7 @@ export default function Footer(props) {
       </nu-flex>
 
       <nu-flow gap="2x" column="||2|1 / -1">
-        <Heading level="5">Community</Heading>
+        <Heading level="2" size="h5">Community</Heading>
         <nu-pane gap="2x">
           <nu-attrs
             for="blocklink"

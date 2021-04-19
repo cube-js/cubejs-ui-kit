@@ -13,6 +13,7 @@ import moonIcon from './assets/icons/moon-outline.svg';
 import gridIcon from './assets/icons/grid-outline.svg';
 import chevronDownIcon from './assets/icons/chevron-down-outline.svg';
 import chevronRightIcon from './assets/icons/chevron-right-outline.svg';
+import { requireNude } from './utils/require-nude';
 export { default as Action } from './components/Action.jsx';
 export { default as Button } from './components/Button.jsx';
 export { default as CardButton } from './components/CardButton.jsx';
@@ -71,16 +72,9 @@ export default {
     options = Object.assign({}, OPTIONS, options);
 
     dataset.nuIcons = options.icons;
-
-    if (options.prevent) {
-      dataset.nuPrevent = '';
-    }
-
     dataset.nuScheme = options.scheme;
 
-    window.addEventListener('nudeReady', (event) => {
-      const { Nude } = window;
-
+    return requireNude().then(Nude => {
       Nude.units.define('sp', spanWidth);
       Nude.units.define('gp', 'var(--grid-gap)');
       Nude.units.define('cp', 'var(--content-padding)');
@@ -383,8 +377,10 @@ export default {
           return [css, `${tag}:not([space]) > * { margin: 0; }`];
         },
       });
-    });
 
-    return import('numl');
+      Nude.init();
+
+      return Nude;
+    });
   },
 };

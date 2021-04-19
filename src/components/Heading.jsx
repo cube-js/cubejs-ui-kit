@@ -6,7 +6,7 @@ import { attrs, insertText } from '../helpers';
 export default function Heading(props) {
   const Tag = props.level ? `h${props.level}` : 'h2';
 
-  return <nu-headingwrapper {...attrs(props)} size={Tag}><Tag
+  return <nu-headingwrapper size={Tag} {...attrs(props)}><Tag
     // role="heading"
     // level={props.level || 2}
     // aria-level={props.level || 2}
