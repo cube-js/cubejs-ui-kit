@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react';
 import T from 'prop-types';
-import jsx from 'jsx-native-events';
+import jsx from '../utils/jsx-native-events';
 import NativeLink from './NativeLink';
 
 const ROLE_MAP = {

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { useState } from 'react';
-import jsx from 'jsx-native-events';
+import jsx from '../utils/jsx-native-events';
 import { attrs, insertText } from '../helpers';
 import Section from './Section.jsx';
 import ButtonGroup from './ButtonGroup.jsx';

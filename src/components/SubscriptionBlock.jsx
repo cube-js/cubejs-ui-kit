@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { createRef } from 'react';
-import jsx from 'jsx-native-events';
+import jsx from '../utils/jsx-native-events';
 import T from 'prop-types';
 
 import { THANK_YOU, UNABLE_TO_SUBSCRIBE, VALIDATION_ERROR_EMAIL } from '../messages';

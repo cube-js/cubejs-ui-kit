@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { useState } from 'react';
-import jsx from 'jsx-native-events';
+import jsx from '../utils/jsx-native-events';
 import { main as mainLogo } from '../logos';
 import { attrs } from '../helpers';
 import Link from './Link';

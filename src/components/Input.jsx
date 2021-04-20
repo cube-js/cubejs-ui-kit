@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { forwardRef } from 'react';
 import T from 'prop-types';
-import jsx from 'jsx-native-events';
+import jsx from '../utils/jsx-native-events';
 
 import { attrs } from '../helpers';
 

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import jsx from 'jsx-native-events';
+import jsx from '../utils/jsx-native-events';
 import { attrs } from '../helpers';
 import BlockLink from './BlockLink';
 

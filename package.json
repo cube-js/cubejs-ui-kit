@@ -1,6 +1,6 @@
 {
   "name": "cubejs-uikit",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "UIKit for Cube.js projects",
   "main": "dist/core.js",
   "type": "module",
@@ -35,7 +35,6 @@
     "@size-limit/preset-small-lib": "^4.5.5",
     "clipboard-copy": "^3.1.0",
     "cubedev-tracking": "^1.0.6",
-    "jsx-native-events": "^1.0.2",
     "lockr": "^0.8.5",
     "numl": "^1.1.0",
     "parcel": "^1.12.4",
@@ -65,8 +64,7 @@
         "dist/core.js"
       ],
       "ignore": [
-        "react",
-        "jsx-native-events"
+        "react"
       ]
     }
   ],

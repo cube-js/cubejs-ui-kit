@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import jsx from 'jsx-native-events';
+import jsx from '../utils/jsx-native-events';
 import SubscriptionBlock from '../components/SubscriptionBlock';
 import Topbar from '../components/Topbar';
 import Footer from '../components/Footer';
