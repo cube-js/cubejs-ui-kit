@@ -5,7 +5,7 @@ import CopyButton from './CopyButton';
 import Link from './Link';
 import T from "prop-types";
 
-export const INSTALL_COMMAND = 'npx cubejs-cli create hello-world';
+export const INSTALL_COMMAND = 'docker run -p 4000:4000 -v cube:/cube/conf -e CUBEJS_DEV_MODE=true cubejs/cube';
 export const START_TEXT = 'and follow our';
 export const END_TEXT = 'guide.';
 export const LINK_URL = '!https://cube.dev/docs/getting-started';
