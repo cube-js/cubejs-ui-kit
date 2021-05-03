@@ -8,7 +8,7 @@ import T from "prop-types";
 export const INSTALL_COMMAND_NODE = "npx cubejs-cli create hello-world";
 export const INSTALL_COMMAND_DOCKER =
   "docker run -p 4000:4000 \
-    -v ${PWD} cube:/cube/conf \
+    -v ${PWD}:/cube/conf \
     -e CUBEJS_DEV_MODE=true \
     cubejs/cube";
 export const START_TEXT = "and follow our";
@@ -62,7 +62,7 @@ export default function GettingStarted(props) {
               height="6x"
               special
               copy={props.nodeCommand || INSTALL_COMMAND_NODE}
-              onCopy={props.onCopy}
+              onCopy={props.onNodeCopy}
               show="y|||n"
             >
               Copy
@@ -106,12 +106,11 @@ export default function GettingStarted(props) {
               text="left"
               dangerouslySetInnerHTML={{
                 __html: `<pre style="font-family: var(--monospace-font);">docker run -p 4000:4000 \\ 
-    -v \${PWD} cube:/cube/conf \\ 
+    -v \${PWD}:/cube/conf \\ 
     -e CUBEJS_DEV_MODE=true \\    
     cubejs/cube</pre>`,
               }}
             ></nu-el>
-            {/* prettier-ignore */}
             <CopyButton
               as="t2"
               place="absolute top right"
@@ -120,7 +119,7 @@ export default function GettingStarted(props) {
               height="6x"
               special
               copy={props.dockerCommand || INSTALL_COMMAND_DOCKER}
-              onCopy={props.onCopy}
+              onCopy={props.onDockerCopy}
               show="y|||n"
             >
               Copy
@@ -147,5 +146,6 @@ GettingStarted.propTypes = {
   dockerCommand: T.string,
   text: T.string,
   link: T.string,
-  onCopy: T.func,
+  onNodeCopy: T.func,
+  onDockerCopy: T.func,
 };
