@@ -7,10 +7,7 @@ import T from "prop-types";
 
 export const INSTALL_COMMAND_NODE = "npx cubejs-cli create hello-world";
 export const INSTALL_COMMAND_DOCKER =
-  "docker run -p 4000:4000 \
-    -v ${PWD}:/cube/conf \
-    -e CUBEJS_DEV_MODE=true \
-    cubejs/cube";
+  "docker run -p 4000:4000 -v ${PWD}:/cube/conf -e CUBEJS_DEV_MODE=true cubejs/cube";
 export const START_TEXT = "and follow our";
 export const END_TEXT = "guide.";
 export const LINK_URL = "!https://cube.dev/docs/getting-started";
