@@ -53,7 +53,7 @@ export default function GettingStarted(props) {
                 src="/static/images/logos/node.svg"
               ></nu-svg>
             </nu-block>
-            {props.command || INSTALL_COMMAND_NODE}
+            {props.nodeCommand || INSTALL_COMMAND_NODE}
             <CopyButton
               as="t2"
               place="absolute right"
@@ -61,7 +61,7 @@ export default function GettingStarted(props) {
               width="10x"
               height="6x"
               special
-              copy={props.command || INSTALL_COMMAND_NODE}
+              copy={props.nodeCommand || INSTALL_COMMAND_NODE}
               onCopy={props.onCopy}
               show="y|||n"
             >
@@ -138,3 +138,14 @@ export default function GettingStarted(props) {
     </SiteBlock>
   );
 }
+
+GettingStarted.propTypes = {
+  heading: T.string,
+  start: T.string,
+  end: T.string,
+  nodeCommand: T.string,
+  dockerCommand: T.string,
+  text: T.string,
+  link: T.string,
+  onCopy: T.func,
+};
