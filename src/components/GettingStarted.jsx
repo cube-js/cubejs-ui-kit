@@ -22,14 +22,14 @@ export default function GettingStarted(props) {
     >
       <nu-flex flow="column" gap="2x">
         <nu-block
-          as="t1"
+          size="18rp|||16rp"
           color="#dark-03"
-          text="left"
+          text="left|||center"
           width="8sp || --content-width"
         >
           Start with Node.js:
         </nu-block>
-        <nu-flex width="8sp || --content-width" gap height="min 9x">
+        <nu-flex width="8sp || --content-width" gap height="min 9x ||| 6x">
           <nu-card
             display="flex"
             flow="row"
@@ -40,17 +40,25 @@ export default function GettingStarted(props) {
             text="monospace nowrap"
             fill="#bg"
             as="h4"
-            overflow="auto hidden"
+            overflow="hidden"
             radius
             border="n"
+            gap="3x|||12rp"
           >
-            <nu-block height="100%" padding="18rp" fill="#95CD40">
+            <nu-block
+              height="100%"
+              padding="18rp|||12rp"
+              fill="#95CD40"
+              width="auto|||6x"
+            >
               <nu-svg
                 place="center"
                 src="/static/images/logos/node.svg"
               ></nu-svg>
             </nu-block>
-            {props.nodeCommand || INSTALL_COMMAND_NODE}
+            <nu-el size="auto|||12rp 20rp">
+              {props.nodeCommand || INSTALL_COMMAND_NODE}
+            </nu-el>
             <CopyButton
               as="t2"
               place="absolute right"
@@ -69,14 +77,14 @@ export default function GettingStarted(props) {
       </nu-flex>
       <nu-flex flow="column" gap="2x">
         <nu-block
-          as="t1"
+          size="18rp|||16rp"
           color="#dark-03"
-          text="left"
+          text="left|||center"
           width="8sp || --content-width"
         >
           Start with Docker:
         </nu-block>
-        <nu-flex width="8sp || --content-width" gap height="min 20x">
+        <nu-flex width="8sp || --content-width" gap height="min 20x ||| 14x">
           <nu-card
             display="flex"
             flow="row"
@@ -87,19 +95,26 @@ export default function GettingStarted(props) {
             text="monospace nowrap"
             fill="#bg"
             as="h4"
-            overflow="auto hidden"
+            overflow="hidden"
             radius
             border="n"
+            gap="3x|||12rp"
           >
-            <nu-block height="100%" padding="18rp 14rp" fill="#5B9EEF">
+            <nu-block
+              height="100%"
+              padding="18rp 14rp ||| 18rp 10rp"
+              fill="#5B9EEF"
+              width="auto|||6x"
+            >
               <nu-svg
                 place="center"
                 src="/static/images/logos/docker.svg"
               ></nu-svg>
             </nu-block>
             <nu-el
-              height="100%"
+              // height="100%"
               padding="2rp 0"
+              size="auto|||12rp 20rp"
               text="left"
               dangerouslySetInnerHTML={{
                 __html: `<pre style="font-family: var(--monospace-font);">docker run -p 4000:4000 \\ 
