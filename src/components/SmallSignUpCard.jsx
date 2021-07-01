@@ -49,7 +49,7 @@ export default function SmallSignUpCard(props) {
             disabled={loading || null}
             id="email"
             type="email"
-            placeholder="Email"
+            placeholder={props.placeholder || "Email"}
             grow="1">
           </Input>
           <Button
