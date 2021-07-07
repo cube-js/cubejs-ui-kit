@@ -13,6 +13,7 @@ import moonIcon from './assets/icons/moon-outline.svg';
 import gridIcon from './assets/icons/grid-outline.svg';
 import chevronDownIcon from './assets/icons/chevron-down-outline.svg';
 import chevronRightIcon from './assets/icons/chevron-right-outline.svg';
+import checkmarkIcon from './assets/icons/checkmark.svg';
 import { requireNude } from './utils/require-nude';
 export { default as Action } from './components/Action.jsx';
 export { default as Button } from './components/Button.jsx';
@@ -118,6 +119,10 @@ export default {
           case 'grid':
           case 'grid-outline':
             return loadIcon(gridIcon, true);
+          case 'check':
+          case 'checkmark':
+          case 'checkmark-outline':
+            return loadIcon(checkmarkIcon);
           default:
             return '';
         }
