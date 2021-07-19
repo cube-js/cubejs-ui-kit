@@ -39,6 +39,11 @@ const MENU = [
         description: 'See how to contribute to Cube.js',
       },
       {
+        label: 'Events',
+        link: '/events',
+        description: 'Learn more about our upcoming events',
+      },
+      {
         label: 'GitHub',
         link: '!https://github.com/cube-js/cube.js',
         description: 'File an issue or contribute the code',
